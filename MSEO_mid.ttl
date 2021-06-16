@@ -1,0 +1,2222 @@
+@prefix : <https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix geo: <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pte: <http://www.daml.org/2003/01/periodictable/PeriodicTable#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.materials.fraunhofer.de/ontologies/MSEO/mid> .
+
+<https://www.materials.fraunhofer.de/ontologies/MSEO/mid> rdf:type owl:Ontology ;
+                                                           owl:versionIRI <https://gitlab.cc-asp.fraunhofer.de/EMI_datamanagement/bwmd_ontology/-/raw/migration_to_cco/MSEO_mid.owl> ;
+                                                           owl:imports <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> ,
+                                                                       <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/AllCoreOntology> ,
+                                                                       <https://gitlab.cc-asp.fraunhofer.de/iwm-hub/mdbw_rdf/-/raw/master/gd.owl> ;
+                                                           rdfs:comment """Contact:
+Christoph Schweizer
+Fraunhofer-Institut für Werkstoffmechanik IWM
+Wöhlerstraße 11, 79108 Freiburg
+christoph.schweizer@iwm.fraunhofer.de"""@de ,
+                                                                        """Contact:
+Martin Huschka 
+Fraunhofer Institute for High-Speed Dynamics , Ernst-Mach-Institut, EMI
+Ernst-Zermelo-Strasse 4, 79104 Freiburg , Germany
+Martin.Huschka@EMI.Fraunhofer.de"""@de ,
+                                                                        """Contact:
+Philipp von Hartrott
+Fraunhofer-Institut für Werkstoffmechanik IWM
+Wöhlerstraße 11, 79108 Freiburg
+philipp.von.hartrott@iwm.fraunhofer.de"""@de ,
+                                                                        """Contact:
+Thomas Hanke
+Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen IMWS
+Walter-Hülse-Strasse 1, 06120 Halle (Saale)
+thomas.hanke@imws.fraunhofer.de"""@de ,
+                                                                        "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
+                                                           owl:priorVersion "BWMD_mid"@de ;
+                                                           :BWMD_00834 "Christoph Schweizer (Fraunhofer IWM)"@de ;
+                                                           :BWMD_00835 "Martin Huschka (Fraunhofer EMI)"@en ,
+                                                                       "Philipp von Hartrott (Fraunhofer IWM)"@en ,
+                                                                       "Simon Stier (Fraunhofer ISC)"@en ,
+                                                                       "Thomas Hanke (Fraunhofer IMWS)"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00834
+:BWMD_00834 rdf:type owl:AnnotationProperty ;
+            rdfs:label "author"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00835
+:BWMD_00835 rdf:type owl:AnnotationProperty ;
+            rdfs:label "curator"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat
+<https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat
+<https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#element
+pte:element rdfs:range pte:Element ;
+            rdfs:label "is element" .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/designated_by
+cco:designated_by owl:equivalentProperty :BWMD_00319 .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00319
+:BWMD_00319 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ;
+            rdfs:range :BWMD_00001 ;
+            rdfs:comment "Indicates properties, such as IDs, names etc. which are used to identify objects, processes etc." ;
+            rdfs:label "obsolete hasIdentifier" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00320
+:BWMD_00320 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "has info"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00321
+:BWMD_00321 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete refersTo" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00322
+:BWMD_00322 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00323 ;
+            rdfs:range :BWMD_00002 ;
+            rdfs:label "obsolete isComposedOf" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00323
+:BWMD_00323 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete hasPart" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":0.75}" .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00324
+:BWMD_00324 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete chronologicalConnection" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00325
+:BWMD_00325 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00326 ;
+            rdfs:range :BWMD_00003 ;
+            rdfs:label "obsolete hasTemporalInfo" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00326
+:BWMD_00326 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ;
+            rdfs:range :BWMD_00024 ;
+            rdfs:label "has attached dataset"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00327
+:BWMD_00327 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00328 ;
+            rdfs:range :BWMD_00004 ;
+            rdfs:label "obsolete hasOperator" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00328
+:BWMD_00328 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:range :BWMD_00013 ,
+                       :BWMD_00014 ;
+            rdfs:label "obsolete hasParticipant" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00329
+:BWMD_00329 rdf:type owl:ObjectProperty ;
+            owl:equivalentProperty :BWMD_00330 ;
+            rdfs:subPropertyOf obo:RO_0010001 ;
+            rdfs:domain :BWMD_00005 ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom rdf:PlainLiteral
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom rdf:XMLLiteral
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:NCName
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:NMTOKEN
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:Name
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:anyURI
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:base64Binary
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:boolean
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:byte
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:dateTime
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:dateTimeStamp
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:decimal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:double
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:hexBinary
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:int
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:language
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:long
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:negativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:nonPositiveInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:normalizedString
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:positiveInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:short
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:token
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedByte
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedInt
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedLong
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedShort
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom owl:rational
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom owl:real
+                       ] ;
+            rdfs:label "has values of type"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00330
+:BWMD_00330 rdf:type owl:ObjectProperty ;
+            obo:IAO_0000116 "too unspecific! what is the purpose of that relation?" ;
+            rdfs:label "obsolete isOfType" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00331
+:BWMD_00331 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00324 ;
+            rdfs:label "obsolete hasOutput" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00332
+:BWMD_00332 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00321 ;
+            rdfs:comment "A reference, that indicates that something is defined by something else. E.g. the location/shape of a geometric feature is defined by the CAD file." ;
+            rdfs:label "obsolete isDefinedBy" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00333
+:BWMD_00333 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ;
+            rdfs:label "obsolete obsolete hasStructuralQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00334
+:BWMD_00334 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00326 ;
+            rdfs:range :BWMD_00006 ;
+            rdfs:comment "Specific textual input (such as comments, descriptions) is attached to any kind of entity" ;
+            rdfs:label "obsolete hasTextualInfo" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00335
+:BWMD_00335 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00324 ;
+            rdfs:label "obsolete precedes" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00336
+:BWMD_00336 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ,
+                               :BWMD_00326 ;
+            rdfs:range :BWMD_00007 ;
+            rdfs:label "has structural info"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00337
+:BWMD_00337 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00324 ;
+            rdfs:label "obsolete isInputFor" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[67,129,191], \"lw\":1.25}" .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00338
+:BWMD_00338 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf cco:described_by ;
+            rdfs:range :BWMD_00008 ;
+            rdfs:label "in accordance with"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00339
+:BWMD_00339 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00326 ;
+            rdfs:domain obo:BFO_0000015 ;
+            rdfs:range :BWMD_00009 ;
+            rdfs:label "has parameter set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00340
+:BWMD_00340 rdf:type owl:ObjectProperty ;
+            rdfs:domain :BWMD_00010 ;
+            rdfs:range :BWMD_00011 ;
+            rdfs:label "obsolete hasQuantityKind" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00341
+:BWMD_00341 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00321 ;
+            rdfs:domain :BWMD_00012 ;
+            rdfs:comment "E.g. a process quantity or material data set is representative for a certain temporal state of an object" ;
+            rdfs:label "obsolete isRepresentativeFor" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#symbol
+pte:symbol owl:equivalentProperty :BWMD_00318 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_decimal_value
+cco:has_decimal_value owl:equivalentProperty :BWMD_00317 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_double_value
+cco:has_double_value owl:equivalentProperty :BWMD_00314 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value
+cco:has_integer_value owl:equivalentProperty :BWMD_00316 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value
+cco:has_text_value owl:equivalentProperty :BWMD_00313 .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00312
+:BWMD_00312 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00313 ;
+            rdfs:domain :BWMD_00010 ;
+            rdfs:range xsd:string ;
+            obo:IAO_0000116 "is obsolete! use relation has measurement unit use annotation property SI unit label" ;
+            rdfs:label "obsolete hasUnitSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00313
+:BWMD_00313 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:range xsd:string ;
+            rdfs:label "obsolete hasStringLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00314
+:BWMD_00314 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:label "obsolete hasDoubleLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00315
+:BWMD_00315 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:label "obsolete hasValue" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[255,128,0], \"lw\":0.75}" .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00316
+:BWMD_00316 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:label "obsolete hasIntegerLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00317
+:BWMD_00317 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:range xsd:float ;
+            rdfs:label "obsolete hasRealLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00318
+:BWMD_00318 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00313 ;
+            rdfs:range xsd:string ;
+            obo:IAO_0000116 "is obsolet! use relation is element" ;
+            rdfs:label "obsolete refersToElementSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class ;
+                owl:equivalentClass :BWMD_00017 .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000019
+obo:BFO_0000019 rdf:type owl:Class ;
+                <https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat> "{\"ic\":[218,218,218], \"sym\":[16], \"tc\":[0,0,0], \"iw\":0.8}" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000024
+obo:BFO_0000024 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+obo:BFO_0000029 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000030
+obo:BFO_0000030 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000031
+obo:BFO_0000031 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000141
+obo:BFO_0000141 rdf:type owl:Class .
+
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Block
+pte:Block rdfs:subClassOf :BWMD_00021 ;
+          rdfs:label "Periodic Table Block" .
+
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Classification
+pte:Classification rdfs:subClassOf :BWMD_00021 ;
+                   rdfs:label "Periodic Table Classification" .
+
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Element
+pte:Element owl:equivalentClass :BWMD_00105 ;
+            rdfs:subClassOf :BWMD_00021 ;
+            obo:IAO_0000118 "Element" ;
+            rdfs:label "Periodic Table Element" .
+
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Group
+pte:Group rdfs:subClassOf :BWMD_00021 ;
+          rdfs:label "Periodic Table Group" .
+
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Period
+pte:Period rdfs:subClassOf :BWMD_00021 ;
+           rdfs:label "Periodic Table Period" .
+
+
+###  http://www.daml.org/2003/01/periodictable/PeriodicTable#StandardState
+pte:StandardState rdfs:subClassOf :BWMD_00021 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/AbbreviatedName
+cco:AbbreviatedName owl:equivalentClass :BWMD_00245 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfArtifactModification
+cco:ActOfArtifactModification owl:equivalentClass :BWMD_00235 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfEstimation
+cco:ActOfEstimation owl:equivalentClass :BWMD_00310 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfManufacturing
+cco:ActOfManufacturing owl:equivalentClass :BWMD_00117 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfOfficialDocumentation
+cco:ActOfOfficialDocumentation owl:equivalentClass :BWMD_00234 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Amount
+cco:Amount owl:equivalentClass :BWMD_00143 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ArbitraryIdentifier
+cco:ArbitraryIdentifier owl:equivalentClass :BWMD_00071 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier
+cco:ArtifactIdentifier owl:equivalentClass :BWMD_00001 ,
+                                           :BWMD_00028 ,
+                                           :BWMD_00178 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CartesianCoordinateSystem
+cco:CartesianCoordinateSystem owl:equivalentClass :BWMD_00273 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Density
+cco:Density owl:equivalentClass :BWMD_00141 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName
+cco:DesignativeName owl:equivalentClass :BWMD_00029 ,
+                                        :BWMD_00087 ,
+                                        :BWMD_00199 ,
+                                        :BWMD_00241 ,
+                                        :BWMD_00306 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Diameter
+cco:Diameter owl:equivalentClass :BWMD_00129 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Facility
+cco:Facility owl:equivalentClass :BWMD_00027 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Force
+cco:Force owl:equivalentClass :BWMD_00033 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Frequency
+cco:Frequency owl:equivalentClass :BWMD_00146 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity
+cco:InformationContentEntity owl:equivalentClass :BWMD_00012 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Length
+cco:Length owl:equivalentClass :BWMD_00127 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Mass
+cco:Mass owl:equivalentClass :BWMD_00224 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnit
+cco:MeasurementUnit owl:equivalentClass :BWMD_00094 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfAngle
+cco:MeasurementUnitOfAngle owl:equivalentClass :BWMD_00098 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfArea
+cco:MeasurementUnitOfArea owl:equivalentClass :BWMD_00286 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfTime
+cco:MeasurementUnitOfTime owl:equivalentClass :BWMD_00030 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier
+cco:NonNameIdentifier owl:equivalentClass :BWMD_00040 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Power
+cco:Power owl:equivalentClass :BWMD_00149 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Pressure
+cco:Pressure owl:equivalentClass :BWMD_00158 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessBeginning
+cco:ProcessBeginning owl:equivalentClass :BWMD_00037 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessEnding
+cco:ProcessEnding owl:equivalentClass :BWMD_00066 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/RatioMeasurementInformationContentEntity
+cco:RatioMeasurementInformationContentEntity owl:equivalentClass :BWMD_00231 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Second
+cco:Second owl:equivalentClass :BWMD_00208 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Temperature
+cco:Temperature owl:equivalentClass :BWMD_00266 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/TimeOfDay
+cco:TimeOfDay owl:equivalentClass :BWMD_00122 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Velocity
+cco:Velocity owl:equivalentClass :BWMD_00165 .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00001
+:BWMD_00001 rdf:type owl:Class ;
+            rdfs:label "obsolete Identifier" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00002
+:BWMD_00002 rdf:type owl:Class ;
+            obo:IAO_0000116 "Pourly defined! Nealy any material is or can be manipulated or arragend to another." ;
+            rdfs:label "obsolete EngineeringMaterial" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00003
+:BWMD_00003 rdf:type owl:Class ;
+            rdfs:label "obsolete Temporal Data Set" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00004
+:BWMD_00004 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Agent ;
+            cco:definition "An  Agent which is designated by a Name. More Complex Definition see definition source..." ;
+            cco:definition_source "https://en.wikipedia.org/wiki/Person" ;
+            rdfs:label "Person"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00005
+:BWMD_00005 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingEntity ;
+            rdfs:comment "Some kind of field data (tables, columns, matrices...)" ;
+            rdfs:label "FieldData"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00006
+:BWMD_00006 rdf:type owl:Class ;
+            obo:IAO_0000116 "is not a quality" ;
+            rdfs:label "obsolete SpecificTextualInput" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00007
+:BWMD_00007 rdf:type owl:Class ;
+            rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+            rdfs:label "StructuralInfo"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00008
+:BWMD_00008 rdf:type owl:Class ;
+            rdfs:subClassOf cco:PlanSpecification ;
+            rdfs:label "Regulation"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00009
+:BWMD_00009 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00068 ;
+            rdfs:comment "A set of parameters, that is used to control a process. Those are usually quantities of type \"as supposed\"." ;
+            rdfs:label "Process Parameter Set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00010
+:BWMD_00010 rdf:type owl:Class ;
+            rdfs:comment "Physikalische und nichtphysikalische Größen" ;
+            rdfs:label "obsolete Quantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00011
+:BWMD_00011 rdf:type owl:Class ;
+            rdfs:label "obsolete QuantityKind" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00012
+:BWMD_00012 rdf:type owl:Class ;
+            rdfs:comment "Any kind of information content entity (e.g. files, data sets...)" ;
+            rdfs:label "obsolete InformationContentEntity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00013
+:BWMD_00013 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            rdfs:label "Software"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00014
+:BWMD_00014 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Algorithm ;
+            rdfs:label "Physics Model"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00015
+:BWMD_00015 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete UnitSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00016
+:BWMD_00016 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete Unit" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00017
+:BWMD_00017 rdf:type owl:Class ;
+            obo:IAO_0000116 "can also be aa process data set, cause any process can be a partof another process or process aggregate" ;
+            rdfs:label "obsolete SubprocessSet" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00018
+:BWMD_00018 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00019 ;
+            rdfs:label "PostProcessing"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00019
+:BWMD_00019 rdf:type owl:Class ;
+            rdfs:subClassOf cco:ActOfPrediction ;
+            rdfs:label "Simulation"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00021
+:BWMD_00021 rdf:type owl:Class ;
+            rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+            obo:IAO_0000116 "We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier." ;
+            rdfs:label "Periodic Table Element Identifer"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00022
+:BWMD_00022 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingEntity ;
+            rdfs:label "Figure"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00023
+:BWMD_00023 rdf:type owl:Class ;
+            rdfs:comment "Any kind of specific data format, e.g. file types like .txt, .xls, .png, .pdf, ..." ;
+            rdfs:label "obsolete SpecificDataFormat" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00024
+:BWMD_00024 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationContentEntity ;
+            obo:IAO_0000116 "this should not be collections of information bearer, they are collections of other ICEs" ;
+            cco:definition "A collection of Information Content Entitys with the purpose to gather them in a particular context." ;
+            rdfs:comment "Any kind of data set" ;
+            rdfs:label "Data Set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00025
+:BWMD_00025 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionOther" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00026
+:BWMD_00026 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00008 ;
+            rdfs:label "Material Naming Convention"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00027
+:BWMD_00027 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            rdfs:label "Building"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00028
+:BWMD_00028 rdf:type owl:Class ;
+            rdfs:label "obsolete SpecimenName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00029
+:BWMD_00029 rdf:type owl:Class ;
+            rdfs:label "obsolete Name" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00030
+:BWMD_00030 rdf:type owl:Class ;
+            rdfs:label "obsolete s" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00031
+:BWMD_00031 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:label "DocumentFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00032
+:BWMD_00032 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingEntity ;
+            rdfs:label "File"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00033
+:BWMD_00033 rdf:type owl:Class ;
+            obo:IAO_0000116 "is not a quality its a process parameter" ;
+            rdfs:label "obsolete Force" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00035
+:BWMD_00035 rdf:type owl:Class ;
+            obo:IAO_0000116 "A Component is defined with the realtion is part of! And anything is a part of another thing. So its kind of pouly defined isnt it?"@en ;
+            rdfs:comment "Some kind of component" ;
+            rdfs:label "obsolete Component" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00036
+:BWMD_00036 rdf:type owl:Class ;
+            rdfs:label "obsolete TechnologicalProduct" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00037
+:BWMD_00037 rdf:type owl:Class ;
+            rdfs:label "obsolete StartDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00038
+:BWMD_00038 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00342 ;
+            rdfs:label "DateTime Cell"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00039
+:BWMD_00039 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00013 ;
+            rdfs:label "SoftwareTool"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00040
+:BWMD_00040 rdf:type owl:Class ;
+            obo:IAO_0000116 "is a kind of identifer"@en ;
+            rdfs:label "obsolete IDNumber" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00044
+:BWMD_00044 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Volume Ratio"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00045
+:BWMD_00045 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            rdfs:comment "Any kind of quantity, that describes the composition of materials" ;
+            rdfs:label "Material Composition"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00046
+:BWMD_00046 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:comment "Any kind of ZIP-File" ;
+            rdfs:label "ZIPFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00047
+:BWMD_00047 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete DerivedUnit" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00048
+:BWMD_00048 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            cco:definition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en ;
+            rdfs:label "Specimen"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00051
+:BWMD_00051 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionSS" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00052
+:BWMD_00052 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionJIS" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00053
+:BWMD_00053 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00005 ;
+            rdfs:comment "Any kind of two dimensional field data, e.g. an Excel sheet, a table..." ;
+            rdfs:label "TwoDimensionalFieldData"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00054
+:BWMD_00054 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            rdfs:comment "Consumables are products that consumers use recurrently, i.e., items which \"get used up\" or discarded." ;
+            rdfs:label "Consumable"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00055
+:BWMD_00055 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000029 ;
+            rdfs:comment "The location (a point) at which some quantity is measured" ;
+            rdfs:label "Measurement Location"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00056
+:BWMD_00056 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00120 ;
+            rdfs:comment "Measurement related fiat object part, e.g. measurement range or measurement location" ;
+            rdfs:label "Measurement Related Fiat Object Part"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00058
+:BWMD_00058 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000144 ;
+            rdfs:label "Voltage"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00059
+:BWMD_00059 rdf:type owl:Class ;
+            rdfs:subClassOf cco:IntentionalAct ;
+            rdfs:label "Act of Concluding"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00060
+:BWMD_00060 rdf:type owl:Class ;
+            owl:equivalentClass :BWMD_00133 ;
+            rdfs:label "obsolete CognitiveProcess" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00063
+:BWMD_00063 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00064 ;
+            rdfs:comment "The process of evaluating some kind of data" ;
+            rdfs:label "DataEvaluation"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00064
+:BWMD_00064 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000015 ;
+            rdfs:label "DataTransformation"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00065
+:BWMD_00065 rdf:type owl:Class ;
+            rdfs:comment "Date and time at the end of a process" ;
+            rdfs:label "obsolete ProcessEndDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00066
+:BWMD_00066 rdf:type owl:Class ;
+            rdfs:label "obsolete EndDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00067
+:BWMD_00067 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00068 ;
+            rdfs:comment "Any kind of raw data set. Raw data refers to the original data set." ;
+            rdfs:label "Raw Data Set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00068
+:BWMD_00068 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00024 ;
+            rdfs:comment "Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)" ;
+            rdfs:label "Process Data Set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00069
+:BWMD_00069 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Weight Ratio"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00070
+:BWMD_00070 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            rdfs:label "Equipment"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00071
+:BWMD_00071 rdf:type owl:Class ;
+            rdfs:label "obsolete SoftwareVersion" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00072
+:BWMD_00072 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00073 ;
+            rdfs:label "ProcessSetup"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00073
+:BWMD_00073 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00024 ;
+            rdfs:label "ObjectSet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00078
+:BWMD_00078 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
+            rdfs:label "Abstract"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00079
+:BWMD_00079 rdf:type owl:Class ;
+            obo:IAO_0000116 "no need for the class equivilent of data property rdfs:literal" ;
+            rdfs:label "obsolete Literal" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00080
+:BWMD_00080 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00024 ;
+            rdfs:comment "A data set containing material specific data" ;
+            rdfs:label "Material Data Set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00081
+:BWMD_00081 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00082 ;
+            rdfs:label "PNGImage"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00082
+:BWMD_00082 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00022 ;
+            rdfs:label "Image"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00083
+:BWMD_00083 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00084 ;
+            rdfs:label "Industry Project"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00084
+:BWMD_00084 rdf:type owl:Class ;
+            rdfs:subClassOf cco:PlanSpecification ;
+            rdfs:label "Project"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00086
+:BWMD_00086 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            obo:IAO_0000116 "Shouldnt that be more specific?" ;
+            rdfs:label "Energy"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00087
+:BWMD_00087 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is the deginative Name of a Organisation." ;
+            rdfs:comment "Name of the producer of any kind of product" ;
+            rdfs:label "obsolete ProducerName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00088
+:BWMD_00088 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Atomic Fraction"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00089
+:BWMD_00089 rdf:type owl:Class ;
+            rdfs:label "obsolete BaseQuantityKind" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00091
+:BWMD_00091 rdf:type owl:Class ;
+            rdfs:label "obsolete AmountOfSubstance" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00092
+:BWMD_00092 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00013 ;
+            rdfs:label "SimulationSoftware"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00093
+:BWMD_00093 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Weight Concentration"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00094
+:BWMD_00094 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete BaseUnit" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00097
+:BWMD_00097 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00019 ;
+            rdfs:label "SimulationStep"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00098
+:BWMD_00098 rdf:type owl:Class ;
+            rdfs:label "obsolete Angle" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00099
+:BWMD_00099 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00100 ;
+            rdfs:comment "A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)" ;
+            rdfs:label "PlanarImageSet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00100
+:BWMD_00100 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00024 ;
+            rdfs:comment "A set of images" ;
+            rdfs:label "ImageSet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00101
+:BWMD_00101 rdf:type owl:Class ;
+            obo:IAO_0000116 "unspecific, what quality can a speciman have that a actifact can not?" ;
+            rdfs:label "obsolete SpecimenRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00102
+:BWMD_00102 rdf:type owl:Class ;
+            rdfs:label "obsolete StructuralQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00104
+:BWMD_00104 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00053 ;
+            rdfs:comment "An excel sheet" ;
+            rdfs:label "ExcelSheet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00105
+:BWMD_00105 rdf:type owl:Class ;
+            rdfs:comment "Symbol of a chemical element (e.g. H for hydrogen, Si for silicon Al for Aluminium, Fe for iron)" ;
+            rdfs:label "obsolete ChemicalElementSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00106
+:BWMD_00106 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            rdfs:label "Electric Capacitance"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00109
+:BWMD_00109 rdf:type owl:Class ;
+            rdfs:label "obsolete TemperatureRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00110
+:BWMD_00110 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Magnetic ;
+            rdfs:label "MagneticFlux"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00111
+:BWMD_00111 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:comment "An input file is a file with no specific file ending, that is used as input for a simulation" ;
+            rdfs:label "InputFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00112
+:BWMD_00112 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00082 ;
+            rdfs:label "JPGImage"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00114
+:BWMD_00114 rdf:type owl:Class ;
+            obo:IAO_0000116 "Pourly defined! Nearly any object is or can be manipulated or arragend to another." ,
+                            "definitions dont work well with artifact Ontologie" ;
+            rdfs:label "obsolete Engineering Object" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00115
+:BWMD_00115 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            rdfs:label "SpecificHeatCapacity"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00117
+:BWMD_00117 rdf:type owl:Class ;
+            rdfs:label "obsolete Manufacturing" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00118
+:BWMD_00118 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionUNS" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00119
+:BWMD_00119 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00120 ;
+            rdfs:label "Material Nano Structure"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00120
+:BWMD_00120 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000024 ;
+            rdfs:label "Material Structure"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00121
+:BWMD_00121 rdf:type owl:Class ;
+            obo:IAO_0000116 "not a quantity, formats are information bearers classes" ;
+            rdfs:label "obsolete FormatDescription" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00122
+:BWMD_00122 rdf:type owl:Class ;
+            obo:IAO_0000116 "This is not a quality. Time is descripte relational or as interval." ;
+            rdfs:label "obsolete Time" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00124
+:BWMD_00124 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Ratio Of Substances"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00126
+:BWMD_00126 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Volume Concentration"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00127
+:BWMD_00127 rdf:type owl:Class ;
+            rdfs:label "obsolete Length" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00128
+:BWMD_00128 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            rdfs:label "Electrical Conductance"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00129
+:BWMD_00129 rdf:type owl:Class ;
+            rdfs:label "obsolete Diameter" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00130
+:BWMD_00130 rdf:type owl:Class ;
+            rdfs:label "obsolete GeneralGeometricQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00131
+:BWMD_00131 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00132 ;
+            rdfs:label "Atom"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00132
+:BWMD_00132 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000030 ;
+            rdfs:label "Matter Object"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00133
+:BWMD_00133 rdf:type owl:Class ;
+            rdfs:subClassOf cco:IntentionalAct ;
+            obo:IAO_0000116 "Not quite sure about this..." ;
+            rdfs:label "Act of Analysing"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00135
+:BWMD_00135 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00136 ;
+            rdfs:label "ChemicalComposition"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00136
+:BWMD_00136 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00007 ;
+            rdfs:label "MaterialStructureInfo"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00137
+:BWMD_00137 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00024 ;
+            rdfs:comment "Metadata set included in images. E.g. microscopes write the process specific metadata into the image file." ;
+            rdfs:label "ImageMetadataSet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00138
+:BWMD_00138 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00068 ;
+            rdfs:comment "Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file." ;
+            rdfs:label "Analysed Data Set"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00139
+:BWMD_00139 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Weight Fraction"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00140
+:BWMD_00140 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
+            rdfs:comment "A descriptive text" ;
+            rdfs:label "Description"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00141
+:BWMD_00141 rdf:type owl:Class ;
+            rdfs:comment "Density: Mass/Volume" ;
+            rdfs:label "obsolete Density" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00142
+:BWMD_00142 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Amount ;
+            rdfs:label "Number"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00143
+:BWMD_00143 rdf:type owl:Class ;
+            rdfs:label "obsolete Amount" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00144
+:BWMD_00144 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000016 ;
+            rdfs:label "Electric Charge"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00146
+:BWMD_00146 rdf:type owl:Class ;
+            rdfs:label "obsolete Frequency" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00147
+:BWMD_00147 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00005 ;
+            rdfs:comment "Any kind of three dimensional field data" ;
+            rdfs:label "ThreeDimensionalFieldData"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00148
+:BWMD_00148 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00120 ;
+            rdfs:label "Material Microstructure"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00149
+:BWMD_00149 rdf:type owl:Class ;
+            rdfs:label "obsolete Power" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00150
+:BWMD_00150 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00151 ;
+            rdfs:label "GeneralExperimentRelatedProcess"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00151
+:BWMD_00151 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000015 ;
+            rdfs:label "Experiment"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00153
+:BWMD_00153 rdf:type owl:Class ;
+            rdfs:label "obsolete Volume" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00157
+:BWMD_00157 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00031 ;
+            rdfs:label "DOCXFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00158
+:BWMD_00158 rdf:type owl:Class ;
+            rdfs:label "obsolete Pressure" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00160
+:BWMD_00160 rdf:type owl:Class ;
+            rdfs:subClassOf cco:IntentionalAct ;
+            rdfs:label "Act of Summarising"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00162
+:BWMD_00162 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
+            rdfs:label "Conclusion"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00163
+:BWMD_00163 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00164 ;
+            rdfs:label "SpecimenGeometryParameter"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00164
+:BWMD_00164 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00007 ;
+            rdfs:comment "Data set containing geometric information content" ;
+            rdfs:label "GeometryInfo"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00165
+:BWMD_00165 rdf:type owl:Class ;
+            rdfs:label "obsolete Velocity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00166
+:BWMD_00166 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00013 ;
+            rdfs:comment "Machine specific software, e.g. used to control the process or acquire data" ;
+            rdfs:label "MachineSoftware"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00167
+:BWMD_00167 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Facility ;
+            rdfs:comment "A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing..." ;
+            rdfs:label "Mechanical Workshop"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00168
+:BWMD_00168 rdf:type owl:Class ;
+            obo:IAO_0000116 "too unspecific" ;
+            rdfs:label "obsolete MicrostructuralQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00169
+:BWMD_00169 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00170 ;
+            rdfs:label "InfrastructureEquipmentSet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00170
+:BWMD_00170 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00073 ;
+            rdfs:label "EquipmentSet"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00171
+:BWMD_00171 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00013 ;
+            rdfs:label "Control Software"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00172
+:BWMD_00172 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionAFNOR" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00174
+:BWMD_00174 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionBS" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00178
+:BWMD_00178 rdf:type owl:Class ;
+            obo:IAO_0000116 "is an artifact identifer"@en ;
+            rdfs:comment "Name of a consumable" ;
+            rdfs:label "obsolete Consumable Name" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00179
+:BWMD_00179 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00136 ;
+            rdfs:label "MaterialSurfaceStructureInfo"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00180
+:BWMD_00180 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:comment "Is the base element of a chemical composition, e.g. Ni in Ni-alloys, Al in Al-alloys." ;
+            rdfs:label "Base Element Of Composition"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00181
+:BWMD_00181 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00084 ;
+            rdfs:label "Public Project"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00184
+:BWMD_00184 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00064 ;
+            rdfs:label "Interpolation"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00185
+:BWMD_00185 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Amount Of Substance Quantity"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00186
+:BWMD_00186 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00008 ;
+            rdfs:label "Procedure"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00187
+:BWMD_00187 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000015 ;
+            rdfs:label "Event"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00188
+:BWMD_00188 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00019 ;
+            rdfs:label "PreProcessing"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00189
+:BWMD_00189 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000144 ;
+            rdfs:label "Electric Current"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00190
+:BWMD_00190 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Amount ;
+            rdfs:label "NumberFraction"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00192
+:BWMD_00192 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00031 ;
+            rdfs:label "Report"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00193
+:BWMD_00193 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00022 ;
+            rdfs:label "Diagram"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00194
+:BWMD_00194 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00064 ;
+            rdfs:comment "The process of exporting data (e.g. from a output file generated by some simulation software)" ;
+            rdfs:label "DataExport"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00196
+:BWMD_00196 rdf:type owl:Class ;
+            rdfs:label "obsolete Resistance" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00197
+:BWMD_00197 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00198 ;
+            rdfs:label "STEPFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00198
+:BWMD_00198 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:label "CADFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00199
+:BWMD_00199 rdf:type owl:Class ;
+            rdfs:label "obsolete PersonName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00201
+:BWMD_00201 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionENMaterialNumber" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00202
+:BWMD_00202 rdf:type owl:Class ;
+            obo:IAO_0000116 "Pourly defined class! What is it tempurally site where a artifact is. Sound like the english counterpart of a fraunhofer noun." ;
+            rdfs:comment "A site related to a technological product" ;
+            rdfs:label "obsolete TechnologicalProductRelatedSite" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00203
+:BWMD_00203 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000030 ;
+            rdfs:label "MaterialStructureRelatedObject"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00206
+:BWMD_00206 rdf:type owl:Class ;
+            rdfs:label "obsolete TimeRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00207
+:BWMD_00207 rdf:type owl:Class ;
+            obo:IAO_0000116 "not a quantity, beeing a consumable is a artifact function" ;
+            rdfs:comment "A structural quantity related to some kind of consumable" ;
+            rdfs:label "obsolete ConsumableRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00208
+:BWMD_00208 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete Second" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00209
+:BWMD_00209 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00092 ;
+            rdfs:comment "Software used for preprocessing" ;
+            rdfs:label "PreprocessingSoftware"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00213
+:BWMD_00213 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:label "CSVFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00214
+:BWMD_00214 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            rdfs:label "Luminous Intensity"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00215
+:BWMD_00215 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00064 ;
+            rdfs:label "DataReduction"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00216
+:BWMD_00216 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionENShortName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00218
+:BWMD_00218 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00005 ;
+            rdfs:comment "Any kind of one dimensional field data" ;
+            rdfs:label "OneDimensionalFieldData"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00224
+:BWMD_00224 rdf:type owl:Class ;
+            rdfs:label "obsolete Mass" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00226
+:BWMD_00226 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00136 ;
+            rdfs:label "MaterialVolumeStructureInfo"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00230
+:BWMD_00230 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00120 ;
+            rdfs:label "Material Structure Related Fiat Object Part"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00231
+:BWMD_00231 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is not a quality its a unit" ;
+            rdfs:label "obsolete DimensionlessRatio" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00233
+:BWMD_00233 rdf:type owl:Class ;
+            obo:IAO_0000116 "isnt that a quantity kind?" ;
+            rdfs:label "obsolete MechanicalQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00234
+:BWMD_00234 rdf:type owl:Class ;
+            rdfs:label "obsolete Documenting" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00235
+:BWMD_00235 rdf:type owl:Class ;
+            obo:IAO_0000116 "unspecific! what is prepared and why? If i prepare myself then this can be an Act of Planning. If a speciment is prepared this must be an Act of Artifact Processing" ;
+            rdfs:label "obsolete Preparation" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00236
+:BWMD_00236 rdf:type owl:Class ;
+            obo:IAO_0000116 "Very undetermined! Coincedent with Region of Interest? Its more scope of an investigation then an actual site on a object." ;
+            rdfs:comment """Measurement range: The area/volume in which the measurement
+is performed.""" ;
+            rdfs:label "obsolete MeasurementRange" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00240
+:BWMD_00240 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:label "XLSFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00241
+:BWMD_00241 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is the desinative Name of a Software instance." ;
+            rdfs:label "obsolete SoftwareName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00242
+:BWMD_00242 rdf:type owl:Class ;
+            rdfs:subClassOf cco:PlanSpecification ;
+            rdfs:comment "A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)" ;
+            rdfs:label "Withdrawal Plan"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00243
+:BWMD_00243 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
+            rdfs:label "Comment"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00244
+:BWMD_00244 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000029 ;
+            rdfs:label "Region Of Interest"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00245
+:BWMD_00245 rdf:type owl:Class ;
+            obo:IAO_0000116 "This is the designative name of a plan." ;
+            rdfs:comment "Name of a procedure (e.g. norm, standard, internal procedure)" ;
+            rdfs:label "obsolete ProcedureName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00248
+:BWMD_00248 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00013 ;
+            rdfs:label "Data Acquisition Software"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00249
+:BWMD_00249 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00120 ;
+            rdfs:label "Technological Product Related Fiat Object Part"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00253
+:BWMD_00253 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Concentration Of Substance"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00254
+:BWMD_00254 rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
+            rdfs:label "Summary"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00258
+:BWMD_00258 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00031 ;
+            rdfs:label "PDFFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00261
+:BWMD_00261 rdf:type owl:Class ;
+            rdfs:comment "Date and time at the start of a process" ;
+            rdfs:label "obsolete ProcessStartDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00264
+:BWMD_00264 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionGOST" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00266
+:BWMD_00266 rdf:type owl:Class ;
+            rdfs:label "obsolete Temperature" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00268
+:BWMD_00268 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00120 ;
+            rdfs:label "Material Meso Structure"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00269
+:BWMD_00269 rdf:type owl:Class ;
+            owl:equivalentClass :BWMD_00276 ;
+            rdfs:label "obsolete Fraction" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00270
+:BWMD_00270 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00271 ;
+            rdfs:label "SI Unit"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00271
+:BWMD_00271 rdf:type owl:Class ;
+            rdfs:subClassOf cco:ReferenceSystem ;
+            rdfs:label "System Of Units"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00272
+:BWMD_00272 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:comment "Windows Media-Audio/-Video file" ;
+            rdfs:label "WMVFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00273
+:BWMD_00273 rdf:type owl:Class ;
+            obo:IAO_0000116 "shouldnt be here - is connected to a spatial regian and therfor no specifically dependent continuant" ;
+            rdfs:comment "Cartesian coordinates (e.g. x, y, z)" ;
+            rdfs:label "obsolete CartesianCoordinate" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00274
+:BWMD_00274 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00064 ;
+            rdfs:label "Extrapolation"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00275
+:BWMD_00275 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00013 ;
+            rdfs:label "SoftwareScript"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00276
+:BWMD_00276 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00045 ;
+            rdfs:label "Volume Fraction"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00277
+:BWMD_00277 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00278 ;
+            rdfs:label "Molecule"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00278
+:BWMD_00278 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00132 ;
+            rdfs:label "Cluster"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00280
+:BWMD_00280 rdf:type owl:Class ;
+            obo:IAO_0000116 "If it is a Object Aggregate with a name then the Instance will have with class Object Aggregate with a designative name." ;
+            rdfs:comment "Name of a specific object aggregate" ;
+            rdfs:label "obsolete ObjectAggregateName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00281
+:BWMD_00281 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00032 ;
+            rdfs:label "TXTFile"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00283
+:BWMD_00283 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00008 ;
+            rdfs:label "ISOStandard"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00284
+:BWMD_00284 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00072 ;
+            rdfs:label "TestSetup"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00285
+:BWMD_00285 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00082 ;
+            rdfs:label "TIFFImage"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00286
+:BWMD_00286 rdf:type owl:Class ;
+            rdfs:label "obsolete Area" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00287
+:BWMD_00287 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00218 ;
+            rdfs:comment "A column (e.g. in a table)" ;
+            rdfs:label "Column"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00289
+:BWMD_00289 rdf:type owl:Class ;
+            obo:IAO_0000116 "If it is a Equipment with a name then the Instance will have with class Object Aggregate with a designative name" ;
+            rdfs:comment "Name of an equipment" ;
+            rdfs:label "obsolete Equipment Name" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00292
+:BWMD_00292 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00100 ;
+            rdfs:comment "A series of images, that form a vertical stack (e.g. a series of images generated by tomography)." ;
+            rdfs:label "ImageStack"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00296
+:BWMD_00296 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            rdfs:label "Software Architecture"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00297
+:BWMD_00297 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00031 ;
+            rdfs:label "Publication"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00298
+:BWMD_00298 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000016 ;
+            rdfs:label "Concentration"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00299
+:BWMD_00299 rdf:type owl:Class ;
+            obo:IAO_0000116 "is definatly not a quality, more a information content entity" ;
+            rdfs:label "obsolete Ratio" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00302
+:BWMD_00302 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionAISI" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00303
+:BWMD_00303 rdf:type owl:Class ;
+            obo:IAO_0000116 "If it is a Fiat Object Part, then it must be a subclass of fiat object part and not an instance of an other class." ;
+            rdfs:comment "Name of a fiat object part" ;
+            rdfs:label "obsolete FiatObjectPartName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00304
+:BWMD_00304 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00053 ;
+            rdfs:comment "Any kind of table" ;
+            rdfs:label "Table"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00306
+:BWMD_00306 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is the designative Name of a Project" ;
+            rdfs:label "obsolete ProjectName" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00307
+:BWMD_00307 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000019 ;
+            rdfs:label "NumberDensity"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00308
+:BWMD_00308 rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000029 ;
+            rdfs:label "Material Defect"@en .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00310
+:BWMD_00310 rdf:type owl:Class ;
+            rdfs:label "obsolete ProcessEvaluation" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00342
+:BWMD_00342 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00343 ;
+            rdfs:label "Cell"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00343
+:BWMD_00343 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00005 ;
+            rdfs:label "Zero Dimensional Field Data"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00004
+:PLC_00004 rdf:type owl:Class ;
+           rdfs:subClassOf cco:CodeIdentifier ;
+           cco:definition "A number designating a particular form of something that is slightly different from other forms of the same thing."@en ;
+           rdfs:label "Version Number"@de .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00001
+:PLC_00001 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "AFNOR"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00002
+:PLC_00002 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "AISI"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00003
+:PLC_00003 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "BS"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00005
+:PLC_00005 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "EN Material Number"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00006
+:PLC_00006 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "EN Short Name"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00007
+:PLC_00007 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "GOST"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00008
+:PLC_00008 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "JIS"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00009
+:PLC_00009 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "Material_Naming_Convention_Other"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00010
+:PLC_00010 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "SS"@de .
+
+
+###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00011
+:PLC_00011 rdf:type owl:NamedIndividual ,
+                    :BWMD_00026 ;
+           rdfs:label "UNS"@de .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+obo:BFO_0000002 <https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat> "{\"ic\":[70,130,180], \"iw\":0.8}" .
+
+
+obo:BFO_0000003 <https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat> "{\"ic\":[28,158,113], \"iw\":0.8}" .
+
+
+obo:BFO_0000051 <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":0.75}" .
+
+
+cco:SpatialOrientation cco:alternative_label "Angle" .
+
+
+cco:Strength obo:IAO_0000118 "Resistance" .
+
+
+cco:has_output <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
+
+
+cco:is_input_of <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[67,129,191], \"lw\":1.25}" .
+
+
+cco:process_precedes <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
