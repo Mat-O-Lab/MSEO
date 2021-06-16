@@ -1,6 +1,6 @@
 # workflow to submit new release to matport.org
 
-name: CI
+name: Submit_to_Matportal
 
 # Controls when the action will run. 
 on:
