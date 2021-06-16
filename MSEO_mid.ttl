@@ -13,7 +13,7 @@
 <https://www.materials.fraunhofer.de/ontologies/MSEO/mid> rdf:type owl:Ontology ;
                                                            owl:versionIRI <https://gitlab.cc-asp.fraunhofer.de/EMI_datamanagement/bwmd_ontology/-/raw/migration_to_cco/MSEO_mid.owl> ;
                                                            owl:imports <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> ,
-                                                                       <http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/AllCoreOntology> ,
+                                                                       <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl> ,
                                                                        <https://gitlab.cc-asp.fraunhofer.de/iwm-hub/mdbw_rdf/-/raw/master/gd.owl> ;
                                                            rdfs:comment """Contact:
 Christoph Schweizer
