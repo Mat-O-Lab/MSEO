@@ -8,40 +8,39 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://www.materials.fraunhofer.de/ontologies/MSEO/mid> .
+@base <https://purl.matolab.org/mseo/mid> .
 
-<https://www.materials.fraunhofer.de/ontologies/MSEO/mid> rdf:type owl:Ontology ;
-                                                           owl:versionIRI <https://gitlab.cc-asp.fraunhofer.de/EMI_datamanagement/bwmd_ontology/-/raw/migration_to_cco/MSEO_mid.owl> ;
-                                                           owl:imports <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> ,
-                                                                       <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl> ,
-                                                                       <https://gitlab.cc-asp.fraunhofer.de/iwm-hub/mdbw_rdf/-/raw/master/gd.owl> ;
-                                                           rdfs:comment """Contact:
+<https://purl.matolab.org/mseo/mid> rdf:type owl:Ontology ;
+                                     owl:imports <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> ,
+                                                 <https://gitlab.cc-asp.fraunhofer.de/iwm-hub/mdbw_rdf/-/raw/master/gd.owl> ,
+                                                 <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl> ;
+                                     rdfs:comment """Contact:
 Christoph Schweizer
 Fraunhofer-Institut für Werkstoffmechanik IWM
 Wöhlerstraße 11, 79108 Freiburg
 christoph.schweizer@iwm.fraunhofer.de"""@de ,
-                                                                        """Contact:
+                                                  """Contact:
 Martin Huschka 
 Fraunhofer Institute for High-Speed Dynamics , Ernst-Mach-Institut, EMI
 Ernst-Zermelo-Strasse 4, 79104 Freiburg , Germany
 Martin.Huschka@EMI.Fraunhofer.de"""@de ,
-                                                                        """Contact:
+                                                  """Contact:
 Philipp von Hartrott
 Fraunhofer-Institut für Werkstoffmechanik IWM
 Wöhlerstraße 11, 79108 Freiburg
 philipp.von.hartrott@iwm.fraunhofer.de"""@de ,
-                                                                        """Contact:
+                                                  """Contact:
 Thomas Hanke
 Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen IMWS
 Walter-Hülse-Strasse 1, 06120 Halle (Saale)
 thomas.hanke@imws.fraunhofer.de"""@de ,
-                                                                        "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
-                                                           owl:priorVersion "BWMD_mid"@de ;
-                                                           :BWMD_00834 "Christoph Schweizer (Fraunhofer IWM)"@de ;
-                                                           :BWMD_00835 "Martin Huschka (Fraunhofer EMI)"@en ,
-                                                                       "Philipp von Hartrott (Fraunhofer IWM)"@en ,
-                                                                       "Simon Stier (Fraunhofer ISC)"@en ,
-                                                                       "Thomas Hanke (Fraunhofer IMWS)"@en .
+                                                  "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
+                                     owl:priorVersion "BWMD_mid"@de ;
+                                     :BWMD_00834 "Christoph Schweizer (Fraunhofer IWM)"@de ;
+                                     :BWMD_00835 "Martin Huschka (Fraunhofer EMI)"@en ,
+                                                 "Philipp von Hartrott (Fraunhofer IWM)"@en ,
+                                                 "Simon Stier (Fraunhofer ISC)"@en ,
+                                                 "Thomas Hanke (Fraunhofer IMWS)"@en .
 
 #################################################################
 #    Annotation properties
