@@ -417,6 +417,31 @@ cco:has_integer_value owl:equivalentProperty :BWMD_00316 .
 cco:has_text_value owl:equivalentProperty :BWMD_00313 .
 
 
+###  https://purl.matolab.org/mseo/mid/has_column_index
+<https://purl.matolab.org/mseo/mid/has_column_index> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf cco:has_integer_value ;
+                                                     rdfs:domain <https://purl.matolab.org/mseo/mid/Information_Field> ;
+                                                     rdfs:range xsd:integer ;
+                                                     rdfs:label "has column index" .
+
+
+###  https://purl.matolab.org/mseo/mid/has_row_index
+<https://purl.matolab.org/mseo/mid/has_row_index> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:subPropertyOf cco:has_integer_value ;
+                                                  rdfs:domain cco:InformationLine ;
+                                                  rdfs:range xsd:integer ;
+                                                  rdfs:label "has row index"^^rdfs:Literal .
+
+
+###  https://purl.matolab.org/mseo/mid/has_separator_string
+<https://purl.matolab.org/mseo/mid/has_separator_string> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf cco:has_text_value ;
+                                                         rdfs:domain cco:InformationBearingArtifact ;
+                                                         rdfs:range xsd:string ;
+                                                         cco:definition "A string by that a line of Informations can be separated into inividual fields." ;
+                                                         rdfs:label "has separator string" .
+
+
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00312
 :BWMD_00312 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BWMD_00313 ;
@@ -673,6 +698,13 @@ cco:TimeOfDay owl:equivalentClass :BWMD_00122 .
 cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 
+###  https://purl.matolab.org/mseo/mid/Information_Field
+<https://purl.matolab.org/mseo/mid/Information_Field> rdf:type owl:Class ;
+                                                      rdfs:subClassOf cco:InformationLine ;
+                                                      cco:definition "A Field in a Informations Line havving a row index and can have a column index property" ;
+                                                      rdfs:label "Information Field" .
+
+
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00001
 :BWMD_00001 rdf:type owl:Class ;
             rdfs:label "obsolete Identifier" ;
@@ -702,9 +734,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00005
 :BWMD_00005 rdf:type owl:Class ;
-            rdfs:subClassOf cco:InformationBearingEntity ;
             rdfs:comment "Some kind of field data (tables, columns, matrices...)" ;
-            rdfs:label "FieldData"@en .
+            rdfs:label "obsolete FieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00006
@@ -807,8 +839,8 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00022
 :BWMD_00022 rdf:type owl:Class ;
-            rdfs:subClassOf cco:InformationBearingEntity ;
-            rdfs:label "Figure"@en .
+            rdfs:label "obsolete Figure"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00023
@@ -871,7 +903,7 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00032
 :BWMD_00032 rdf:type owl:Class ;
-            rdfs:subClassOf cco:InformationBearingEntity ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
             rdfs:label "File"@en .
 
 
@@ -904,8 +936,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00038
 :BWMD_00038 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00342 ;
-            rdfs:label "DateTime Cell"@en .
+            rdfs:comment "In CCO Is a dataproperty connected to a temparal interval" ;
+            rdfs:label "obsolete DateTime Cell"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00039
@@ -969,9 +1002,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00053
 :BWMD_00053 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00005 ;
             rdfs:comment "Any kind of two dimensional field data, e.g. an Excel sheet, a table..." ;
-            rdfs:label "TwoDimensionalFieldData"@en .
+            rdfs:label "obsolete TwoDimensionalFieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00054
@@ -1106,14 +1139,14 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00081
 :BWMD_00081 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00082 ;
-            rdfs:label "PNGImage"@en .
+            rdfs:label "obsolete PNGImage"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00082
 :BWMD_00082 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00022 ;
-            rdfs:label "Image"@en .
+            rdfs:label "obsolete Image"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00083
@@ -1221,9 +1254,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00104
 :BWMD_00104 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00053 ;
             rdfs:comment "An excel sheet" ;
-            rdfs:label "ExcelSheet"@en .
+            rdfs:label "obsolete ExcelSheet"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00105
@@ -1260,8 +1293,8 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00112
 :BWMD_00112 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00082 ;
-            rdfs:label "JPGImage"@en .
+            rdfs:label "obsolete JPGImage"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00114
@@ -1443,9 +1476,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00147
 :BWMD_00147 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00005 ;
             rdfs:comment "Any kind of three dimensional field data" ;
-            rdfs:label "ThreeDimensionalFieldData"@en .
+            rdfs:label "obsolete ThreeDimensionalFieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00148
@@ -1619,8 +1652,8 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00187
 :BWMD_00187 rdf:type owl:Class ;
-            rdfs:subClassOf obo:BFO_0000015 ;
-            rdfs:label "Event"@en .
+            rdfs:label "obsolete Event"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00188
@@ -1649,8 +1682,8 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00193
 :BWMD_00193 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00022 ;
-            rdfs:label "Diagram"@en .
+            rdfs:label "obsolete Diagram"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00194
@@ -1758,9 +1791,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00218
 :BWMD_00218 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00005 ;
             rdfs:comment "Any kind of one dimensional field data" ;
-            rdfs:label "OneDimensionalFieldData"@en .
+            rdfs:label "obsolete OneDimensionalFieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00224
@@ -2004,8 +2037,8 @@ is performed.""" ;
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00285
 :BWMD_00285 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00082 ;
-            rdfs:label "TIFFImage"@en .
+            rdfs:label "obsolete TIFFImage"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00286
@@ -2016,9 +2049,10 @@ is performed.""" ;
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00287
 :BWMD_00287 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00218 ;
-            rdfs:comment "A column (e.g. in a table)" ;
-            rdfs:label "Column"@en .
+            rdfs:comment "A column (e.g. in a table)" ,
+                         "is done by dataproperty column index connected to Information Field" ;
+            rdfs:label "obsolete Column"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00289
@@ -2077,7 +2111,7 @@ is performed.""" ;
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00304
 :BWMD_00304 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00053 ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
             rdfs:comment "Any kind of table" ;
             rdfs:label "Table"@en .
 
@@ -2109,14 +2143,14 @@ is performed.""" ;
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00342
 :BWMD_00342 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00343 ;
-            rdfs:label "Cell"@de .
+            rdfs:label "obsolete Cell"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#BWMD_00343
 :BWMD_00343 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00005 ;
-            rdfs:label "Zero Dimensional Field Data"@de .
+            rdfs:label "obsolete Zero Dimensional Field Data"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#PLC_00004

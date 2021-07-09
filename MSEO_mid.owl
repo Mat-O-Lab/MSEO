@@ -101,6 +101,9 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI="obo:BFO_0000141"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/Information_Field"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI=":BWMD_00001"/>
     </Declaration>
     <Declaration>
@@ -848,6 +851,15 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <ObjectProperty abbreviatedIRI=":BWMD_00341"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="/has_column_index"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/has_row_index"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="/has_separator_string"/>
+    </Declaration>
+    <Declaration>
         <DataProperty abbreviatedIRI=":BWMD_00312"/>
     </Declaration>
     <Declaration>
@@ -909,474 +921,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Db"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cs"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cu"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cl"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Co"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cd"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ce"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Cf"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ca"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Br"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Bi"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Bk"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ba"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Be"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Bh"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ar"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:As"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:At"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Au"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Al"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Am"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ac"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ag"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Zr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Zn"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Yb"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Xe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_actinoid"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:f-block"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Tl"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Tm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Tc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Te"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Th"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ti"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ta"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Tb"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Sr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Sm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Sn"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Sb"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Sc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Se"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Sg"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Si"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ru"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Rn"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ra"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Rb"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Re"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Rf"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Rh"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Po"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pt"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pu"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pa"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pb"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Pd"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Os"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:No"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Np"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ne"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ni"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Na"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Nb"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:liquid"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Nd"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Mt"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Mn"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Mo"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Md"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Mg"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Lu"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Lr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Li"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:La"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Kr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ir"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:In"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ho"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Hs"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Hg"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:He"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Hf"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ga"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Gd"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Ge"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Fm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Fr"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Fe"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Eu"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Er"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Es"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Dy"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:W"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Y"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:O"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:P"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:S"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:U"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:V"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:H"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:I"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:K"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:N"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:B"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:C"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:F"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:solid"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Metallic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_17"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_16"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_15"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_14"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_13"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_12"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_11"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_10"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_18"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:d-block"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:gas"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:state_unknown"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uuq"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uuo"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uup"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uuu"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uus"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uut"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uuh"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uun"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Uub"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:p-block"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:s-block"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Non-metallic"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_9"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_8"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_6"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_5"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_7"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_2"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_1"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_4"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:period_3"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:group_lanthanoid"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI="pte:Semi-metallic"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:BFO_0000015"/>
@@ -1571,12 +1115,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00021"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00004"/>
-        <Class abbreviatedIRI="cco:Agent"/>
+        <Class IRI="/Information_Field"/>
+        <Class abbreviatedIRI="cco:InformationLine"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00005"/>
-        <Class abbreviatedIRI="cco:InformationBearingEntity"/>
+        <Class abbreviatedIRI=":BWMD_00004"/>
+        <Class abbreviatedIRI="cco:Agent"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00007"/>
@@ -1611,10 +1155,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI="cco:DesignativeInformationContentEntity"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00022"/>
-        <Class abbreviatedIRI="cco:InformationBearingEntity"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00024"/>
         <Class abbreviatedIRI="cco:InformationContentEntity"/>
     </SubClassOf>
@@ -1632,11 +1172,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00032"/>
-        <Class abbreviatedIRI="cco:InformationBearingEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00038"/>
-        <Class abbreviatedIRI=":BWMD_00342"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00039"/>
@@ -1657,10 +1193,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00048"/>
         <Class abbreviatedIRI="cco:Artifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00053"/>
-        <Class abbreviatedIRI=":BWMD_00005"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00054"/>
@@ -1723,14 +1255,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00024"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00081"/>
-        <Class abbreviatedIRI=":BWMD_00082"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00082"/>
-        <Class abbreviatedIRI=":BWMD_00022"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00083"/>
         <Class abbreviatedIRI=":BWMD_00084"/>
     </SubClassOf>
@@ -1767,10 +1291,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00024"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00104"/>
-        <Class abbreviatedIRI=":BWMD_00053"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00106"/>
         <Class abbreviatedIRI="obo:BFO_0000019"/>
     </SubClassOf>
@@ -1781,10 +1301,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00111"/>
         <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00112"/>
-        <Class abbreviatedIRI=":BWMD_00082"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00115"/>
@@ -1853,10 +1369,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00144"/>
         <Class abbreviatedIRI="obo:BFO_0000016"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00147"/>
-        <Class abbreviatedIRI=":BWMD_00005"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00148"/>
@@ -1935,10 +1447,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00008"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00187"/>
-        <Class abbreviatedIRI="obo:BFO_0000015"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00188"/>
         <Class abbreviatedIRI=":BWMD_00019"/>
     </SubClassOf>
@@ -1953,10 +1461,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00192"/>
         <Class abbreviatedIRI=":BWMD_00031"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00193"/>
-        <Class abbreviatedIRI=":BWMD_00022"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00194"/>
@@ -1989,10 +1493,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00215"/>
         <Class abbreviatedIRI=":BWMD_00064"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00218"/>
-        <Class abbreviatedIRI=":BWMD_00005"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00226"/>
@@ -2087,14 +1587,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00072"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00285"/>
-        <Class abbreviatedIRI=":BWMD_00082"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00287"/>
-        <Class abbreviatedIRI=":BWMD_00218"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00292"/>
         <Class abbreviatedIRI=":BWMD_00100"/>
     </SubClassOf>
@@ -2112,7 +1604,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00304"/>
-        <Class abbreviatedIRI=":BWMD_00053"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00307"/>
@@ -2121,14 +1613,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00308"/>
         <Class abbreviatedIRI="obo:BFO_0000029"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00342"/>
-        <Class abbreviatedIRI=":BWMD_00343"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00343"/>
-        <Class abbreviatedIRI=":BWMD_00005"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":PLC_00004"/>
@@ -2597,6 +2081,18 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <DataProperty abbreviatedIRI=":BWMD_00313"/>
     </EquivalentDataProperties>
     <SubDataPropertyOf>
+        <DataProperty IRI="/has_column_index"/>
+        <DataProperty abbreviatedIRI="cco:has_integer_value"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/has_row_index"/>
+        <DataProperty abbreviatedIRI="cco:has_integer_value"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="/has_separator_string"/>
+        <DataProperty abbreviatedIRI="cco:has_text_value"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
         <DataProperty abbreviatedIRI=":BWMD_00312"/>
         <DataProperty abbreviatedIRI=":BWMD_00313"/>
     </SubDataPropertyOf>
@@ -2625,9 +2121,33 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <DataProperty abbreviatedIRI=":BWMD_00313"/>
     </SubDataPropertyOf>
     <DataPropertyDomain>
+        <DataProperty IRI="/has_column_index"/>
+        <Class IRI="/Information_Field"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/has_row_index"/>
+        <Class abbreviatedIRI="cco:InformationLine"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="/has_separator_string"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty abbreviatedIRI=":BWMD_00312"/>
         <Class abbreviatedIRI=":BWMD_00010"/>
     </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="/has_column_index"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/has_row_index"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="/has_separator_string"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty abbreviatedIRI=":BWMD_00312"/>
         <Datatype abbreviatedIRI="xsd:string"/>
@@ -2725,6 +2245,36 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:1.75}</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:definition"/>
+        <IRI>/Information_Field</IRI>
+        <Literal>A Field in a Informations Line havving a row index and can have a column index property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Information_Field</IRI>
+        <Literal>Information Field</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/has_column_index</IRI>
+        <Literal>has column index</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/has_row_index</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2000/01/rdf-schema#Literal">has row index</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:definition"/>
+        <IRI>/has_separator_string</IRI>
+        <Literal>A string by that a line of Informations can be separated into inividual fields.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/has_separator_string</IRI>
+        <Literal>has separator string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00001</AbbreviatedIRI>
         <Literal>obsolete Identifier</Literal>
@@ -2782,7 +2332,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00005</AbbreviatedIRI>
-        <Literal xml:lang="en">FieldData</Literal>
+        <Literal>obsolete FieldData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00005</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -2937,7 +2492,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00022</AbbreviatedIRI>
-        <Literal xml:lang="en">Figure</Literal>
+        <Literal>obsolete Figure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00022</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3090,9 +2650,19 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:BWMD_00038</AbbreviatedIRI>
+        <Literal>In CCO Is a dataproperty connected to a temparal interval</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00038</AbbreviatedIRI>
-        <Literal xml:lang="en">DateTime Cell</Literal>
+        <Literal>obsolete DateTime Cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00038</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3192,7 +2762,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00053</AbbreviatedIRI>
-        <Literal xml:lang="en">TwoDimensionalFieldData</Literal>
+        <Literal>obsolete TwoDimensionalFieldData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00053</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3367,12 +2942,22 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00081</AbbreviatedIRI>
-        <Literal xml:lang="en">PNGImage</Literal>
+        <Literal>obsolete PNGImage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00081</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00082</AbbreviatedIRI>
-        <Literal xml:lang="en">Image</Literal>
+        <Literal>obsolete Image</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00082</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3532,7 +3117,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00104</AbbreviatedIRI>
-        <Literal xml:lang="en">ExcelSheet</Literal>
+        <Literal>obsolete ExcelSheet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00104</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3582,7 +3172,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00112</AbbreviatedIRI>
-        <Literal xml:lang="en">JPGImage</Literal>
+        <Literal>obsolete JPGImage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00112</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -3832,7 +3427,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00147</AbbreviatedIRI>
-        <Literal xml:lang="en">ThreeDimensionalFieldData</Literal>
+        <Literal>obsolete ThreeDimensionalFieldData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00147</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4047,7 +3647,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00187</AbbreviatedIRI>
-        <Literal xml:lang="en">Event</Literal>
+        <Literal>obsolete Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00187</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4072,7 +3677,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00193</AbbreviatedIRI>
-        <Literal xml:lang="en">Diagram</Literal>
+        <Literal>obsolete Diagram</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00193</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4237,7 +3847,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00218</AbbreviatedIRI>
-        <Literal xml:lang="en">OneDimensionalFieldData</Literal>
+        <Literal>obsolete OneDimensionalFieldData</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00218</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4573,7 +4188,12 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00285</AbbreviatedIRI>
-        <Literal xml:lang="en">TIFFImage</Literal>
+        <Literal>obsolete TIFFImage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00285</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4591,9 +4211,19 @@ is performed.</Literal>
         <Literal>A column (e.g. in a table)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:BWMD_00287</AbbreviatedIRI>
+        <Literal>is done by dataproperty column index connected to Information Field</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00287</AbbreviatedIRI>
-        <Literal xml:lang="en">Column</Literal>
+        <Literal>obsolete Column</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00287</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -5063,12 +4693,22 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00342</AbbreviatedIRI>
-        <Literal xml:lang="de">Cell</Literal>
+        <Literal>obsolete Cell</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00342</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00343</AbbreviatedIRI>
-        <Literal xml:lang="de">Zero Dimensional Field Data</Literal>
+        <Literal>obsolete Zero Dimensional Field Data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00343</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
