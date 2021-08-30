@@ -60,23 +60,23 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal xml:lang="de">BWMD_mid</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00834"/>
+        <AnnotationProperty abbreviatedIRI=":author"/>
         <Literal xml:lang="de">Christoph Schweizer (Fraunhofer IWM)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00835"/>
+        <AnnotationProperty abbreviatedIRI=":curator"/>
         <Literal xml:lang="en">Martin Huschka (Fraunhofer EMI)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00835"/>
+        <AnnotationProperty abbreviatedIRI=":curator"/>
         <Literal xml:lang="en">Philipp von Hartrott (Fraunhofer IWM)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00835"/>
+        <AnnotationProperty abbreviatedIRI=":curator"/>
         <Literal xml:lang="en">Simon Stier (Fraunhofer ISC)</Literal>
     </Annotation>
     <Annotation>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00835"/>
+        <AnnotationProperty abbreviatedIRI=":curator"/>
         <Literal xml:lang="en">Thomas Hanke (Fraunhofer IMWS)</Literal>
     </Annotation>
     <Declaration>
@@ -101,7 +101,28 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI="obo:BFO_0000141"/>
     </Declaration>
     <Declaration>
-        <Class IRI="/Information_Field"/>
+        <Class IRI="/InformationField"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Abstract"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ActOfAnalysing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ActOfConcluding"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ActOfSummarising"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AnalysedDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Atom"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":AtomicFraction"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00001"/>
@@ -122,15 +143,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00006"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00007"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00008"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00009"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00010"/>
     </Declaration>
     <Declaration>
@@ -138,12 +150,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00012"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00014"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00015"/>
@@ -155,31 +161,13 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00017"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00018"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00019"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00021"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00022"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00023"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00024"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00025"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00026"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00027"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00028"/>
@@ -189,12 +177,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00030"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00031"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00032"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00033"/>
@@ -218,19 +200,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00040"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00044"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00046"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00047"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00048"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00051"/>
@@ -242,28 +212,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00053"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00054"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00055"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00056"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00058"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00059"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00060"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00063"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00064"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00065"/>
@@ -272,34 +221,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00066"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00067"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00068"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00069"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00070"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00071"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00072"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00073"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00078"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00079"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00080"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00081"/>
@@ -308,19 +233,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00082"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00083"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00084"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00086"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00087"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00088"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00089"/>
@@ -332,22 +248,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00092"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00093"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00094"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00097"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00098"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00099"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00100"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00101"/>
@@ -362,16 +266,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00105"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00106"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00109"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00110"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00111"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00112"/>
@@ -380,19 +278,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00114"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00115"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00117"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00118"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00119"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00120"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00121"/>
@@ -404,13 +293,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00124"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00126"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00127"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00128"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00129"/>
@@ -419,43 +302,13 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00130"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00131"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00132"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00133"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00135"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00136"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00137"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00138"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00139"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00140"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00141"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00142"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00143"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00144"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00146"/>
@@ -464,37 +317,19 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00147"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00148"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00149"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00150"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00151"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00153"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00157"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00158"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00160"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00162"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00163"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00164"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00165"/>
@@ -503,16 +338,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00166"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00167"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00168"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00169"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00170"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00171"/>
@@ -530,49 +356,19 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00179"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00180"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00181"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00184"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00185"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00186"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00187"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00188"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00189"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00190"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00192"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00193"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00194"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00196"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00197"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00198"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00199"/>
@@ -582,9 +378,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00202"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00203"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00206"/>
@@ -599,15 +392,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00209"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00213"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00214"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00215"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00216"/>
     </Declaration>
     <Declaration>
@@ -618,9 +402,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00226"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00230"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00231"/>
@@ -638,19 +419,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00236"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00240"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00241"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00242"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00243"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00244"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00245"/>
@@ -659,16 +428,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00248"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00249"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00253"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00254"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00258"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00261"/>
@@ -680,46 +440,16 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00266"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00268"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00269"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00270"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00271"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00272"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00273"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00274"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00275"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00276"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00277"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00278"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00280"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00281"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00283"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00284"/>
@@ -737,18 +467,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00289"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00292"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00296"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00297"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00298"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00299"/>
     </Declaration>
     <Declaration>
@@ -758,16 +476,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00303"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":BWMD_00304"/>
-    </Declaration>
-    <Declaration>
         <Class abbreviatedIRI=":BWMD_00306"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00307"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BWMD_00308"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI=":BWMD_00310"/>
@@ -779,7 +488,298 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00343"/>
     </Declaration>
     <Declaration>
-        <Class abbreviatedIRI=":PLC_00004"/>
+        <Class abbreviatedIRI=":BaseElementOfComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Building"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CADile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":CSVFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Cluster"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Comment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Concentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Consumable"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Count"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DOCXFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DataEvaluation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DataExport"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DataReduction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DataTransformation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Description"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DocumentFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ElectricCapacitance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ElectricCharge"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ElectricCurrent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ElectricalConductance"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":EquipmentSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Experiment"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Extrapolation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":File"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Fraction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":GeometryInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ISOStandard"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ImageMetadataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ImageSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ImageStack"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":IndustryProject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":InfrastructureEquipmentSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":InputFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":InternationalSystemofUnits"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Interpolation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":LuminousIntensity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialDefect"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialMesoStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialMicrostructure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialNanoStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialStructureInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialStructureRelatedFiatObjectPart"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MaterialStructureRelatedObject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MatterObject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MeasurementLocation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MeasurementRelatedFiatObjectPart"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":MechanicalWorkshop"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Molecure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":NumberDensity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ObjectSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PDFFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PhysicsModel"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PlanarImageSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PostProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PreProcessing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Procedure"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ProcessDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ProcessParameterSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ProcessSetup"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Project"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":PublicProject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Publication"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":RawDataSet"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":RegionOfInterest"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Regulation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Report"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Simulation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SimulationStep"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Software"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SoftwareArchitecture"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SpecificHeatCapacity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Specimen"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":StructuralInfo"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Summary"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SystemOfUnits"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TXTFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Table"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":TechnologicalProductRelatedFiatObjectPart"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VersionNumber"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Voltage"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VolumeConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VolumeFraction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":VolumeRatio"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WMVFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WeightConcentration"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WeightFraction"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WeightRatio"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":WithdrawalPlan"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":XLSFFile"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ZipFile"/>
     </Declaration>
     <Declaration>
         <ObjectProperty abbreviatedIRI=":BWMD_00319"/>
@@ -911,16 +911,484 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <NamedIndividual abbreviatedIRI=":PLC_00011"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00834"/>
+        <AnnotationProperty abbreviatedIRI=":author"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI=":BWMD_00835"/>
+        <AnnotationProperty abbreviatedIRI=":curator"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Db"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Co"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cd"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Cf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Br"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Bi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Bk"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Be"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Bh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:As"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:At"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Au"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Al"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Am"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ac"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ag"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Zr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Zn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Yb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Xe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_actinoid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:f-block"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Tl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Tm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Tc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Te"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Th"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ti"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Tb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Sr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Sm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Sn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Sb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Sc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Se"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Sg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Si"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ru"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Rn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Rb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Re"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Rf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Rh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Po"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Pd"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Os"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:No"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Np"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ni"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Na"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Nb"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:liquid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Nd"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Mt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Mn"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Mo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Md"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Mg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Lu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Lr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Li"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:La"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Kr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ir"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:In"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Hs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Hg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:He"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Hf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ga"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Gd"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Ge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Fm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Fr"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Fe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Eu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Er"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Es"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Dy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:W"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Y"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:O"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:P"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:S"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:U"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:V"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:H"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:I"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:K"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:N"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:F"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:solid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Metallic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_17"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_16"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_15"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_14"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_13"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_12"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_11"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_10"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_18"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:d-block"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:gas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:state_unknown"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uuq"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uuo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uup"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uuu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uut"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uuh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uun"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Uub"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:p-block"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:s-block"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Non-metallic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_9"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_8"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_6"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_5"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_7"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_4"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:period_3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:group_lanthanoid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI="pte:Semi-metallic"/>
     </Declaration>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:BFO_0000015"/>
@@ -1004,7 +1472,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="cco:Facility"/>
-        <Class abbreviatedIRI=":BWMD_00027"/>
+        <Class abbreviatedIRI=":Building"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="cco:Force"/>
@@ -1083,584 +1551,564 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI=":BWMD_00165"/>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class abbreviatedIRI=":ActOfAnalysing"/>
         <Class abbreviatedIRI=":BWMD_00060"/>
-        <Class abbreviatedIRI=":BWMD_00133"/>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI=":BWMD_00269"/>
-        <Class abbreviatedIRI=":BWMD_00276"/>
+        <Class abbreviatedIRI=":VolumeFraction"/>
     </EquivalentClasses>
     <SubClassOf>
         <Class abbreviatedIRI="pte:Block"/>
-        <Class abbreviatedIRI=":BWMD_00021"/>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="pte:Classification"/>
-        <Class abbreviatedIRI=":BWMD_00021"/>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="pte:Element"/>
-        <Class abbreviatedIRI=":BWMD_00021"/>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="pte:Group"/>
-        <Class abbreviatedIRI=":BWMD_00021"/>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="pte:Period"/>
-        <Class abbreviatedIRI=":BWMD_00021"/>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="pte:StandardState"/>
-        <Class abbreviatedIRI=":BWMD_00021"/>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="/Information_Field"/>
+        <Class IRI="/InformationField"/>
         <Class abbreviatedIRI="cco:InformationLine"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00004"/>
-        <Class abbreviatedIRI="cco:Agent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00007"/>
-        <Class abbreviatedIRI="cco:NominalMeasurementInformationContentEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00008"/>
-        <Class abbreviatedIRI="cco:PlanSpecification"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00009"/>
-        <Class abbreviatedIRI=":BWMD_00068"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-        <Class abbreviatedIRI="cco:Artifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00014"/>
-        <Class abbreviatedIRI="cco:Algorithm"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00018"/>
-        <Class abbreviatedIRI=":BWMD_00019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00019"/>
-        <Class abbreviatedIRI="cco:ActOfPrediction"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00021"/>
-        <Class abbreviatedIRI="cco:DesignativeInformationContentEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00024"/>
-        <Class abbreviatedIRI="cco:InformationContentEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00026"/>
-        <Class abbreviatedIRI=":BWMD_00008"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00027"/>
-        <Class abbreviatedIRI="cco:Artifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00031"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00032"/>
+        <Class abbreviatedIRI=":Abstract"/>
         <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00039"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00044"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-        <Class abbreviatedIRI="obo:BFO_0000019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00046"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00048"/>
-        <Class abbreviatedIRI="cco:Artifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00054"/>
-        <Class abbreviatedIRI="cco:Artifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00055"/>
-        <Class abbreviatedIRI="obo:BFO_0000029"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00056"/>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00058"/>
-        <Class abbreviatedIRI="obo:BFO_0000144"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00059"/>
+        <Class abbreviatedIRI=":ActOfAnalysing"/>
         <Class abbreviatedIRI="cco:IntentionalAct"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00063"/>
-        <Class abbreviatedIRI=":BWMD_00064"/>
+        <Class abbreviatedIRI=":ActOfConcluding"/>
+        <Class abbreviatedIRI="cco:IntentionalAct"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00064"/>
-        <Class abbreviatedIRI="obo:BFO_0000015"/>
+        <Class abbreviatedIRI=":ActOfSummarising"/>
+        <Class abbreviatedIRI="cco:IntentionalAct"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00067"/>
-        <Class abbreviatedIRI=":BWMD_00068"/>
+        <Class abbreviatedIRI=":AnalysedDataSet"/>
+        <Class abbreviatedIRI=":ProcessDataSet"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00068"/>
-        <Class abbreviatedIRI=":BWMD_00024"/>
+        <Class abbreviatedIRI=":Atom"/>
+        <Class abbreviatedIRI=":MatterObject"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00069"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
+        <Class abbreviatedIRI=":AtomicFraction"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00070"/>
-        <Class abbreviatedIRI="cco:Artifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00072"/>
-        <Class abbreviatedIRI=":BWMD_00073"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00073"/>
-        <Class abbreviatedIRI=":BWMD_00024"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00078"/>
-        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00080"/>
-        <Class abbreviatedIRI=":BWMD_00024"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00083"/>
-        <Class abbreviatedIRI=":BWMD_00084"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00084"/>
-        <Class abbreviatedIRI="cco:PlanSpecification"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00086"/>
-        <Class abbreviatedIRI="obo:BFO_0000019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00088"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
+        <Class abbreviatedIRI=":BWMD_00039"/>
+        <Class abbreviatedIRI=":Software"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00092"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00093"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00097"/>
-        <Class abbreviatedIRI=":BWMD_00019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00099"/>
-        <Class abbreviatedIRI=":BWMD_00100"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00100"/>
-        <Class abbreviatedIRI=":BWMD_00024"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00106"/>
-        <Class abbreviatedIRI="obo:BFO_0000019"/>
+        <Class abbreviatedIRI=":Software"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00110"/>
         <Class abbreviatedIRI="cco:Magnetic"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00111"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00115"/>
-        <Class abbreviatedIRI="obo:BFO_0000019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00119"/>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-        <Class abbreviatedIRI="obo:BFO_0000024"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00124"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00126"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00128"/>
-        <Class abbreviatedIRI="obo:BFO_0000019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00131"/>
-        <Class abbreviatedIRI=":BWMD_00132"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00132"/>
-        <Class abbreviatedIRI="obo:BFO_0000030"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00133"/>
-        <Class abbreviatedIRI="cco:IntentionalAct"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00135"/>
-        <Class abbreviatedIRI=":BWMD_00136"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00136"/>
-        <Class abbreviatedIRI=":BWMD_00007"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00137"/>
-        <Class abbreviatedIRI=":BWMD_00024"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00138"/>
-        <Class abbreviatedIRI=":BWMD_00068"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00139"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00140"/>
-        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00142"/>
-        <Class abbreviatedIRI="cco:Amount"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00144"/>
-        <Class abbreviatedIRI="obo:BFO_0000016"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00148"/>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00150"/>
-        <Class abbreviatedIRI=":BWMD_00151"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00151"/>
-        <Class abbreviatedIRI="obo:BFO_0000015"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00157"/>
-        <Class abbreviatedIRI=":BWMD_00031"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00160"/>
-        <Class abbreviatedIRI="cco:IntentionalAct"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00162"/>
-        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00163"/>
-        <Class abbreviatedIRI=":BWMD_00164"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00164"/>
-        <Class abbreviatedIRI=":BWMD_00007"/>
+        <Class abbreviatedIRI=":MaterialStructureInfo"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00166"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00167"/>
-        <Class abbreviatedIRI="cco:Facility"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00169"/>
-        <Class abbreviatedIRI=":BWMD_00170"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00170"/>
-        <Class abbreviatedIRI=":BWMD_00073"/>
+        <Class abbreviatedIRI=":Software"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00171"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
+        <Class abbreviatedIRI=":Software"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00179"/>
-        <Class abbreviatedIRI=":BWMD_00136"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00180"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00181"/>
-        <Class abbreviatedIRI=":BWMD_00084"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00184"/>
-        <Class abbreviatedIRI=":BWMD_00064"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00185"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00186"/>
-        <Class abbreviatedIRI=":BWMD_00008"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00188"/>
-        <Class abbreviatedIRI=":BWMD_00019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00189"/>
-        <Class abbreviatedIRI="obo:BFO_0000144"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00190"/>
-        <Class abbreviatedIRI="cco:Amount"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00192"/>
-        <Class abbreviatedIRI=":BWMD_00031"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00194"/>
-        <Class abbreviatedIRI=":BWMD_00064"/>
+        <Class abbreviatedIRI=":MaterialStructureInfo"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00197"/>
-        <Class abbreviatedIRI=":BWMD_00198"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00198"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00203"/>
-        <Class abbreviatedIRI="obo:BFO_0000030"/>
+        <Class abbreviatedIRI=":CADile"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00209"/>
         <Class abbreviatedIRI=":BWMD_00092"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00213"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00214"/>
-        <Class abbreviatedIRI="obo:BFO_0000019"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00215"/>
-        <Class abbreviatedIRI=":BWMD_00064"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00226"/>
-        <Class abbreviatedIRI=":BWMD_00136"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00230"/>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00240"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00242"/>
-        <Class abbreviatedIRI="cco:PlanSpecification"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00243"/>
-        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00244"/>
-        <Class abbreviatedIRI="obo:BFO_0000029"/>
+        <Class abbreviatedIRI=":MaterialStructureInfo"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00248"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00249"/>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00253"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00254"/>
-        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00258"/>
-        <Class abbreviatedIRI=":BWMD_00031"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00268"/>
-        <Class abbreviatedIRI=":BWMD_00120"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00270"/>
-        <Class abbreviatedIRI=":BWMD_00271"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00271"/>
-        <Class abbreviatedIRI="cco:ReferenceSystem"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00272"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00274"/>
-        <Class abbreviatedIRI=":BWMD_00064"/>
+        <Class abbreviatedIRI=":Software"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00275"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00276"/>
-        <Class abbreviatedIRI=":BWMD_00045"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00277"/>
-        <Class abbreviatedIRI=":BWMD_00278"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00278"/>
-        <Class abbreviatedIRI=":BWMD_00132"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00281"/>
-        <Class abbreviatedIRI=":BWMD_00032"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00283"/>
-        <Class abbreviatedIRI=":BWMD_00008"/>
+        <Class abbreviatedIRI=":Software"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI=":BWMD_00284"/>
-        <Class abbreviatedIRI=":BWMD_00072"/>
+        <Class abbreviatedIRI=":ProcessSetup"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00292"/>
-        <Class abbreviatedIRI=":BWMD_00100"/>
+        <Class abbreviatedIRI=":BaseElementOfComposition"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00296"/>
+        <Class abbreviatedIRI=":Building"/>
         <Class abbreviatedIRI="cco:Artifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00297"/>
-        <Class abbreviatedIRI=":BWMD_00031"/>
+        <Class abbreviatedIRI=":CADile"/>
+        <Class abbreviatedIRI=":File"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00298"/>
-        <Class abbreviatedIRI="obo:BFO_0000016"/>
+        <Class abbreviatedIRI=":CSVFile"/>
+        <Class abbreviatedIRI=":File"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00304"/>
+        <Class abbreviatedIRI=":Cluster"/>
+        <Class abbreviatedIRI=":MatterObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Comment"/>
         <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00307"/>
+        <Class abbreviatedIRI=":Concentration"/>
+        <Class abbreviatedIRI="obo:BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Conclusion"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Consumable"/>
+        <Class abbreviatedIRI="cco:Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Count"/>
+        <Class abbreviatedIRI="cco:Amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DOCXFile"/>
+        <Class abbreviatedIRI=":DocumentFile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DataEvaluation"/>
+        <Class abbreviatedIRI=":DataTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DataExport"/>
+        <Class abbreviatedIRI=":DataTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DataReduction"/>
+        <Class abbreviatedIRI=":DataTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DataSet"/>
+        <Class abbreviatedIRI="cco:InformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DataTransformation"/>
+        <Class abbreviatedIRI="obo:BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Description"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DocumentFile"/>
+        <Class abbreviatedIRI=":File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ElectricCapacitance"/>
         <Class abbreviatedIRI="obo:BFO_0000019"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":BWMD_00308"/>
+        <Class abbreviatedIRI=":ElectricCharge"/>
+        <Class abbreviatedIRI="obo:BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ElectricCurrent"/>
+        <Class abbreviatedIRI="obo:BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ElectricalConductance"/>
+        <Class abbreviatedIRI="obo:BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Equipment"/>
+        <Class abbreviatedIRI="cco:Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":EquipmentSet"/>
+        <Class abbreviatedIRI=":ObjectSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Experiment"/>
+        <Class abbreviatedIRI="obo:BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Extrapolation"/>
+        <Class abbreviatedIRI=":DataTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":File"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Fraction"/>
+        <Class abbreviatedIRI="cco:Amount"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":GeometryInfo"/>
+        <Class abbreviatedIRI=":StructuralInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ISOStandard"/>
+        <Class abbreviatedIRI=":Regulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ImageMetadataSet"/>
+        <Class abbreviatedIRI=":DataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ImageSet"/>
+        <Class abbreviatedIRI=":DataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ImageStack"/>
+        <Class abbreviatedIRI=":ImageSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":IndustryProject"/>
+        <Class abbreviatedIRI=":Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":InfrastructureEquipmentSet"/>
+        <Class abbreviatedIRI=":EquipmentSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":InputFile"/>
+        <Class abbreviatedIRI=":File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":InternationalSystemofUnits"/>
+        <Class abbreviatedIRI=":SystemOfUnits"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Interpolation"/>
+        <Class abbreviatedIRI=":DataTransformation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":LuminousIntensity"/>
+        <Class abbreviatedIRI="obo:BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+        <Class abbreviatedIRI="obo:BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialDataSet"/>
+        <Class abbreviatedIRI=":DataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialDefect"/>
         <Class abbreviatedIRI="obo:BFO_0000029"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI=":PLC_00004"/>
+        <Class abbreviatedIRI=":MaterialMesoStructure"/>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialMicrostructure"/>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
+        <Class abbreviatedIRI=":Regulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialNanoStructure"/>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+        <Class abbreviatedIRI="obo:BFO_0000024"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialStructureInfo"/>
+        <Class abbreviatedIRI=":StructuralInfo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialStructureRelatedFiatObjectPart"/>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MaterialStructureRelatedObject"/>
+        <Class abbreviatedIRI="obo:BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MatterObject"/>
+        <Class abbreviatedIRI="obo:BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MeasurementLocation"/>
+        <Class abbreviatedIRI="obo:BFO_0000029"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MeasurementRelatedFiatObjectPart"/>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":MechanicalWorkshop"/>
+        <Class abbreviatedIRI="cco:Facility"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Molecure"/>
+        <Class abbreviatedIRI=":Cluster"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":NumberDensity"/>
+        <Class abbreviatedIRI="obo:BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ObjectSet"/>
+        <Class abbreviatedIRI=":DataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PDFFile"/>
+        <Class abbreviatedIRI=":DocumentFile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PeriodicTableElementIdentifer"/>
+        <Class abbreviatedIRI="cco:DesignativeInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PhysicsModel"/>
+        <Class abbreviatedIRI="cco:Algorithm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PlanarImageSet"/>
+        <Class abbreviatedIRI=":ImageSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PostProcessing"/>
+        <Class abbreviatedIRI=":Simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PreProcessing"/>
+        <Class abbreviatedIRI=":Simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Procedure"/>
+        <Class abbreviatedIRI=":Regulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ProcessDataSet"/>
+        <Class abbreviatedIRI=":DataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ProcessParameterSet"/>
+        <Class abbreviatedIRI=":ProcessDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ProcessSetup"/>
+        <Class abbreviatedIRI=":ObjectSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Project"/>
+        <Class abbreviatedIRI="cco:PlanSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":PublicProject"/>
+        <Class abbreviatedIRI=":Project"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Publication"/>
+        <Class abbreviatedIRI=":DocumentFile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":RawDataSet"/>
+        <Class abbreviatedIRI=":ProcessDataSet"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":RegionOfInterest"/>
+        <Class abbreviatedIRI="obo:BFO_0000029"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Regulation"/>
+        <Class abbreviatedIRI="cco:PlanSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Report"/>
+        <Class abbreviatedIRI=":DocumentFile"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Simulation"/>
+        <Class abbreviatedIRI="cco:ActOfPrediction"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SimulationStep"/>
+        <Class abbreviatedIRI=":Simulation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Software"/>
+        <Class abbreviatedIRI="cco:Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SoftwareArchitecture"/>
+        <Class abbreviatedIRI="cco:Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SpecificHeatCapacity"/>
+        <Class abbreviatedIRI="obo:BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Specimen"/>
+        <Class abbreviatedIRI="cco:Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":StructuralInfo"/>
+        <Class abbreviatedIRI="cco:NominalMeasurementInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Summary"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SystemOfUnits"/>
+        <Class abbreviatedIRI="cco:ReferenceSystem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TXTFile"/>
+        <Class abbreviatedIRI=":File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Table"/>
+        <Class abbreviatedIRI="cco:InformationBearingArtifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":TechnologicalProductRelatedFiatObjectPart"/>
+        <Class abbreviatedIRI=":MaterialStructure"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VersionNumber"/>
         <Class abbreviatedIRI="cco:CodeIdentifier"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Voltage"/>
+        <Class abbreviatedIRI="obo:BFO_0000144"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VolumeConcentration"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VolumeFraction"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":VolumeRatio"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WMVFile"/>
+        <Class abbreviatedIRI=":File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WeightConcentration"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WeightFraction"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WeightRatio"/>
+        <Class abbreviatedIRI=":MaterialComposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":WithdrawalPlan"/>
+        <Class abbreviatedIRI="cco:PlanSpecification"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":XLSFFile"/>
+        <Class abbreviatedIRI=":File"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ZipFile"/>
+        <Class abbreviatedIRI=":File"/>
+    </SubClassOf>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00001"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00002"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00003"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00005"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00006"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00007"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00008"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00009"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00010"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class abbreviatedIRI=":BWMD_00026"/>
+        <Class abbreviatedIRI=":MaterialNamingConvention"/>
         <NamedIndividual abbreviatedIRI=":PLC_00011"/>
     </ClassAssertion>
     <EquivalentObjectProperties>
+        <ObjectProperty abbreviatedIRI="obo:RO_0010001"/>
+        <ObjectProperty abbreviatedIRI=":BWMD_00326"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
         <ObjectProperty abbreviatedIRI="cco:designated_by"/>
         <ObjectProperty abbreviatedIRI=":BWMD_00319"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty abbreviatedIRI="cco:is_subject_of"/>
+        <ObjectProperty abbreviatedIRI=":BWMD_00320"/>
     </EquivalentObjectProperties>
     <EquivalentObjectProperties>
         <ObjectProperty abbreviatedIRI=":BWMD_00329"/>
@@ -1788,7 +2236,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00326"/>
-        <Class abbreviatedIRI=":BWMD_00024"/>
+        <Class abbreviatedIRI=":DataSet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00327"/>
@@ -1796,11 +2244,11 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00328"/>
-        <Class abbreviatedIRI=":BWMD_00013"/>
+        <Class abbreviatedIRI=":PhysicsModel"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00328"/>
-        <Class abbreviatedIRI=":BWMD_00014"/>
+        <Class abbreviatedIRI=":Software"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00329"/>
@@ -2046,15 +2494,15 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00336"/>
-        <Class abbreviatedIRI=":BWMD_00007"/>
+        <Class abbreviatedIRI=":StructuralInfo"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00338"/>
-        <Class abbreviatedIRI=":BWMD_00008"/>
+        <Class abbreviatedIRI=":Regulation"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00339"/>
-        <Class abbreviatedIRI=":BWMD_00009"/>
+        <Class abbreviatedIRI=":ProcessParameterSet"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI=":BWMD_00340"/>
@@ -2122,7 +2570,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </SubDataPropertyOf>
     <DataPropertyDomain>
         <DataProperty IRI="/has_column_index"/>
-        <Class IRI="/Information_Field"/>
+        <Class IRI="/InformationField"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="/has_row_index"/>
@@ -2246,12 +2694,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="cco:definition"/>
-        <IRI>/Information_Field</IRI>
+        <IRI>/InformationField</IRI>
         <Literal>A Field in a Informations Line havving a row index and can have a column index property</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/Information_Field</IRI>
+        <IRI>/InformationField</IRI>
         <Literal>Information Field</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2273,6 +2721,51 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/has_separator_string</IRI>
         <Literal>has separator string</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Abstract</AbbreviatedIRI>
+        <Literal xml:lang="en">Abstract</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>:ActOfAnalysing</AbbreviatedIRI>
+        <Literal>Not quite sure about this...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ActOfAnalysing</AbbreviatedIRI>
+        <Literal xml:lang="en">Act of Analysing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ActOfConcluding</AbbreviatedIRI>
+        <Literal xml:lang="en">Act of Concluding</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ActOfSummarising</AbbreviatedIRI>
+        <Literal xml:lang="en">Act of Summarising</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:AnalysedDataSet</AbbreviatedIRI>
+        <Literal>Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:AnalysedDataSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Analysed Data Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Atom</AbbreviatedIRI>
+        <Literal xml:lang="en">Atom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:AtomicFraction</AbbreviatedIRI>
+        <Literal xml:lang="en">Atomic Fraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2322,7 +2815,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00004</AbbreviatedIRI>
-        <Literal xml:lang="en">Person</Literal>
+        <Literal>obsolete Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00004</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2353,26 +2851,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00006</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00007</AbbreviatedIRI>
-        <Literal xml:lang="en">StructuralInfo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00008</AbbreviatedIRI>
-        <Literal xml:lang="en">Regulation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00009</AbbreviatedIRI>
-        <Literal>A set of parameters, that is used to control a process. Those are usually quantities of type &quot;as supposed&quot;.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00009</AbbreviatedIRI>
-        <Literal xml:lang="en">Process Parameter Set</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2413,16 +2891,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00012</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00013</AbbreviatedIRI>
-        <Literal xml:lang="en">Software</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00014</AbbreviatedIRI>
-        <Literal xml:lang="en">Physics Model</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -2471,26 +2939,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00018</AbbreviatedIRI>
-        <Literal xml:lang="en">PostProcessing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00019</AbbreviatedIRI>
-        <Literal xml:lang="en">Simulation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
-        <AbbreviatedIRI>:BWMD_00021</AbbreviatedIRI>
-        <Literal>We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00021</AbbreviatedIRI>
-        <Literal xml:lang="en">Periodic Table Element Identifer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00022</AbbreviatedIRI>
         <Literal>obsolete Figure</Literal>
     </AnnotationAssertion>
@@ -2515,26 +2963,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
-        <AbbreviatedIRI>:BWMD_00024</AbbreviatedIRI>
-        <Literal>this should not be collections of information bearer, they are collections of other ICEs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="cco:definition"/>
-        <AbbreviatedIRI>:BWMD_00024</AbbreviatedIRI>
-        <Literal>A collection of Information Content Entitys with the purpose to gather them in a particular context.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00024</AbbreviatedIRI>
-        <Literal>Any kind of data set</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00024</AbbreviatedIRI>
-        <Literal xml:lang="en">Data Set</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00025</AbbreviatedIRI>
         <Literal>obsolete MaterialNamingConventionOther</Literal>
@@ -2543,16 +2971,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00025</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00026</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Naming Convention</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00027</AbbreviatedIRI>
-        <Literal xml:lang="en">Building</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2583,16 +3001,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00030</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00031</AbbreviatedIRI>
-        <Literal xml:lang="en">DocumentFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00032</AbbreviatedIRI>
-        <Literal xml:lang="en">File</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -2685,31 +3093,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00044</AbbreviatedIRI>
-        <Literal xml:lang="en">Volume Ratio</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00045</AbbreviatedIRI>
-        <Literal>Any kind of quantity, that describes the composition of materials</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00045</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Composition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00046</AbbreviatedIRI>
-        <Literal>Any kind of ZIP-File</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00046</AbbreviatedIRI>
-        <Literal xml:lang="en">ZIPFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00047</AbbreviatedIRI>
         <Literal>Use Measurement Unit ICE instead</Literal>
@@ -2723,16 +3106,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00047</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="cco:definition"/>
-        <AbbreviatedIRI>:BWMD_00048</AbbreviatedIRI>
-        <Literal xml:lang="en">An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00048</AbbreviatedIRI>
-        <Literal xml:lang="en">Specimen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2770,46 +3143,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00054</AbbreviatedIRI>
-        <Literal>Consumables are products that consumers use recurrently, i.e., items which &quot;get used up&quot; or discarded.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00054</AbbreviatedIRI>
-        <Literal xml:lang="en">Consumable</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00055</AbbreviatedIRI>
-        <Literal>The location (a point) at which some quantity is measured</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00055</AbbreviatedIRI>
-        <Literal xml:lang="en">Measurement Location</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00056</AbbreviatedIRI>
-        <Literal>Measurement related fiat object part, e.g. measurement range or measurement location</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00056</AbbreviatedIRI>
-        <Literal xml:lang="en">Measurement Related Fiat Object Part</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00058</AbbreviatedIRI>
-        <Literal xml:lang="en">Voltage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00059</AbbreviatedIRI>
-        <Literal xml:lang="en">Act of Concluding</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00060</AbbreviatedIRI>
         <Literal>obsolete CognitiveProcess</Literal>
@@ -2818,21 +3151,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00060</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00063</AbbreviatedIRI>
-        <Literal>The process of evaluating some kind of data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00063</AbbreviatedIRI>
-        <Literal xml:lang="en">DataEvaluation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00064</AbbreviatedIRI>
-        <Literal xml:lang="en">DataTransformation</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2860,36 +3178,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00067</AbbreviatedIRI>
-        <Literal>Any kind of raw data set. Raw data refers to the original data set.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00067</AbbreviatedIRI>
-        <Literal xml:lang="en">Raw Data Set</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00068</AbbreviatedIRI>
-        <Literal>Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00068</AbbreviatedIRI>
-        <Literal xml:lang="en">Process Data Set</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00069</AbbreviatedIRI>
-        <Literal xml:lang="en">Weight Ratio</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00070</AbbreviatedIRI>
-        <Literal xml:lang="en">Equipment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00071</AbbreviatedIRI>
         <Literal>obsolete SoftwareVersion</Literal>
@@ -2898,21 +3186,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00071</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00072</AbbreviatedIRI>
-        <Literal xml:lang="en">ProcessSetup</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00073</AbbreviatedIRI>
-        <Literal xml:lang="en">ObjectSet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00078</AbbreviatedIRI>
-        <Literal xml:lang="en">Abstract</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -2928,16 +3201,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00079</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00080</AbbreviatedIRI>
-        <Literal>A data set containing material specific data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00080</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Data Set</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2960,16 +3223,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00083</AbbreviatedIRI>
-        <Literal xml:lang="en">Industry Project</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00084</AbbreviatedIRI>
-        <Literal xml:lang="en">Project</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00086</AbbreviatedIRI>
         <Literal>Shouldnt that be more specific?</Literal>
@@ -2977,7 +3230,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00086</AbbreviatedIRI>
-        <Literal xml:lang="en">Energy</Literal>
+        <Literal>obsolete Energy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00086</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -2998,11 +3256,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00087</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00088</AbbreviatedIRI>
-        <Literal xml:lang="en">Atomic Fraction</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3030,11 +3283,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal xml:lang="en">SimulationSoftware</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00093</AbbreviatedIRI>
-        <Literal xml:lang="en">Weight Concentration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00094</AbbreviatedIRI>
         <Literal>Use Measurement Unit ICE instead</Literal>
@@ -3051,11 +3299,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00097</AbbreviatedIRI>
-        <Literal xml:lang="en">SimulationStep</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00098</AbbreviatedIRI>
         <Literal>obsolete Angle</Literal>
     </AnnotationAssertion>
@@ -3063,26 +3306,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00098</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00099</AbbreviatedIRI>
-        <Literal>A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00099</AbbreviatedIRI>
-        <Literal xml:lang="en">PlanarImageSet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00100</AbbreviatedIRI>
-        <Literal>A set of images</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00100</AbbreviatedIRI>
-        <Literal xml:lang="en">ImageSet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -3141,11 +3364,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00106</AbbreviatedIRI>
-        <Literal xml:lang="en">Electric Capacitance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00109</AbbreviatedIRI>
         <Literal>obsolete TemperatureRelatedQuantity</Literal>
     </AnnotationAssertion>
@@ -3158,16 +3376,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00110</AbbreviatedIRI>
         <Literal xml:lang="en">MagneticFlux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00111</AbbreviatedIRI>
-        <Literal>An input file is a file with no specific file ending, that is used as input for a simulation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00111</AbbreviatedIRI>
-        <Literal xml:lang="en">InputFile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3201,11 +3409,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00115</AbbreviatedIRI>
-        <Literal xml:lang="en">SpecificHeatCapacity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00117</AbbreviatedIRI>
         <Literal>obsolete Manufacturing</Literal>
     </AnnotationAssertion>
@@ -3223,16 +3426,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00118</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00119</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Nano Structure</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00120</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Structure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -3267,12 +3460,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00124</AbbreviatedIRI>
-        <Literal xml:lang="en">Ratio Of Substances</Literal>
+        <Literal>obsolete Ratio Of Substances</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00126</AbbreviatedIRI>
-        <Literal xml:lang="en">Volume Concentration</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00124</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3283,11 +3476,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00127</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00128</AbbreviatedIRI>
-        <Literal xml:lang="en">Electrical Conductance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3311,68 +3499,8 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00131</AbbreviatedIRI>
-        <Literal xml:lang="en">Atom</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00132</AbbreviatedIRI>
-        <Literal xml:lang="en">Matter Object</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
-        <AbbreviatedIRI>:BWMD_00133</AbbreviatedIRI>
-        <Literal>Not quite sure about this...</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00133</AbbreviatedIRI>
-        <Literal xml:lang="en">Act of Analysing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00135</AbbreviatedIRI>
         <Literal xml:lang="en">ChemicalComposition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00136</AbbreviatedIRI>
-        <Literal xml:lang="en">MaterialStructureInfo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00137</AbbreviatedIRI>
-        <Literal>Metadata set included in images. E.g. microscopes write the process specific metadata into the image file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00137</AbbreviatedIRI>
-        <Literal xml:lang="en">ImageMetadataSet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00138</AbbreviatedIRI>
-        <Literal>Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00138</AbbreviatedIRI>
-        <Literal xml:lang="en">Analysed Data Set</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00139</AbbreviatedIRI>
-        <Literal xml:lang="en">Weight Fraction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00140</AbbreviatedIRI>
-        <Literal>A descriptive text</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00140</AbbreviatedIRI>
-        <Literal xml:lang="en">Description</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -3391,11 +3519,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00142</AbbreviatedIRI>
-        <Literal xml:lang="en">Number</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00143</AbbreviatedIRI>
         <Literal>obsolete Amount</Literal>
     </AnnotationAssertion>
@@ -3403,11 +3526,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00143</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00144</AbbreviatedIRI>
-        <Literal xml:lang="en">Electric Charge</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3436,11 +3554,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00148</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Microstructure</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00149</AbbreviatedIRI>
         <Literal>obsolete Power</Literal>
     </AnnotationAssertion>
@@ -3452,12 +3565,12 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00150</AbbreviatedIRI>
-        <Literal xml:lang="en">GeneralExperimentRelatedProcess</Literal>
+        <Literal>obsolete GeneralExperimentRelatedProcess</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00151</AbbreviatedIRI>
-        <Literal xml:lang="en">Experiment</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00150</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3471,11 +3584,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00157</AbbreviatedIRI>
-        <Literal xml:lang="en">DOCXFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00158</AbbreviatedIRI>
         <Literal>obsolete Pressure</Literal>
     </AnnotationAssertion>
@@ -3485,29 +3593,19 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00160</AbbreviatedIRI>
-        <Literal xml:lang="en">Act of Summarising</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00162</AbbreviatedIRI>
-        <Literal xml:lang="en">Conclusion</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:BWMD_00163</AbbreviatedIRI>
+        <Literal>Shoud be a geometry quality and therfor predecribed or measured</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00163</AbbreviatedIRI>
-        <Literal xml:lang="en">SpecimenGeometryParameter</Literal>
+        <Literal>obsolete SpecimenGeometryParameter</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00164</AbbreviatedIRI>
-        <Literal>Data set containing geometric information content</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00164</AbbreviatedIRI>
-        <Literal xml:lang="en">GeometryInfo</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00163</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3530,16 +3628,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal xml:lang="en">MachineSoftware</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00167</AbbreviatedIRI>
-        <Literal>A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing...</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00167</AbbreviatedIRI>
-        <Literal xml:lang="en">Mechanical Workshop</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00168</AbbreviatedIRI>
         <Literal>too unspecific</Literal>
@@ -3553,16 +3641,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00168</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00169</AbbreviatedIRI>
-        <Literal xml:lang="en">InfrastructureEquipmentSet</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00170</AbbreviatedIRI>
-        <Literal xml:lang="en">EquipmentSet</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3615,34 +3693,14 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Literal xml:lang="en">MaterialSurfaceStructureInfo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00180</AbbreviatedIRI>
-        <Literal>Is the base element of a chemical composition, e.g. Ni in Ni-alloys, Al in Al-alloys.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00180</AbbreviatedIRI>
-        <Literal xml:lang="en">Base Element Of Composition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00181</AbbreviatedIRI>
-        <Literal xml:lang="en">Public Project</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00184</AbbreviatedIRI>
-        <Literal xml:lang="en">Interpolation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00185</AbbreviatedIRI>
-        <Literal xml:lang="en">Amount Of Substance Quantity</Literal>
+        <Literal>obsolete Amount Of Substance Quantity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00186</AbbreviatedIRI>
-        <Literal xml:lang="en">Procedure</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00185</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3656,26 +3714,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00188</AbbreviatedIRI>
-        <Literal xml:lang="en">PreProcessing</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00189</AbbreviatedIRI>
-        <Literal xml:lang="en">Electric Current</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00190</AbbreviatedIRI>
-        <Literal xml:lang="en">NumberFraction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00192</AbbreviatedIRI>
-        <Literal xml:lang="en">Report</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00193</AbbreviatedIRI>
         <Literal>obsolete Diagram</Literal>
     </AnnotationAssertion>
@@ -3683,16 +3721,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00193</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00194</AbbreviatedIRI>
-        <Literal>The process of exporting data (e.g. from a output file generated by some simulation software)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00194</AbbreviatedIRI>
-        <Literal xml:lang="en">DataExport</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3708,11 +3736,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00197</AbbreviatedIRI>
         <Literal xml:lang="en">STEPFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00198</AbbreviatedIRI>
-        <Literal xml:lang="en">CADFile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3753,11 +3776,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00202</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00203</AbbreviatedIRI>
-        <Literal xml:lang="en">MaterialStructureRelatedObject</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3816,21 +3834,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00213</AbbreviatedIRI>
-        <Literal xml:lang="en">CSVFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00214</AbbreviatedIRI>
-        <Literal xml:lang="en">Luminous Intensity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00215</AbbreviatedIRI>
-        <Literal xml:lang="en">DataReduction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00216</AbbreviatedIRI>
         <Literal>obsolete MaterialNamingConventionENShortName</Literal>
     </AnnotationAssertion>
@@ -3868,11 +3871,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00226</AbbreviatedIRI>
         <Literal xml:lang="en">MaterialVolumeStructureInfo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00230</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Structure Related Fiat Object Part</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -3951,11 +3949,6 @@ is performed.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00240</AbbreviatedIRI>
-        <Literal xml:lang="en">XLSFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00241</AbbreviatedIRI>
         <Literal>Is the desinative Name of a Software instance.</Literal>
@@ -3969,26 +3962,6 @@ is performed.</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00241</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00242</AbbreviatedIRI>
-        <Literal>A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00242</AbbreviatedIRI>
-        <Literal xml:lang="en">Withdrawal Plan</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00243</AbbreviatedIRI>
-        <Literal xml:lang="en">Comment</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00244</AbbreviatedIRI>
-        <Literal xml:lang="en">Region Of Interest</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -4017,23 +3990,13 @@ is performed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00249</AbbreviatedIRI>
-        <Literal xml:lang="en">Technological Product Related Fiat Object Part</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00253</AbbreviatedIRI>
-        <Literal xml:lang="en">Concentration Of Substance</Literal>
+        <Literal>obsolete Concentration Of Substance</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00254</AbbreviatedIRI>
-        <Literal xml:lang="en">Summary</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00258</AbbreviatedIRI>
-        <Literal xml:lang="en">PDFFile</Literal>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00253</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -4072,11 +4035,6 @@ is performed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00268</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Meso Structure</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00269</AbbreviatedIRI>
         <Literal>obsolete Fraction</Literal>
     </AnnotationAssertion>
@@ -4084,26 +4042,6 @@ is performed.</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00269</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00270</AbbreviatedIRI>
-        <Literal xml:lang="en">SI Unit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00271</AbbreviatedIRI>
-        <Literal xml:lang="en">System Of Units</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00272</AbbreviatedIRI>
-        <Literal>Windows Media-Audio/-Video file</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00272</AbbreviatedIRI>
-        <Literal xml:lang="en">WMVFile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -4127,28 +4065,8 @@ is performed.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00274</AbbreviatedIRI>
-        <Literal xml:lang="en">Extrapolation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00275</AbbreviatedIRI>
         <Literal xml:lang="en">SoftwareScript</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00276</AbbreviatedIRI>
-        <Literal xml:lang="en">Volume Fraction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00277</AbbreviatedIRI>
-        <Literal xml:lang="en">Molecule</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00278</AbbreviatedIRI>
-        <Literal xml:lang="en">Cluster</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -4169,16 +4087,6 @@ is performed.</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00280</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00281</AbbreviatedIRI>
-        <Literal xml:lang="en">TXTFile</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00283</AbbreviatedIRI>
-        <Literal xml:lang="en">ISOStandard</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4246,31 +4154,6 @@ is performed.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00292</AbbreviatedIRI>
-        <Literal>A series of images, that form a vertical stack (e.g. a series of images generated by tomography).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00292</AbbreviatedIRI>
-        <Literal xml:lang="en">ImageStack</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00296</AbbreviatedIRI>
-        <Literal xml:lang="en">Software Architecture</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00297</AbbreviatedIRI>
-        <Literal xml:lang="en">Publication</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00298</AbbreviatedIRI>
-        <Literal xml:lang="en">Concentration</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00299</AbbreviatedIRI>
         <Literal>is definatly not a quality, more a information content entity</Literal>
@@ -4316,16 +4199,6 @@ is performed.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:BWMD_00304</AbbreviatedIRI>
-        <Literal>Any kind of table</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00304</AbbreviatedIRI>
-        <Literal xml:lang="en">Table</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>:BWMD_00306</AbbreviatedIRI>
         <Literal>Is the designative Name of a Project</Literal>
@@ -4339,16 +4212,6 @@ is performed.</Literal>
         <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
         <AbbreviatedIRI>:BWMD_00306</AbbreviatedIRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00307</AbbreviatedIRI>
-        <Literal xml:lang="en">NumberDensity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00308</AbbreviatedIRI>
-        <Literal xml:lang="en">Material Defect</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4463,7 +4326,12 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00320</AbbreviatedIRI>
-        <Literal xml:lang="en">has info</Literal>
+        <Literal>obsolete has info</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00320</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4523,7 +4391,12 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00326</AbbreviatedIRI>
-        <Literal xml:lang="en">has attached dataset</Literal>
+        <Literal>obsolete has attached dataset</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00326</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4548,7 +4421,12 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00329</AbbreviatedIRI>
-        <Literal xml:lang="en">has values of type</Literal>
+        <Literal>obsolete has values of type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00329</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -4638,7 +4516,12 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00336</AbbreviatedIRI>
-        <Literal xml:lang="en">has structural info</Literal>
+        <Literal>obsolete has structural info</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00336</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4663,7 +4546,12 @@ is performed.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:BWMD_00339</AbbreviatedIRI>
-        <Literal xml:lang="en">has parameter set</Literal>
+        <Literal>obsolete has parameter set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:deprecated"/>
+        <AbbreviatedIRI>:BWMD_00339</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4711,14 +4599,399 @@ is performed.</Literal>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00834</AbbreviatedIRI>
-        <Literal xml:lang="en">author</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:BaseElementOfComposition</AbbreviatedIRI>
+        <Literal>Is the base element of a chemical composition, e.g. Ni in Ni-alloys, Al in Al-alloys.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BWMD_00835</AbbreviatedIRI>
-        <Literal xml:lang="en">curator</Literal>
+        <AbbreviatedIRI>:BaseElementOfComposition</AbbreviatedIRI>
+        <Literal xml:lang="en">Base Element Of Composition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Building</AbbreviatedIRI>
+        <Literal xml:lang="en">Building</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:CADile</AbbreviatedIRI>
+        <Literal xml:lang="en">CADFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:CSVFile</AbbreviatedIRI>
+        <Literal xml:lang="en">CSVFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Cluster</AbbreviatedIRI>
+        <Literal xml:lang="en">Cluster</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Comment</AbbreviatedIRI>
+        <Literal xml:lang="en">Comment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Concentration</AbbreviatedIRI>
+        <Literal xml:lang="en">Concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Conclusion</AbbreviatedIRI>
+        <Literal xml:lang="en">Conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Consumable</AbbreviatedIRI>
+        <Literal>Consumables are products that consumers use recurrently, i.e., items which &quot;get used up&quot; or discarded.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Consumable</AbbreviatedIRI>
+        <Literal xml:lang="en">Consumable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:alternative_label"/>
+        <AbbreviatedIRI>:Count</AbbreviatedIRI>
+        <Literal>Count</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Count</AbbreviatedIRI>
+        <Literal xml:lang="en">Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DOCXFile</AbbreviatedIRI>
+        <Literal xml:lang="en">DOCXFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:DataEvaluation</AbbreviatedIRI>
+        <Literal>The process of evaluating some kind of data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DataEvaluation</AbbreviatedIRI>
+        <Literal xml:lang="en">DataEvaluation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:DataExport</AbbreviatedIRI>
+        <Literal>The process of exporting data (e.g. from a output file generated by some simulation software)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DataExport</AbbreviatedIRI>
+        <Literal xml:lang="en">DataExport</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DataReduction</AbbreviatedIRI>
+        <Literal xml:lang="en">DataReduction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>:DataSet</AbbreviatedIRI>
+        <Literal>this should not be collections of information bearer, they are collections of other ICEs</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:definition"/>
+        <AbbreviatedIRI>:DataSet</AbbreviatedIRI>
+        <Literal>A collection of Information Content Entitys with the purpose to gather them in a particular context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:DataSet</AbbreviatedIRI>
+        <Literal>Any kind of data set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DataSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Data Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DataTransformation</AbbreviatedIRI>
+        <Literal xml:lang="en">DataTransformation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Description</AbbreviatedIRI>
+        <Literal>A descriptive text</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Description</AbbreviatedIRI>
+        <Literal xml:lang="en">Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DocumentFile</AbbreviatedIRI>
+        <Literal xml:lang="en">DocumentFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ElectricCapacitance</AbbreviatedIRI>
+        <Literal xml:lang="en">Electric Capacitance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ElectricCharge</AbbreviatedIRI>
+        <Literal xml:lang="en">Electric Charge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ElectricCurrent</AbbreviatedIRI>
+        <Literal xml:lang="en">Electric Current</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ElectricalConductance</AbbreviatedIRI>
+        <Literal xml:lang="en">Electrical Conductance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Equipment</AbbreviatedIRI>
+        <Literal xml:lang="en">Equipment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:EquipmentSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Equipment Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Experiment</AbbreviatedIRI>
+        <Literal xml:lang="en">Experiment</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Extrapolation</AbbreviatedIRI>
+        <Literal xml:lang="en">Extrapolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:File</AbbreviatedIRI>
+        <Literal xml:lang="en">File</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:definition"/>
+        <AbbreviatedIRI>:Fraction</AbbreviatedIRI>
+        <Literal>A fraction of a number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Fraction</AbbreviatedIRI>
+        <Literal xml:lang="en">Fraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:GeometryInfo</AbbreviatedIRI>
+        <Literal>Data set containing geometric information content</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:GeometryInfo</AbbreviatedIRI>
+        <Literal xml:lang="en">Geometry Info</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ISOStandard</AbbreviatedIRI>
+        <Literal xml:lang="en">ISOStandard</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ImageMetadataSet</AbbreviatedIRI>
+        <Literal>Metadata set included in images. E.g. microscopes write the process specific metadata into the image file.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ImageMetadataSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Image Metadata Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ImageSet</AbbreviatedIRI>
+        <Literal>A set of images</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ImageSet</AbbreviatedIRI>
+        <Literal xml:lang="en">ImageSet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ImageStack</AbbreviatedIRI>
+        <Literal>A series of images, that form a vertical stack (e.g. a series of images generated by tomography).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ImageStack</AbbreviatedIRI>
+        <Literal xml:lang="en">Image Stack</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:IndustryProject</AbbreviatedIRI>
+        <Literal xml:lang="en">Industry Project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:InfrastructureEquipmentSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Infrastructure Equipment Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:InputFile</AbbreviatedIRI>
+        <Literal>An input file is a file with no specific file ending, that is used as input for a simulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:InputFile</AbbreviatedIRI>
+        <Literal xml:lang="en">InputFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:alternative_label"/>
+        <AbbreviatedIRI>:InternationalSystemofUnits</AbbreviatedIRI>
+        <Literal xml:lang="en">SI Unit System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:InternationalSystemofUnits</AbbreviatedIRI>
+        <Literal>International System of Units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Interpolation</AbbreviatedIRI>
+        <Literal xml:lang="en">Interpolation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:LuminousIntensity</AbbreviatedIRI>
+        <Literal xml:lang="en">Luminous Intensity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MaterialComposition</AbbreviatedIRI>
+        <Literal>Any kind of quantity, that describes the composition of materials</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialComposition</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Composition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MaterialDataSet</AbbreviatedIRI>
+        <Literal>A data set containing material specific data</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialDataSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Data Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialDefect</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Defect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialMesoStructure</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Meso Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialMicrostructure</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Microstructure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialNamingConvention</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Naming Convention</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialNanoStructure</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Nano Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialStructure</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Structure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialStructureInfo</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Structure Info</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialStructureRelatedFiatObjectPart</AbbreviatedIRI>
+        <Literal xml:lang="en">Material Structure Related Fiat Object Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MaterialStructureRelatedObject</AbbreviatedIRI>
+        <Literal xml:lang="en">MaterialStructureRelatedObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MatterObject</AbbreviatedIRI>
+        <Literal xml:lang="en">Matter Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MeasurementLocation</AbbreviatedIRI>
+        <Literal>The location (a point) at which some quantity is measured</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MeasurementLocation</AbbreviatedIRI>
+        <Literal xml:lang="en">Measurement Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MeasurementRelatedFiatObjectPart</AbbreviatedIRI>
+        <Literal>Measurement related fiat object part, e.g. measurement range or measurement location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MeasurementRelatedFiatObjectPart</AbbreviatedIRI>
+        <Literal xml:lang="en">Measurement Related Fiat Object Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:MechanicalWorkshop</AbbreviatedIRI>
+        <Literal>A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing...</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:MechanicalWorkshop</AbbreviatedIRI>
+        <Literal xml:lang="en">Mechanical Workshop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Molecure</AbbreviatedIRI>
+        <Literal xml:lang="en">Molecule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:NumberDensity</AbbreviatedIRI>
+        <Literal xml:lang="en">Number Density</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ObjectSet</AbbreviatedIRI>
+        <Literal xml:lang="en">ObjectSet</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PDFFile</AbbreviatedIRI>
+        <Literal xml:lang="en">PDFFile</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4734,16 +5007,6 @@ is performed.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:PLC_00003</AbbreviatedIRI>
         <Literal xml:lang="de">BS</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="cco:definition"/>
-        <AbbreviatedIRI>:PLC_00004</AbbreviatedIRI>
-        <Literal xml:lang="en">A number designating a particular form of something that is slightly different from other forms of the same thing.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:PLC_00004</AbbreviatedIRI>
-        <Literal xml:lang="de">Version Number</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -4779,6 +5042,271 @@ is performed.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>:PLC_00011</AbbreviatedIRI>
         <Literal xml:lang="de">UNS</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>:PeriodicTableElementIdentifer</AbbreviatedIRI>
+        <Literal>We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PeriodicTableElementIdentifer</AbbreviatedIRI>
+        <Literal xml:lang="en">Periodic Table Element Identifer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PhysicsModel</AbbreviatedIRI>
+        <Literal xml:lang="en">Physics Model</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:PlanarImageSet</AbbreviatedIRI>
+        <Literal>A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PlanarImageSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Planar Image Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PostProcessing</AbbreviatedIRI>
+        <Literal xml:lang="en">Post Processing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PreProcessing</AbbreviatedIRI>
+        <Literal xml:lang="en">PreProcessing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Procedure</AbbreviatedIRI>
+        <Literal xml:lang="en">Procedure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ProcessDataSet</AbbreviatedIRI>
+        <Literal>Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ProcessDataSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Process Data Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ProcessParameterSet</AbbreviatedIRI>
+        <Literal>A set of parameters, that is used to control a process. Those are usually quantities of type &quot;as supposed&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ProcessParameterSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Process Parameter Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ProcessSetup</AbbreviatedIRI>
+        <Literal xml:lang="en">Process Setup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Project</AbbreviatedIRI>
+        <Literal xml:lang="en">Project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:PublicProject</AbbreviatedIRI>
+        <Literal xml:lang="en">Public Project</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Publication</AbbreviatedIRI>
+        <Literal xml:lang="en">Publication</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:RawDataSet</AbbreviatedIRI>
+        <Literal>Any kind of raw data set. Raw data refers to the original data set.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:RawDataSet</AbbreviatedIRI>
+        <Literal xml:lang="en">Raw Data Set</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:RegionOfInterest</AbbreviatedIRI>
+        <Literal xml:lang="en">Region Of Interest</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Regulation</AbbreviatedIRI>
+        <Literal xml:lang="en">Regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Report</AbbreviatedIRI>
+        <Literal xml:lang="en">Report</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Simulation</AbbreviatedIRI>
+        <Literal xml:lang="en">Simulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SimulationStep</AbbreviatedIRI>
+        <Literal xml:lang="en">SimulationStep</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Software</AbbreviatedIRI>
+        <Literal xml:lang="en">Software</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SoftwareArchitecture</AbbreviatedIRI>
+        <Literal xml:lang="en">Software Architecture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SpecificHeatCapacity</AbbreviatedIRI>
+        <Literal xml:lang="en">Specific Heat Capacity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:definition"/>
+        <AbbreviatedIRI>:Specimen</AbbreviatedIRI>
+        <Literal xml:lang="en">An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Specimen</AbbreviatedIRI>
+        <Literal xml:lang="en">Specimen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:StructuralInfo</AbbreviatedIRI>
+        <Literal xml:lang="en">Structural Info</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Summary</AbbreviatedIRI>
+        <Literal xml:lang="en">Summary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SystemOfUnits</AbbreviatedIRI>
+        <Literal xml:lang="en">System Of Units</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:TXTFile</AbbreviatedIRI>
+        <Literal xml:lang="en">TXTFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:Table</AbbreviatedIRI>
+        <Literal>Any kind of table</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Table</AbbreviatedIRI>
+        <Literal xml:lang="en">Table</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:TechnologicalProductRelatedFiatObjectPart</AbbreviatedIRI>
+        <Literal xml:lang="en">Technological Product Related Fiat Object Part</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="cco:definition"/>
+        <AbbreviatedIRI>:VersionNumber</AbbreviatedIRI>
+        <Literal xml:lang="en">A number designating a particular form of something that is slightly different from other forms of the same thing.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:VersionNumber</AbbreviatedIRI>
+        <Literal xml:lang="de">Version Number</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Voltage</AbbreviatedIRI>
+        <Literal xml:lang="en">Voltage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:VolumeConcentration</AbbreviatedIRI>
+        <Literal xml:lang="en">Volume Concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:VolumeFraction</AbbreviatedIRI>
+        <Literal xml:lang="en">Volume Fraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:VolumeRatio</AbbreviatedIRI>
+        <Literal xml:lang="en">Volume Ratio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:WMVFile</AbbreviatedIRI>
+        <Literal>Windows Media-Audio/-Video file</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:WMVFile</AbbreviatedIRI>
+        <Literal xml:lang="en">WMVFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:WeightConcentration</AbbreviatedIRI>
+        <Literal xml:lang="en">Weight Concentration</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:WeightFraction</AbbreviatedIRI>
+        <Literal xml:lang="en">Weight Fraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:WeightRatio</AbbreviatedIRI>
+        <Literal xml:lang="en">Weight Ratio</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:WithdrawalPlan</AbbreviatedIRI>
+        <Literal>A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:WithdrawalPlan</AbbreviatedIRI>
+        <Literal xml:lang="en">Withdrawal Plan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:XLSFFile</AbbreviatedIRI>
+        <Literal xml:lang="en">XLSFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ZipFile</AbbreviatedIRI>
+        <Literal>Any kind of ZIP-File</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ZipFile</AbbreviatedIRI>
+        <Literal xml:lang="en">ZIPFile</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:author</AbbreviatedIRI>
+        <Literal xml:lang="en">author</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:curator</AbbreviatedIRI>
+        <Literal xml:lang="en">curator</Literal>
     </AnnotationAssertion>
 </Ontology>
 
