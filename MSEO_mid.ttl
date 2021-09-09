@@ -1,4 +1,4 @@
-@prefix : <https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#> .
+@prefix : <https://purl.matolab.org/mseo/mid/> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix geo: <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
@@ -36,24 +36,24 @@ Walter-Hülse-Strasse 1, 06120 Halle (Saale)
 thomas.hanke@imws.fraunhofer.de"""@de ,
                                                   "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
                                      owl:priorVersion "BWMD_mid"@de ;
-                                     <https://purl.matolab.org/mseo/mid/author> "Christoph Schweizer (Fraunhofer IWM)"@de ;
-                                     <https://purl.matolab.org/mseo/mid/curator> "Martin Huschka (Fraunhofer EMI)"@en ,
-                                                                                 "Philipp von Hartrott (Fraunhofer IWM)"@en ,
-                                                                                 "Simon Stier (Fraunhofer ISC)"@en ,
-                                                                                 "Thomas Hanke (Fraunhofer IMWS)"@en .
+                                     :author "Christoph Schweizer (Fraunhofer IWM)"@de ;
+                                     :curator "Martin Huschka (Fraunhofer EMI)"@en ,
+                                              "Philipp von Hartrott (Fraunhofer IWM)"@en ,
+                                              "Simon Stier (Fraunhofer ISC)"@en ,
+                                              "Thomas Hanke (Fraunhofer IMWS)"@en .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
 ###  https://purl.matolab.org/mseo/mid/author
-<https://purl.matolab.org/mseo/mid/author> rdf:type owl:AnnotationProperty ;
-                                           rdfs:label "author"@en .
+:author rdf:type owl:AnnotationProperty ;
+        rdfs:label "author"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/curator
-<https://purl.matolab.org/mseo/mid/curator> rdf:type owl:AnnotationProperty ;
-                                            rdfs:label "curator"@en .
+:curator rdf:type owl:AnnotationProperty ;
+         rdfs:label "curator"@en .
 
 
 ###  https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat
@@ -68,8 +68,12 @@ thomas.hanke@imws.fraunhofer.de"""@de ,
 #    Object Properties
 #################################################################
 
+###  http://purl.obolibrary.org/obo/BFO_0000051
+obo:BFO_0000051 <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":0.75}" .
+
+
 ###  http://purl.obolibrary.org/obo/RO_0010001
-obo:RO_0010001 owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00326> .
+obo:RO_0010001 owl:equivalentProperty :BWMD_00326 .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#element
@@ -78,332 +82,332 @@ pte:element rdfs:range pte:Element ;
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/designated_by
-cco:designated_by owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00319> .
+cco:designated_by owl:equivalentProperty :BWMD_00319 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of
-cco:is_subject_of owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00320> .
+cco:is_subject_of owl:equivalentProperty :BWMD_00320 .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00319
-<https://purl.matolab.org/mseo/mid/BWMD_00319> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00320> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/BWMD_00001> ;
-                                               rdfs:comment "Indicates properties, such as IDs, names etc. which are used to identify objects, processes etc." ;
-                                               rdfs:label "obsolete hasIdentifier" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00319 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ;
+            rdfs:range :BWMD_00001 ;
+            rdfs:comment "Indicates properties, such as IDs, names etc. which are used to identify objects, processes etc." ;
+            rdfs:label "obsolete hasIdentifier" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00320
-<https://purl.matolab.org/mseo/mid/BWMD_00320> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:label "obsolete has info"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00320 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete has info"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00321
-<https://purl.matolab.org/mseo/mid/BWMD_00321> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:label "obsolete refersTo" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00321 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete refersTo" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00322
-<https://purl.matolab.org/mseo/mid/BWMD_00322> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00323> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/BWMD_00002> ;
-                                               rdfs:label "obsolete isComposedOf" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00322 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00323 ;
+            rdfs:range :BWMD_00002 ;
+            rdfs:label "obsolete isComposedOf" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00323
-<https://purl.matolab.org/mseo/mid/BWMD_00323> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:label "obsolete hasPart" ;
-                                               owl:deprecated "true"^^xsd:boolean ;
-                                               <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":0.75}" .
+:BWMD_00323 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete hasPart" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":0.75}" .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00324
-<https://purl.matolab.org/mseo/mid/BWMD_00324> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:label "obsolete chronologicalConnection" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00324 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:label "obsolete chronologicalConnection" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00325
-<https://purl.matolab.org/mseo/mid/BWMD_00325> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00326> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/BWMD_00003> ;
-                                               rdfs:label "obsolete hasTemporalInfo" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00325 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00326 ;
+            rdfs:range :BWMD_00003 ;
+            rdfs:label "obsolete hasTemporalInfo" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00326
-<https://purl.matolab.org/mseo/mid/BWMD_00326> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00320> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/DataSet> ;
-                                               rdfs:label "obsolete has attached dataset"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00326 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ;
+            rdfs:range :DataSet ;
+            rdfs:label "obsolete has attached dataset"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00327
-<https://purl.matolab.org/mseo/mid/BWMD_00327> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00328> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/BWMD_00004> ;
-                                               rdfs:label "obsolete hasOperator" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00327 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00328 ;
+            rdfs:range :BWMD_00004 ;
+            rdfs:label "obsolete hasOperator" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00328
-<https://purl.matolab.org/mseo/mid/BWMD_00328> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf owl:topObjectProperty ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/PhysicsModel> ,
-                                                          <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:label "obsolete hasParticipant" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00328 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:range :PhysicsModel ,
+                       :Software ;
+            rdfs:label "obsolete hasParticipant" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00329
-<https://purl.matolab.org/mseo/mid/BWMD_00329> rdf:type owl:ObjectProperty ;
-                                               owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00330> ;
-                                               rdfs:subPropertyOf obo:RO_0010001 ;
-                                               rdfs:domain <https://purl.matolab.org/mseo/mid/BWMD_00005> ;
-                                               rdfs:range [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom rdf:PlainLiteral
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom rdf:XMLLiteral
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom rdfs:Literal
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:NCName
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:NMTOKEN
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:Name
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:anyURI
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:base64Binary
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:boolean
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:byte
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:dateTime
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:dateTimeStamp
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:decimal
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:double
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:float
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:hexBinary
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:int
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:integer
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:language
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:long
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:negativeInteger
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:nonNegativeInteger
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:nonPositiveInteger
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:normalizedString
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:positiveInteger
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:short
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:string
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:token
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:unsignedByte
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:unsignedInt
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:unsignedLong
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom xsd:unsignedShort
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom owl:rational
-                                                          ] ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty owl:topDataProperty ;
-                                                            owl:someValuesFrom owl:real
-                                                          ] ;
-                                               rdfs:label "obsolete has values of type"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00329 rdf:type owl:ObjectProperty ;
+            owl:equivalentProperty :BWMD_00330 ;
+            rdfs:subPropertyOf obo:RO_0010001 ;
+            rdfs:domain :BWMD_00005 ;
+            rdfs:range [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom rdf:PlainLiteral
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom rdf:XMLLiteral
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom rdfs:Literal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:NCName
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:NMTOKEN
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:Name
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:anyURI
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:base64Binary
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:boolean
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:byte
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:dateTime
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:dateTimeStamp
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:decimal
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:double
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:float
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:hexBinary
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:int
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:language
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:long
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:negativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:nonPositiveInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:normalizedString
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:positiveInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:short
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:token
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedByte
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedInt
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedLong
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom xsd:unsignedShort
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom owl:rational
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty owl:topDataProperty ;
+                         owl:someValuesFrom owl:real
+                       ] ;
+            rdfs:label "obsolete has values of type"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00330
-<https://purl.matolab.org/mseo/mid/BWMD_00330> rdf:type owl:ObjectProperty ;
-                                               obo:IAO_0000116 "too unspecific! what is the purpose of that relation?" ;
-                                               rdfs:label "obsolete isOfType" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00330 rdf:type owl:ObjectProperty ;
+            obo:IAO_0000116 "too unspecific! what is the purpose of that relation?" ;
+            rdfs:label "obsolete isOfType" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00331
-<https://purl.matolab.org/mseo/mid/BWMD_00331> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00324> ;
-                                               rdfs:label "obsolete hasOutput" ;
-                                               owl:deprecated "true"^^xsd:boolean ;
-                                               <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
+:BWMD_00331 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00324 ;
+            rdfs:label "obsolete hasOutput" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00332
-<https://purl.matolab.org/mseo/mid/BWMD_00332> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00321> ;
-                                               rdfs:comment "A reference, that indicates that something is defined by something else. E.g. the location/shape of a geometric feature is defined by the CAD file." ;
-                                               rdfs:label "obsolete isDefinedBy" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00332 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00321 ;
+            rdfs:comment "A reference, that indicates that something is defined by something else. E.g. the location/shape of a geometric feature is defined by the CAD file." ;
+            rdfs:label "obsolete isDefinedBy" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00333
-<https://purl.matolab.org/mseo/mid/BWMD_00333> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00320> ;
-                                               rdfs:label "obsolete obsolete hasStructuralQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00333 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ;
+            rdfs:label "obsolete obsolete hasStructuralQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00334
-<https://purl.matolab.org/mseo/mid/BWMD_00334> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00326> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/BWMD_00006> ;
-                                               rdfs:comment "Specific textual input (such as comments, descriptions) is attached to any kind of entity" ;
-                                               rdfs:label "obsolete hasTextualInfo" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00334 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00326 ;
+            rdfs:range :BWMD_00006 ;
+            rdfs:comment "Specific textual input (such as comments, descriptions) is attached to any kind of entity" ;
+            rdfs:label "obsolete hasTextualInfo" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00335
-<https://purl.matolab.org/mseo/mid/BWMD_00335> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00324> ;
-                                               rdfs:label "obsolete precedes" ;
-                                               owl:deprecated "true"^^xsd:boolean ;
-                                               <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
+:BWMD_00335 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00324 ;
+            rdfs:label "obsolete precedes" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":1.75}" .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00336
-<https://purl.matolab.org/mseo/mid/BWMD_00336> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00320> ,
-                                                                  <https://purl.matolab.org/mseo/mid/BWMD_00326> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/StructuralInfo> ;
-                                               rdfs:label "obsolete has structural info"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00336 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00320 ,
+                               :BWMD_00326 ;
+            rdfs:range :StructuralInfo ;
+            rdfs:label "obsolete has structural info"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00337
-<https://purl.matolab.org/mseo/mid/BWMD_00337> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00324> ;
-                                               rdfs:label "obsolete isInputFor" ;
-                                               owl:deprecated "true"^^xsd:boolean ;
-                                               <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[67,129,191], \"lw\":1.25}" .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00338
-<https://purl.matolab.org/mseo/mid/BWMD_00338> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf cco:described_by ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/Regulation> ;
-                                               rdfs:label "in accordance with"@en .
+:BWMD_00337 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00324 ;
+            rdfs:label "obsolete isInputFor" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[67,129,191], \"lw\":1.25}" .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00339
-<https://purl.matolab.org/mseo/mid/BWMD_00339> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00326> ;
-                                               rdfs:domain obo:BFO_0000015 ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/ProcessParameterSet> ;
-                                               rdfs:label "obsolete has parameter set"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00339 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00326 ;
+            rdfs:domain obo:BFO_0000015 ;
+            rdfs:range :ProcessParameterSet ;
+            rdfs:label "obsolete has parameter set"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00340
-<https://purl.matolab.org/mseo/mid/BWMD_00340> rdf:type owl:ObjectProperty ;
-                                               rdfs:domain <https://purl.matolab.org/mseo/mid/BWMD_00010> ;
-                                               rdfs:range <https://purl.matolab.org/mseo/mid/BWMD_00011> ;
-                                               rdfs:label "obsolete hasQuantityKind" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00340 rdf:type owl:ObjectProperty ;
+            rdfs:domain :BWMD_00010 ;
+            rdfs:range :BWMD_00011 ;
+            rdfs:label "obsolete hasQuantityKind" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00341
-<https://purl.matolab.org/mseo/mid/BWMD_00341> rdf:type owl:ObjectProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00321> ;
-                                               rdfs:domain <https://purl.matolab.org/mseo/mid/BWMD_00012> ;
-                                               rdfs:comment "E.g. a process quantity or material data set is representative for a certain temporal state of an object" ;
-                                               rdfs:label "obsolete isRepresentativeFor" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00341 rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :BWMD_00321 ;
+            rdfs:domain :BWMD_00012 ;
+            rdfs:comment "E.g. a process quantity or material data set is representative for a certain temporal state of an object" ;
+            rdfs:label "obsolete isRepresentativeFor" ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://purl.matolab.org/mseo/mid/in_accordance_with
+:in_accordance_with rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf cco:described_by ;
+                    rdfs:range :Regulation ;
+                    rdfs:label "in accordance with"@en .
 
 
 #################################################################
@@ -411,105 +415,105 @@ cco:is_subject_of owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD
 #################################################################
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#symbol
-pte:symbol owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00318> .
+pte:symbol owl:equivalentProperty :BWMD_00318 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_decimal_value
-cco:has_decimal_value owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00317> .
+cco:has_decimal_value owl:equivalentProperty :BWMD_00317 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_double_value
-cco:has_double_value owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00314> .
+cco:has_double_value owl:equivalentProperty :BWMD_00314 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value
-cco:has_integer_value owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00316> .
+cco:has_integer_value owl:equivalentProperty :BWMD_00316 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value
-cco:has_text_value owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWMD_00313> .
+cco:has_text_value owl:equivalentProperty :BWMD_00313 .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00312
-<https://purl.matolab.org/mseo/mid/BWMD_00312> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00313> ;
-                                               rdfs:domain <https://purl.matolab.org/mseo/mid/BWMD_00010> ;
-                                               rdfs:range xsd:string ;
-                                               obo:IAO_0000116 "is obsolete! use relation has measurement unit use annotation property SI unit label" ;
-                                               rdfs:label "obsolete hasUnitSymbol" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00312 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00313 ;
+            rdfs:domain :BWMD_00010 ;
+            rdfs:range xsd:string ;
+            obo:IAO_0000116 "is obsolete! use relation has measurement unit use annotation property SI unit label" ;
+            rdfs:label "obsolete hasUnitSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00313
-<https://purl.matolab.org/mseo/mid/BWMD_00313> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00315> ;
-                                               rdfs:range xsd:string ;
-                                               rdfs:label "obsolete hasStringLiteral" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00313 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:range xsd:string ;
+            rdfs:label "obsolete hasStringLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00314
-<https://purl.matolab.org/mseo/mid/BWMD_00314> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00315> ;
-                                               rdfs:label "obsolete hasDoubleLiteral" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00314 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:label "obsolete hasDoubleLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00315
-<https://purl.matolab.org/mseo/mid/BWMD_00315> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf owl:topDataProperty ;
-                                               rdfs:label "obsolete hasValue" ;
-                                               owl:deprecated "true"^^xsd:boolean ;
-                                               <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[255,128,0], \"lw\":0.75}" .
+:BWMD_00315 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:label "obsolete hasValue" ;
+            owl:deprecated "true"^^xsd:boolean ;
+            <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[255,128,0], \"lw\":0.75}" .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00316
-<https://purl.matolab.org/mseo/mid/BWMD_00316> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00315> ;
-                                               rdfs:label "obsolete hasIntegerLiteral" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00316 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:label "obsolete hasIntegerLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00317
-<https://purl.matolab.org/mseo/mid/BWMD_00317> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00315> ;
-                                               rdfs:range xsd:float ;
-                                               rdfs:label "obsolete hasRealLiteral" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00317 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00315 ;
+            rdfs:range xsd:float ;
+            rdfs:label "obsolete hasRealLiteral" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00318
-<https://purl.matolab.org/mseo/mid/BWMD_00318> rdf:type owl:DatatypeProperty ;
-                                               rdfs:subPropertyOf <https://purl.matolab.org/mseo/mid/BWMD_00313> ;
-                                               rdfs:range xsd:string ;
-                                               obo:IAO_0000116 "is obsolet! use relation is element" ;
-                                               rdfs:label "obsolete refersToElementSymbol" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00318 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :BWMD_00313 ;
+            rdfs:range xsd:string ;
+            obo:IAO_0000116 "is obsolet! use relation is element" ;
+            rdfs:label "obsolete refersToElementSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/has_column_index
-<https://purl.matolab.org/mseo/mid/has_column_index> rdf:type owl:DatatypeProperty ;
-                                                     rdfs:subPropertyOf cco:has_integer_value ;
-                                                     rdfs:domain <https://purl.matolab.org/mseo/mid/InformationField> ;
-                                                     rdfs:range xsd:integer ;
-                                                     rdfs:label "has column index" .
+:has_column_index rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf cco:has_integer_value ;
+                  rdfs:domain :InformationField ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "has column index" .
 
 
 ###  https://purl.matolab.org/mseo/mid/has_row_index
-<https://purl.matolab.org/mseo/mid/has_row_index> rdf:type owl:DatatypeProperty ;
-                                                  rdfs:subPropertyOf cco:has_integer_value ;
-                                                  rdfs:domain cco:InformationLine ;
-                                                  rdfs:range xsd:integer ;
-                                                  rdfs:label "has row index"^^rdfs:Literal .
+:has_row_index rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf cco:has_integer_value ;
+               rdfs:domain cco:InformationLine ;
+               rdfs:range xsd:integer ;
+               rdfs:label "has row index"^^rdfs:Literal .
 
 
 ###  https://purl.matolab.org/mseo/mid/has_separator_string
-<https://purl.matolab.org/mseo/mid/has_separator_string> rdf:type owl:DatatypeProperty ;
-                                                         rdfs:subPropertyOf cco:has_text_value ;
-                                                         rdfs:domain cco:InformationBearingArtifact ;
-                                                         rdfs:range xsd:string ;
-                                                         cco:definition "A string by that a line of Informations can be separated into inividual fields." ;
-                                                         rdfs:label "has separator string" .
+:has_separator_string rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf cco:has_text_value ;
+                      rdfs:domain cco:InformationBearingArtifact ;
+                      rdfs:range xsd:string ;
+                      cco:definition "A string by that a line of Informations can be separated into inividual fields." ;
+                      rdfs:label "has separator string" .
 
 
 #################################################################
@@ -518,7 +522,7 @@ cco:has_text_value owl:equivalentProperty <https://purl.matolab.org/mseo/mid/BWM
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015
 obo:BFO_0000015 rdf:type owl:Class ;
-                owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00017> .
+                owl:equivalentClass :BWMD_00017 .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000019
@@ -547,1698 +551,1775 @@ obo:BFO_0000141 rdf:type owl:Class .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Block
-pte:Block rdfs:subClassOf <https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> ;
+pte:Block rdfs:subClassOf :PeriodicTableElementIdentifer ;
           rdfs:label "Periodic Table Block" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Classification
-pte:Classification rdfs:subClassOf <https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> ;
+pte:Classification rdfs:subClassOf :PeriodicTableElementIdentifer ;
                    rdfs:label "Periodic Table Classification" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Element
-pte:Element owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00105> ;
-            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> ;
+pte:Element owl:equivalentClass :BWMD_00105 ;
+            rdfs:subClassOf :PeriodicTableElementIdentifer ;
             obo:IAO_0000118 "Element" ;
             rdfs:label "Periodic Table Element" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Group
-pte:Group rdfs:subClassOf <https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> ;
+pte:Group rdfs:subClassOf :PeriodicTableElementIdentifer ;
           rdfs:label "Periodic Table Group" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Period
-pte:Period rdfs:subClassOf <https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> ;
+pte:Period rdfs:subClassOf :PeriodicTableElementIdentifer ;
            rdfs:label "Periodic Table Period" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#StandardState
-pte:StandardState rdfs:subClassOf <https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> .
+pte:StandardState rdfs:subClassOf :PeriodicTableElementIdentifer .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/AbbreviatedName
-cco:AbbreviatedName owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00245> .
+cco:AbbreviatedName owl:equivalentClass :BWMD_00245 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfArtifactModification
-cco:ActOfArtifactModification owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00235> .
+cco:ActOfArtifactModification owl:equivalentClass :BWMD_00235 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfEstimation
-cco:ActOfEstimation owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00310> .
+cco:ActOfEstimation owl:equivalentClass :BWMD_00310 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfManufacturing
-cco:ActOfManufacturing owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00117> .
+cco:ActOfManufacturing owl:equivalentClass :BWMD_00117 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActOfOfficialDocumentation
-cco:ActOfOfficialDocumentation owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00234> .
+cco:ActOfOfficialDocumentation owl:equivalentClass :BWMD_00234 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Amount
-cco:Amount owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00143> .
+cco:Amount owl:equivalentClass :BWMD_00143 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ArbitraryIdentifier
-cco:ArbitraryIdentifier owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00071> .
+cco:ArbitraryIdentifier owl:equivalentClass :BWMD_00071 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ArtifactIdentifier
-cco:ArtifactIdentifier owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00001> ,
-                                           <https://purl.matolab.org/mseo/mid/BWMD_00028> ,
-                                           <https://purl.matolab.org/mseo/mid/BWMD_00178> .
+cco:ArtifactIdentifier owl:equivalentClass :BWMD_00001 ,
+                                           :BWMD_00028 ,
+                                           :BWMD_00178 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/CartesianCoordinateSystem
-cco:CartesianCoordinateSystem owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00273> .
+cco:CartesianCoordinateSystem owl:equivalentClass :BWMD_00273 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Density
-cco:Density owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00141> .
+cco:Density owl:equivalentClass :BWMD_00141 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/DesignativeName
-cco:DesignativeName owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00029> ,
-                                        <https://purl.matolab.org/mseo/mid/BWMD_00087> ,
-                                        <https://purl.matolab.org/mseo/mid/BWMD_00199> ,
-                                        <https://purl.matolab.org/mseo/mid/BWMD_00241> ,
-                                        <https://purl.matolab.org/mseo/mid/BWMD_00306> .
+cco:DesignativeName owl:equivalentClass :BWMD_00029 ,
+                                        :BWMD_00087 ,
+                                        :BWMD_00199 ,
+                                        :BWMD_00241 ,
+                                        :BWMD_00306 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Diameter
-cco:Diameter owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00129> .
+cco:Diameter owl:equivalentClass :BWMD_00129 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Facility
-cco:Facility owl:equivalentClass <https://purl.matolab.org/mseo/mid/Building> .
+cco:Facility owl:equivalentClass :Building .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Force
-cco:Force owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00033> .
+cco:Force owl:equivalentClass :BWMD_00033 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Frequency
-cco:Frequency owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00146> .
+cco:Frequency owl:equivalentClass :BWMD_00146 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity
-cco:InformationContentEntity owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00012> .
+cco:InformationContentEntity owl:equivalentClass :BWMD_00012 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Length
-cco:Length owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00127> .
+cco:Length owl:equivalentClass :BWMD_00127 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Mass
-cco:Mass owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00224> .
+cco:Mass owl:equivalentClass :BWMD_00224 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnit
-cco:MeasurementUnit owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00094> .
+cco:MeasurementUnit owl:equivalentClass :BWMD_00094 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfAngle
-cco:MeasurementUnitOfAngle owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00098> .
+cco:MeasurementUnitOfAngle owl:equivalentClass :BWMD_00098 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfArea
-cco:MeasurementUnitOfArea owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00286> .
+cco:MeasurementUnitOfArea owl:equivalentClass :BWMD_00286 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfTime
-cco:MeasurementUnitOfTime owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00030> .
+cco:MeasurementUnitOfTime owl:equivalentClass :BWMD_00030 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/NonNameIdentifier
-cco:NonNameIdentifier owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00040> .
+cco:NonNameIdentifier owl:equivalentClass :BWMD_00040 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Power
-cco:Power owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00149> .
+cco:Power owl:equivalentClass :BWMD_00149 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Pressure
-cco:Pressure owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00158> .
+cco:Pressure owl:equivalentClass :BWMD_00158 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessBeginning
-cco:ProcessBeginning owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00037> .
+cco:ProcessBeginning owl:equivalentClass :BWMD_00037 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ProcessEnding
-cco:ProcessEnding owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00066> .
+cco:ProcessEnding owl:equivalentClass :BWMD_00066 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/RatioMeasurementInformationContentEntity
-cco:RatioMeasurementInformationContentEntity owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00231> .
+cco:RatioMeasurementInformationContentEntity owl:equivalentClass :BWMD_00231 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Second
-cco:Second owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00208> .
+cco:Second owl:equivalentClass :BWMD_00208 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Temperature
-cco:Temperature owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00266> .
+cco:Temperature owl:equivalentClass :BWMD_00266 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/TimeOfDay
-cco:TimeOfDay owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00122> .
+cco:TimeOfDay owl:equivalentClass :BWMD_00122 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Velocity
-cco:Velocity owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00165> .
+cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 
 ###  https://purl.matolab.org/mseo/mid/Abstract
-<https://purl.matolab.org/mseo/mid/Abstract> rdf:type owl:Class ;
-                                             rdfs:subClassOf cco:InformationBearingArtifact ;
-                                             rdfs:label "Abstract"@en .
+:Abstract rdf:type owl:Class ;
+          rdfs:subClassOf cco:InformationBearingArtifact ;
+          rdfs:label "Abstract"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ActOfAnalysing
-<https://purl.matolab.org/mseo/mid/ActOfAnalysing> rdf:type owl:Class ;
-                                                   owl:equivalentClass <https://purl.matolab.org/mseo/mid/BWMD_00060> ;
-                                                   rdfs:subClassOf cco:IntentionalAct ;
-                                                   obo:IAO_0000116 "Not quite sure about this..." ;
-                                                   rdfs:label "Act of Analysing"@en .
+:ActOfAnalysing rdf:type owl:Class ;
+                owl:equivalentClass :BWMD_00060 ;
+                rdfs:subClassOf cco:IntentionalAct ;
+                obo:IAO_0000116 "Not quite sure about this..." ;
+                rdfs:label "Act of Analysing"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ActOfConcluding
-<https://purl.matolab.org/mseo/mid/ActOfConcluding> rdf:type owl:Class ;
-                                                    rdfs:subClassOf cco:IntentionalAct ;
-                                                    rdfs:label "Act of Concluding"@en .
+:ActOfConcluding rdf:type owl:Class ;
+                 rdfs:subClassOf cco:IntentionalAct ;
+                 rdfs:label "Act of Concluding"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ActOfSummarising
-<https://purl.matolab.org/mseo/mid/ActOfSummarising> rdf:type owl:Class ;
-                                                     rdfs:subClassOf cco:IntentionalAct ;
-                                                     rdfs:label "Act of Summarising"@en .
+:ActOfSummarising rdf:type owl:Class ;
+                  rdfs:subClassOf cco:IntentionalAct ;
+                  rdfs:label "Act of Summarising"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/AnalysedDataSet
-<https://purl.matolab.org/mseo/mid/AnalysedDataSet> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ProcessDataSet> ;
-                                                    rdfs:comment "Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file." ;
-                                                    rdfs:label "Analysed Data Set"@en .
+:AnalysedDataSet rdf:type owl:Class ;
+                 rdfs:subClassOf :ProcessDataSet ;
+                 rdfs:comment "Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file." ;
+                 rdfs:label "Analysed Data Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Atom
-<https://purl.matolab.org/mseo/mid/Atom> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MatterObject> ;
-                                         rdfs:label "Atom"@en .
+:Atom rdf:type owl:Class ;
+      rdfs:subClassOf :MatterObject ;
+      rdfs:label "Atom"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/AtomicFraction
-<https://purl.matolab.org/mseo/mid/AtomicFraction> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                   rdfs:label "Atomic Fraction"@en .
+:AtomicFraction rdf:type owl:Class ;
+                rdfs:subClassOf :MaterialComposition ;
+                rdfs:label "Atomic Fraction"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00001
-<https://purl.matolab.org/mseo/mid/BWMD_00001> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Identifier" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00001 rdf:type owl:Class ;
+            rdfs:label "obsolete Identifier" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00002
-<https://purl.matolab.org/mseo/mid/BWMD_00002> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Pourly defined! Nealy any material is or can be manipulated or arragend to another." ;
-                                               rdfs:label "obsolete EngineeringMaterial" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00002 rdf:type owl:Class ;
+            obo:IAO_0000116 "Pourly defined! Nealy any material is or can be manipulated or arragend to another." ;
+            rdfs:label "obsolete EngineeringMaterial" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00003
-<https://purl.matolab.org/mseo/mid/BWMD_00003> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Temporal Data Set" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00003 rdf:type owl:Class ;
+            rdfs:label "obsolete Temporal Data Set" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00004
-<https://purl.matolab.org/mseo/mid/BWMD_00004> rdf:type owl:Class ;
-                                               cco:definition "An  Agent which is designated by a Name. More Complex Definition see definition source..." ;
-                                               cco:definition_source "https://en.wikipedia.org/wiki/Person" ;
-                                               rdfs:label "obsolete Person"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00004 rdf:type owl:Class ;
+            cco:definition "An  Agent which is designated by a Name. More Complex Definition see definition source..." ;
+            cco:definition_source "https://en.wikipedia.org/wiki/Person" ;
+            rdfs:label "obsolete Person"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00005
-<https://purl.matolab.org/mseo/mid/BWMD_00005> rdf:type owl:Class ;
-                                               rdfs:comment "Some kind of field data (tables, columns, matrices...)" ;
-                                               rdfs:label "obsolete FieldData"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00005 rdf:type owl:Class ;
+            rdfs:comment "Some kind of field data (tables, columns, matrices...)" ;
+            rdfs:label "obsolete FieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00006
-<https://purl.matolab.org/mseo/mid/BWMD_00006> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "is not a quality" ;
-                                               rdfs:label "obsolete SpecificTextualInput" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00006 rdf:type owl:Class ;
+            obo:IAO_0000116 "is not a quality" ;
+            rdfs:label "obsolete SpecificTextualInput" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00010
-<https://purl.matolab.org/mseo/mid/BWMD_00010> rdf:type owl:Class ;
-                                               rdfs:comment "Physikalische und nichtphysikalische Größen" ;
-                                               rdfs:label "obsolete Quantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00010 rdf:type owl:Class ;
+            rdfs:comment "Physikalische und nichtphysikalische Größen" ;
+            rdfs:label "obsolete Quantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00011
-<https://purl.matolab.org/mseo/mid/BWMD_00011> rdf:type owl:Class ;
-                                               rdfs:label "obsolete QuantityKind" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00011 rdf:type owl:Class ;
+            rdfs:label "obsolete QuantityKind" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00012
-<https://purl.matolab.org/mseo/mid/BWMD_00012> rdf:type owl:Class ;
-                                               rdfs:comment "Any kind of information content entity (e.g. files, data sets...)" ;
-                                               rdfs:label "obsolete InformationContentEntity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00012 rdf:type owl:Class ;
+            rdfs:comment "Any kind of information content entity (e.g. files, data sets...)" ;
+            rdfs:label "obsolete InformationContentEntity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00015
-<https://purl.matolab.org/mseo/mid/BWMD_00015> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
-                                               rdfs:label "obsolete UnitSymbol" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00015 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete UnitSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00016
-<https://purl.matolab.org/mseo/mid/BWMD_00016> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
-                                               rdfs:label "obsolete Unit" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00016 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete Unit" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00017
-<https://purl.matolab.org/mseo/mid/BWMD_00017> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "can also be aa process data set, cause any process can be a partof another process or process aggregate" ;
-                                               rdfs:label "obsolete SubprocessSet" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00017 rdf:type owl:Class ;
+            obo:IAO_0000116 "can also be aa process data set, cause any process can be a partof another process or process aggregate" ;
+            rdfs:label "obsolete SubprocessSet" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00022
-<https://purl.matolab.org/mseo/mid/BWMD_00022> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Figure"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00022 rdf:type owl:Class ;
+            rdfs:label "obsolete Figure"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00023
-<https://purl.matolab.org/mseo/mid/BWMD_00023> rdf:type owl:Class ;
-                                               rdfs:comment "Any kind of specific data format, e.g. file types like .txt, .xls, .png, .pdf, ..." ;
-                                               rdfs:label "obsolete SpecificDataFormat" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00023 rdf:type owl:Class ;
+            rdfs:comment "Any kind of specific data format, e.g. file types like .txt, .xls, .png, .pdf, ..." ;
+            rdfs:label "obsolete SpecificDataFormat" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00025
-<https://purl.matolab.org/mseo/mid/BWMD_00025> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionOther" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00025 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionOther" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00028
-<https://purl.matolab.org/mseo/mid/BWMD_00028> rdf:type owl:Class ;
-                                               rdfs:label "obsolete SpecimenName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00028 rdf:type owl:Class ;
+            rdfs:label "obsolete SpecimenName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00029
-<https://purl.matolab.org/mseo/mid/BWMD_00029> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Name" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00029 rdf:type owl:Class ;
+            rdfs:label "obsolete Name" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00030
-<https://purl.matolab.org/mseo/mid/BWMD_00030> rdf:type owl:Class ;
-                                               rdfs:label "obsolete s" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00030 rdf:type owl:Class ;
+            rdfs:label "obsolete s" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00033
-<https://purl.matolab.org/mseo/mid/BWMD_00033> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "is not a quality its a process parameter" ;
-                                               rdfs:label "obsolete Force" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00033 rdf:type owl:Class ;
+            obo:IAO_0000116 "is not a quality its a process parameter" ;
+            rdfs:label "obsolete Force" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00035
-<https://purl.matolab.org/mseo/mid/BWMD_00035> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "A Component is defined with the realtion is part of! And anything is a part of another thing. So its kind of pouly defined isnt it?"@en ;
-                                               rdfs:comment "Some kind of component" ;
-                                               rdfs:label "obsolete Component" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00035 rdf:type owl:Class ;
+            obo:IAO_0000116 "A Component is defined with the realtion is part of! And anything is a part of another thing. So its kind of pouly defined isnt it?"@en ;
+            rdfs:comment "Some kind of component" ;
+            rdfs:label "obsolete Component" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00036
-<https://purl.matolab.org/mseo/mid/BWMD_00036> rdf:type owl:Class ;
-                                               rdfs:label "obsolete TechnologicalProduct" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00036 rdf:type owl:Class ;
+            rdfs:label "obsolete TechnologicalProduct" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00037
-<https://purl.matolab.org/mseo/mid/BWMD_00037> rdf:type owl:Class ;
-                                               rdfs:label "obsolete StartDateTime" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00037 rdf:type owl:Class ;
+            rdfs:label "obsolete StartDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00038
-<https://purl.matolab.org/mseo/mid/BWMD_00038> rdf:type owl:Class ;
-                                               rdfs:comment "In CCO Is a dataproperty connected to a temparal interval" ;
-                                               rdfs:label "obsolete DateTime Cell"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00038 rdf:type owl:Class ;
+            rdfs:comment "In CCO Is a dataproperty connected to a temparal interval" ;
+            rdfs:label "obsolete DateTime Cell"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00039
-<https://purl.matolab.org/mseo/mid/BWMD_00039> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:label "SoftwareTool"@en .
+:BWMD_00039 rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
+            rdfs:label "SoftwareTool"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00040
-<https://purl.matolab.org/mseo/mid/BWMD_00040> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "is a kind of identifer"@en ;
-                                               rdfs:label "obsolete IDNumber" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00040 rdf:type owl:Class ;
+            obo:IAO_0000116 "is a kind of identifer"@en ;
+            rdfs:label "obsolete IDNumber" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00047
-<https://purl.matolab.org/mseo/mid/BWMD_00047> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
-                                               rdfs:label "obsolete DerivedUnit" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00047 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete DerivedUnit" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00051
-<https://purl.matolab.org/mseo/mid/BWMD_00051> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionSS" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00051 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionSS" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00052
-<https://purl.matolab.org/mseo/mid/BWMD_00052> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionJIS" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00052 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionJIS" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00053
-<https://purl.matolab.org/mseo/mid/BWMD_00053> rdf:type owl:Class ;
-                                               rdfs:comment "Any kind of two dimensional field data, e.g. an Excel sheet, a table..." ;
-                                               rdfs:label "obsolete TwoDimensionalFieldData"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00053 rdf:type owl:Class ;
+            rdfs:comment "Any kind of two dimensional field data, e.g. an Excel sheet, a table..." ;
+            rdfs:label "obsolete TwoDimensionalFieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00060
-<https://purl.matolab.org/mseo/mid/BWMD_00060> rdf:type owl:Class ;
-                                               rdfs:label "obsolete CognitiveProcess" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00060 rdf:type owl:Class ;
+            rdfs:label "obsolete CognitiveProcess" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00065
-<https://purl.matolab.org/mseo/mid/BWMD_00065> rdf:type owl:Class ;
-                                               rdfs:comment "Date and time at the end of a process" ;
-                                               rdfs:label "obsolete ProcessEndDateTime" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00065 rdf:type owl:Class ;
+            rdfs:comment "Date and time at the end of a process" ;
+            rdfs:label "obsolete ProcessEndDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00066
-<https://purl.matolab.org/mseo/mid/BWMD_00066> rdf:type owl:Class ;
-                                               rdfs:label "obsolete EndDateTime" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00066 rdf:type owl:Class ;
+            rdfs:label "obsolete EndDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00071
-<https://purl.matolab.org/mseo/mid/BWMD_00071> rdf:type owl:Class ;
-                                               rdfs:label "obsolete SoftwareVersion" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00071 rdf:type owl:Class ;
+            rdfs:label "obsolete SoftwareVersion" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00079
-<https://purl.matolab.org/mseo/mid/BWMD_00079> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "no need for the class equivilent of data property rdfs:literal" ;
-                                               rdfs:label "obsolete Literal" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00079 rdf:type owl:Class ;
+            obo:IAO_0000116 "no need for the class equivilent of data property rdfs:literal" ;
+            rdfs:label "obsolete Literal" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00081
-<https://purl.matolab.org/mseo/mid/BWMD_00081> rdf:type owl:Class ;
-                                               rdfs:label "obsolete PNGImage"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00081 rdf:type owl:Class ;
+            rdfs:label "obsolete PNGImage"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00082
-<https://purl.matolab.org/mseo/mid/BWMD_00082> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Image"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00082 rdf:type owl:Class ;
+            rdfs:label "obsolete Image"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00086
-<https://purl.matolab.org/mseo/mid/BWMD_00086> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Shouldnt that be more specific?" ;
-                                               rdfs:label "obsolete Energy"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00086 rdf:type owl:Class ;
+            obo:IAO_0000116 "Shouldnt that be more specific?" ;
+            rdfs:label "obsolete Energy"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00087
-<https://purl.matolab.org/mseo/mid/BWMD_00087> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Is the deginative Name of a Organisation." ;
-                                               rdfs:comment "Name of the producer of any kind of product" ;
-                                               rdfs:label "obsolete ProducerName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00087 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is the deginative Name of a Organisation." ;
+            rdfs:comment "Name of the producer of any kind of product" ;
+            rdfs:label "obsolete ProducerName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00089
-<https://purl.matolab.org/mseo/mid/BWMD_00089> rdf:type owl:Class ;
-                                               rdfs:label "obsolete BaseQuantityKind" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00089 rdf:type owl:Class ;
+            rdfs:label "obsolete BaseQuantityKind" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00091
-<https://purl.matolab.org/mseo/mid/BWMD_00091> rdf:type owl:Class ;
-                                               rdfs:label "obsolete AmountOfSubstance" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00091 rdf:type owl:Class ;
+            rdfs:label "obsolete AmountOfSubstance" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00092
-<https://purl.matolab.org/mseo/mid/BWMD_00092> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:label "SimulationSoftware"@en .
+:BWMD_00092 rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
+            rdfs:label "SimulationSoftware"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00094
-<https://purl.matolab.org/mseo/mid/BWMD_00094> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
-                                               rdfs:label "obsolete BaseUnit" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00094 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete BaseUnit" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00098
-<https://purl.matolab.org/mseo/mid/BWMD_00098> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Angle" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00098 rdf:type owl:Class ;
+            rdfs:label "obsolete Angle" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00101
-<https://purl.matolab.org/mseo/mid/BWMD_00101> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "unspecific, what quality can a speciman have that a actifact can not?" ;
-                                               rdfs:label "obsolete SpecimenRelatedQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00101 rdf:type owl:Class ;
+            obo:IAO_0000116 "unspecific, what quality can a speciman have that a actifact can not?" ;
+            rdfs:label "obsolete SpecimenRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00102
-<https://purl.matolab.org/mseo/mid/BWMD_00102> rdf:type owl:Class ;
-                                               rdfs:label "obsolete StructuralQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00102 rdf:type owl:Class ;
+            rdfs:label "obsolete StructuralQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00104
-<https://purl.matolab.org/mseo/mid/BWMD_00104> rdf:type owl:Class ;
-                                               rdfs:comment "An excel sheet" ;
-                                               rdfs:label "obsolete ExcelSheet"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00104 rdf:type owl:Class ;
+            rdfs:comment "An excel sheet" ;
+            rdfs:label "obsolete ExcelSheet"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00105
-<https://purl.matolab.org/mseo/mid/BWMD_00105> rdf:type owl:Class ;
-                                               rdfs:comment "Symbol of a chemical element (e.g. H for hydrogen, Si for silicon Al for Aluminium, Fe for iron)" ;
-                                               rdfs:label "obsolete ChemicalElementSymbol" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00105 rdf:type owl:Class ;
+            rdfs:comment "Symbol of a chemical element (e.g. H for hydrogen, Si for silicon Al for Aluminium, Fe for iron)" ;
+            rdfs:label "obsolete ChemicalElementSymbol" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00109
-<https://purl.matolab.org/mseo/mid/BWMD_00109> rdf:type owl:Class ;
-                                               rdfs:label "obsolete TemperatureRelatedQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00109 rdf:type owl:Class ;
+            rdfs:label "obsolete TemperatureRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00110
-<https://purl.matolab.org/mseo/mid/BWMD_00110> rdf:type owl:Class ;
-                                               rdfs:subClassOf cco:Magnetic ;
-                                               rdfs:label "MagneticFlux"@en .
+:BWMD_00110 rdf:type owl:Class ;
+            rdfs:subClassOf cco:Magnetic ;
+            rdfs:label "MagneticFlux"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00112
-<https://purl.matolab.org/mseo/mid/BWMD_00112> rdf:type owl:Class ;
-                                               rdfs:label "obsolete JPGImage"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00112 rdf:type owl:Class ;
+            rdfs:label "obsolete JPGImage"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00114
-<https://purl.matolab.org/mseo/mid/BWMD_00114> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Pourly defined! Nearly any object is or can be manipulated or arragend to another." ,
-                                                               "definitions dont work well with artifact Ontologie" ;
-                                               rdfs:label "obsolete Engineering Object" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00114 rdf:type owl:Class ;
+            obo:IAO_0000116 "Pourly defined! Nearly any object is or can be manipulated or arragend to another." ,
+                            "definitions dont work well with artifact Ontologie" ;
+            rdfs:label "obsolete Engineering Object" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00117
-<https://purl.matolab.org/mseo/mid/BWMD_00117> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Manufacturing" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00117 rdf:type owl:Class ;
+            rdfs:label "obsolete Manufacturing" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00118
-<https://purl.matolab.org/mseo/mid/BWMD_00118> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionUNS" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00118 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionUNS" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00121
-<https://purl.matolab.org/mseo/mid/BWMD_00121> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "not a quantity, formats are information bearers classes" ;
-                                               rdfs:label "obsolete FormatDescription" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00121 rdf:type owl:Class ;
+            obo:IAO_0000116 "not a quantity, formats are information bearers classes" ;
+            rdfs:label "obsolete FormatDescription" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00122
-<https://purl.matolab.org/mseo/mid/BWMD_00122> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "This is not a quality. Time is descripte relational or as interval." ;
-                                               rdfs:label "obsolete Time" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00122 rdf:type owl:Class ;
+            obo:IAO_0000116 "This is not a quality. Time is descripte relational or as interval." ;
+            rdfs:label "obsolete Time" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00124
-<https://purl.matolab.org/mseo/mid/BWMD_00124> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Ratio Of Substances"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00124 rdf:type owl:Class ;
+            rdfs:label "obsolete Ratio Of Substances"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00127
-<https://purl.matolab.org/mseo/mid/BWMD_00127> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Length" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00127 rdf:type owl:Class ;
+            rdfs:label "obsolete Length" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00129
-<https://purl.matolab.org/mseo/mid/BWMD_00129> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Diameter" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00129 rdf:type owl:Class ;
+            rdfs:label "obsolete Diameter" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00130
-<https://purl.matolab.org/mseo/mid/BWMD_00130> rdf:type owl:Class ;
-                                               rdfs:label "obsolete GeneralGeometricQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00130 rdf:type owl:Class ;
+            rdfs:label "obsolete GeneralGeometricQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00135
-<https://purl.matolab.org/mseo/mid/BWMD_00135> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructureInfo> ;
-                                               rdfs:label "ChemicalComposition"@en .
+:BWMD_00135 rdf:type owl:Class ;
+            rdfs:subClassOf :MaterialStructureInfo ;
+            rdfs:label "ChemicalComposition"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00141
-<https://purl.matolab.org/mseo/mid/BWMD_00141> rdf:type owl:Class ;
-                                               rdfs:comment "Density: Mass/Volume" ;
-                                               rdfs:label "obsolete Density" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00141 rdf:type owl:Class ;
+            rdfs:comment "Density: Mass/Volume" ;
+            rdfs:label "obsolete Density" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00143
-<https://purl.matolab.org/mseo/mid/BWMD_00143> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Amount" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00143 rdf:type owl:Class ;
+            rdfs:label "obsolete Amount" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00146
-<https://purl.matolab.org/mseo/mid/BWMD_00146> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Frequency" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00146 rdf:type owl:Class ;
+            rdfs:label "obsolete Frequency" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00147
-<https://purl.matolab.org/mseo/mid/BWMD_00147> rdf:type owl:Class ;
-                                               rdfs:comment "Any kind of three dimensional field data" ;
-                                               rdfs:label "obsolete ThreeDimensionalFieldData"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00147 rdf:type owl:Class ;
+            rdfs:comment "Any kind of three dimensional field data" ;
+            rdfs:label "obsolete ThreeDimensionalFieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00149
-<https://purl.matolab.org/mseo/mid/BWMD_00149> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Power" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00149 rdf:type owl:Class ;
+            rdfs:label "obsolete Power" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00150
-<https://purl.matolab.org/mseo/mid/BWMD_00150> rdf:type owl:Class ;
-                                               rdfs:label "obsolete GeneralExperimentRelatedProcess"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00150 rdf:type owl:Class ;
+            rdfs:label "obsolete GeneralExperimentRelatedProcess"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00153
-<https://purl.matolab.org/mseo/mid/BWMD_00153> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Volume" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00153 rdf:type owl:Class ;
+            rdfs:label "obsolete Volume" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00158
-<https://purl.matolab.org/mseo/mid/BWMD_00158> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Pressure" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00158 rdf:type owl:Class ;
+            rdfs:label "obsolete Pressure" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00163
-<https://purl.matolab.org/mseo/mid/BWMD_00163> rdf:type owl:Class ;
-                                               rdfs:comment "Shoud be a geometry quality and therfor predecribed or measured" ;
-                                               rdfs:label "obsolete SpecimenGeometryParameter"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00163 rdf:type owl:Class ;
+            rdfs:comment "Shoud be a geometry quality and therfor predecribed or measured" ;
+            rdfs:label "obsolete SpecimenGeometryParameter"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00165
-<https://purl.matolab.org/mseo/mid/BWMD_00165> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Velocity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00165 rdf:type owl:Class ;
+            rdfs:label "obsolete Velocity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00166
-<https://purl.matolab.org/mseo/mid/BWMD_00166> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:comment "Machine specific software, e.g. used to control the process or acquire data" ;
-                                               rdfs:label "MachineSoftware"@en .
+:BWMD_00166 rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
+            rdfs:comment "Machine specific software, e.g. used to control the process or acquire data" ;
+            rdfs:label "MachineSoftware"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00168
-<https://purl.matolab.org/mseo/mid/BWMD_00168> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "too unspecific" ;
-                                               rdfs:label "obsolete MicrostructuralQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00168 rdf:type owl:Class ;
+            obo:IAO_0000116 "too unspecific" ;
+            rdfs:label "obsolete MicrostructuralQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00171
-<https://purl.matolab.org/mseo/mid/BWMD_00171> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:label "Control Software"@en .
+:BWMD_00171 rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
+            rdfs:label "Control Software"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00172
-<https://purl.matolab.org/mseo/mid/BWMD_00172> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionAFNOR" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00172 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionAFNOR" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00174
-<https://purl.matolab.org/mseo/mid/BWMD_00174> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionBS" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00174 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionBS" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00178
-<https://purl.matolab.org/mseo/mid/BWMD_00178> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "is an artifact identifer"@en ;
-                                               rdfs:comment "Name of a consumable" ;
-                                               rdfs:label "obsolete Consumable Name" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00178 rdf:type owl:Class ;
+            obo:IAO_0000116 "is an artifact identifer"@en ;
+            rdfs:comment "Name of a consumable" ;
+            rdfs:label "obsolete Consumable Name" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00179
-<https://purl.matolab.org/mseo/mid/BWMD_00179> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructureInfo> ;
-                                               rdfs:label "MaterialSurfaceStructureInfo"@en .
+:BWMD_00179 rdf:type owl:Class ;
+            rdfs:subClassOf :MaterialStructureInfo ;
+            rdfs:label "MaterialSurfaceStructureInfo"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00185
-<https://purl.matolab.org/mseo/mid/BWMD_00185> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Amount Of Substance Quantity"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00185 rdf:type owl:Class ;
+            rdfs:label "obsolete Amount Of Substance Quantity"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00187
-<https://purl.matolab.org/mseo/mid/BWMD_00187> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Event"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00187 rdf:type owl:Class ;
+            rdfs:label "obsolete Event"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00193
-<https://purl.matolab.org/mseo/mid/BWMD_00193> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Diagram"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00193 rdf:type owl:Class ;
+            rdfs:label "obsolete Diagram"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00196
-<https://purl.matolab.org/mseo/mid/BWMD_00196> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Resistance" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00196 rdf:type owl:Class ;
+            rdfs:label "obsolete Resistance" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00197
-<https://purl.matolab.org/mseo/mid/BWMD_00197> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/CADile> ;
-                                               rdfs:label "STEPFile"@en .
+:BWMD_00197 rdf:type owl:Class ;
+            rdfs:subClassOf :CADile ;
+            rdfs:label "STEPFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00199
-<https://purl.matolab.org/mseo/mid/BWMD_00199> rdf:type owl:Class ;
-                                               rdfs:label "obsolete PersonName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00199 rdf:type owl:Class ;
+            rdfs:label "obsolete PersonName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00201
-<https://purl.matolab.org/mseo/mid/BWMD_00201> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionENMaterialNumber" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00201 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionENMaterialNumber" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00202
-<https://purl.matolab.org/mseo/mid/BWMD_00202> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Pourly defined class! What is it tempurally site where a artifact is. Sound like the english counterpart of a fraunhofer noun." ;
-                                               rdfs:comment "A site related to a technological product" ;
-                                               rdfs:label "obsolete TechnologicalProductRelatedSite" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00202 rdf:type owl:Class ;
+            obo:IAO_0000116 "Pourly defined class! What is it tempurally site where a artifact is. Sound like the english counterpart of a fraunhofer noun." ;
+            rdfs:comment "A site related to a technological product" ;
+            rdfs:label "obsolete TechnologicalProductRelatedSite" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00206
-<https://purl.matolab.org/mseo/mid/BWMD_00206> rdf:type owl:Class ;
-                                               rdfs:label "obsolete TimeRelatedQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00206 rdf:type owl:Class ;
+            rdfs:label "obsolete TimeRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00207
-<https://purl.matolab.org/mseo/mid/BWMD_00207> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "not a quantity, beeing a consumable is a artifact function" ;
-                                               rdfs:comment "A structural quantity related to some kind of consumable" ;
-                                               rdfs:label "obsolete ConsumableRelatedQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00207 rdf:type owl:Class ;
+            obo:IAO_0000116 "not a quantity, beeing a consumable is a artifact function" ;
+            rdfs:comment "A structural quantity related to some kind of consumable" ;
+            rdfs:label "obsolete ConsumableRelatedQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00208
-<https://purl.matolab.org/mseo/mid/BWMD_00208> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
-                                               rdfs:label "obsolete Second" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00208 rdf:type owl:Class ;
+            obo:IAO_0000116 "Use Measurement Unit ICE instead" ;
+            rdfs:label "obsolete Second" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00209
-<https://purl.matolab.org/mseo/mid/BWMD_00209> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/BWMD_00092> ;
-                                               rdfs:comment "Software used for preprocessing" ;
-                                               rdfs:label "PreprocessingSoftware"@en .
+:BWMD_00209 rdf:type owl:Class ;
+            rdfs:subClassOf :BWMD_00092 ;
+            rdfs:comment "Software used for preprocessing" ;
+            rdfs:label "PreprocessingSoftware"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00216
-<https://purl.matolab.org/mseo/mid/BWMD_00216> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionENShortName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00216 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionENShortName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00218
-<https://purl.matolab.org/mseo/mid/BWMD_00218> rdf:type owl:Class ;
-                                               rdfs:comment "Any kind of one dimensional field data" ;
-                                               rdfs:label "obsolete OneDimensionalFieldData"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00218 rdf:type owl:Class ;
+            rdfs:comment "Any kind of one dimensional field data" ;
+            rdfs:label "obsolete OneDimensionalFieldData"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00224
-<https://purl.matolab.org/mseo/mid/BWMD_00224> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Mass" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00224 rdf:type owl:Class ;
+            rdfs:label "obsolete Mass" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00226
-<https://purl.matolab.org/mseo/mid/BWMD_00226> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructureInfo> ;
-                                               rdfs:label "MaterialVolumeStructureInfo"@en .
+:BWMD_00226 rdf:type owl:Class ;
+            rdfs:subClassOf :MaterialStructureInfo ;
+            rdfs:label "MaterialVolumeStructureInfo"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00231
-<https://purl.matolab.org/mseo/mid/BWMD_00231> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Is not a quality its a unit" ;
-                                               rdfs:label "obsolete DimensionlessRatio" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00231 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is not a quality its a unit" ;
+            rdfs:label "obsolete DimensionlessRatio" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00233
-<https://purl.matolab.org/mseo/mid/BWMD_00233> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "isnt that a quantity kind?" ;
-                                               rdfs:label "obsolete MechanicalQuantity" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00233 rdf:type owl:Class ;
+            obo:IAO_0000116 "isnt that a quantity kind?" ;
+            rdfs:label "obsolete MechanicalQuantity" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00234
-<https://purl.matolab.org/mseo/mid/BWMD_00234> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Documenting" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00234 rdf:type owl:Class ;
+            rdfs:label "obsolete Documenting" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00235
-<https://purl.matolab.org/mseo/mid/BWMD_00235> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "unspecific! what is prepared and why? If i prepare myself then this can be an Act of Planning. If a speciment is prepared this must be an Act of Artifact Processing" ;
-                                               rdfs:label "obsolete Preparation" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00235 rdf:type owl:Class ;
+            obo:IAO_0000116 "unspecific! what is prepared and why? If i prepare myself then this can be an Act of Planning. If a speciment is prepared this must be an Act of Artifact Processing" ;
+            rdfs:label "obsolete Preparation" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00236
-<https://purl.matolab.org/mseo/mid/BWMD_00236> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Very undetermined! Coincedent with Region of Interest? Its more scope of an investigation then an actual site on a object." ;
-                                               rdfs:comment """Measurement range: The area/volume in which the measurement
+:BWMD_00236 rdf:type owl:Class ;
+            obo:IAO_0000116 "Very undetermined! Coincedent with Region of Interest? Its more scope of an investigation then an actual site on a object." ;
+            rdfs:comment """Measurement range: The area/volume in which the measurement
 is performed.""" ;
-                                               rdfs:label "obsolete MeasurementRange" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+            rdfs:label "obsolete MeasurementRange" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00241
-<https://purl.matolab.org/mseo/mid/BWMD_00241> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Is the desinative Name of a Software instance." ;
-                                               rdfs:label "obsolete SoftwareName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00241 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is the desinative Name of a Software instance." ;
+            rdfs:label "obsolete SoftwareName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00245
-<https://purl.matolab.org/mseo/mid/BWMD_00245> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "This is the designative name of a plan." ;
-                                               rdfs:comment "Name of a procedure (e.g. norm, standard, internal procedure)" ;
-                                               rdfs:label "obsolete ProcedureName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00245 rdf:type owl:Class ;
+            obo:IAO_0000116 "This is the designative name of a plan." ;
+            rdfs:comment "Name of a procedure (e.g. norm, standard, internal procedure)" ;
+            rdfs:label "obsolete ProcedureName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00248
-<https://purl.matolab.org/mseo/mid/BWMD_00248> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:label "Data Acquisition Software"@en .
+:BWMD_00248 rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
+            rdfs:label "Data Acquisition Software"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00253
-<https://purl.matolab.org/mseo/mid/BWMD_00253> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Concentration Of Substance"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00253 rdf:type owl:Class ;
+            rdfs:label "obsolete Concentration Of Substance"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00261
-<https://purl.matolab.org/mseo/mid/BWMD_00261> rdf:type owl:Class ;
-                                               rdfs:comment "Date and time at the start of a process" ;
-                                               rdfs:label "obsolete ProcessStartDateTime" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00261 rdf:type owl:Class ;
+            rdfs:comment "Date and time at the start of a process" ;
+            rdfs:label "obsolete ProcessStartDateTime" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00264
-<https://purl.matolab.org/mseo/mid/BWMD_00264> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionGOST" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00264 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionGOST" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00266
-<https://purl.matolab.org/mseo/mid/BWMD_00266> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Temperature" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00266 rdf:type owl:Class ;
+            rdfs:label "obsolete Temperature" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00269
-<https://purl.matolab.org/mseo/mid/BWMD_00269> rdf:type owl:Class ;
-                                               owl:equivalentClass <https://purl.matolab.org/mseo/mid/VolumeFraction> ;
-                                               rdfs:label "obsolete Fraction" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00269 rdf:type owl:Class ;
+            owl:equivalentClass :VolumeFraction ;
+            rdfs:label "obsolete Fraction" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00273
-<https://purl.matolab.org/mseo/mid/BWMD_00273> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "shouldnt be here - is connected to a spatial regian and therfor no specifically dependent continuant" ;
-                                               rdfs:comment "Cartesian coordinates (e.g. x, y, z)" ;
-                                               rdfs:label "obsolete CartesianCoordinate" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00273 rdf:type owl:Class ;
+            obo:IAO_0000116 "shouldnt be here - is connected to a spatial regian and therfor no specifically dependent continuant" ;
+            rdfs:comment "Cartesian coordinates (e.g. x, y, z)" ;
+            rdfs:label "obsolete CartesianCoordinate" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00275
-<https://purl.matolab.org/mseo/mid/BWMD_00275> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Software> ;
-                                               rdfs:label "SoftwareScript"@en .
+:BWMD_00275 rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
+            rdfs:label "SoftwareScript"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00280
-<https://purl.matolab.org/mseo/mid/BWMD_00280> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "If it is a Object Aggregate with a name then the Instance will have with class Object Aggregate with a designative name." ;
-                                               rdfs:comment "Name of a specific object aggregate" ;
-                                               rdfs:label "obsolete ObjectAggregateName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00280 rdf:type owl:Class ;
+            obo:IAO_0000116 "If it is a Object Aggregate with a name then the Instance will have with class Object Aggregate with a designative name." ;
+            rdfs:comment "Name of a specific object aggregate" ;
+            rdfs:label "obsolete ObjectAggregateName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00284
-<https://purl.matolab.org/mseo/mid/BWMD_00284> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ProcessSetup> ;
-                                               rdfs:label "TestSetup"@en .
+:BWMD_00284 rdf:type owl:Class ;
+            rdfs:subClassOf :ProcessSetup ;
+            rdfs:label "TestSetup"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00285
-<https://purl.matolab.org/mseo/mid/BWMD_00285> rdf:type owl:Class ;
-                                               rdfs:label "obsolete TIFFImage"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00285 rdf:type owl:Class ;
+            rdfs:label "obsolete TIFFImage"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00286
-<https://purl.matolab.org/mseo/mid/BWMD_00286> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Area" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00286 rdf:type owl:Class ;
+            rdfs:label "obsolete Area" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00287
-<https://purl.matolab.org/mseo/mid/BWMD_00287> rdf:type owl:Class ;
-                                               rdfs:comment "A column (e.g. in a table)" ,
-                                                            "is done by dataproperty column index connected to Information Field" ;
-                                               rdfs:label "obsolete Column"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00287 rdf:type owl:Class ;
+            rdfs:comment "A column (e.g. in a table)" ,
+                         "is done by dataproperty column index connected to Information Field" ;
+            rdfs:label "obsolete Column"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00289
-<https://purl.matolab.org/mseo/mid/BWMD_00289> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "If it is a Equipment with a name then the Instance will have with class Object Aggregate with a designative name" ;
-                                               rdfs:comment "Name of an equipment" ;
-                                               rdfs:label "obsolete Equipment Name" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00289 rdf:type owl:Class ;
+            obo:IAO_0000116 "If it is a Equipment with a name then the Instance will have with class Object Aggregate with a designative name" ;
+            rdfs:comment "Name of an equipment" ;
+            rdfs:label "obsolete Equipment Name" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00299
-<https://purl.matolab.org/mseo/mid/BWMD_00299> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "is definatly not a quality, more a information content entity" ;
-                                               rdfs:label "obsolete Ratio" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00299 rdf:type owl:Class ;
+            obo:IAO_0000116 "is definatly not a quality, more a information content entity" ;
+            rdfs:label "obsolete Ratio" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00302
-<https://purl.matolab.org/mseo/mid/BWMD_00302> rdf:type owl:Class ;
-                                               rdfs:label "obsolete MaterialNamingConventionAISI" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00302 rdf:type owl:Class ;
+            rdfs:label "obsolete MaterialNamingConventionAISI" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00303
-<https://purl.matolab.org/mseo/mid/BWMD_00303> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "If it is a Fiat Object Part, then it must be a subclass of fiat object part and not an instance of an other class." ;
-                                               rdfs:comment "Name of a fiat object part" ;
-                                               rdfs:label "obsolete FiatObjectPartName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00303 rdf:type owl:Class ;
+            obo:IAO_0000116 "If it is a Fiat Object Part, then it must be a subclass of fiat object part and not an instance of an other class." ;
+            rdfs:comment "Name of a fiat object part" ;
+            rdfs:label "obsolete FiatObjectPartName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00306
-<https://purl.matolab.org/mseo/mid/BWMD_00306> rdf:type owl:Class ;
-                                               obo:IAO_0000116 "Is the designative Name of a Project" ;
-                                               rdfs:label "obsolete ProjectName" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00306 rdf:type owl:Class ;
+            obo:IAO_0000116 "Is the designative Name of a Project" ;
+            rdfs:label "obsolete ProjectName" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00310
-<https://purl.matolab.org/mseo/mid/BWMD_00310> rdf:type owl:Class ;
-                                               rdfs:label "obsolete ProcessEvaluation" ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00310 rdf:type owl:Class ;
+            rdfs:label "obsolete ProcessEvaluation" ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00342
-<https://purl.matolab.org/mseo/mid/BWMD_00342> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Cell"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00342 rdf:type owl:Class ;
+            rdfs:label "obsolete Cell"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00343
-<https://purl.matolab.org/mseo/mid/BWMD_00343> rdf:type owl:Class ;
-                                               rdfs:label "obsolete Zero Dimensional Field Data"^^xsd:string ;
-                                               owl:deprecated "true"^^xsd:boolean .
+:BWMD_00343 rdf:type owl:Class ;
+            rdfs:label "obsolete Zero Dimensional Field Data"^^xsd:string ;
+            owl:deprecated "true"^^xsd:boolean .
 
 
 ###  https://purl.matolab.org/mseo/mid/BaseElementOfComposition
-<https://purl.matolab.org/mseo/mid/BaseElementOfComposition> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                             rdfs:comment "Is the base element of a chemical composition, e.g. Ni in Ni-alloys, Al in Al-alloys." ;
-                                                             rdfs:label "Base Element Of Composition"@en .
+:BaseElementOfComposition rdf:type owl:Class ;
+                          rdfs:subClassOf :MaterialComposition ;
+                          rdfs:comment "Is the base element of a chemical composition, e.g. Ni in Ni-alloys, Al in Al-alloys." ;
+                          rdfs:label "Base Element Of Composition"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Building
-<https://purl.matolab.org/mseo/mid/Building> rdf:type owl:Class ;
-                                             rdfs:subClassOf cco:Artifact ;
-                                             rdfs:label "Building"@en .
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf cco:Artifact ;
+          rdfs:label "Building"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/CADile
-<https://purl.matolab.org/mseo/mid/CADile> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                           rdfs:label "CADFile"@en .
+:CADile rdf:type owl:Class ;
+        rdfs:subClassOf :File ;
+        rdfs:label "CADFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/CSVFile
-<https://purl.matolab.org/mseo/mid/CSVFile> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                            rdfs:label "CSVFile"@en .
+:CSVFile rdf:type owl:Class ;
+         rdfs:subClassOf :File ;
+         rdfs:label "CSVFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Cluster
-<https://purl.matolab.org/mseo/mid/Cluster> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MatterObject> ;
-                                            rdfs:label "Cluster"@en .
+:Cluster rdf:type owl:Class ;
+         rdfs:subClassOf :MatterObject ;
+         rdfs:label "Cluster"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Comment
-<https://purl.matolab.org/mseo/mid/Comment> rdf:type owl:Class ;
-                                            rdfs:subClassOf cco:InformationBearingArtifact ;
-                                            rdfs:label "Comment"@en .
+:Comment rdf:type owl:Class ;
+         rdfs:subClassOf cco:InformationBearingArtifact ;
+         rdfs:label "Comment"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Concentration
-<https://purl.matolab.org/mseo/mid/Concentration> rdf:type owl:Class ;
-                                                  rdfs:subClassOf obo:BFO_0000016 ;
-                                                  rdfs:label "Concentration"@en .
+:Concentration rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000016 ;
+               rdfs:label "Concentration"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Conclusion
-<https://purl.matolab.org/mseo/mid/Conclusion> rdf:type owl:Class ;
-                                               rdfs:subClassOf cco:InformationBearingArtifact ;
-                                               rdfs:label "Conclusion"@en .
+:Conclusion rdf:type owl:Class ;
+            rdfs:subClassOf cco:InformationBearingArtifact ;
+            rdfs:label "Conclusion"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Consumable
-<https://purl.matolab.org/mseo/mid/Consumable> rdf:type owl:Class ;
-                                               rdfs:subClassOf cco:Artifact ;
-                                               rdfs:comment "Consumables are products that consumers use recurrently, i.e., items which \"get used up\" or discarded." ;
-                                               rdfs:label "Consumable"@en .
+:Consumable rdf:type owl:Class ;
+            rdfs:subClassOf cco:Artifact ;
+            rdfs:comment "Consumables are products that consumers use recurrently, i.e., items which \"get used up\" or discarded." ;
+            rdfs:label "Consumable"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Count
-<https://purl.matolab.org/mseo/mid/Count> rdf:type owl:Class ;
-                                          rdfs:subClassOf cco:Amount ;
-                                          cco:alternative_label "Count" ;
-                                          rdfs:label "Number"@en .
+:Count rdf:type owl:Class ;
+       rdfs:subClassOf cco:Amount ;
+       cco:alternative_label "Count" ;
+       rdfs:label "Number"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/CrossSection
+:CrossSection rdf:type owl:Class ;
+              rdfs:subClassOf obo:BFO_0000009 ;
+              cco:definition "a surface or shape exposed by making a straight cut through something, especially at right angles to an axis"@en ;
+              cco:definition_source "https://languages.oup.com/google-dictionary-en/"@en ;
+              rdfs:label "Cross Section"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DOCXFile
-<https://purl.matolab.org/mseo/mid/DOCXFile> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DocumentFile> ;
-                                             rdfs:label "DOCXFile"@en .
+:DOCXFile rdf:type owl:Class ;
+          rdfs:subClassOf :DocumentFile ;
+          rdfs:label "DOCXFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataEvaluation
-<https://purl.matolab.org/mseo/mid/DataEvaluation> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataTransformation> ;
-                                                   rdfs:comment "The process of evaluating some kind of data" ;
-                                                   rdfs:label "DataEvaluation"@en .
+:DataEvaluation rdf:type owl:Class ;
+                rdfs:subClassOf :DataTransformation ;
+                rdfs:comment "The process of evaluating some kind of data" ;
+                rdfs:label "DataEvaluation"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataExport
-<https://purl.matolab.org/mseo/mid/DataExport> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataTransformation> ;
-                                               rdfs:comment "The process of exporting data (e.g. from a output file generated by some simulation software)" ;
-                                               rdfs:label "DataExport"@en .
+:DataExport rdf:type owl:Class ;
+            rdfs:subClassOf :DataTransformation ;
+            rdfs:comment "The process of exporting data (e.g. from a output file generated by some simulation software)" ;
+            rdfs:label "DataExport"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataReduction
-<https://purl.matolab.org/mseo/mid/DataReduction> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataTransformation> ;
-                                                  rdfs:label "DataReduction"@en .
+:DataReduction rdf:type owl:Class ;
+               rdfs:subClassOf :DataTransformation ;
+               rdfs:label "DataReduction"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataSet
-<https://purl.matolab.org/mseo/mid/DataSet> rdf:type owl:Class ;
-                                            rdfs:subClassOf cco:InformationContentEntity ;
-                                            obo:IAO_0000116 "this should not be collections of information bearer, they are collections of other ICEs" ;
-                                            cco:definition "A collection of Information Content Entitys with the purpose to gather them in a particular context." ;
-                                            rdfs:comment "Any kind of data set" ;
-                                            rdfs:label "Data Set"@en .
+:DataSet rdf:type owl:Class ;
+         rdfs:subClassOf cco:InformationContentEntity ;
+         obo:IAO_0000116 "this should not be collections of information bearer, they are collections of other ICEs" ;
+         cco:definition "A collection of Information Content Entitys with the purpose to gather them in a particular context." ;
+         rdfs:comment "Any kind of data set" ;
+         rdfs:label "Data Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataTransformation
-<https://purl.matolab.org/mseo/mid/DataTransformation> rdf:type owl:Class ;
-                                                       rdfs:subClassOf obo:BFO_0000015 ;
-                                                       rdfs:label "DataTransformation"@en .
+:DataTransformation rdf:type owl:Class ;
+                    rdfs:subClassOf obo:BFO_0000015 ;
+                    rdfs:label "DataTransformation"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Description
-<https://purl.matolab.org/mseo/mid/Description> rdf:type owl:Class ;
-                                                rdfs:subClassOf cco:InformationBearingArtifact ;
-                                                rdfs:comment "A descriptive text" ;
-                                                rdfs:label "Description"@en .
+:Description rdf:type owl:Class ;
+             rdfs:subClassOf cco:InformationBearingArtifact ;
+             rdfs:comment "A descriptive text" ;
+             rdfs:label "Description"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DocumentFile
-<https://purl.matolab.org/mseo/mid/DocumentFile> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                                 rdfs:label "DocumentFile"@en .
+:DocumentFile rdf:type owl:Class ;
+              rdfs:subClassOf :File ;
+              rdfs:label "DocumentFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCapacitance
-<https://purl.matolab.org/mseo/mid/ElectricCapacitance> rdf:type owl:Class ;
-                                                        rdfs:subClassOf obo:BFO_0000019 ;
-                                                        rdfs:label "Electric Capacitance"@en .
+:ElectricCapacitance rdf:type owl:Class ;
+                     rdfs:subClassOf obo:BFO_0000019 ;
+                     rdfs:label "Electric Capacitance"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCharge
-<https://purl.matolab.org/mseo/mid/ElectricCharge> rdf:type owl:Class ;
-                                                   rdfs:subClassOf obo:BFO_0000016 ;
-                                                   rdfs:label "Electric Charge"@en .
+:ElectricCharge rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000016 ;
+                rdfs:label "Electric Charge"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCurrent
-<https://purl.matolab.org/mseo/mid/ElectricCurrent> rdf:type owl:Class ;
-                                                    rdfs:subClassOf obo:BFO_0000144 ;
-                                                    rdfs:label "Electric Current"@en .
+:ElectricCurrent rdf:type owl:Class ;
+                 rdfs:subClassOf obo:BFO_0000144 ;
+                 rdfs:label "Electric Current"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricalConductance
-<https://purl.matolab.org/mseo/mid/ElectricalConductance> rdf:type owl:Class ;
-                                                          rdfs:subClassOf obo:BFO_0000019 ;
-                                                          rdfs:label "Electrical Conductance"@en .
+:ElectricalConductance rdf:type owl:Class ;
+                       rdfs:subClassOf obo:BFO_0000019 ;
+                       rdfs:label "Electrical Conductance"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Equipment
-<https://purl.matolab.org/mseo/mid/Equipment> rdf:type owl:Class ;
-                                              rdfs:subClassOf cco:Artifact ;
-                                              rdfs:label "Equipment"@en .
+:Equipment rdf:type owl:Class ;
+           rdfs:subClassOf cco:Artifact ;
+           rdfs:label "Equipment"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/EquipmentSet
-<https://purl.matolab.org/mseo/mid/EquipmentSet> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ObjectSet> ;
-                                                 rdfs:label "Equipment Set"@en .
+:EquipmentSet rdf:type owl:Class ;
+              rdfs:subClassOf :ObjectSet ;
+              rdfs:label "Equipment Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Experiment
-<https://purl.matolab.org/mseo/mid/Experiment> rdf:type owl:Class ;
-                                               rdfs:subClassOf obo:BFO_0000015 ;
-                                               rdfs:label "Experiment"@en .
+:Experiment rdf:type owl:Class ;
+            rdfs:subClassOf obo:BFO_0000015 ;
+            rdfs:label "Experiment"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/ExperimentTime
+:ExperimentTime rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000038 ;
+                cco:definition "The Time Interval measuring while a Experiment is conducted"@en ;
+                rdfs:label "Experiment Time"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Extrapolation
-<https://purl.matolab.org/mseo/mid/Extrapolation> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataTransformation> ;
-                                                  rdfs:label "Extrapolation"@en .
+:Extrapolation rdf:type owl:Class ;
+               rdfs:subClassOf :DataTransformation ;
+               rdfs:label "Extrapolation"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/File
-<https://purl.matolab.org/mseo/mid/File> rdf:type owl:Class ;
-                                         rdfs:subClassOf cco:InformationBearingArtifact ;
-                                         rdfs:label "File"@en .
+:File rdf:type owl:Class ;
+      rdfs:subClassOf cco:InformationBearingArtifact ;
+      rdfs:label "File"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction
+:ForceMeasurementArtifactFunction rdf:type owl:Class ;
+                                  rdfs:subClassOf cco:MeasurementArtifactFunction ;
+                                  cco:definition "A Measurement Artifact Function that is realized during events in which an Artifact is used to measure the Force applied on a specified object or class of objects."@en ;
+                                  rdfs:label "Force Measurement Artifact Function"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Fraction
-<https://purl.matolab.org/mseo/mid/Fraction> rdf:type owl:Class ;
-                                             rdfs:subClassOf cco:Amount ;
-                                             cco:definition "A fraction of a number" ;
-                                             rdfs:label "Fraction"@en .
+:Fraction rdf:type owl:Class ;
+          rdfs:subClassOf cco:Amount ;
+          cco:definition "A fraction of a number" ;
+          rdfs:label "Fraction"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/GeometryInfo
-<https://purl.matolab.org/mseo/mid/GeometryInfo> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.matolab.org/mseo/mid/StructuralInfo> ;
-                                                 rdfs:comment "Data set containing geometric information content" ;
-                                                 rdfs:label "Geometry Info"@en .
+:GeometryInfo rdf:type owl:Class ;
+              rdfs:subClassOf :StructuralInfo ;
+              rdfs:comment "Data set containing geometric information content" ;
+              rdfs:label "Geometry Info"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ISOStandard
-<https://purl.matolab.org/mseo/mid/ISOStandard> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Regulation> ;
-                                                rdfs:label "ISOStandard"@en .
+:ISOStandard rdf:type owl:Class ;
+             rdfs:subClassOf :Regulation ;
+             rdfs:label "Standard"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ImageMetadataSet
-<https://purl.matolab.org/mseo/mid/ImageMetadataSet> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataSet> ;
-                                                     rdfs:comment "Metadata set included in images. E.g. microscopes write the process specific metadata into the image file." ;
-                                                     rdfs:label "Image Metadata Set"@en .
+:ImageMetadataSet rdf:type owl:Class ;
+                  rdfs:subClassOf :DataSet ;
+                  rdfs:comment "Metadata set included in images. E.g. microscopes write the process specific metadata into the image file." ;
+                  rdfs:label "Image Metadata Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ImageSet
-<https://purl.matolab.org/mseo/mid/ImageSet> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataSet> ;
-                                             rdfs:comment "A set of images" ;
-                                             rdfs:label "ImageSet"@en .
+:ImageSet rdf:type owl:Class ;
+          rdfs:subClassOf :DataSet ;
+          rdfs:comment "A set of images" ;
+          rdfs:label "ImageSet"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ImageStack
-<https://purl.matolab.org/mseo/mid/ImageStack> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ImageSet> ;
-                                               rdfs:comment "A series of images, that form a vertical stack (e.g. a series of images generated by tomography)." ;
-                                               rdfs:label "Image Stack"@en .
+:ImageStack rdf:type owl:Class ;
+            rdfs:subClassOf :ImageSet ;
+            rdfs:comment "A series of images, that form a vertical stack (e.g. a series of images generated by tomography)." ;
+            rdfs:label "Image Stack"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/IndustryProject
-<https://purl.matolab.org/mseo/mid/IndustryProject> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Project> ;
-                                                    rdfs:label "Industry Project"@en .
+:IndustryProject rdf:type owl:Class ;
+                 rdfs:subClassOf :Project ;
+                 rdfs:label "Industry Project"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/InformationField
-<https://purl.matolab.org/mseo/mid/InformationField> rdf:type owl:Class ;
-                                                     rdfs:subClassOf cco:InformationLine ;
-                                                     cco:definition "A Field in a Informations Line havving a row index and can have a column index property" ;
-                                                     rdfs:label "Information Field" .
+:InformationField rdf:type owl:Class ;
+                  rdfs:subClassOf cco:InformationLine ;
+                  cco:definition "A Field in a Informations Line havving a row index and can have a column index property" ;
+                  rdfs:label "Information Field" .
 
 
 ###  https://purl.matolab.org/mseo/mid/InfrastructureEquipmentSet
-<https://purl.matolab.org/mseo/mid/InfrastructureEquipmentSet> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/EquipmentSet> ;
-                                                               rdfs:label "Infrastructure Equipment Set"@en .
+:InfrastructureEquipmentSet rdf:type owl:Class ;
+                            rdfs:subClassOf :EquipmentSet ;
+                            rdfs:label "Infrastructure Equipment Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/InputFile
-<https://purl.matolab.org/mseo/mid/InputFile> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                              rdfs:comment "An input file is a file with no specific file ending, that is used as input for a simulation" ;
-                                              rdfs:label "InputFile"@en .
+:InputFile rdf:type owl:Class ;
+           rdfs:subClassOf :File ;
+           rdfs:comment "An input file is a file with no specific file ending, that is used as input for a simulation" ;
+           rdfs:label "InputFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/InternationalSystemofUnits
-<https://purl.matolab.org/mseo/mid/InternationalSystemofUnits> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/SystemOfUnits> ;
-                                                               cco:alternative_label "SI Unit System"@en ;
-                                                               rdfs:label "International System of Units" .
+:InternationalSystemofUnits rdf:type owl:Class ;
+                            rdfs:subClassOf :SystemOfUnits ;
+                            cco:alternative_label "SI Unit System"@en ;
+                            rdfs:label "International System of Units" .
 
 
 ###  https://purl.matolab.org/mseo/mid/Interpolation
-<https://purl.matolab.org/mseo/mid/Interpolation> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataTransformation> ;
-                                                  rdfs:label "Interpolation"@en .
+:Interpolation rdf:type owl:Class ;
+               rdfs:subClassOf :DataTransformation ;
+               rdfs:label "Interpolation"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/LuminousIntensity
-<https://purl.matolab.org/mseo/mid/LuminousIntensity> rdf:type owl:Class ;
-                                                      rdfs:subClassOf obo:BFO_0000019 ;
-                                                      rdfs:label "Luminous Intensity"@en .
+:LuminousIntensity rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000019 ;
+                   rdfs:label "Luminous Intensity"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialComposition
-<https://purl.matolab.org/mseo/mid/MaterialComposition> rdf:type owl:Class ;
-                                                        rdfs:subClassOf obo:BFO_0000019 ;
-                                                        rdfs:comment "Any kind of quantity, that describes the composition of materials" ;
-                                                        rdfs:label "Material Composition"@en .
+:MaterialComposition rdf:type owl:Class ;
+                     rdfs:subClassOf obo:BFO_0000019 ;
+                     rdfs:comment "Any kind of quantity, that describes the composition of materials" ;
+                     rdfs:label "Material Composition"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialDataSet
-<https://purl.matolab.org/mseo/mid/MaterialDataSet> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataSet> ;
-                                                    rdfs:comment "A data set containing material specific data" ;
-                                                    rdfs:label "Material Data Set"@en .
+:MaterialDataSet rdf:type owl:Class ;
+                 rdfs:subClassOf :DataSet ;
+                 rdfs:comment "A data set containing material specific data" ;
+                 rdfs:label "Material Data Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialDefect
-<https://purl.matolab.org/mseo/mid/MaterialDefect> rdf:type owl:Class ;
-                                                   rdfs:subClassOf obo:BFO_0000029 ;
-                                                   rdfs:label "Material Defect"@en .
+:MaterialDefect rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000029 ;
+                rdfs:label "Material Defect"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialMesoStructure
-<https://purl.matolab.org/mseo/mid/MaterialMesoStructure> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructure> ;
-                                                          rdfs:label "Material Meso Structure"@en .
+:MaterialMesoStructure rdf:type owl:Class ;
+                       rdfs:subClassOf :MaterialStructure ;
+                       rdfs:label "Material Meso Structure"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialMicrostructure
-<https://purl.matolab.org/mseo/mid/MaterialMicrostructure> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructure> ;
-                                                           rdfs:label "Material Microstructure"@en .
+:MaterialMicrostructure rdf:type owl:Class ;
+                        rdfs:subClassOf :MaterialStructure ;
+                        rdfs:label "Material Microstructure"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialNamingConvention
-<https://purl.matolab.org/mseo/mid/MaterialNamingConvention> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Regulation> ;
-                                                             rdfs:label "Material Naming Convention"@en .
+:MaterialNamingConvention rdf:type owl:Class ;
+                          rdfs:subClassOf :Regulation ;
+                          rdfs:label "Material Naming Convention"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialNanoStructure
-<https://purl.matolab.org/mseo/mid/MaterialNanoStructure> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructure> ;
-                                                          rdfs:label "Material Nano Structure"@en .
+:MaterialNanoStructure rdf:type owl:Class ;
+                       rdfs:subClassOf :MaterialStructure ;
+                       rdfs:label "Material Nano Structure"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialStructure
-<https://purl.matolab.org/mseo/mid/MaterialStructure> rdf:type owl:Class ;
-                                                      rdfs:subClassOf obo:BFO_0000024 ;
-                                                      rdfs:label "Material Structure"@en .
+:MaterialStructure rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000024 ;
+                   rdfs:label "Material Structure"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialStructureInfo
-<https://purl.matolab.org/mseo/mid/MaterialStructureInfo> rdf:type owl:Class ;
-                                                          rdfs:subClassOf <https://purl.matolab.org/mseo/mid/StructuralInfo> ;
-                                                          rdfs:label "Material Structure Info"@en .
+:MaterialStructureInfo rdf:type owl:Class ;
+                       rdfs:subClassOf :StructuralInfo ;
+                       rdfs:label "Material Structure Info"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialStructureRelatedFiatObjectPart
-<https://purl.matolab.org/mseo/mid/MaterialStructureRelatedFiatObjectPart> rdf:type owl:Class ;
-                                                                           rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructure> ;
-                                                                           rdfs:label "Material Structure Related Fiat Object Part"@en .
+:MaterialStructureRelatedFiatObjectPart rdf:type owl:Class ;
+                                        rdfs:subClassOf :MaterialStructure ;
+                                        rdfs:label "Material Structure Related Fiat Object Part"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialStructureRelatedObject
-<https://purl.matolab.org/mseo/mid/MaterialStructureRelatedObject> rdf:type owl:Class ;
-                                                                   rdfs:subClassOf obo:BFO_0000030 ;
-                                                                   rdfs:label "MaterialStructureRelatedObject"@en .
+:MaterialStructureRelatedObject rdf:type owl:Class ;
+                                rdfs:subClassOf obo:BFO_0000030 ;
+                                rdfs:label "MaterialStructureRelatedObject"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MatterObject
-<https://purl.matolab.org/mseo/mid/MatterObject> rdf:type owl:Class ;
-                                                 rdfs:subClassOf obo:BFO_0000030 ;
-                                                 rdfs:label "Matter Object"@en .
+:MatterObject rdf:type owl:Class ;
+              rdfs:subClassOf obo:BFO_0000030 ;
+              rdfs:label "Matter Object"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/MeasurementDevice
+:MeasurementDevice rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( cco:Artifact
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty obo:RO_0000085 ;
+                                                                owl:someValuesFrom cco:MeasurementArtifactFunction
+                                                              ]
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty cco:designated_by ;
+                                                                owl:someValuesFrom cco:DesignativeInformationContentEntity
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   cco:definition "A Artifact inhering a Measurement Artifact Function"@en ;
+                   rdfs:label "Measurement Device" .
 
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementLocation
-<https://purl.matolab.org/mseo/mid/MeasurementLocation> rdf:type owl:Class ;
-                                                        rdfs:subClassOf obo:BFO_0000029 ;
-                                                        rdfs:comment "The location (a point) at which some quantity is measured" ;
-                                                        rdfs:label "Measurement Location"@en .
+:MeasurementLocation rdf:type owl:Class ;
+                     rdfs:subClassOf obo:BFO_0000029 ;
+                     rdfs:comment "The location (a point) at which some quantity is measured" ;
+                     rdfs:label "Measurement Location"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/MeasurementRegion
+:MeasurementRegion rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000028 ;
+                   cco:definition "a three-dimensional spatial region which is prepared and or defined as scope for a measurement to be carried out"@en ;
+                   rdfs:label "Measurement Region"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementRelatedFiatObjectPart
-<https://purl.matolab.org/mseo/mid/MeasurementRelatedFiatObjectPart> rdf:type owl:Class ;
-                                                                     rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructure> ;
-                                                                     rdfs:comment "Measurement related fiat object part, e.g. measurement range or measurement location" ;
-                                                                     rdfs:label "Measurement Related Fiat Object Part"@en .
+:MeasurementRelatedFiatObjectPart rdf:type owl:Class ;
+                                  rdfs:subClassOf :MaterialStructure ;
+                                  rdfs:comment "Measurement related fiat object part, e.g. measurement range or measurement location" ;
+                                  rdfs:label "Measurement Related Fiat Object Part"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MechanicalWorkshop
-<https://purl.matolab.org/mseo/mid/MechanicalWorkshop> rdf:type owl:Class ;
-                                                       rdfs:subClassOf cco:Facility ;
-                                                       rdfs:comment "A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing..." ;
-                                                       rdfs:label "Mechanical Workshop"@en .
+:MechanicalWorkshop rdf:type owl:Class ;
+                    rdfs:subClassOf cco:Facility ;
+                    rdfs:comment "A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing..." ;
+                    rdfs:label "Mechanical Workshop"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Molecure
-<https://purl.matolab.org/mseo/mid/Molecure> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Cluster> ;
-                                             rdfs:label "Molecule"@en .
+:Molecure rdf:type owl:Class ;
+          rdfs:subClassOf :Cluster ;
+          rdfs:label "Molecule"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/NumberDensity
-<https://purl.matolab.org/mseo/mid/NumberDensity> rdf:type owl:Class ;
-                                                  rdfs:subClassOf obo:BFO_0000019 ;
-                                                  rdfs:label "Number Density"@en .
+:NumberDensity rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000019 ;
+               rdfs:label "Number Density"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ObjectSet
-<https://purl.matolab.org/mseo/mid/ObjectSet> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataSet> ;
-                                              rdfs:label "ObjectSet"@en .
+:ObjectSet rdf:type owl:Class ;
+           rdfs:subClassOf :DataSet ;
+           rdfs:label "ObjectSet"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PDFFile
-<https://purl.matolab.org/mseo/mid/PDFFile> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DocumentFile> ;
-                                            rdfs:label "PDFFile"@en .
+:PDFFile rdf:type owl:Class ;
+         rdfs:subClassOf :DocumentFile ;
+         rdfs:label "PDFFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer
-<https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer> rdf:type owl:Class ;
-                                                                  rdfs:subClassOf cco:DesignativeInformationContentEntity ;
-                                                                  obo:IAO_0000116 "We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier." ;
-                                                                  rdfs:label "Periodic Table Element Identifer"@en .
+:PeriodicTableElementIdentifer rdf:type owl:Class ;
+                               rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+                               obo:IAO_0000116 "We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier." ;
+                               rdfs:label "Periodic Table Element Identifer"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PhysicsModel
-<https://purl.matolab.org/mseo/mid/PhysicsModel> rdf:type owl:Class ;
-                                                 rdfs:subClassOf cco:Algorithm ;
-                                                 rdfs:label "Physics Model"@en .
+:PhysicsModel rdf:type owl:Class ;
+              rdfs:subClassOf cco:Algorithm ;
+              rdfs:label "Physics Model"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PlanarImageSet
-<https://purl.matolab.org/mseo/mid/PlanarImageSet> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ImageSet> ;
-                                                   rdfs:comment "A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)" ;
-                                                   rdfs:label "Planar Image Set"@en .
+:PlanarImageSet rdf:type owl:Class ;
+                rdfs:subClassOf :ImageSet ;
+                rdfs:comment "A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)" ;
+                rdfs:label "Planar Image Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PostProcessing
-<https://purl.matolab.org/mseo/mid/PostProcessing> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Simulation> ;
-                                                   rdfs:label "Post Processing"@en .
+:PostProcessing rdf:type owl:Class ;
+                rdfs:subClassOf :Simulation ;
+                rdfs:label "Post Processing"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PreProcessing
-<https://purl.matolab.org/mseo/mid/PreProcessing> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Simulation> ;
-                                                  rdfs:label "PreProcessing"@en .
+:PreProcessing rdf:type owl:Class ;
+               rdfs:subClassOf :Simulation ;
+               rdfs:label "PreProcessing"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Procedure
-<https://purl.matolab.org/mseo/mid/Procedure> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Regulation> ;
-                                              rdfs:label "Procedure"@en .
+:Procedure rdf:type owl:Class ;
+           rdfs:subClassOf :Regulation ;
+           rdfs:label "Procedure"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ProcessDataSet
-<https://purl.matolab.org/mseo/mid/ProcessDataSet> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DataSet> ;
-                                                   rdfs:comment "Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)" ;
-                                                   rdfs:label "Process Data Set"@en .
+:ProcessDataSet rdf:type owl:Class ;
+                rdfs:subClassOf :DataSet ;
+                rdfs:comment "Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)" ;
+                rdfs:label "Process Data Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ProcessParameterSet
-<https://purl.matolab.org/mseo/mid/ProcessParameterSet> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ProcessDataSet> ;
-                                                        rdfs:comment "A set of parameters, that is used to control a process. Those are usually quantities of type \"as supposed\"." ;
-                                                        rdfs:label "Process Parameter Set"@en .
+:ProcessParameterSet rdf:type owl:Class ;
+                     rdfs:subClassOf :ProcessDataSet ;
+                     rdfs:comment "A set of parameters, that is used to control a process. Those are usually quantities of type \"as supposed\"." ;
+                     rdfs:label "Process Parameter Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ProcessSetup
-<https://purl.matolab.org/mseo/mid/ProcessSetup> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ObjectSet> ;
-                                                 rdfs:label "Process Setup"@en .
+:ProcessSetup rdf:type owl:Class ;
+              rdfs:subClassOf :ObjectSet ;
+              rdfs:label "Process Setup"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Project
-<https://purl.matolab.org/mseo/mid/Project> rdf:type owl:Class ;
-                                            rdfs:subClassOf cco:PlanSpecification ;
-                                            rdfs:label "Project"@en .
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf cco:PlanSpecification ;
+         rdfs:label "Project"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PublicProject
-<https://purl.matolab.org/mseo/mid/PublicProject> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Project> ;
-                                                  rdfs:label "Public Project"@en .
+:PublicProject rdf:type owl:Class ;
+               rdfs:subClassOf :Project ;
+               rdfs:label "Public Project"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Publication
-<https://purl.matolab.org/mseo/mid/Publication> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DocumentFile> ;
-                                                rdfs:label "Publication"@en .
+:Publication rdf:type owl:Class ;
+             rdfs:subClassOf :DocumentFile ;
+             rdfs:label "Publication"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/RawDataSet
-<https://purl.matolab.org/mseo/mid/RawDataSet> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://purl.matolab.org/mseo/mid/ProcessDataSet> ;
-                                               rdfs:comment "Any kind of raw data set. Raw data refers to the original data set." ;
-                                               rdfs:label "Raw Data Set"@en .
+:RawDataSet rdf:type owl:Class ;
+            rdfs:subClassOf :ProcessDataSet ;
+            rdfs:comment "Any kind of raw data set. Raw data refers to the original data set." ;
+            rdfs:label "Raw Data Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/RegionOfInterest
-<https://purl.matolab.org/mseo/mid/RegionOfInterest> rdf:type owl:Class ;
-                                                     rdfs:subClassOf obo:BFO_0000029 ;
-                                                     rdfs:label "Region Of Interest"@en .
+:RegionOfInterest rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000029 ;
+                  rdfs:label "Region Of Interest"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Regulation
-<https://purl.matolab.org/mseo/mid/Regulation> rdf:type owl:Class ;
-                                               rdfs:subClassOf cco:PlanSpecification ;
-                                               rdfs:label "Regulation"@en .
+:Regulation rdf:type owl:Class ;
+            rdfs:subClassOf cco:PlanSpecification ;
+            rdfs:label "Regulation"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Report
-<https://purl.matolab.org/mseo/mid/Report> rdf:type owl:Class ;
-                                           rdfs:subClassOf <https://purl.matolab.org/mseo/mid/DocumentFile> ;
-                                           rdfs:label "Report"@en .
+:Report rdf:type owl:Class ;
+        rdfs:subClassOf :DocumentFile ;
+        rdfs:label "Report"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Simulation
-<https://purl.matolab.org/mseo/mid/Simulation> rdf:type owl:Class ;
-                                               rdfs:subClassOf cco:ActOfPrediction ;
-                                               rdfs:label "Simulation"@en .
+:Simulation rdf:type owl:Class ;
+            rdfs:subClassOf cco:ActOfPrediction ;
+            rdfs:label "Simulation"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/SimulationStep
-<https://purl.matolab.org/mseo/mid/SimulationStep> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/Simulation> ;
-                                                   rdfs:label "SimulationStep"@en .
+:SimulationStep rdf:type owl:Class ;
+                rdfs:subClassOf :Simulation ;
+                rdfs:label "SimulationStep"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Software
-<https://purl.matolab.org/mseo/mid/Software> rdf:type owl:Class ;
-                                             rdfs:subClassOf cco:Artifact ;
-                                             rdfs:label "Software"@en .
+:Software rdf:type owl:Class ;
+          rdfs:subClassOf cco:Artifact ;
+          rdfs:label "Software"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/SoftwareArchitecture
-<https://purl.matolab.org/mseo/mid/SoftwareArchitecture> rdf:type owl:Class ;
-                                                         rdfs:subClassOf cco:Artifact ;
-                                                         rdfs:label "Software Architecture"@en .
+:SoftwareArchitecture rdf:type owl:Class ;
+                      rdfs:subClassOf cco:Artifact ;
+                      rdfs:label "Software Architecture"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/SpecificHeatCapacity
-<https://purl.matolab.org/mseo/mid/SpecificHeatCapacity> rdf:type owl:Class ;
-                                                         rdfs:subClassOf obo:BFO_0000019 ;
-                                                         rdfs:label "Specific Heat Capacity"@en .
+:SpecificHeatCapacity rdf:type owl:Class ;
+                      rdfs:subClassOf obo:BFO_0000019 ;
+                      rdfs:label "Specific Heat Capacity"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Specimen
-<https://purl.matolab.org/mseo/mid/Specimen> rdf:type owl:Class ;
-                                             rdfs:subClassOf cco:Artifact ;
-                                             cco:definition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en ;
-                                             rdfs:label "Specimen"@en .
+:Specimen rdf:type owl:Class ;
+          rdfs:subClassOf cco:Artifact ;
+          cco:definition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en ;
+          rdfs:label "Specimen"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/StructuralInfo
-<https://purl.matolab.org/mseo/mid/StructuralInfo> rdf:type owl:Class ;
-                                                   rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
-                                                   rdfs:label "Structural Info"@en .
+:StructuralInfo rdf:type owl:Class ;
+                rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
+                rdfs:label "Structural Info"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Summary
-<https://purl.matolab.org/mseo/mid/Summary> rdf:type owl:Class ;
-                                            rdfs:subClassOf cco:InformationBearingArtifact ;
-                                            rdfs:label "Summary"@en .
+:Summary rdf:type owl:Class ;
+         rdfs:subClassOf cco:InformationBearingArtifact ;
+         rdfs:label "Summary"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/SystemOfUnits
-<https://purl.matolab.org/mseo/mid/SystemOfUnits> rdf:type owl:Class ;
-                                                  rdfs:subClassOf cco:ReferenceSystem ;
-                                                  rdfs:label "System Of Units"@en .
+:SystemOfUnits rdf:type owl:Class ;
+               rdfs:subClassOf cco:ReferenceSystem ;
+               rdfs:label "System Of Units"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/TXTFile
-<https://purl.matolab.org/mseo/mid/TXTFile> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                            rdfs:label "TXTFile"@en .
+:TXTFile rdf:type owl:Class ;
+         rdfs:subClassOf :File ;
+         rdfs:label "TXTFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Table
-<https://purl.matolab.org/mseo/mid/Table> rdf:type owl:Class ;
-                                          rdfs:subClassOf cco:InformationBearingArtifact ;
-                                          rdfs:comment "Any kind of table" ;
-                                          rdfs:label "Table"@en .
+:Table rdf:type owl:Class ;
+       rdfs:subClassOf cco:InformationBearingArtifact ;
+       rdfs:comment "Any kind of table" ;
+       rdfs:label "Table"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart
-<https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart> rdf:type owl:Class ;
-                                                                              rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialStructure> ;
-                                                                              rdfs:label "Technological Product Related Fiat Object Part"@en .
+:TechnologicalProductRelatedFiatObjectPart rdf:type owl:Class ;
+                                           rdfs:subClassOf :MaterialStructure ;
+                                           rdfs:label "Technological Product Related Fiat Object Part"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/TimeOfBreak
+:TimeOfBreak rdf:type owl:Class ;
+             rdfs:subClassOf obo:BFO_0000148 ;
+             cco:definition "The instand when a part or specimen breaks in an mechanical test."@en ;
+             rdfs:label "Time of Break"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/UniversalTestingMachine
+:UniversalTestingMachine rdf:type owl:Class ;
+                         rdfs:subClassOf cco:Artifact ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty cco:designated_by ;
+                                           owl:someValuesFrom cco:DesignativeInformationContentEntity
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty obo:BFO_0000051 ;
+                                           owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                           owl:onClass :MeasurementDevice
+                                         ] ;
+                         cco:definition "A machine capitable of performing komplex mechanical experiments, by applying force or displacement controlled regimes on specimen."@en ;
+                         rdfs:label "Universal Testing Machine"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/VersionNumber
-<https://purl.matolab.org/mseo/mid/VersionNumber> rdf:type owl:Class ;
-                                                  rdfs:subClassOf cco:CodeIdentifier ;
-                                                  cco:definition "A number designating a particular form of something that is slightly different from other forms of the same thing."@en ;
-                                                  rdfs:label "Version Number"@de .
+:VersionNumber rdf:type owl:Class ;
+               rdfs:subClassOf cco:CodeIdentifier ;
+               cco:definition "A number designating a particular form of something that is slightly different from other forms of the same thing."@en ;
+               rdfs:label "Version Number"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/Voltage
-<https://purl.matolab.org/mseo/mid/Voltage> rdf:type owl:Class ;
-                                            rdfs:subClassOf obo:BFO_0000144 ;
-                                            rdfs:label "Voltage"@en .
+:Voltage rdf:type owl:Class ;
+         rdfs:subClassOf obo:BFO_0000144 ;
+         rdfs:label "Voltage"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/VolumeConcentration
-<https://purl.matolab.org/mseo/mid/VolumeConcentration> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                        rdfs:label "Volume Concentration"@en .
+:VolumeConcentration rdf:type owl:Class ;
+                     rdfs:subClassOf :MaterialComposition ;
+                     rdfs:label "Volume Concentration"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/VolumeFraction
-<https://purl.matolab.org/mseo/mid/VolumeFraction> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                   rdfs:label "Volume Fraction"@en .
+:VolumeFraction rdf:type owl:Class ;
+                rdfs:subClassOf :MaterialComposition ;
+                rdfs:label "Volume Fraction"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/VolumeRatio
-<https://purl.matolab.org/mseo/mid/VolumeRatio> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                rdfs:label "Volume Ratio"@en .
+:VolumeRatio rdf:type owl:Class ;
+             rdfs:subClassOf :MaterialComposition ;
+             rdfs:label "Volume Ratio"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/WMVFile
-<https://purl.matolab.org/mseo/mid/WMVFile> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                            rdfs:comment "Windows Media-Audio/-Video file" ;
-                                            rdfs:label "WMVFile"@en .
+:WMVFile rdf:type owl:Class ;
+         rdfs:subClassOf :File ;
+         rdfs:comment "Windows Media-Audio/-Video file" ;
+         rdfs:label "WMVFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/WeightConcentration
-<https://purl.matolab.org/mseo/mid/WeightConcentration> rdf:type owl:Class ;
-                                                        rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                        rdfs:label "Weight Concentration"@en .
+:WeightConcentration rdf:type owl:Class ;
+                     rdfs:subClassOf :MaterialComposition ;
+                     rdfs:label "Weight Concentration"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/WeightFraction
-<https://purl.matolab.org/mseo/mid/WeightFraction> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                   rdfs:label "Weight Fraction"@en .
+:WeightFraction rdf:type owl:Class ;
+                rdfs:subClassOf :MaterialComposition ;
+                rdfs:label "Weight Fraction"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/WeightRatio
-<https://purl.matolab.org/mseo/mid/WeightRatio> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://purl.matolab.org/mseo/mid/MaterialComposition> ;
-                                                rdfs:label "Weight Ratio"@en .
+:WeightRatio rdf:type owl:Class ;
+             rdfs:subClassOf :MaterialComposition ;
+             rdfs:label "Weight Ratio"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/WithdrawalPlan
-<https://purl.matolab.org/mseo/mid/WithdrawalPlan> rdf:type owl:Class ;
-                                                   rdfs:subClassOf cco:PlanSpecification ;
-                                                   rdfs:comment "A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)" ;
-                                                   rdfs:label "Withdrawal Plan"@en .
+:WithdrawalPlan rdf:type owl:Class ;
+                rdfs:subClassOf cco:PlanSpecification ;
+                rdfs:comment "A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)" ;
+                rdfs:label "Withdrawal Plan"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/XLSFFile
-<https://purl.matolab.org/mseo/mid/XLSFFile> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                             rdfs:label "XLSFile"@en .
+:XLSFFile rdf:type owl:Class ;
+          rdfs:subClassOf :File ;
+          rdfs:label "XLSFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ZipFile
-<https://purl.matolab.org/mseo/mid/ZipFile> rdf:type owl:Class ;
-                                            rdfs:subClassOf <https://purl.matolab.org/mseo/mid/File> ;
-                                            rdfs:comment "Any kind of ZIP-File" ;
-                                            rdfs:label "ZIPFile"@en .
+:ZipFile rdf:type owl:Class ;
+         rdfs:subClassOf :File ;
+         rdfs:comment "Any kind of ZIP-File" ;
+         rdfs:label "ZIPFile"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
+###  https://purl.matolab.org/mseo/mid/MilliMeterPerMinuteMeasurementUnit
+:MilliMeterPerMinuteMeasurementUnit rdf:type owl:NamedIndividual ,
+                                             cco:MeasurementUnitOfSpeed ;
+                                    cco:alternative_label "mm/min" ;
+                                    rdfs:label "Milli Meter Per Minute Measurement Unit"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/PLC_00001
-<https://purl.matolab.org/mseo/mid/PLC_00001> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "AFNOR"@de .
+:PLC_00001 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "AFNOR"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00002
-<https://purl.matolab.org/mseo/mid/PLC_00002> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "AISI"@de .
+:PLC_00002 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "AISI"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00003
-<https://purl.matolab.org/mseo/mid/PLC_00003> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "BS"@de .
+:PLC_00003 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "BS"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00005
-<https://purl.matolab.org/mseo/mid/PLC_00005> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "EN Material Number"@de .
+:PLC_00005 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "EN Material Number"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00006
-<https://purl.matolab.org/mseo/mid/PLC_00006> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "EN Short Name"@de .
+:PLC_00006 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "EN Short Name"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00007
-<https://purl.matolab.org/mseo/mid/PLC_00007> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "GOST"@de .
+:PLC_00007 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "GOST"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00008
-<https://purl.matolab.org/mseo/mid/PLC_00008> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "JIS"@de .
+:PLC_00008 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "JIS"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00009
-<https://purl.matolab.org/mseo/mid/PLC_00009> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "Material_Naming_Convention_Other"@de .
+:PLC_00009 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "Material_Naming_Convention_Other"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00010
-<https://purl.matolab.org/mseo/mid/PLC_00010> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "SS"@de .
+:PLC_00010 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "SS"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/PLC_00011
-<https://purl.matolab.org/mseo/mid/PLC_00011> rdf:type owl:NamedIndividual ,
-                                                       <https://purl.matolab.org/mseo/mid/MaterialNamingConvention> ;
-                                              rdfs:label "UNS"@de .
+:PLC_00011 rdf:type owl:NamedIndividual ,
+                    :MaterialNamingConvention ;
+           rdfs:label "UNS"@de .
 
 
 #################################################################
@@ -2251,7 +2332,7 @@ obo:BFO_0000002 <https://www.materials.fraunhofer.de/ontologies/graph_designer#I
 obo:BFO_0000003 <https://www.materials.fraunhofer.de/ontologies/graph_designer#ItemFormat> "{\"ic\":[28,158,113], \"iw\":0.8}" .
 
 
-obo:BFO_0000051 <https://www.materials.fraunhofer.de/ontologies/graph_designer#RelationFormat> "{\"rc\":[0,0,0], \"lw\":0.75}" .
+cco:PascalMeasurementUnit cco:alternative_label "N/mm²" .
 
 
 cco:SpatialOrientation cco:alternative_label "Angle" .
