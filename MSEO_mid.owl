@@ -17,7 +17,6 @@
      xmlns:graph_designer="https://www.materials.fraunhofer.de/ontologies/graph_designer#">
     <owl:Ontology rdf:about="https://purl.matolab.org/mseo/mid">
         <owl:imports rdf:resource="http://www.daml.org/2003/01/periodictable/PeriodicTable.owl"/>
-        <owl:imports rdf:resource="https://gitlab.cc-asp.fraunhofer.de/iwm-hub/mdbw_rdf/-/raw/master/gd.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl"/>
         <rdfs:comment xml:lang="de">Contact:
 Christoph Schweizer
@@ -97,14 +96,6 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000051 -->
-
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000051">
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:0.75}</graph_designer:RelationFormat>
-    </rdf:Description>
     
 
 
@@ -190,7 +181,6 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:label>obsolete hasPart</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:0.75}</graph_designer:RelationFormat>
     </owl:ObjectProperty>
     
 
@@ -482,7 +472,6 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00324"/>
         <rdfs:label>obsolete hasOutput</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:1.75}</graph_designer:RelationFormat>
     </owl:ObjectProperty>
     
 
@@ -526,7 +515,6 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00324"/>
         <rdfs:label>obsolete precedes</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:1.75}</graph_designer:RelationFormat>
     </owl:ObjectProperty>
     
 
@@ -549,7 +537,6 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00324"/>
         <rdfs:label>obsolete isInputFor</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[67,129,191], &quot;lw&quot;:1.25}</graph_designer:RelationFormat>
     </owl:ObjectProperty>
     
 
@@ -690,7 +677,6 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:label>obsolete hasValue</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[255,128,0], &quot;lw&quot;:0.75}</graph_designer:RelationFormat>
     </owl:DatatypeProperty>
     
 
@@ -783,9 +769,7 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
-        <graph_designer:ItemFormat>{&quot;ic&quot;:[218,218,218], &quot;sym&quot;:[16], &quot;tc&quot;:[0,0,0], &quot;iw&quot;:0.8}</graph_designer:ItemFormat>
-    </owl:Class>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
     
 
 
@@ -3500,12 +3484,6 @@ is performed.</rdfs:comment>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
-        <graph_designer:ItemFormat>{&quot;ic&quot;:[70,130,180], &quot;iw&quot;:0.8}</graph_designer:ItemFormat>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
-        <graph_designer:ItemFormat>{&quot;ic&quot;:[28,158,113], &quot;iw&quot;:0.8}</graph_designer:ItemFormat>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/PascalMeasurementUnit">
         <cco:alternative_label>N/mm²</cco:alternative_label>
     </rdf:Description>
@@ -3514,15 +3492,6 @@ is performed.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/Strength">
         <obo:IAO_0000118>Resistance</obo:IAO_0000118>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_output">
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:1.75}</graph_designer:RelationFormat>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/is_input_of">
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[67,129,191], &quot;lw&quot;:1.25}</graph_designer:RelationFormat>
-    </rdf:Description>
-    <rdf:Description rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/process_precedes">
-        <graph_designer:RelationFormat>{&quot;rc&quot;:[0,0,0], &quot;lw&quot;:1.75}</graph_designer:RelationFormat>
     </rdf:Description>
 </rdf:RDF>
 
