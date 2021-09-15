@@ -12,5 +12,6 @@ jobs:
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
-          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+          # echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+          echo "CHANGED_FILES=(`ls ${prefix}*.drawio`)
           for f in $CHANGED_FILES; do cat f; done
