@@ -3,11 +3,14 @@ name: CI
 on: [push]
 
 jobs:
-  phpunit:
+  chowlk:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
-          cls
+          echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+          for f in $CHANGED_FILES; do cat f; done
