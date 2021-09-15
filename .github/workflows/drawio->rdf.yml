@@ -1,4 +1,4 @@
-name: CI
+name: DrawioToRdf
 
 on: [push]
 
