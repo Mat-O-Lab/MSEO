@@ -13,5 +13,6 @@ jobs:
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
-          echo "CHANGED_FILES=(`ls ${prefix}*.drawio`)"
-          for f in $CHANGED_FILES; do cat f; done
+          git clone https://github.com/oeg-upm/Chowlk.git
+          git checkout webservice
+          pip install -r requirements.txt
