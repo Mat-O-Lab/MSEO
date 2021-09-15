@@ -13,5 +13,5 @@ jobs:
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
-          echo "CHANGED_FILES=(`ls ${prefix}*.drawio`)
+          echo "CHANGED_FILES=(`ls ${prefix}*.drawio`)"
           for f in $CHANGED_FILES; do cat f; done
