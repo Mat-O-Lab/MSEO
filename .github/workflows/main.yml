@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  phpunit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: convert drawio to rdf
+        working-directory: ./methods
+        run: |
+          cls
