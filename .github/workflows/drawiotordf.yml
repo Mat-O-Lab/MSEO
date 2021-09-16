@@ -1,8 +1,9 @@
 name: DrawioToRdf
 
 on: [push]
-# echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
-          
+if: $(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})
+#echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
+
 jobs:
   chowlk:
     runs-on: ubuntu-latest
