@@ -41,6 +41,7 @@ jobs:
           git add *.ttl
           git commit -m "converted changed drawio files"  
       - name: Push changes # push the output folder to your repo
+        if: ${{ steps.diff.outputs.diff }}
         uses: ad-m/github-push-action@master
         with:
           #branch: main #ignore if your branch is master
