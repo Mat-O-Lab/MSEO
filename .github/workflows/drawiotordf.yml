@@ -14,5 +14,5 @@ jobs:
         working-directory: ./methods
         run: |
           git clone https://github.com/oeg-upm/Chowlk.git
-          git checkout webservice
-          pip install -r requirements.txt
+          pip install -r Chowlk/requirements.txt
+          python Chowlk/converter.py DIN_EN_ISO_527-3.drawio DIN_EN_ISO_527-3.ttl --type ontology --format ttl
