@@ -1,8 +1,6 @@
 name: DrawioToRdf
 
 on: [push]
-#echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
-
 jobs:
   chowlk:
     runs-on: ubuntu-latest
@@ -36,7 +34,7 @@ jobs:
         run: |
           git config --local user.email "chowlk.action@github.com"
           git config --local user.name "Chowlk Action"
-          git add *.ttl
+          git add -A
           git commit -m "converted changed drawio files"  
       - name: Push changes # push the output folder to your repo
         if: ${{ steps.diff.outputs.diff }}
