@@ -19,6 +19,8 @@ jobs:
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
+          export CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }}) 
+          echo $CHANGED_FILES
           python Chowlk/converter.py DIN_EN_ISO_527-3.drawio DIN_EN_ISO_527-3.ttl --type ontology --format ttl
       - name: Commit files # commit the output folder
         working-directory: ./methods
