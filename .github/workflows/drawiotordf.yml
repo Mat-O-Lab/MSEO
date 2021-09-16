@@ -14,7 +14,7 @@ jobs:
         id: diff
         run: |
           # See https://github.community/t/check-pushed-file-changes-with-git-diff-tree-in-github-actions/17220/10
-          export DIFF=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} methods/)
+          export DIFF=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} methods/*.drawio)
           echo "$DIFF"
           # Escape newlines (replace \n with %0A)
           echo "::set-output name=diff::$( echo "$DIFF" | sed ':a;N;$!ba;s/\n/%0A/g' )"
