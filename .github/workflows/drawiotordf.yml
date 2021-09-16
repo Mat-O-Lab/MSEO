@@ -6,14 +6,22 @@ on: [push]
 jobs:
   chowlk:
     runs-on: ubuntu-latest
-    if: $(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Check changed files
+        id: diff
+        run: |
+          # See https://github.community/t/check-pushed-file-changes-with-git-diff-tree-in-github-actions/17220/10
+          export DIFF=$( git diff --dirstat=files,0,cumulative ${{ github.event.pull_request.base.sha }} | awk -F ' ' '{print $2}' )
+          echo "$DIFF"
+          # Escape newlines (replace \n with %0A)
+          echo "::set-output name=diff::$( echo "$DIFF" | sed ':a;N;$!ba;s/\n/%0A/g' )"
       - name: clone Chowlk and install requirements
         working-directory: ./methods
         run: |
+          echo "${{ steps.diff.outputs.diff }}"
           git clone https://github.com/oeg-upm/Chowlk.git
           pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
