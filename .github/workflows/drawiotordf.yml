@@ -1,12 +1,12 @@
 name: DrawioToRdf
 
 on: [push]
-if: $(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})
 #echo "CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})" >> $GITHUB_ENV
 
 jobs:
   chowlk:
     runs-on: ubuntu-latest
+    if: $(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})
     steps:
       - uses: actions/checkout@v2
         with:
