@@ -13,6 +13,9 @@ jobs:
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
+          echo "clone Chowlk and install requirements"
           git clone https://github.com/oeg-upm/Chowlk.git
           pip install -r Chowlk/requirements.txt
+          echo "run converter on files"
           python Chowlk/converter.py DIN_EN_ISO_527-3.drawio DIN_EN_ISO_527-3.ttl --type ontology --format ttl
+          echo "job done"
