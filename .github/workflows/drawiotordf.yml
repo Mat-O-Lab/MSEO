@@ -14,23 +14,26 @@ jobs:
         id: diff
         run: |
           # See https://github.community/t/check-pushed-file-changes-with-git-diff-tree-in-github-actions/17220/10
-          export DIFF=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }})
+          export DIFF=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }} methods/)
           echo "$DIFF"
           # Escape newlines (replace \n with %0A)
           echo "::set-output name=diff::$( echo "$DIFF" | sed ':a;N;$!ba;s/\n/%0A/g' )"
       - name: clone Chowlk and install requirements
         working-directory: ./methods
+        if: ${{ steps.diff.outputs.diff }}
         run: |
           echo "${{ steps.diff.outputs.diff }}"
           git clone https://github.com/oeg-upm/Chowlk.git
           pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
+        if: ${{ steps.diff.outputs.diff }}
         working-directory: ./methods
         run: |
           export CHANGED_FILES=$(git diff --name-only ${{ github.event.before }}..${{ github.event.after }}) 
           echo $CHANGED_FILES
           python Chowlk/converter.py DIN_EN_ISO_527-3.drawio DIN_EN_ISO_527-3.ttl --type ontology --format ttl
       - name: Commit files # commit the output folder
+        if: ${{ steps.diff.outputs.diff }}
         working-directory: ./methods
         run: |
           git config --local user.email "chowlk.action@github.com"
