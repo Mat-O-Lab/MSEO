@@ -10,12 +10,25 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: clone Chowlk and install requirements
+        working-directory: ./methods
+        run: |
+          git clone https://github.com/oeg-upm/Chowlk.git
+          pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
         working-directory: ./methods
         run: |
-          echo "clone Chowlk and install requirements"
-          git clone https://github.com/oeg-upm/Chowlk.git
-          pip install -r Chowlk/requirements.txt
-          echo "run converter on files"
           python Chowlk/converter.py DIN_EN_ISO_527-3.drawio DIN_EN_ISO_527-3.ttl --type ontology --format ttl
-          echo "job done"
+      - name: Commit files # commit the output folder
+        working-directory: ./methods
+        run: |
+          git config --local user.email "chowlk.action@github.com"
+          git config --local user.name "Chowlk Action"
+          git add ./output
+          git commit -m "converted changed drawio files"  
+      - name: Push changes # push the output folder to your repo
+        uses: ad-m/github-push-action@master
+        with:
+          #branch: main #ignore if your branch is master
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
