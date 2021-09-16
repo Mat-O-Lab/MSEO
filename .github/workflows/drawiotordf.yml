@@ -19,7 +19,7 @@ jobs:
           # Escape newlines (replace \n with %0A)
           echo "::set-output name=diff::$( echo "$DIFF" | sed ':a;N;$!ba;s/\n/%0A/g' )"
       - name: clone Chowlk and install requirements
-        working-directory: ./methods
+        #working-directory: ./methods
         if: ${{ steps.diff.outputs.diff }}
         run: |
           echo "${{ steps.diff.outputs.diff }}"
@@ -27,7 +27,7 @@ jobs:
           pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
         if: ${{ steps.diff.outputs.diff }}
-        working-directory: ./methods
+        #working-directory: ./methods
         run: |
           for file in ${{ steps.diff.outputs.diff }}; do python Chowlk/converter.py "$file" "$file".ttl --type ontology --format ttl; done
       - name: Commit files # commit the output folder
