@@ -4,7 +4,7 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix tt: <https://purl.matolab.org/mseo/methods/DIN_EN_ISO_527-3> .
+@prefix tt: <https://purl.matolab.org/mseo/methods/DIN_EN_ISO_527-3/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 obo:BFO_0000051 a owl:ObjectProperty ;
