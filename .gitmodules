@@ -1,3 +1,6 @@
 [submodule "tools/CSVToCSVW"]
 	path = tools/CSVToCSVW
 	url = https://github.com/Mat-O-Lab/CSVToCSVW
+[submodule "tools/MapToMethod"]
+	path = tools/MapToMethod
+	url = https://github.com/Mat-O-Lab/MapToMethod
