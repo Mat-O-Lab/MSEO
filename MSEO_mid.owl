@@ -2655,6 +2655,15 @@ is performed.</rdfs:comment>
     
 
 
+    <!-- https://purl.matolab.org/mseo/mid/IdentingArtfactFunction -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/IdentingArtfactFunction">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/DamagingArtifactFunction"/>
+        <rdfs:label>Identing Artfact Function</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.matolab.org/mseo/mid/ImageMetadataSet -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ImageMetadataSet">
@@ -2698,7 +2707,7 @@ is performed.</rdfs:comment>
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/InformationField">
         <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/InformationLine"/>
-        <cco:definition>A Field in a Informations Line havving a row index and can have a column index property</cco:definition>
+        <cco:definition>A Field in a Informations Line having a row index and can have a column index property</cco:definition>
         <rdfs:label>Information Field</rdfs:label>
     </owl:Class>
     
