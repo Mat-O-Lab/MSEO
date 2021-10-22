@@ -1,0 +1,395 @@
+@prefix base: <https://purl.matolab.org/mseo/methods/DIN_EN_ISO_6506-1/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000051" ;
+    rdfs:range cco:Circular,
+        cco:InformationLine .
+
+obo:RO_0000086 a owl:ObjectProperty ;
+    rdfs:label "r o_0000086" .
+
+obo:RO_0010001 a owl:ObjectProperty ;
+    rdfs:label "r o_0010001" .
+
+cco:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" ;
+    rdfs:domain cco:Artifact ;
+    rdfs:range cco:NonNameIdentifier .
+
+cco:has_accessory a owl:ObjectProperty ;
+    rdfs:label "has_accessory" ;
+    rdfs:domain cco:ActOfArtifactAssembly,
+        cco:ActOfMeasurement,
+        cco:ActOfMeasuring .
+
+cco:has_agent a owl:ObjectProperty ;
+    rdfs:label "has_agent" ;
+    rdfs:domain mseo:Experiment .
+
+cco:has_function a owl:ObjectProperty ;
+    rdfs:label "has_function" ;
+    rdfs:domain cco:Artifact,
+        cco:Camera,
+        mseo:MeasurementDevice ;
+    rdfs:range cco:ArtifactFunction,
+        cco:DistanceMeasurementArtifactFunction,
+        cco:ImagingArtifactFunction,
+        mseo:ForceMeasurementArtifactFunction,
+        mseo:IndentingArtifactFunction .
+
+cco:has_input a owl:ObjectProperty ;
+    rdfs:label "has_input" ;
+    rdfs:domain mseo:ActOfAnalysing ;
+    rdfs:range cco:DistanceMeasurementInformationContentEntity,
+        cco:ForceMeasurementInformationContentEntity .
+
+cco:has_output a owl:ObjectProperty ;
+    rdfs:label "has_output" ;
+    rdfs:domain mseo:Experiment ;
+    rdfs:range cco:DistanceMeasurementInformationContentEntity,
+        cco:RatioMeasurementInformationContentEntity .
+
+cco:has_process_part a owl:ObjectProperty ;
+    rdfs:label "has_process_part" .
+
+cco:is_cause_of a owl:ObjectProperty ;
+    rdfs:label "is_cause_of" .
+
+cco:is_input_of a owl:ObjectProperty ;
+    rdfs:label "is_input_of" ;
+    rdfs:domain mseo:Specimen .
+
+cco:is_measured_by a owl:ObjectProperty ;
+    rdfs:label "is_measured_by" .
+
+cco:occures_on a owl:ObjectProperty ;
+    rdfs:label "occures_on" ;
+    rdfs:domain mseo:Experiment .
+
+cco:prescribed_by a owl:ObjectProperty ;
+    rdfs:label "prescribed_by" ;
+    rdfs:domain mseo:Experiment .
+
+cco:process_preceeds a owl:ObjectProperty ;
+    rdfs:label "process_preceeds" ;
+    rdfs:range cco:ActOfMeasurement,
+        cco:ActOfMeasuring,
+        mseo:ActOfAnalysing .
+
+base:ExperimentDate a cco:Day,
+        owl:NamedIndividual ;
+    cco:designated_by base:ExperimentDateIdentifier .
+
+base:HardnessMeasurementInformation a cco:RatioMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+base:HardnessTest a owl:NamedIndividual,
+        mseo:Experiment ;
+    cco:has_process_part base:AlignSpecimen,
+        base:ApplyLoad,
+        base:DeterminHardness,
+        base:MeasureIndentedArea,
+        base:PositionMeasureHead,
+        base:Relaxation,
+        base:Unload,
+        base:ZeroMeasureHeadPosition .
+
+base:HardnessTestSpecimen a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+base:HardnessTesterIdentifer a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:IdentMaxCrossSectionShape a cco:Circular,
+        owl:NamedIndividual .
+
+base:Mircoscope a cco:Microscope,
+        owl:NamedIndividual ;
+    obo:BFO_0000051 base:MicroscopeCamera .
+
+base:Operator a cco:Agent,
+        owl:NamedIndividual ;
+    cco:designated_by base:OperatorName .
+
+base:RawDataFile a owl:NamedIndividual,
+        mseo:File ;
+    cco:has_URI_value "raw_data_location"^^xsd:anyURI .
+
+base:Specimen a owl:NamedIndividual,
+        mseo:Specimen ;
+    obo:BFO_0000051 base:IdentedRegion ;
+    cco:designated_by base:SpecimenName .
+
+base:Standard a owl:NamedIndividual,
+        mseo:Regulation ;
+    obo:RO_0010001 base:DIN_EN_ISO_6506-1 ;
+    cco:designated_by base:StandardIdentifier .
+
+base:TestMachineIdentifer a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:TestPlan a cco:PlanSpecification,
+        owl:NamedIndividual ;
+    cco:designated_by base:TestPlanName .
+
+base:ZeroDepthMeasurementInformation a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+mseo: a owl:Ontology ;
+    dc:creator "Thomas Hanke" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "DIN EN ISO 6506-1 Graph" ;
+    owl:versionInfo "0.0.1" .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" ;
+    rdfs:domain mseo:Experiment .
+
+cco:ActOfPositionChange a owl:Class ;
+    rdfs:label "Act Of Position Change" .
+
+cco:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+cco:CalendarDateIdentifier a owl:Class ;
+    rdfs:label "Calendar Date Identifier" .
+
+cco:Day a owl:Class ;
+    rdfs:label "Day" .
+
+cco:DesignativeName a owl:Class ;
+    rdfs:label "Designative Name" .
+
+cco:DistanceMeasurementArtifactFunction a owl:Class ;
+    rdfs:label "Distance Measurement Artifact Function" .
+
+cco:Document a owl:Class ;
+    rdfs:label "Document" .
+
+cco:ImagingArtifactFunction a owl:Class ;
+    rdfs:label "Imaging Artifact Function" .
+
+cco:Microscope a owl:Class ;
+    rdfs:label "Microscope" .
+
+cco:PlanSpecification a owl:Class ;
+    rdfs:label "Plan Specification" .
+
+cco:Spherical a owl:Class ;
+    rdfs:label "Spherical" .
+
+base:AlignSpecimen a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:has_accessory base:HardnessTester .
+
+base:ApplyLoad a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_output base:MaxLoadMeasurementInformation ;
+    cco:is_cause_of base:IdentedRegion ;
+    cco:occures_on base:LoadingTimeInterval .
+
+base:Cameradentifer a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:CrossSection a owl:NamedIndividual,
+        mseo:CrossSection ;
+    obo:RO_0000086 base:MaxIdentDiameter .
+
+base:DIN_EN_ISO_6506-1 a cco:Document,
+        owl:NamedIndividual ;
+    cco:has_URI_value "https://www.beuth.de/de/norm/din-en-iso-6506-1/204131134|"^^xsd:anyURI .
+
+base:DeterminHardness a owl:NamedIndividual,
+        mseo:ActOfAnalysing ;
+    cco:has_input base:MaxLoadMeasurementInformation .
+
+base:ExperimentDateIdentifier a cco:CalendarDateIdentifier,
+        owl:NamedIndividual .
+
+base:IdenterDiameterInformation a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+base:Indenter a cco:Artifact,
+        owl:NamedIndividual ;
+    obo:RO_0000086 base:IndenterDiameter,
+        base:IndenterShape ;
+    cco:designated_by base:IndenterIdentifer .
+
+base:IndenterDiameter a cco:Diameter,
+        owl:NamedIndividual ;
+    cco:is_measured_by base:IdenterDiameterInformation .
+
+base:IndenterIdentifer a owl:NamedIndividual .
+
+base:IndenterShape a cco:Spherical,
+        owl:NamedIndividual .
+
+base:LenghtMeasurementDevice a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    cco:designated_by base:LenghtMeasurementDeviceIdentifer .
+
+base:LenghtMeasurementDeviceIdentifer a owl:NamedIndividual .
+
+base:LoadCell a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    cco:designated_by base:LoadCellIdentifer .
+
+base:LoadCellIdentifer a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:LoadingTimeInterval a owl:NamedIndividual,
+        mseo:ExperimentTime .
+
+base:MaxIdentDiameter a cco:Diameter,
+        owl:NamedIndividual ;
+    cco:is_measured_by base:HorizontalDiameterMeasurementInformation,
+        base:VerticalDiameterMeasurementInformation .
+
+base:MeasureIndentedArea a cco:ActOfMeasurement,
+        owl:NamedIndividual ;
+    cco:has_output base:HorizontalDiameterMeasurementInformation,
+        base:VerticalDiameterMeasurementInformation .
+
+base:MicroscopeCamera a cco:Camera,
+        owl:NamedIndividual ;
+    cco:designated_by base:Cameradentifer .
+
+base:OperatorName a cco:DesignativeName,
+        owl:NamedIndividual .
+
+base:PositionMeasureHead a cco:ActOfArtifactAssembly,
+        owl:NamedIndividual .
+
+base:Relaxation a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:occures_on base:RelaxationTimeInterval .
+
+base:RelaxationTimeInterval a owl:NamedIndividual,
+        mseo:ExperimentTime .
+
+base:SpecimenName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:StandardCode a cco:InformationLine,
+        owl:NamedIndividual ;
+    cco:has_text_value "DIN EN ISO 6506-1:2015-02"^^xsd:string .
+
+base:StandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    obo:RO_0010001 base:StandardCode .
+
+base:TestPlanName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:Unload a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:occures_on base:UnloadingTimeInterval .
+
+base:UnloadingTimeInterval a owl:NamedIndividual,
+        mseo:ExperimentTime .
+
+base:ZeroMeasureHeadPosition a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory base:HardnessTester .
+
+mseo:CrossSection a owl:Class ;
+    rdfs:label "Cross Section" .
+
+mseo:File a owl:Class ;
+    rdfs:label "File" .
+
+mseo:ForceMeasurementArtifactFunction a owl:Class ;
+    rdfs:label "Force Measurement Artifact Function" .
+
+mseo:MeasurementRegion a owl:Class ;
+    rdfs:label "Measurement Region" .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+cco:ActOfArtifactAssembly a owl:Class ;
+    rdfs:label "Act Of Artifact Assembly" .
+
+cco:ArtifactFunction a owl:Class ;
+    rdfs:label "Artifact Function" .
+
+cco:Camera a owl:Class ;
+    rdfs:label "Camera" .
+
+cco:Circular a owl:Class ;
+    rdfs:label "Circular" .
+
+cco:Diameter a owl:Class ;
+    rdfs:label "Diameter" .
+
+cco:ForceMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Force Measurement Information Content Entity" .
+
+cco:InformationLine a owl:Class ;
+    rdfs:label "Information Line" .
+
+base:HardnessTester a cco:Artifact,
+        owl:NamedIndividual ;
+    obo:BFO_0000051 base:Indenter,
+        base:LenghtMeasurementDevice,
+        base:LoadCell .
+
+base:HorizontalDiameterMeasurementInformation a cco:DistanceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+base:IdentedRegion a owl:NamedIndividual,
+        mseo:MeasurementRegion ;
+    obo:BFO_0000051 base:CrossSection .
+
+base:MaxLoadMeasurementInformation a cco:RatioMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+base:VerticalDiameterMeasurementInformation a cco:ForceMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+mseo:IndentingArtifactFunction a owl:Class ;
+    rdfs:label "Indenting Artifact Function" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+cco:ActOfMeasurement a owl:Class ;
+    rdfs:label "Act Of Measurement" .
+
+cco:RatioMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Ratio Measurement Information Content Entity" .
+
+mseo:ActOfAnalysing a owl:Class ;
+    rdfs:label "Act Of Analysing" .
+
+mseo:ExperimentTime a owl:Class ;
+    rdfs:label "Experiment Time" .
+
+mseo:MeasurementDevice a owl:Class ;
+    rdfs:label "Measurement Device" .
+
+cco:Artifact a owl:Class ;
+    rdfs:label "Artifact" .
+
+cco:DistanceMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Distance Measurement Information Content Entity" .
+
+cco:ActOfMeasuring a owl:Class ;
+    rdfs:label "Act Of Measuring" .
+
+mseo:Experiment a owl:Class ;
+    rdfs:label "Experiment" .
+
+cco:NonNameIdentifier a owl:Class,
+        owl:DatatypeProperty ;
+    rdfs:label "Non Name Identifier",
+        "non name identifier" ;
+    rdfs:domain mseo:IndentingArtifactFunction .
+
