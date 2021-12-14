@@ -1,0 +1,444 @@
+@prefix base: <https://www.materials.fraunhofer.de/ontologies/MoL_TensileTest#> .
+@prefix cco: <http://www.owl-ontologies.com/cco#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mid: <https://www.materials.fraunhofer.de/ontologies/BWMD_ontology/mid#> .
+@prefix ns: <https://www.mydata.com/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cco:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" .
+
+mid:BWMD_00331 a owl:ObjectProperty ;
+    rdfs:label "b w m d_00331" .
+
+mid:BWMD_00335 a owl:ObjectProperty ;
+    rdfs:label "b w m d_00335" .
+
+mid:BWMD_00337 a owl:ObjectProperty ;
+    rdfs:label "b w m d_00337" .
+
+mid:BWMD_00339 a owl:ObjectProperty ;
+    rdfs:label "b w m d_00339" .
+
+base: a owl:Ontology ;
+    dc:description "Ontology code created by Chowlk" .
+
+base:TT_00011 a owl:ObjectProperty ;
+    rdfs:label "t t_00011" .
+
+base:TT_00014 a owl:ObjectProperty ;
+    rdfs:label "t t_00014" .
+
+base:TT_00015 a owl:ObjectProperty ;
+    rdfs:label "t t_00015" .
+
+base:TT_00019 a owl:ObjectProperty ;
+    rdfs:label "t t_00019" .
+
+base:TT_00020 a owl:ObjectProperty ;
+    rdfs:label "t t_00020" .
+
+base:TT_00021 a owl:ObjectProperty ;
+    rdfs:label "t t_00021" .
+
+base:TT_00022 a owl:ObjectProperty ;
+    rdfs:label "t t_00022" .
+
+base:TT_00023 a owl:ObjectProperty ;
+    rdfs:label "t t_00023" .
+
+base:TT_00025 a owl:ObjectProperty ;
+    rdfs:label "t t_00025" .
+
+base:TT_00026 a owl:ObjectProperty ;
+    rdfs:label "t t_00026" .
+
+base:TT_00037 a owl:ObjectProperty ;
+    rdfs:label "t t_00037" .
+
+base:TT_00038 a owl:ObjectProperty ;
+    rdfs:label "t t_00038" .
+
+base:TT_00039 a owl:ObjectProperty ;
+    rdfs:label "t t_00039" .
+
+base:TT_00040 a owl:ObjectProperty ;
+    rdfs:label "t t_00040" .
+
+base:TT_00041 a owl:ObjectProperty ;
+    rdfs:label "t t_00041" .
+
+base:TT_00042 a owl:ObjectProperty ;
+    rdfs:label "t t_00042" .
+
+base:TT_00043 a owl:ObjectProperty ;
+    rdfs:label "t t_00043" .
+
+base:TT_00044 a owl:ObjectProperty ;
+    rdfs:label "t t_00044" .
+
+base:TT_00045 a owl:ObjectProperty ;
+    rdfs:label "t t_00045" .
+
+base:TT_00046 a owl:ObjectProperty ;
+    rdfs:label "t t_00046" .
+
+base:TT_00047 a owl:ObjectProperty ;
+    rdfs:label "t t_00047" .
+
+base:TT_00048 a owl:ObjectProperty ;
+    rdfs:label "t t_00048" .
+
+base:TT_00049 a owl:ObjectProperty ;
+    rdfs:label "t t_00049" .
+
+base:TT_00050 a owl:ObjectProperty ;
+    rdfs:label "t t_00050" .
+
+base:TT_00051 a owl:ObjectProperty ;
+    rdfs:label "t t_00051" .
+
+base:TT_00052 a owl:ObjectProperty ;
+    rdfs:label "t t_00052" .
+
+base:TT_00053 a owl:ObjectProperty ;
+    rdfs:label "t t_00053" .
+
+base:TT_00054 a owl:ObjectProperty ;
+    rdfs:label "t t_00054" .
+
+ns:modulus_of_elasticity_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:permanent_extension_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:proof_strength_total_extension_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:specimen1_state1 a owl:NamedIndividual,
+        mid:BWMD_00048 ;
+    mid:BWMD_00337 ns:subprocess1 .
+
+ns:yield_strength a owl:NamedIndividual,
+        base:TT_00072 ;
+    base:TT_00020 ns:upper_yield_strength ;
+    base:TT_00021 ns:lower_yield_strength .
+
+cco:NonNameIdentifier a owl:Class ;
+    rdfs:label "Non Name Identifier" .
+
+cco:RepresentationalInformationContentEntity a owl:Class ;
+    rdfs:label "Representational Information Content Entity" .
+
+mid:BWMD_00009 a owl:Class ;
+    rdfs:label "B W M D_00009" .
+
+mid:BWMD_00012 a owl:Class ;
+    rdfs:label "B W M D_00012" .
+
+mid:BWMD_00033 a owl:Class ;
+    rdfs:label "B W M D_00033" .
+
+mid:BWMD_00068 a owl:Class ;
+    rdfs:label "B W M D_00068" .
+
+base:TT_00068 a owl:Class ;
+    rdfs:label "T T_00068" .
+
+base:TT_00069 a owl:Class ;
+    rdfs:label "T T_00069" .
+
+base:TT_00070 a owl:Class ;
+    rdfs:label "T T_00070" .
+
+base:TT_00074 a owl:Class ;
+    rdfs:label "T T_00074" .
+
+base:TT_00095 a owl:Class ;
+    rdfs:label "T T_00095" .
+
+ns:characteristic_values_collection a owl:NamedIndividual,
+        base:TT_00074 ;
+    base:TT_00022 ns:reduction_of_area ;
+    base:TT_00023 ns:elongation_after_fracture ;
+    base:TT_00025 ns:proof_strength_plastic_extension,
+        ns:proof_strength_total_extension ;
+    base:TT_00026 ns:modulus_of_elasticity ;
+    base:TT_00040 ns:maximum_force ;
+    base:TT_00045 ns:permanent_elongation ;
+    base:TT_00046 ns:permanent_extension ;
+    base:TT_00047 ns:plastic_extension_at_maximum_force ;
+    base:TT_00051 ns:tensile_strength ;
+    base:TT_00052 ns:total_extension_at_fracture ;
+    base:TT_00053 ns:total_extension_at_maximum_force ;
+    base:TT_00054 ns:yield_point_extension .
+
+ns:elongation_after_fracture a owl:NamedIndividual,
+        base:TT_00071 ;
+    cco:designated_by ns:elongation_after_fracture_value .
+
+ns:elongation_after_fracture_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:lower_yield_strength a owl:NamedIndividual,
+        base:TT_00072 ;
+    cco:designated_by ns:lower_yield_strength_value .
+
+ns:lower_yield_strength_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:maximum_force a owl:NamedIndividual,
+        mid:BWMD_00033 ;
+    cco:designated_by ns:maximum_force_value .
+
+ns:maximum_force_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:modulus_of_elasticity a owl:NamedIndividual,
+        base:TT_00072 .
+
+ns:permanent_elongation a owl:NamedIndividual,
+        base:TT_00071 ;
+    cco:designated_by ns:permanent_elongation_value .
+
+ns:permanent_elongation_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:permanent_extension a owl:NamedIndividual,
+        base:TT_00071 .
+
+ns:plastic_extension_at_maximum_force a owl:NamedIndividual,
+        base:TT_00071 ;
+    cco:designated_by ns:plastic_extension_at_maximum_force-value .
+
+ns:plastic_extension_at_maximum_force-value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:proof_strength_plastic_extension a owl:NamedIndividual,
+        base:TT_00072 ;
+    cco:designated_by ns:proof_strength_plastic_extension_value .
+
+ns:proof_strength_plastic_extension_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:proof_strength_total_extension a owl:NamedIndividual,
+        base:TT_00072 .
+
+ns:reduction_of_area a owl:NamedIndividual,
+        mid:BWMD_00286 ;
+    cco:designated_by ns:reduction_of_area_value .
+
+ns:reduction_of_area_value a cco:SpatialRegionIdentifier,
+        owl:NamedIndividual .
+
+ns:specimen1_name a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+ns:specimen1_state2 a owl:NamedIndividual,
+        mid:BWMD_00048 ;
+    cco:designated_by ns:specimen1_name ;
+    mid:BWMD_00337 ns:subprocess2 ;
+    base:TT_00011 ns:specimen1_state2_length ;
+    base:TT_00015 ns:specimen1_state2_diameter ;
+    base:TT_00043 ns:specimen1_state2_area .
+
+ns:specimen1_state2_area a owl:NamedIndividual,
+        mid:BWMD_00286 ;
+    cco:designated_by ns:specimen1_state2_area_value .
+
+ns:specimen1_state2_area_value a cco:SpatialRegionIdentifier,
+        owl:NamedIndividual .
+
+ns:specimen1_state2_diameter a owl:NamedIndividual,
+        mid:BWMD_00129 ;
+    cco:designated_by ns:specimen1_state2_diameter_value .
+
+ns:specimen1_state2_diameter_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:specimen1_state2_length a owl:NamedIndividual,
+        mid:BWMD_00127 ;
+    cco:designated_by ns:specimen1_state2_length_value .
+
+ns:specimen1_state2_length_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:specimen1_state3 a owl:NamedIndividual,
+        mid:BWMD_00048 ;
+    base:TT_00014 ns:specimen1_state3_Diameter ;
+    base:TT_00039 ns:specimen1_state3_Length ;
+    base:TT_00042 ns:specimen1_state3_mInimum_cross_section_area .
+
+ns:specimen1_state3_Diameter a owl:NamedIndividual,
+        mid:BWMD_00129 ;
+    cco:designated_by ns:specimen1_state3_Diameter_value .
+
+ns:specimen1_state3_Diameter_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:specimen1_state3_Length a owl:NamedIndividual,
+        mid:BWMD_00127 ;
+    cco:designated_by ns:specimen1_state3_Length_value .
+
+ns:specimen1_state3_Length_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:specimen1_state3_mInimum_cross_section_area a owl:NamedIndividual,
+        mid:BWMD_00286 ;
+    cco:designated_by ns:specimen1_state3_mInimum_cross_section_area_value .
+
+ns:specimen1_state3_mInimum_cross_section_area_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess1 a owl:NamedIndividual,
+        base:TT_00068 ;
+    mid:BWMD_00331 ns:specimen1_state2 .
+
+ns:subprocess2 a owl:NamedIndividual,
+        base:TT_00070 ;
+    mid:BWMD_00331 ns:specimen1_state3,
+        ns:subprocess2_processdata ;
+    mid:BWMD_00335 ns:subprocess3 ;
+    mid:BWMD_00339 ns:subprocess2_parameter_set .
+
+ns:subprocess2_Indicated_temperature_i a owl:NamedIndividual,
+        mid:BWMD_00266 ;
+    cco:designated_by ns:subprocess2_Indicated_temperature_i_value .
+
+ns:subprocess2_Indicated_temperature_i_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess2_extensometer_gauge_length a owl:NamedIndividual,
+        mid:BWMD_00127 ;
+    cco:designated_by ns:subprocess2_extensometer_gauge_length_value .
+
+ns:subprocess2_extensometer_gauge_length_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess2_extensometer_parallel_length a owl:NamedIndividual,
+        mid:BWMD_00127 ;
+    cco:designated_by ns:subprocess2_extensometer_parallel_length_value .
+
+ns:subprocess2_extensometer_parallel_length_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess2_method a owl:NamedIndividual,
+        mid:BWMD_00012 ;
+    cco:designated_by ns:subprocess2_method_description .
+
+ns:subprocess2_method_description a cco:RepresentationalInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess2_parameter_set a owl:NamedIndividual,
+        mid:BWMD_00009 ;
+    base:TT_00037 ns:subprocess_Crosshead_separation_rate ;
+    base:TT_00038 ns:subprocess2_extensometer_gauge_length ;
+    base:TT_00041 ns:subprocess2_method ;
+    base:TT_00044 ns:subprocess2_extensometer_parallel_length ;
+    base:TT_00048 ns:subprocess2_strain_rate ;
+    base:TT_00049 ns:subprocess2_stress_rate ;
+    base:TT_00050 ns:subprocess2_test_temperature .
+
+ns:subprocess2_processdata a owl:NamedIndividual,
+        mid:BWMD_00068 ;
+    base:TT_00050 ns:subprocess2_Indicated_temperature_i .
+
+ns:subprocess2_strain_rate a owl:NamedIndividual,
+        base:TT_00095 ;
+    cco:designated_by ns:subprocess2_strain_rate_value .
+
+ns:subprocess2_strain_rate_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess2_stress_rate a owl:NamedIndividual,
+        base:TT_00073 ;
+    cco:designated_by ns:subprocess2_stress_rate_value .
+
+ns:subprocess2_stress_rate_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess2_test_temperature a owl:NamedIndividual,
+        mid:BWMD_00266 ;
+    cco:designated_by ns:subprocess2_test_temperature_value .
+
+ns:subprocess2_test_temperature_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:subprocess3 a owl:NamedIndividual,
+        base:TT_00069 ;
+    mid:BWMD_00331 ns:characteristic_values_collection .
+
+ns:subprocess_Crosshead_separation_rate a owl:NamedIndividual,
+        base:TT_00073 ;
+    cco:designated_by ns:subprocess_Crosshead_separation_rate_value .
+
+ns:subprocess_Crosshead_separation_rate_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:tensile_strength a owl:NamedIndividual,
+        base:TT_00072 ;
+    cco:designated_by ns:tensile_strength_value .
+
+ns:tensile_strength_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:total_extension_at_fracture a owl:NamedIndividual,
+        base:TT_00071 ;
+    cco:designated_by ns:total_extension_at_fracture_value .
+
+ns:total_extension_at_fracture_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:total_extension_at_maximum_force a owl:NamedIndividual,
+        base:TT_00071 ;
+    cco:designated_by ns:total_extension_at_maximum_force_value .
+
+ns:total_extension_at_maximum_force_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:upper_yield_strength a owl:NamedIndividual,
+        base:TT_00072 ;
+    cco:designated_by ns:upper_yield_strength_value .
+
+ns:upper_yield_strength_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+ns:yield_point_extension a owl:NamedIndividual,
+        base:TT_00071 ;
+    cco:designated_by ns:yield_point_extension_value .
+
+ns:yield_point_extension_value a cco:MeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+cco:SpatialRegionIdentifier a owl:Class ;
+    rdfs:label "Spatial Region Identifier" .
+
+mid:BWMD_00129 a owl:Class ;
+    rdfs:label "B W M D_00129" .
+
+mid:BWMD_00266 a owl:Class ;
+    rdfs:label "B W M D_00266" .
+
+base:TT_00073 a owl:Class ;
+    rdfs:label "T T_00073" .
+
+mid:BWMD_00048 a owl:Class ;
+    rdfs:label "B W M D_00048" .
+
+mid:BWMD_00286 a owl:Class ;
+    rdfs:label "B W M D_00286" .
+
+mid:BWMD_00127 a owl:Class ;
+    rdfs:label "B W M D_00127" .
+
+base:TT_00071 a owl:Class ;
+    rdfs:label "T T_00071" .
+
+base:TT_00072 a owl:Class ;
+    rdfs:label "T T_00072" .
+
+cco:MeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Measurement Information Content Entity" .
+
