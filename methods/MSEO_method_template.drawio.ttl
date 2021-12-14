@@ -1,0 +1,293 @@
+@prefix base: <https://purl.matolab.org/mseo/methods/my_method_shortname/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+obo:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000051" .
+
+obo:RO_0000086 a owl:ObjectProperty ;
+    rdfs:label "r o_0000086" .
+
+cco:ActOfArtifactAssembly a owl:Class ;
+    rdfs:label "Act Of Artifact Assembly" .
+
+cco:ActOfArtifactModification a owl:Class ;
+    rdfs:label "Act Of Artifact Modification" .
+
+cco:ActOfMeasuring a owl:Class ;
+    rdfs:label "Act Of Measuring" .
+
+cco:ActOfPositionChange a owl:Class ;
+    rdfs:label "Act Of Position Change" .
+
+cco:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+cco:ArtifactFunction a owl:Class ;
+    rdfs:label "Artifact Function" .
+
+cco:CalendarDateIdentifier a owl:Class ;
+    rdfs:label "Calendar Date Identifier" .
+
+cco:Cuboidal a owl:Class ;
+    rdfs:label "Cuboidal" .
+
+cco:Day a owl:Class ;
+    rdfs:label "Day" .
+
+cco:DesignativeName a owl:Class ;
+    rdfs:label "Designative Name" .
+
+cco:Lenght a owl:Class ;
+    rdfs:label "Lenght" .
+
+cco:PlanSpecification a owl:Class ;
+    rdfs:label "Plan Specification" .
+
+cco:ProperAccelaration a owl:Class ;
+    rdfs:label "Proper Accelaration" .
+
+cco:QualitySpecification a owl:Class ;
+    rdfs:label "Quality Specification" .
+
+cco:Speed a owl:Class ;
+    rdfs:label "Speed" .
+
+cco:Temperature a owl:Class ;
+    rdfs:label "Temperature" .
+
+cco:Thickness a owl:Class ;
+    rdfs:label "Thickness" .
+
+cco:Width a owl:Class ;
+    rdfs:label "Width" .
+
+cco:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" .
+
+cco:has_accessory a owl:ObjectProperty ;
+    rdfs:label "has_accessory" .
+
+cco:has_agent a owl:ObjectProperty ;
+    rdfs:label "has_agent" .
+
+cco:has_function a owl:ObjectProperty ;
+    rdfs:label "has_function" ;
+    rdfs:domain mseo:MeasurementDevice ;
+    rdfs:range cco:DistanceMeasurementArtifactFunction .
+
+cco:has_input a owl:ObjectProperty ;
+    rdfs:label "has_input" .
+
+cco:has_output a owl:ObjectProperty ;
+    rdfs:label "has_output" ;
+    rdfs:range cco:DistanceMeasurementInformationContentEntity .
+
+cco:has_process_part a owl:ObjectProperty ;
+    rdfs:label "has_process_part" .
+
+cco:has_profil a owl:ObjectProperty ;
+    rdfs:label "has_profil" .
+
+cco:is_input_of a owl:ObjectProperty ;
+    rdfs:label "is_input_of" .
+
+cco:is_measured_by a owl:ObjectProperty ;
+    rdfs:label "is_measured_by" .
+
+cco:occures_on a owl:ObjectProperty ;
+    rdfs:label "occures_on" .
+
+cco:prescribed_by a owl:ObjectProperty ;
+    rdfs:label "prescribed_by" .
+
+cco:prescribes a owl:ObjectProperty ;
+    rdfs:label "prescribes" .
+
+cco:process_preceeds a owl:ObjectProperty ;
+    rdfs:label "process_preceeds" .
+
+base:Specimen a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    obo:BFO_0000051 base:MeasurementRegion ;
+    cco:designated_by base:SpecimenName ;
+    cco:has_function base:TensileTestSpecimen ;
+    cco:is_input_of base:MyTest .
+
+mseo: a owl:Ontology ;
+    dc:creator "author_full_name" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "my_method_long_name" ;
+    owl:versionInfo "0.0.1" .
+
+mseo:ActOfAnalysing a owl:Class ;
+    rdfs:label "Act Of Analysing" .
+
+mseo:CrossSection a owl:Class ;
+    rdfs:label "Cross Section" .
+
+mseo:Experiment a owl:Class ;
+    rdfs:label "Experiment" .
+
+mseo:MeasurementRegion a owl:Class ;
+    rdfs:label "Measurement Region" .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" .
+
+cco:DistanceMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Distance Measurement Information Content Entity" .
+
+base:AlignSpecimen a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:SpecimenTempering .
+
+base:Caliper a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    cco:designated_by base:CaliperIdentifer .
+
+base:CaliperIdentifer a owl:NamedIndividual .
+
+base:CrossAcccelaration a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:CrossHeadSpeed a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:CrossSection a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    obo:RO_0000086 base:SpecimenThickness,
+        base:SpecimenWidth .
+
+base:ExperimentDate a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:designated_by base:ExperimentDateIdentifier .
+
+base:ExperimentDateIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:MeasureThickness a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:MeasureLenght .
+
+base:MeasureWidth a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:has_accessory base:Caliper ;
+    cco:process_preceeds base:MeasureLenght .
+
+base:MeasurementRegion a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    obo:BFO_0000051 base:CrossSection ;
+    obo:RO_0000086 base:SpecimenLenght,
+        base:SpecimenShape,
+        base:SpecimenTemperature .
+
+base:MyTest a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:has_agent base:Operator ;
+    cco:has_process_part base:ActOfElongation,
+        base:AlignSpecimen,
+        base:ClampSpecimen,
+        base:GetCharacteristicValues,
+        base:MeasureLenght,
+        base:MeasureThickness,
+        base:MeasureWidth,
+        base:SpecimenTempering ;
+    cco:occures_on base:ExperimentDate ;
+    cco:prescribed_by base:TestPlan ;
+    mseo:in_accordance_with base:Standard .
+
+base:Operator a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:designated_by base:OperatorName .
+
+base:OperatorName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenLenght a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenShape a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenTemperaturPlan a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:prescribes base:SpecimenTemperature .
+
+base:SpecimenThickness a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenWidth a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:is_measured_by base:WidthMeasurementInformation .
+
+base:Standard a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:designated_by base:StandardIdentifier .
+
+base:StandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:TensileTestSpecimen a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:TestPlan a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:designated_by base:TestPlanName .
+
+base:TestPlanName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:WidthMeasurementInformation a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+cco:DistanceMeasurementArtifactFunction a owl:Class ;
+    rdfs:label "Distance Measurement Artifact Function" .
+
+base:ActOfElongation a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:has_profil base:CrossAcccelaration,
+        base:CrossHeadSpeed ;
+    cco:process_preceeds base:GetCharacteristicValues .
+
+base:ClampSpecimen a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:MeasureLenght .
+
+base:GetCharacteristicValues a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenTemperature a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenTempering a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:has_input base:SpecimenTemperaturPlan ;
+    cco:process_preceeds base:ClampSpecimen .
+
+mseo:MeasurementDevice a owl:Class ;
+    rdfs:label "Measurement Device" .
+
+base:MeasureLenght a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:ActOfElongation .
+
+cco:NonNameIdentifier a owl:Class,
+        owl:DatatypeProperty ;
+    rdfs:label "Non Name Identifier",
+        "non name identifier" ;
+    rdfs:domain cco:DistanceMeasurementArtifactFunction .
+
