@@ -511,8 +511,7 @@ cco:has_text_value owl:equivalentProperty :BWMD_00313 .
 #################################################################
 
 ###  http://purl.obolibrary.org/obo/BFO_0000015
-obo:BFO_0000015 rdf:type owl:Class ;
-                owl:equivalentClass :BWMD_00017 .
+obo:BFO_0000015 rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000019
@@ -628,10 +627,6 @@ cco:Diameter owl:equivalentClass :BWMD_00129 .
 cco:Facility owl:equivalentClass :Building .
 
 
-###  http://www.ontologyrepository.com/CommonCoreOntologies/Force
-cco:Force owl:equivalentClass :BWMD_00033 .
-
-
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Frequency
 cco:Frequency owl:equivalentClass :BWMD_00146 .
 
@@ -654,10 +649,6 @@ cco:MeasurementUnit owl:equivalentClass :BWMD_00094 .
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfAngle
 cco:MeasurementUnitOfAngle owl:equivalentClass :BWMD_00098 .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfArea
-cco:MeasurementUnitOfArea owl:equivalentClass :BWMD_00286 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementUnitOfTime
@@ -692,12 +683,21 @@ cco:RatioMeasurementInformationContentEntity owl:equivalentClass :BWMD_00231 .
 cco:Second owl:equivalentClass :BWMD_00208 .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Strength
+cco:Strength obo:IAO_0000118 "Resistance" ;
+             rdfs:label "Stärke"@de .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Temperature
 cco:Temperature owl:equivalentClass :BWMD_00266 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/TimeOfDay
 cco:TimeOfDay owl:equivalentClass :BWMD_00122 .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/TwoDimensionalExtent
+cco:TwoDimensionalExtent owl:equivalentClass :BWMD_00286 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Velocity
@@ -1556,6 +1556,15 @@ is performed.""" ;
           rdfs:label "Building"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/BulkModulus
+:BulkModulus rdf:type owl:Class ;
+             rdfs:subClassOf :Stiffness ;
+             cco:definition "The bulk modulus ({\\displaystyle K}K or {\\displaystyle B}B) of a substance is a measure of how resistant to compression that substance is. It is defined as the ratio of the infinitesimal pressure increase to the resulting relative decrease of the volume. Other moduli describe the material's response (strain) to other kinds of stress: the shear modulus describes the response to shear stress, and Young's modulus describes the response to normal stress. For a fluid, only the bulk modulus is meaningful. For a complex anisotropic solid such as wood or paper, these three moduli do not contain enough information to describe its behaviour, and one must use the full generalized Hooke's law. The reciprocal of the bulk modulus at fixed temperature is called the isothermal compressibility."@en ;
+             cco:definition_source "https://en.wikipedia.org/wiki/Bulk_modulus"@en ;
+             rdfs:label "Bulk Modulus"@en ,
+                        "Kompressionsmodul"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/CADile
 :CADile rdf:type owl:Class ;
         rdfs:subClassOf :File ;
@@ -1655,6 +1664,33 @@ is performed.""" ;
                     rdfs:label "DataTransformation"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/Deformation
+:Deformation rdf:type owl:Class ;
+             rdfs:subClassOf obo:BFO_0000016 ;
+             obo:IAO_0000116 "excludes any rigid body motion"@en ;
+             cco:definition """In engineering, deformation refers to the change in size or shape of an object. Displacements are the absolute change in position of a point on the object. Deflection is the relative change in external displacements on an object. Strain is the relative internal change in shape of an infinitesimally small cube of material and can be expressed as a non-dimensional change in length or angle of distortion of the cube. Strains are related to the forces acting on the cube, which are known as stress, by a stress-strain curve. The relationship between stress and strain is generally linear and reversible up until the yield point and the deformation is elastic. The linear relationship for a material is known as Young's modulus. Above the yield point, some degree of permanent distortion remains after unloading and is termed plastic deformation. The determination of the stress and strain throughout a solid object is given by the field of strength of materials and for a structure by structural analysis.
+
+Engineering stress and engineering strain are approximations to the internal state that may be determined from the external forces and deformations of an object, provided that there is no significant change in size. When there is a significant change in size, the true stress and true strain can be derived from the instantaneous size of the object.
+
+In the figure it can be seen that the compressive loading (indicated by the arrow) has caused deformation in the cylinder so that the original shape (dashed lines) has changed (deformed) into one with bulging sides. The sides bulge because the material, although strong enough to not crack or otherwise fail, is not strong enough to support the load without change. As a result, the material is forced out laterally. Internal forces (in this case at right angles to the deformation) resist the applied load."""@en ;
+             cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(engineering)" ;
+             rdfs:label "Deformation"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/DeformationSpeed
+:DeformationSpeed rdf:type owl:Class ;
+                  rdfs:subClassOf obo:BFO_0000144 ;
+                  cco:alternative_label "Dehnrate"@de ,
+                                        "Strain Rate"@en ;
+                  cco:definition """Strain rate is the change in strain (deformation) of a material with respect to time.
+
+The strain rate at some point within the material measures the rate at which the distances of adjacent parcels of the material change with time in the neighborhood of that point. It comprises both the rate at which the material is expanding or shrinking (expansion rate), and also the rate at which it is being deformed by progressive shearing without changing its volume (shear rate). It is zero if these distances do not change, as happens when all particles in some region are moving with the same velocity (same speed and direction) and/or rotating with the same angular velocity, as if that part of the medium were a rigid body.
+The strain rate is a concept of materials science and continuum mechanics, that plays an essential role in the physics of fluids and deformable solids. In an isotropic Newtonian fluid, in particular, the viscous stress is a linear function of the rate of strain, defined by two coefficients, one relating to the expansion rate (the bulk viscosity coefficient) and one relating to the shear rate (the \"ordinary\" viscosity coefficient). In solids, higher strain rates can often cause normally ductile materials to fail in a brittle manner."""@en ;
+                  cco:definition_source "https://en.wikipedia.org/wiki/Strain_rate"@en ;
+                  rdfs:label "Deformation Speed"@en ,
+                             "Deformationsgeschwindigkeit"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/Description
 :Description rdf:type owl:Class ;
              rdfs:subClassOf cco:InformationBearingArtifact ;
@@ -1668,9 +1704,21 @@ is performed.""" ;
               rdfs:label "DocumentFile"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/ElasticModulus
+:ElasticModulus rdf:type owl:Class ;
+                rdfs:subClassOf :Stiffness ;
+                cco:alternative_label "Young's Modulus"@en ;
+                cco:definition """An elastic modulus (also known as modulus of elasticity) is a quantity that measures an object or substance's resistance to being deformed elastically (i.e., non-permanently) when a stress is applied to it. The elastic modulus of an object is defined as the slope of its stress–strain curve in the elastic deformation region: A stiffer material will have a higher elastic modulus. An elastic modulus has the form:
+{\\displaystyle \\delta \\ {\\stackrel {\\text{def}}{=}}\\ {\\frac {\\text{stress}}{\\text{strain}}}}{\\displaystyle \\delta \\ {\\stackrel {\\text{def}}{=}}\\ {\\frac {\\text{stress}}{\\text{strain}}}}
+where stress is the force causing the deformation divided by the area to which the force is applied and strain is the ratio of the change in some parameter caused by the deformation to the original value of the parameter. Since strain is a dimensionless quantity, the units of {\\displaystyle \\delta }\\delta  will be the same as the units of stress."""@en ;
+                cco:definition_source "https://en.wikipedia.org/wiki/Elastic_modulus"@en ;
+                rdfs:label "Elastic Modulus"@en ,
+                           "Elastizitätsmodul"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/ElectricCapacitance
 :ElectricCapacitance rdf:type owl:Class ;
-                     rdfs:subClassOf obo:BFO_0000019 ;
+                     rdfs:subClassOf obo:BFO_0000016 ;
                      rdfs:label "Electric Capacitance"@en .
 
 
@@ -1688,8 +1736,36 @@ is performed.""" ;
 
 ###  https://purl.matolab.org/mseo/mid/ElectricalConductance
 :ElectricalConductance rdf:type owl:Class ;
-                       rdfs:subClassOf obo:BFO_0000019 ;
+                       rdfs:subClassOf obo:BFO_0000016 ;
                        rdfs:label "Electrical Conductance"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/EngineeringStrain
+:EngineeringStrain rdf:type owl:Class ;
+                   rdfs:subClassOf :Strain ;
+                   cco:alternative_label "Cauchy Strain"@en ,
+                                         "Technical Strain"@en ;
+                   cco:definition """The Engineering strain also known as Cauchy strain is expressed as the ratio of total deformation to the initial dimension of the material body on which forces are applied. The engineering normal strain or engineering extensional strain or nominal strain e of a material line element or fiber axially loaded is expressed as the change in length ΔL per unit of the original length L of the line element or fibers. The normal strain is positive if the material fibers are stretched and negative if they are compressed. Thus, we have
+
+{\\displaystyle \\ e={\\frac {\\Delta L}{L}}={\\frac {l-L}{L}}}{\\displaystyle \\ e={\\frac {\\Delta L}{L}}={\\frac {l-L}{L}}}
+where e is the engineering normal strain, L is the original length of the fiber and l is the final length of the fiber. Measures of strain are often expressed in parts per million or microstrains."""@de ;
+                   cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#Engineering_strain"@en ;
+                   rdfs:label "Engineering Strain"@en ,
+                              "Technische Dehnung"@de .
+
+
+###  https://purl.matolab.org/mseo/mid/EngineeringStress
+:EngineeringStress rdf:type owl:Class ;
+                   rdfs:subClassOf :Stress ;
+                   obo:IAO_0000116 "Assumes unchanged size of Area the force is normalized to. Changes in the Area can only be neclected for very small deformations."@en ;
+                   cco:definition """Consider a bar of original cross sectional area {\\displaystyle A_{0}}A_{0} being subjected to equal and opposite forces {\\displaystyle F}F pulling at the ends so the bar is under tension. The material is experiencing a stress defined to be the ratio of the force to the cross sectional area of the bar, as well as an axial elongation:
+
+{\\displaystyle \\sigma ={\\tfrac {F}{A_{0}}}}{\\displaystyle \\sigma ={\\tfrac {F}{A_{0}}}}
+{\\displaystyle \\varepsilon ={\\tfrac {L-L_{0}}{L_{0}}}={\\tfrac {\\Delta L}{L_{0}}}}{\\displaystyle \\varepsilon ={\\tfrac {L-L_{0}}{L_{0}}}={\\tfrac {\\Delta L}{L_{0}}}}
+Subscript 0 denotes the original dimensions of the sample. The SI unit for stress is newton per square metre, or pascal (1 pascal = 1 Pa = 1 N/m2), and strain is unitless. Stress-strain curve for this material is plotted by elongating the sample and recording the stress variation with strain until the sample fractures. By convention, the strain is set to the horizontal axis and stress is set to vertical axis. Note that for engineering purposes we often assume the cross-section area of the material does not change during the whole deformation process. This is not true since the actual area will decrease while deforming due to elastic and plastic deformation. The curve based on the original cross-section and gauge length is called the engineering stress-strain curve, while the curve based on the instantaneous cross-section area and length is called the true stress-strain curve. Unless stated otherwise, engineering stress-strain is generally used."""@en ;
+                   cco:definition_source "https://en.wikipedia.org/wiki/Stress%E2%80%93strain_curve"@en ;
+                   rdfs:label "Engineering Stress"@en ,
+                              "Technische Spannung"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/Equipment
@@ -1706,7 +1782,9 @@ is performed.""" ;
 
 ###  https://purl.matolab.org/mseo/mid/Experiment
 :Experiment rdf:type owl:Class ;
-            rdfs:subClassOf obo:BFO_0000015 ;
+            rdfs:subClassOf cco:IntentionalAct ;
+            cco:definition "In engineering and the physical sciences, experiments are a primary component of the scientific method. They are used to test theories and hypotheses about how physical processes work under particular conditions (e.g., whether a particular engineering process can produce a desired chemical compound). Typically, experiments in these fields focus on replication of identical procedures in hopes of producing identical results in each replication. Random assignment is uncommon."@en ;
+            cco:definition_source "https://en.wikipedia.org/wiki/Experiment"@en ;
             rdfs:label "Experiment"@en .
 
 
@@ -1736,6 +1814,19 @@ is performed.""" ;
                                   rdfs:label "Force Measurement Artifact Function"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/ForceRate
+:ForceRate rdf:type owl:Class ;
+           rdfs:subClassOf obo:BFO_0000144 ;
+           obo:IAO_0000116 "second derivative of momentum with respect to time"@en ;
+           cco:alternative_label "Force Rate"@en ,
+                                 "Ruck"@de ,
+                                 "Yank"@en ;
+           cco:definition "In physics, yank is sometimes used to denote the derivative of force with respect to time or mass multiplied by jerk. In relativistic physics, it is expressed as the second derivative of momentum with respect to time, because the mass is velocity-dependent. Though not universally accepted as an official term for this quantity, the term \"yank\" is commonly used among physics enthusiasts."@en ;
+           cco:definition_source "https://en-academic.com/dic.nsf/enwiki/1620873"@en ;
+           rdfs:label "Force Rate"@en ,
+                      "Kraftrate"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/Fraction
 :Fraction rdf:type owl:Class ;
           rdfs:subClassOf cco:Amount ;
@@ -1754,12 +1845,6 @@ is performed.""" ;
 :ISOStandard rdf:type owl:Class ;
              rdfs:subClassOf :Regulation ;
              rdfs:label "Standard"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/IdentingArtfactFunction
-:IdentingArtfactFunction rdf:type owl:Class ;
-                         rdfs:subClassOf cco:DamagingArtifactFunction ;
-                         rdfs:label "Identing Artfact Function" .
 
 
 ###  https://purl.matolab.org/mseo/mid/ImageMetadataSet
@@ -1781,6 +1866,12 @@ is performed.""" ;
             rdfs:subClassOf :ImageSet ;
             rdfs:comment "A series of images, that form a vertical stack (e.g. a series of images generated by tomography)." ;
             rdfs:label "Image Stack"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/IndentingArtfactFunction
+:IndentingArtfactFunction rdf:type owl:Class ;
+                          rdfs:subClassOf cco:DamagingArtifactFunction ;
+                          rdfs:label "Indenting Artfact Function" .
 
 
 ###  https://purl.matolab.org/mseo/mid/IndustryProject
@@ -1941,6 +2032,15 @@ is performed.""" ;
                                   rdfs:label "Measurement Related Fiat Object Part"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/MechanicalStrength
+:MechanicalStrength rdf:type owl:Class ;
+                    rdfs:subClassOf cco:Strength ;
+                    cco:definition "In the mechanics of materials, the strength of a material is its ability to withstand an applied load without failure or plastic deformation. The field of strength of materials deals with forces and deformations that result from their acting on a material. A load applied to a mechanical member will induce internal forces within the member called stresses when those forces are expressed on a unit basis. The stresses acting on the material cause deformation of the material in various manners including breaking them completely. Deformation of the material is called strain when those deformations too are placed on a unit basis."@en ;
+                    cco:definition_source "https://en.wikipedia.org/wiki/Strength_of_materials"@en ;
+                    rdfs:label "Festigkeit"@de ,
+                               "Mechanical Strength"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/MechanicalWorkshop
 :MechanicalWorkshop rdf:type owl:Class ;
                     rdfs:subClassOf cco:Facility ;
@@ -1992,6 +2092,24 @@ is performed.""" ;
                 rdfs:label "Planar Image Set"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/PoissonEffect
+:PoissonEffect rdf:type owl:Class ;
+               rdfs:subClassOf obo:BFO_0000017 ;
+               cco:definition "The dual effect that a compression load has on an object: the compression causes the object to become shorter in the direction of the compressive load and wider laterally. Thus, an intervertebral disc subjected to compression will shorten in the vertical dimension, but will bulge out laterally. For each different type of material, there is a specific ratio of strain in the axial direction to strain in the transverse direction; this is known as the Poisson ratio."@en ;
+               cco:definition_source "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100333756"@en ;
+               rdfs:label "Poisson Effect"@en ,
+                          "Querkontraktion"@de .
+
+
+###  https://purl.matolab.org/mseo/mid/PoissonRatio
+:PoissonRatio rdf:type owl:Class ;
+              rdfs:subClassOf :PoissonEffect ;
+              cco:definition "Poisson's ratio is a measure of the Poisson effect, the phenomenon in which a material tends to expand in directions perpendicular to the direction of compression. Conversely, if the material is stretched rather than compressed, it usually tends to contract in the directions transverse to the direction of stretching. It is a common observation when a rubber band is stretched, it becomes noticeably thinner. Again, the Poisson ratio will be the ratio of relative contraction to relative expansion and will have the same value as above. In certain rare cases, a material will actually shrink in the transverse direction when compressed (or expand when stretched) which will yield a negative value of the Poisson ratio."@en ;
+              cco:definition_source "https://en.wikipedia.org/wiki/Poisson%27s_ratio"@en ;
+              rdfs:label "Poisson's Ratio"@en ,
+                         "Poissonzahl"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/PostProcessing
 :PostProcessing rdf:type owl:Class ;
                 rdfs:subClassOf :Simulation ;
@@ -2022,6 +2140,14 @@ is performed.""" ;
                      rdfs:subClassOf :ProcessDataSet ;
                      rdfs:comment "A set of parameters, that is used to control a process. Those are usually quantities of type \"as supposed\"." ;
                      rdfs:label "Process Parameter Set"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/ProcessProfilSpecification
+:ProcessProfilSpecification rdf:type owl:Class ;
+                            rdfs:subClassOf cco:Objective ;
+                            cco:definition "A Specification which describes the Target for a Profil of a Process."@en ;
+                            cco:example_of_usage "The set point of the speed of a motor; The intended heat rate to increase the temperature"@en ;
+                            rdfs:label "Process Profil Specification"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ProcessSetup
@@ -2073,6 +2199,26 @@ is performed.""" ;
         rdfs:label "Report"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/ShearModulus
+:ShearModulus rdf:type owl:Class ;
+              rdfs:subClassOf :Stiffness ;
+              cco:definition """In materials science, shear modulus or modulus of rigidity, denoted by G, or sometimes S or μ, is a measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain:
+
+{\\displaystyle G\\ {\\stackrel {\\mathrm {def} }{=}}\\ {\\frac {\\tau _{xy}}{\\gamma _{xy}}}={\\frac {F/A}{\\Delta x/l}}={\\frac {Fl}{A\\Delta x}}}G\\ {\\stackrel  {{\\mathrm  {def}}}{=}}\\ {\\frac  {\\tau _{{xy}}}{\\gamma _{{xy}}}}={\\frac  {F/A}{\\Delta x/l}}={\\frac  {Fl}{A\\Delta x}}
+where
+
+{\\displaystyle \\tau _{xy}=F/A\\,}\\tau _{{xy}}=F/A\\, = shear stress
+{\\displaystyle F}F is the force which acts
+{\\displaystyle A}A is the area on which the force acts
+{\\displaystyle \\gamma _{xy}}\\gamma _{xy} = shear strain. In engineering {\\displaystyle :=\\Delta x/l=\\tan \\theta }{\\displaystyle :=\\Delta x/l=\\tan \\theta }, elsewhere {\\displaystyle :=\\theta }{\\displaystyle :=\\theta }
+{\\displaystyle \\Delta x}\\Delta x is the transverse displacement
+{\\displaystyle l}l is the initial length of the area.
+The derived SI unit of shear modulus is the pascal (Pa), although it is usually expressed in gigapascals (GPa) or in thousand pounds per square inch (ksi). Its dimensional form is M1L−1T−2, replacing force by mass times acceleration."""@en ;
+              cco:definition_source "https://en.wikipedia.org/wiki/Shear_modulus"@en ;
+              rdfs:label "Schubmodul"@de ,
+                         "Shear Modulus"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/Simulation
 :Simulation rdf:type owl:Class ;
             rdfs:subClassOf cco:ActOfPrediction ;
@@ -2108,6 +2254,38 @@ is performed.""" ;
           rdfs:subClassOf cco:Artifact ;
           cco:definition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en ;
           rdfs:label "Specimen"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Stiffness
+:Stiffness rdf:type owl:Class ;
+           rdfs:subClassOf cco:Strength ;
+           obo:IAO_0000116 "While Stiffness characterizes a bodies response, taking into account its geometry and materials. Elastic Modulus aims to be agnostic to geometry and specific for the material."@en ;
+           cco:definition """Stiffness is the extent to which an object resists deformation in response to an applied force.
+The complementary concept is flexibility or pliability: the more flexible an object is, the less stiff it is."""@en ;
+           cco:definition_source "https://en.wikipedia.org/wiki/Stiffness"@en ;
+           rdfs:label "Steifigkeit"@de ,
+                      "Stiffness"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Strain
+:Strain rdf:type owl:Class ;
+        rdfs:subClassOf :Deformation ;
+        cco:definition "Strain is related to deformation in terms of relative displacement of particles in the body that excludes rigid-body motions. Different equivalent choices may be made for the expression of a strain field depending on whether it is defined with respect to the initial or the final configuration of the body and on whether the metric tensor or its dual is considered."@en ;
+        cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(physics)"@en ;
+        rdfs:label "Dehnung"@de ,
+                   "Strain"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Stress
+:Stress rdf:type owl:Class ;
+        rdfs:subClassOf obo:BFO_0000019 ;
+        cco:alternative_label "Cauchy Stress"@en ,
+                              "True Stress"@en ,
+                              "Wahre Spannung"@de ;
+        cco:definition "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other, while strain is the measure of the deformation of the material. For example, when a solid vertical bar is supporting an overhead weight, each particle in the bar pushes on the particles immediately below it. When a liquid is in a closed container under pressure, each particle gets pushed against by all the surrounding particles. The container walls and the pressure-inducing surface (such as a piston) push against them in (Newtonian) reaction. These macroscopic forces are actually the net result of a very large number of intermolecular forces and collisions between the particles in those molecules. Stress is frequently represented by a lowercase Greek letter sigma (σ)."@en ;
+        cco:definition_source "https://en.wikipedia.org/wiki/Stress_(mechanics)"@en ;
+        rdfs:label "Spannung"@de ,
+                   "Stress"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/StructuralInfo
@@ -2152,6 +2330,23 @@ is performed.""" ;
              rdfs:subClassOf obo:BFO_0000148 ;
              cco:definition "The instand when a part or specimen breaks in an mechanical test."@en ;
              rdfs:label "Time of Break"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/TrueStrain
+:TrueStrain rdf:type owl:Class ;
+            rdfs:subClassOf :Strain ;
+            cco:alternative_label "Hencky Strain"@en ;
+            cco:definition """The logarithmic strain ε, also called, true strain or Hencky strain. Considering an incremental strain (Ludwik)
+
+{\\displaystyle \\ \\delta \\varepsilon ={\\frac {\\delta l}{l}}}{\\displaystyle \\ \\delta \\varepsilon ={\\frac {\\delta l}{l}}}
+the logarithmic strain is obtained by integrating this incremental strain:
+
+{\\displaystyle \\ {\\begin{aligned}\\int \\delta \\varepsilon &=\\int _{L}^{l}{\\frac {\\delta l}{l}}\\\\\\varepsilon &=\\ln \\left({\\frac {l}{L}}\\right)=\\ln(\\lambda )\\\\&=\\ln(1+e)\\\\&=e-{\\frac {e^{2}}{2}}+{\\frac {e^{3}}{3}}-\\cdots \\\\\\end{aligned}}}{\\displaystyle \\ {\\begin{aligned}\\int \\delta \\varepsilon &=\\int _{L}^{l}{\\frac {\\delta l}{l}}\\\\\\varepsilon &=\\ln \\left({\\frac {l}{L}}\\right)=\\ln(\\lambda )\\\\&=\\ln(1+e)\\\\&=e-{\\frac {e^{2}}{2}}+{\\frac {e^{3}}{3}}-\\cdots \\\\\\end{aligned}}}
+where e is the engineering strain. The logarithmic strain provides the correct measure of the final strain when deformation takes place in a series of increments, taking into account the influence of the strain path."""@de ;
+            cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#True_strain"@en ;
+            rdfs:label "Logarithmic Strain"@en ,
+                       "True Strain"@en ,
+                       "Wahre Dehnung"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/UniversalTestingMachine
@@ -2321,13 +2516,13 @@ is performed.""" ;
 #    Annotations
 #################################################################
 
+cco:Force obo:IAO_0000116 "first derivativ of momentum over time"@en .
+
+
 cco:PascalMeasurementUnit cco:alternative_label "N/mm²" .
 
 
 cco:SpatialOrientation cco:alternative_label "Angle" .
-
-
-cco:Strength obo:IAO_0000118 "Resistance" .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
