@@ -1,0 +1,396 @@
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix ns: <http://www.owl-ontologies.com/ns#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tem: <https://purl.matolab.org/mseo/transmissionelectronmicroscopy> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000051" .
+
+cco:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" .
+
+cco:has_accessory a owl:ObjectProperty ;
+    rdfs:label "has_accessory" .
+
+cco:has_agent a owl:ObjectProperty ;
+    rdfs:label "has_agent" ;
+    rdfs:domain mseo:Experiment .
+
+cco:has_function a owl:ObjectProperty ;
+    rdfs:label "has_function" ;
+    rdfs:range cco:ArtificalFunction .
+
+cco:has_output a owl:ObjectProperty ;
+    rdfs:label "has_output" ;
+    rdfs:domain mseo:Experiment .
+
+cco:has_process_part a owl:ObjectProperty ;
+    rdfs:label "has_process_part" .
+
+cco:is_input_of a owl:ObjectProperty ;
+    rdfs:label "is_input_of" .
+
+cco:occures_on a owl:ObjectProperty ;
+    rdfs:label "occures_on" ;
+    rdfs:domain mseo:Experiment .
+
+cco:prescribed_by a owl:ObjectProperty ;
+    rdfs:label "prescribed_by" ;
+    rdfs:domain mseo:Experiment .
+
+cco:process_preceeds a owl:ObjectProperty ;
+    rdfs:label "process_preceeds" .
+
+ns:ExperimentalDate a cco:Day,
+        owl:NamedIndividual ;
+    cco:designated_by tem:ExperimentalDateIdentifier .
+
+mseo: a owl:Ontology ;
+    dc:creator "Bernd Bayerlein" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "TEM Precipitation Analysis" ;
+    owl:versionInfo "0.0.1" .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" .
+
+tem:Operator a cco:Agent,
+        owl:NamedIndividual ;
+    cco:designated_by tem:OperatorName .
+
+tem:RawDataFile a owl:NamedIndividual,
+        mseo:File ;
+    cco:has_URI_value "raw_data_location"^^xsd:anyURI .
+
+tem:SampleEnvironment a cco:EnvironmentControlSystem,
+        owl:NamedIndividual ;
+    cco:has_accessory tem:NitrogenBottle,
+        tem:TemperatureControl,
+        tem:VacuumChamber .
+
+tem:SoftwareArchitecture a owl:NamedIndividual,
+        mseo:Software ;
+    cco:has_accessory tem:ControlSoftware_1,
+        tem:ControlSoftware_2,
+        tem:ControlSoftware_3,
+        tem:DataAcquisitionSoftware_1,
+        tem:DataAcquisitionSoftware_2,
+        tem:DataAcquisitionSoftware_3 .
+
+tem:Specimen a owl:NamedIndividual,
+        mseo:Specimen ;
+    cco:designated_by tem:SpecimenName ;
+    cco:is_input_of tem:TEM_PrecipitateAnalysis .
+
+tem:Standard a owl:NamedIndividual,
+        mseo:Regulation ;
+    cco:designated_by tem:StandardIdentifier .
+
+tem:TestPlan a cco:PlanSpecification,
+        owl:NamedIndividual ;
+    cco:designated_by tem:TestPlanName .
+
+tem:TransmissionElectronMicroscopeSpecimen a cco:ArtificalFunction,
+        owl:NamedIndividual .
+
+cco:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+cco:CalendarDateIdentifier a owl:Class ;
+    rdfs:label "Calendar Date Identifier" .
+
+cco:Camera a owl:Class ;
+    rdfs:label "Camera" .
+
+cco:Day a owl:Class ;
+    rdfs:label "Day" .
+
+cco:DesignativeName a owl:Class ;
+    rdfs:label "Designative Name" .
+
+cco:ElectronMicroscope a owl:Class ;
+    rdfs:label "Electron Microscope" .
+
+cco:EnvironmentControlSystem a owl:Class ;
+    rdfs:label "Environment Control System" .
+
+cco:PlanSpecification a owl:Class ;
+    rdfs:label "Plan Specification" .
+
+mseo:File a owl:Class ;
+    rdfs:label "File" .
+
+mseo:RegionOfInterest a owl:Class ;
+    rdfs:label "Region Of Interest" .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+mseo:Software a owl:Class ;
+    rdfs:label "Software" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+tem:AlignementProcedure a owl:NamedIndividual,
+        mseo:Experiment ;
+    cco:has_process_part tem:DetectThinPart,
+        tem:FindSample,
+        tem:InsertSpecimenHolderInTEM,
+        tem:InsertSpecimenInHolder,
+        tem:PerformAlignmentProcedure ;
+    cco:process_preceeds tem:InsertSpecimenInHolder .
+
+tem:BrightFieldImage a cco:Image,
+        owl:NamedIndividual .
+
+tem:BrightFieldImageDescription a owl:NamedIndividual,
+        mseo:Comment .
+
+tem:BrightFieldImaging a owl:NamedIndividual,
+        mseo:Experiment ;
+    cco:has_process_part tem:ChangeSpatialPositionOfSpecimen,
+        tem:ChooseMagnification,
+        tem:FocusOnFeature,
+        tem:SelectRegionOfInterest,
+        tem:TakeImage ;
+    cco:process_preceeds tem:SelectRegionOfInterest .
+
+tem:CCD_Camera_1 a cco:Camera,
+        owl:DatatypeProperty,
+        owl:NamedIndividual ;
+    rdfs:label "c c d_ camera_1" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:CCD_Camera_2 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:Equipment ;
+    rdfs:label "c c d_ camera_2" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:Cathode a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:Equipment ;
+    rdfs:label "cathode" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:ControlSoftware_1 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:BWMD_00171 ;
+    rdfs:label "control software_1" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:ControlSoftware_2 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:BWMD_00171 ;
+    rdfs:label "control software_2" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:ControlSoftware_3 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:BWMD_00171 ;
+    rdfs:label "control software_3" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:DarkFieldImage a cco:Image,
+        owl:NamedIndividual .
+
+tem:DarkFieldImageDescription a owl:NamedIndividual,
+        mseo:Comment .
+
+tem:DarkFieldImaging a owl:NamedIndividual,
+        mseo:Experiment ;
+    cco:has_process_part tem:CenterElectronDiffractionSpot,
+        tem:ChangeToDarkFieldMode,
+        tem:ChangeToDiffractionMode,
+        tem:OrientSpecimen,
+        tem:TakeImage ;
+    cco:process_preceeds tem:ChangeToDiffractionMode .
+
+tem:DataAcquisitionSoftware_1 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:BWMD_00248 ;
+    rdfs:label "data acquisition software_1" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:DataAcquisitionSoftware_2 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:BWMD_00248 ;
+    rdfs:label "data acquisition software_2" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:DataAcquisitionSoftware_3 a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:BWMD_00248 ;
+    rdfs:label "data acquisition software_3" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:Detector a cco:NonNameIdentifier,
+        owl:NamedIndividual,
+        mseo:Equipment ;
+    cco:designated_by tem:Detector .
+
+tem:DiffractionImage a cco:Image,
+        owl:NamedIndividual .
+
+tem:DiffractionImageDescription a owl:NamedIndividual,
+        mseo:Comment .
+
+tem:ExperimentalDateIdentifier a cco:CalendarDateIdentifier,
+        owl:NamedIndividual .
+
+tem:FindSample a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:DetectThinPart .
+
+tem:Metadata a cco:Image,
+        owl:NamedIndividual .
+
+tem:NitrogenBottle a owl:NamedIndividual,
+        mseo:Equipment .
+
+tem:OperatorName a cco:DesignativeName,
+        owl:NamedIndividual .
+
+tem:PerformAlignmentProcedure a cco:ActOfPositionChange,
+        owl:NamedIndividual .
+
+tem:PhosphorScreen a owl:DatatypeProperty,
+        owl:NamedIndividual,
+        mseo:Equipment ;
+    rdfs:label "phosphor screen" ;
+    rdfs:domain cco:NonNameIdentifier .
+
+tem:SpecimenHolderIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tem:SpecimenName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tem:StandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tem:TEM_PrecipitateAnalysis a owl:NamedIndividual,
+        mseo:Experiment ;
+    cco:has_accessory tem:TransmissionElectronMicroscope ;
+    cco:has_process_part tem:AlignementProcedure,
+        tem:BrightFieldImaging,
+        tem:DarkFieldImaging .
+
+tem:TemperatureControl a owl:NamedIndividual,
+        mseo:Equipment .
+
+tem:TestPlanName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tem:TransmissionElectronMicroscope a cco:ElectronMicroscope,
+        owl:NamedIndividual ;
+    obo:BFO_0000051 tem:CCD_Camera_1,
+        tem:CCD_Camera_2,
+        tem:Cathode,
+        tem:PhosphorScreen ;
+    cco:designated_by tem:TransmissionElectronMicroscopeIdentifier ;
+    cco:has_accessory tem:SpecimenHolder .
+
+tem:TransmissionElectronMicroscopeIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tem:VacuumChamber a owl:NamedIndividual,
+        mseo:Equipment .
+
+cco:ActOfArtifactAssembly a owl:Class ;
+    rdfs:label "Act Of Artifact Assembly" .
+
+cco:ArtificalFunction a owl:Class ;
+    rdfs:label "Artifical Function" .
+
+tem:CenterElectronDiffractionSpot a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:TakeImage .
+
+tem:ChangeSpatialPositionOfSpecimen a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:FocusOnFeature .
+
+tem:ChangeToDarkFieldMode a cco:Act,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:TakeImage .
+
+tem:ChangeToDiffractionMode a cco:Act,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:OrientSpecimen .
+
+tem:ChooseMagnification a cco:Act,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:ChangeSpatialPositionOfSpecimen .
+
+tem:DetectThinPart a cco:ActOfPositionChange,
+        owl:NamedIndividual .
+
+tem:FocusOnFeature a cco:Act,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:TakeImage .
+
+tem:InsertSpecimenHolderInTEM a cco:ActOfArtifactAssembly,
+        owl:NamedIndividual .
+
+tem:InsertSpecimenInHolder a cco:ActOfArtifactAssembly,
+        owl:NamedIndividual ;
+    cco:has_accessory tem:SpecimenHolder ;
+    cco:process_preceeds tem:InsertSpecimenHolderInTEM .
+
+tem:OrientSpecimen a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:process_preceeds tem:CenterElectronDiffractionSpot .
+
+tem:SelectRegionOfInterest a owl:NamedIndividual,
+        mseo:RegionOfInterest ;
+    cco:process_preceeds tem:ChooseMagnification .
+
+tem:SpecimenHolder a owl:NamedIndividual,
+        mseo:Equipment ;
+    cco:designated_by tem:SpecimenHolderIdentifier .
+
+mseo:BWMD_00171 a owl:Class ;
+    rdfs:label "B W M D_00171" .
+
+mseo:BWMD_00248 a owl:Class ;
+    rdfs:label "B W M D_00248" .
+
+mseo:Comment a owl:Class ;
+    rdfs:label "Comment" .
+
+cco:Image a owl:Class ;
+    rdfs:label "Image" .
+
+cco:Act a owl:Class ;
+    rdfs:label "Act" .
+
+tem:TakeImage a cco:Act,
+        owl:NamedIndividual ;
+    cco:has_output tem:BrightFieldImage,
+        tem:BrightFieldImageDescription,
+        tem:DarkFieldImage,
+        tem:DarkFieldImageDescription,
+        tem:DiffractionImage,
+        tem:DiffractionImageDescription,
+        tem:Metadata ;
+    cco:process_preceeds tem:ChangeToDarkFieldMode .
+
+cco:ActOfPositionChange a owl:Class ;
+    rdfs:label "Act Of Position Change" .
+
+mseo:Equipment a owl:Class ;
+    rdfs:label "Equipment" .
+
+mseo:Experiment a owl:Class ;
+    rdfs:label "Experiment" .
+
+cco:NonNameIdentifier a owl:Class ;
+    rdfs:label "Non Name Identifier" .
+
