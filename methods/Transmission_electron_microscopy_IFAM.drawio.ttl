@@ -1,0 +1,156 @@
+@prefix CCO: <http://www.owl-ontologies.com/CCO#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix ns: <http://www.owl-ontologies.com/ns#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tt: <https://purl.matolab.org/mseo/methods/DIN_EN_ISO_527-3/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:RO_0010001 a owl:ObjectProperty ;
+    rdfs:label "r o_0010001" .
+
+cco:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" .
+
+cco:has_URI_value a owl:ObjectProperty ;
+    rdfs:label "has_ u r i_value" ;
+    rdfs:domain mseo:File .
+
+cco:has_agent a owl:ObjectProperty ;
+    rdfs:label "has_agent" ;
+    rdfs:domain mseo:Experiment .
+
+cco:has_output a owl:ObjectProperty ;
+    rdfs:label "has_output" ;
+    rdfs:domain mseo:Experiment ;
+    rdfs:range mseo:File .
+
+cco:has_process_part a owl:ObjectProperty ;
+    rdfs:label "has_process_part" ;
+    rdfs:range cco:ActOfObservation .
+
+cco:occures_on a owl:ObjectProperty ;
+    rdfs:label "occures_on" ;
+    rdfs:domain mseo:Experiment .
+
+CCO:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" ;
+    rdfs:range CCO:NonNameIdentifier .
+
+CCO:has_function a owl:ObjectProperty ;
+    rdfs:label "has_function" ;
+    rdfs:range CCO:ArtifactFunction .
+
+CCO:has_output a owl:ObjectProperty ;
+    rdfs:label "has_output" .
+
+CCO:is_input_of a owl:ObjectProperty ;
+    rdfs:label "is_input_of" ;
+    rdfs:domain mseo:Specimen .
+
+ns:Individual1 a ns:Class1,
+        owl:NamedIndividual .
+
+tt:AACode a cco:InformationLine,
+        owl:NamedIndividual ;
+    cco:has_text_value "KT AA 029"^^xsd:string .
+
+tt:ExperimentDate a cco:Day,
+        owl:NamedIndividual ;
+    cco:designated_by tt:ExperimentDateIdentifier .
+
+tt:ImageName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tt:Operator a cco:Agent,
+        owl:NamedIndividual ;
+    cco:designated_by tt:OperatorName .
+
+tt:Procedure a owl:NamedIndividual,
+        mseo:Regulation .
+
+tt:Specimen a owl:NamedIndividual,
+        mseo:Specimen .
+
+tt:SpecimenName a CCO:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tt:StandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+tt:TEMImaging a cco:ActOfObservation,
+        owl:NamedIndividual ;
+    CCO:has_output tt:TEMImage .
+
+tt:TEMLamella a CCO:ArtifactFunction,
+        owl:NamedIndividual .
+
+tt:TransmissionElectronMicroscopy a ns:Class1,
+        owl:NamedIndividual .
+
+mseo: a owl:Ontology ;
+    dc:creator "Michael Hoffmann" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "Transmission electron microscopy IFAM Graph" ;
+    owl:versionInfo "0.0.1" .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" .
+
+cco:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+cco:CalendarDateIdentifier a owl:Class ;
+    rdfs:label "Calendar Date Identifier" .
+
+cco:Day a owl:Class ;
+    rdfs:label "Day" .
+
+cco:DesignativeName a owl:Class ;
+    rdfs:label "Designative Name" .
+
+cco:Image a owl:Class ;
+    rdfs:label "Image" .
+
+cco:InformationLine a owl:Class ;
+    rdfs:label "Information Line" .
+
+tt:ExperimentDateIdentifier a cco:CalendarDateIdentifier,
+        owl:NamedIndividual .
+
+tt:OperatorName a cco:DesignativeName,
+        owl:NamedIndividual .
+
+tt:TEMImage a cco:Image,
+        owl:NamedIndividual .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+cco:ActOfObservation a owl:Class ;
+    rdfs:label "Act Of Observation" .
+
+cco:NonNameIdentifier a owl:Class ;
+    rdfs:label "Non Name Identifier" .
+
+CCO:ArtifactFunction a owl:Class ;
+    rdfs:label "Artifact Function" .
+
+CCO:NonNameIdentifier a owl:Class ;
+    rdfs:label "Non Name Identifier" .
+
+ns:Class1 a owl:Class ;
+    rdfs:label "Class1" .
+
+mseo:File a owl:Class ;
+    rdfs:label "File" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+mseo:Experiment a owl:Class ;
+    rdfs:label "Experiment" .
+
