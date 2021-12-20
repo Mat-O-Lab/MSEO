@@ -111,8 +111,8 @@ cco:prescribes a owl:ObjectProperty ;
 cco:process_preceeds a owl:ObjectProperty ;
     rdfs:label "process_preceeds" .
 
-base:Specimen a cco:NonNameIdentifier,
-        owl:NamedIndividual ;
+base:Specimen a owl:NamedIndividual,
+        mseo:Specimen ;
     obo:BFO_0000051 base:MeasurementRegion ;
     cco:designated_by base:SpecimenName ;
     cco:has_function base:TensileTestSpecimen ;
@@ -138,9 +138,6 @@ mseo:MeasurementRegion a owl:Class ;
 
 mseo:Regulation a owl:Class ;
     rdfs:label "Regulation" .
-
-mseo:Specimen a owl:Class ;
-    rdfs:label "Specimen" .
 
 mseo:in_accordance_with a owl:ObjectProperty ;
     rdfs:label "in_accordance_with" .
@@ -253,6 +250,9 @@ base:TestPlanName a cco:NonNameIdentifier,
 
 base:WidthMeasurementInformation a cco:NonNameIdentifier,
         owl:NamedIndividual .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
 
 cco:DistanceMeasurementArtifactFunction a owl:Class ;
     rdfs:label "Distance Measurement Artifact Function" .
