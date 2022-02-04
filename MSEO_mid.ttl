@@ -72,7 +72,8 @@ obo:RO_0010001 owl:equivalentProperty :BWMD_00326 .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#element
-pte:element rdfs:range pte:Element ;
+pte:element rdf:type owl:ObjectProperty ;
+            rdfs:range pte:Element ;
             rdfs:label "is element" .
 
 
@@ -406,7 +407,8 @@ cco:is_subject_of owl:equivalentProperty :BWMD_00320 .
 #################################################################
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#symbol
-pte:symbol owl:equivalentProperty :BWMD_00318 .
+pte:symbol rdf:type owl:DatatypeProperty ;
+           owl:equivalentProperty :BWMD_00318 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_decimal_value
@@ -539,34 +541,40 @@ obo:BFO_0000141 rdf:type owl:Class .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Block
-pte:Block rdfs:subClassOf :PeriodicTableElementIdentifer ;
+pte:Block rdf:type owl:Class ;
+          rdfs:subClassOf :PeriodicTableElementIdentifer ;
           rdfs:label "Periodic Table Block" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Classification
-pte:Classification rdfs:subClassOf :PeriodicTableElementIdentifer ;
+pte:Classification rdf:type owl:Class ;
+                   rdfs:subClassOf :PeriodicTableElementIdentifer ;
                    rdfs:label "Periodic Table Classification" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Element
-pte:Element owl:equivalentClass :BWMD_00105 ;
+pte:Element rdf:type owl:Class ;
+            owl:equivalentClass :BWMD_00105 ;
             rdfs:subClassOf :PeriodicTableElementIdentifer ;
             obo:IAO_0000118 "Element" ;
             rdfs:label "Periodic Table Element" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Group
-pte:Group rdfs:subClassOf :PeriodicTableElementIdentifer ;
+pte:Group rdf:type owl:Class ;
+          rdfs:subClassOf :PeriodicTableElementIdentifer ;
           rdfs:label "Periodic Table Group" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#Period
-pte:Period rdfs:subClassOf :PeriodicTableElementIdentifer ;
+pte:Period rdf:type owl:Class ;
+           rdfs:subClassOf :PeriodicTableElementIdentifer ;
            rdfs:label "Periodic Table Period" .
 
 
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#StandardState
-pte:StandardState rdfs:subClassOf :PeriodicTableElementIdentifer .
+pte:StandardState rdf:type owl:Class ;
+                  rdfs:subClassOf :PeriodicTableElementIdentifer .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/AbbreviatedName
@@ -702,6 +710,11 @@ cco:TwoDimensionalExtent owl:equivalentClass :BWMD_00286 .
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Velocity
 cco:Velocity owl:equivalentClass :BWMD_00165 .
+
+
+###  http://www.w3.org/ns/csvw#Column
+<http://www.w3.org/ns/csvw#Column> rdf:type owl:Class ;
+                                   rdfs:subClassOf :Table .
 
 
 ###  https://purl.matolab.org/mseo/mid/Abstract
@@ -2032,6 +2045,14 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                                   rdfs:label "Measurement Related Fiat Object Part"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/MeasurementSpecimenFunction
+:MeasurementSpecimenFunction rdf:type owl:Class ;
+                             rdfs:subClassOf cco:ArtifactFunction ;
+                             cco:definition "An artifact function gained by a preparation processedure aiming modifing an object to meet the specifications of a test procedure."@en ;
+                             rdfs:label "Measurement Specimen Function"@en ,
+                                        "Prüfkörper Funktion"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/MechanicalStrength
 :MechanicalStrength rdf:type owl:Class ;
                     rdfs:subClassOf cco:Strength ;
@@ -2251,6 +2272,16 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
 
 ###  https://purl.matolab.org/mseo/mid/Specimen
 :Specimen rdf:type owl:Class ;
+          owl:equivalentClass [ rdf:type owl:Restriction ;
+                                owl:onProperty obo:RO_0000085 ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :MeasurementSpecimenFunction
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty cco:designated_by ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass cco:DesignativeInformationContentEntity
+                              ] ;
           rdfs:subClassOf cco:Artifact ;
           cco:definition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en ;
           rdfs:label "Specimen"@en .
