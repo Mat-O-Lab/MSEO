@@ -1,6 +1,6 @@
 # This is a basic workflow that is manually triggered
 
-name: Manual workflow
+name: Create Ontology Documentation
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
@@ -16,6 +16,7 @@ on:
         # Input has to be provided for the workflow to run
         required: true
 
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "greet"
@@ -28,3 +29,14 @@ jobs:
     # Runs a single command using the runners shell
     - name: Send greeting
       run: echo "Hello ${{ github.event.inputs.name }}"
+# jobs:
+#     build:
+#     runs-on: ubuntu-latest
+#     pylode:
+#       steps:
+#         - uses: actions/checkout@v2
+#         - uses: actions/setup-python@v2
+#           with:
+#             python-version: '3.9'
+#             cache: 'pip'
+#         - run: pip install pyLODE
