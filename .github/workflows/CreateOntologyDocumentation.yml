@@ -36,4 +36,4 @@ jobs:
       - name: Install pyLODE
         run: pip install pylode
       - name: Run pyLODE
-        run: python pylode MSEO_mid.owl -o pyLODE.html
+        run: pylode MSEO_mid.owl -o pyLODE.html
