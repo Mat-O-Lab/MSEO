@@ -34,6 +34,6 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Install pyLODE
-        run: pip install --noinput pylode
+        run: pip install pylode
       - name: Run pyLODE
         run: python pylode MSEO_mid.owl -o pyLODE.html
