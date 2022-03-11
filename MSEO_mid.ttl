@@ -13,6 +13,7 @@
 <https://purl.matolab.org/mseo/mid> rdf:type owl:Ontology ;
                                      owl:imports <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> ,
                                                  <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl> ;
+                                     <http://purl.org/dc/terms/title> "Material Science and Engineering Ontology"@en ;
                                      rdfs:comment """Contact:
 Christoph Schweizer
 Fraunhofer-Institut für Werkstoffmechanik IWM
@@ -34,7 +35,6 @@ Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen IMWS
 Walter-Hülse-Strasse 1, 06120 Halle (Saale)
 thomas.hanke@imws.fraunhofer.de"""@de ,
                                                   "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
-                                     rdfs:label "Material Science and Engineering Ontology"@en ;
                                      owl:priorVersion "BWMD_mid"@de ;
                                      :author "Christoph Schweizer (Fraunhofer IWM)"@de ;
                                      :curator "Martin Huschka (Fraunhofer EMI)"@en ,
@@ -45,6 +45,10 @@ thomas.hanke@imws.fraunhofer.de"""@de ,
 #################################################################
 #    Annotation properties
 #################################################################
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
 
 ###  https://purl.matolab.org/mseo/mid/author
 :author rdf:type owl:AnnotationProperty ;
