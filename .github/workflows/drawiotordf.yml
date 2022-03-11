@@ -34,7 +34,7 @@ jobs:
         run: |
           git config --local user.email "chowlk.action@github.com"
           git config --local user.name "Chowlk Action"
-          git add -A
+          git add .
           git commit -m "converted changed drawio files"  
       - name: Push changes # push the output folder to your repo
         if: ${{ steps.diff.outputs.diff }}
