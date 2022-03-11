@@ -34,6 +34,7 @@ Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen IMWS
 Walter-Hülse-Strasse 1, 06120 Halle (Saale)
 thomas.hanke@imws.fraunhofer.de"""@de ,
                                                   "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
+                                     rdfs:label "Material Science and Engineering Ontology"@en ;
                                      owl:priorVersion "BWMD_mid"@de ;
                                      :author "Christoph Schweizer (Fraunhofer IWM)"@de ;
                                      :curator "Martin Huschka (Fraunhofer EMI)"@en ,
@@ -74,7 +75,7 @@ obo:RO_0010001 owl:equivalentProperty :BWMD_00326 .
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#element
 pte:element rdf:type owl:ObjectProperty ;
             rdfs:range pte:Element ;
-            rdfs:label "is element" .
+            rdfs:label "has element" .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/designated_by
@@ -714,7 +715,9 @@ cco:Velocity owl:equivalentClass :BWMD_00165 .
 
 ###  http://www.w3.org/ns/csvw#Column
 <http://www.w3.org/ns/csvw#Column> rdf:type owl:Class ;
-                                   rdfs:subClassOf :Table .
+                                   rdfs:subClassOf :CSVFile ;
+                                   cco:definition "An Column as Defined by the W3C Vocabulary for CSV Files on the web. Typically, inhers in the tableSchema class and carries information about the name, the position and the unit for values in that table."@en ;
+                                   rdfs:label "CSVColumn"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Abstract
@@ -1563,6 +1566,19 @@ is performed.""" ;
                           rdfs:label "Base Element Of Composition"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/BreakingStrength
+:BreakingStrength rdf:type owl:Class ;
+                  rdfs:subClassOf :MechanicalStrength ;
+                  obo:IAO_0000119 "https://en.wikipedia.org/wiki/Fracture"@en ;
+                  cco:alternative_label "Bruchspannung"@de ,
+                                        "Fracture Stress"@en ,
+                                        "Strength at Break"@en ;
+                  cco:definition "Fracture strength, also known as breaking strength, is the stress at which a specimen fails via fracture. This is usually determined for a given specimen by a tensile test, which charts the stress–strain curve. The final recorded point is the fracture strength."@en ;
+                  rdfs:comment "Where the Ultimate Strenght is the maximum recorded stress, the breaking strenght is the last stress recorded when the break event of the experiment occures."@en ;
+                  rdfs:label "Breaking Strenght"@en ,
+                             "Bruchfestigkeit"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/Building
 :Building rdf:type owl:Class ;
           rdfs:subClassOf cco:Artifact ;
@@ -1587,6 +1603,14 @@ is performed.""" ;
 ###  https://purl.matolab.org/mseo/mid/CSVFile
 :CSVFile rdf:type owl:Class ;
          rdfs:subClassOf :File ;
+         cco:definition """A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.
+
+The CSV file format is not fully standardized. Separating fields with commas is the foundation, but commas in the data or embedded line breaks have to be handled specially. Some implementations disallow such content while others surround the field with quotation marks, which yet again creates the need for escaping if quotation marks are present in the data.
+
+The term \"CSV\" also denotes several closely-related delimiter-separated formats that use other field delimiters such as semicolons.[2] These include tab-separated values and space-separated values. A delimiter guaranteed not to be part of the data greatly simplifies parsing.
+
+Alternative delimiter-separated files are often given a \".csv\" extension despite the use of a non-comma field separator. This loose terminology can cause problems in data exchange. Many applications that accept CSV files have options to select the delimiter character and the quotation character. Semicolons are often used instead of commas in many European locales in order to use the comma as the decimal separator and, possibly, the period as a decimal grouping character."""@en ;
+         cco:definition_source "https://en.wikipedia.org/wiki/Comma-separated_values"@en ;
          rdfs:label "CSVFile"@en .
 
 
@@ -1727,6 +1751,19 @@ where stress is the force causing the deformation divided by the area to which t
                 cco:definition_source "https://en.wikipedia.org/wiki/Elastic_modulus"@en ;
                 rdfs:label "Elastic Modulus"@en ,
                            "Elastizitätsmodul"@de .
+
+
+###  https://purl.matolab.org/mseo/mid/ElasticStrain
+:ElasticStrain rdf:type owl:Class ;
+               rdfs:subClassOf :Strain ;
+               obo:IAO_0000119 "https://en.wikipedia.org/wiki/Plasticity_(physics)"@en ;
+               cco:alternative_label "Elastic Deformation"@en ,
+                                     "Elastische Verformung"@de ;
+               cco:definition """For many ductile metals, tensile loading applied to a sample will cause it to behave in an elastic manner. Each increment of load is accompanied by a proportional increment in extension. When the load is removed, the piece returns to its original size. However, once the load exceeds a threshold – the yield strength – the extension increases more rapidly than in the elastic region; now when the load is removed, some degree of extension will remain.
+
+Elastic deformation, however, is an approximation and its quality depends on the time frame considered and loading speed. If, as indicated in the graph opposite, the deformation includes elastic deformation, it is also often referred to as \"elasto-plastic deformation\" or \"elastic-plastic deformation\"."""@en ;
+               rdfs:label "Elastic Strain"@en ,
+                          "Elastische Deformation"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCapacitance
@@ -1926,6 +1963,17 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                rdfs:label "Interpolation"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/LowerYieldStrenght
+:LowerYieldStrenght rdf:type owl:Class ;
+                    rdfs:subClassOf :YieldStrenght ;
+                    obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
+                    cco:alternative_label "Lower Yield Stress"@en ,
+                                          "Untere Fließspannung"@de ;
+                    cco:definition "Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop."@en ;
+                    rdfs:label "Lower Yield Strength"@en ,
+                               "Untere Streckgrenze"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/LuminousIntensity
 :LuminousIntensity rdf:type owl:Class ;
                    rdfs:subClassOf obo:BFO_0000019 ;
@@ -2113,6 +2161,19 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                 rdfs:label "Planar Image Set"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/PlasticStrain
+:PlasticStrain rdf:type owl:Class ;
+               rdfs:subClassOf :Strain ;
+               obo:IAO_0000119 "https://en.wikipedia.org/wiki/Plasticity_(physics)"@en ;
+               cco:alternative_label "Plastic Deformation"@en ,
+                                     "Plastische Verformung"@de ;
+               cco:definition """In physics and materials science, plasticity, also known as plastic deformation, is the ability of a solid material to undergo permanent deformation, a non-reversible change of shape in response to applied forces.[1][2] For example, a solid piece of metal being bent or pounded into a new shape displays plasticity as permanent changes occur within the material itself. In engineering, the transition from elastic behavior to plastic behavior is known as yielding.
+
+Plastic deformation is observed in most materials, particularly metals, soils, rocks, concrete, and foams.[3][4][5][6] However, the physical mechanisms that cause plastic deformation can vary widely. At a crystalline scale, plasticity in metals is usually a consequence of dislocations. Such defects are relatively rare in most crystalline materials, but are numerous in some and part of their crystal structure; in such cases, plastic crystallinity can result. In brittle materials such as rock, concrete and bone, plasticity is caused predominantly by slip at microcracks. In cellular materials such as liquid foams or biological tissues, plasticity is mainly a consequence of bubble or cell rearrangements, notably T1 processes."""@en ;
+               rdfs:label "Plastic Strain"@en ,
+                          "Plastische Deformation"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/PoissonEffect
 :PoissonEffect rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000017 ;
@@ -2181,6 +2242,15 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 :Project rdf:type owl:Class ;
          rdfs:subClassOf cco:PlanSpecification ;
          rdfs:label "Project"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/ProofStrenght
+:ProofStrenght rdf:type owl:Class ;
+               rdfs:subClassOf :MechanicalStrength ;
+               obo:IAO_0000119 "https://www.corrosionpedia.com/definition/6354/proof-stress"@en ;
+               cco:alternative_label "Proof Stress"@en ;
+               cco:definition "The proof stress of a material is defined as the amount of stress it can endure until it undergoes a relatively small amount of plastic deformation. Specifically, proof stress is the point at which the material exhibits 0.2% of plastic deformation."@en ;
+               rdfs:label "Proof Strenght"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PublicProject
@@ -2380,6 +2450,19 @@ where e is the engineering strain. The logarithmic strain provides the correct m
                        "Wahre Dehnung"@de .
 
 
+###  https://purl.matolab.org/mseo/mid/UltimateTensileStrength
+:UltimateTensileStrength rdf:type owl:Class ;
+                         rdfs:subClassOf :MechanicalStrength ;
+                         obo:IAO_0000119 "https://en.wikipedia.org/wiki/Ultimate_tensile_strength"@en ;
+                         cco:definition """Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\\displaystyle F_{\\text{tu}}}{\\displaystyle F_{\\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
+
+The ultimate tensile strength is usually found by performing a tensile test and recording the engineering stress versus strain. The highest point of the stress–strain curve is the ultimate tensile strength and has units of stress. The equivalent point for the case of compression, instead of tension, is called the compressive strength.
+
+Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood."""@en ;
+                         rdfs:label "Ultimate Tensile Strength"@en ,
+                                    "Zugfestigkeit"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/UniversalTestingMachine
 :UniversalTestingMachine rdf:type owl:Class ;
                          rdfs:subClassOf cco:Artifact ,
@@ -2394,6 +2477,17 @@ where e is the engineering strain. The logarithmic strain provides the correct m
                                          ] ;
                          cco:definition "A machine capitable of performing komplex mechanical experiments, by applying force or displacement controlled regimes on specimen."@en ;
                          rdfs:label "Universal Testing Machine"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/UpperYieldStrength
+:UpperYieldStrength rdf:type owl:Class ;
+                    rdfs:subClassOf :YieldStrenght ;
+                    obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
+                    cco:alternative_label "Obere Fließspannung"@de ,
+                                          "Upper Yield Stress"@en ;
+                    cco:definition "Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop."@en ;
+                    rdfs:label "Obere Streckgrenze"@de ,
+                               "Upper Yield Strenght"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/VersionNumber
@@ -2465,11 +2559,30 @@ where e is the engineering strain. The logarithmic strain provides the correct m
           rdfs:label "XLSFile"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/YieldStrenght
+:YieldStrenght rdf:type owl:Class ;
+               rdfs:subClassOf :MechanicalStrength ;
+               obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
+               cco:alternative_label "Yield Stress"@en ;
+               cco:definition """In materials science and engineering, the yield point is the point on a stress-strain curve that indicates the limit of elastic behavior and the beginning of plastic behavior. Below the yield point, a material will deform elastically and will return to its original shape when the applied stress is removed. Once the yield point is passed, some fraction of the deformation will be permanent and non-reversible and is known as plastic deformation.
+
+The yield strength or yield stress is a material property and is the stress corresponding to the yield point at which the material begins to deform plastically. The yield strength is often used to determine the maximum allowable load in a mechanical component, since it represents the upper limit to forces that can be applied without producing permanent deformation. In some materials, such as aluminium, there is a gradual onset of non-linear behavior, making the precise yield point difficult to determine. In such a case, the offset yield point (or proof stress) is taken as the stress at which 0.2% plastic deformation occurs. Yielding is a gradual failure mode which is normally not catastrophic, unlike ultimate failure."""@en ;
+               rdfs:label "Fließgrenze"@de ,
+                          "Yield Strength"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/ZipFile
 :ZipFile rdf:type owl:Class ;
          rdfs:subClassOf :File ;
          rdfs:comment "Any kind of ZIP-File" ;
          rdfs:label "ZIPFile"@en .
+
+
+###  https://www.w3.org/ns/csvw#note
+<https://www.w3.org/ns/csvw#note> rdf:type owl:Class ;
+                                  rdfs:subClassOf :CSVFile ;
+                                  cco:definition "An Annotation as Defined by the W3C Vocabulary for CSV Files on the web. Typically, the bearer of the Information provided by the additional header before the actual tabular data in a CSV file."@en ;
+                                  rdfs:label "CSVNote"@en .
 
 
 #################################################################

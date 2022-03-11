@@ -30,7 +30,7 @@ In a next step you should point out every accessory needed for measurements and 
 
 The mseo:MeasurementDevice in the example is an subclass of cco:Artifact which are objects with at least one function. Connecting such a Artifact with a certain process makes sure that, if the process outputs a measurement, the acccessory with the appropriate function is in relation to that.
 
-### specimen
+### Specimen
 Specimen are defined by a subclass of cco:Artifact having the function MeasurementSpecimenFunction.
 They must have an Identfier as a subclass of cco:DesignativeInformationContentEntity attached.
 
@@ -45,3 +45,5 @@ Measured Values are typically output of processes. CCO provides a set of subclas
 ![Method Measurement](images/method_Measurement.drawio.png)
 
 The MeasurementInformationContentEntities are connected to the quality they measure by the relation cco:is_measured_by.
+
+### Changes and Effects
