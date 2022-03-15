@@ -1,0 +1,411 @@
+@prefix base: <https://purl.matolab.org/mseo/methods/my_method_shortname/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix mid: <http://www.owl-ontologies.com/mid#> .
+@prefix mseo: <https://raw.githubusercontent.com/Mat-O-Lab/MSEO/main/MSEO_mid.owl/> .
+@prefix ns: <http://www.owl-ontologies.com/ns#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000051 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000051" .
+
+obo:RO_0000086 a owl:ObjectProperty ;
+    rdfs:label "r o_0000086" .
+
+obo:RO_0010001 a owl:ObjectProperty ;
+    rdfs:label "r o_0010001" .
+
+cco:CalendarDateIdentifier a owl:Class ;
+    rdfs:label "Calendar Date Identifier" .
+
+cco:Day a owl:Class ;
+    rdfs:label "Day" .
+
+cco:DesignativeName a owl:Class ;
+    rdfs:label "Designative Name" .
+
+cco:Force a owl:Class ;
+    rdfs:label "Force" .
+
+cco:InformationBearingEntity a owl:Class ;
+    rdfs:label "Information Bearing Entity" .
+
+cco:Lenght a owl:Class ;
+    rdfs:label "Lenght" .
+
+cco:ProperAccelaration a owl:Class ;
+    rdfs:label "Proper Accelaration" .
+
+cco:QualitySpecification a owl:Class ;
+    rdfs:label "Quality Specification" .
+
+cco:Speed a owl:Class ;
+    rdfs:label "Speed" .
+
+cco:designated_by a owl:ObjectProperty ;
+    rdfs:label "designated_by" .
+
+cco:has_accessory a owl:ObjectProperty ;
+    rdfs:label "has_accessory" .
+
+cco:has_agent a owl:ObjectProperty ;
+    rdfs:label "has_agent" .
+
+cco:has_function a owl:ObjectProperty ;
+    rdfs:label "has_function" ;
+    rdfs:domain mseo:MeasurementDevice ;
+    rdfs:range cco:DistanceMeasurementArtifactFunction .
+
+cco:has_input a owl:ObjectProperty ;
+    rdfs:label "has_input" .
+
+cco:has_output a owl:ObjectProperty ;
+    rdfs:label "has_output" ;
+    rdfs:range cco:DistanceMeasurementInformationContentEntity,
+        cco:RatioMeasurementInformationContentEntity .
+
+cco:has_process_part a owl:ObjectProperty ;
+    rdfs:label "has_process_part" .
+
+cco:has_profil a owl:ObjectProperty ;
+    rdfs:label "has_profil" .
+
+cco:has_text_value a owl:ObjectProperty ;
+    rdfs:label "has_text_value" .
+
+cco:is_input_of a owl:ObjectProperty ;
+    rdfs:label "is_input_of" .
+
+cco:is_measured_by a owl:ObjectProperty ;
+    rdfs:label "is_measured_by" .
+
+cco:is_ratio_measurement_of a owl:ObjectProperty ;
+    rdfs:label "is_ratio_measurement_of" .
+
+cco:occures_on a owl:ObjectProperty ;
+    rdfs:label "occures_on" .
+
+cco:prescribed_by a owl:ObjectProperty ;
+    rdfs:label "prescribed_by" .
+
+cco:prescribes a owl:ObjectProperty ;
+    rdfs:label "prescribes" .
+
+cco:process_preceeds a owl:ObjectProperty ;
+    rdfs:label "process_preceeds" .
+
+ns:reduction_of_area a mid:BWMD_00286,
+        owl:NamedIndividual .
+
+base:DisplacementMeasurementInformation a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:ElasticModulus a owl:NamedIndividual,
+        mseo:ElasticModulus .
+
+base:ElongationAfterFracture a owl:NamedIndividual,
+        mseo:EngineeringStrain .
+
+base:ForceMeasurementInformation a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:LowerYieldStrenght a owl:NamedIndividual,
+        mseo:LowerYieldStrenght .
+
+base:PermanentElongation a owl:NamedIndividual,
+        mseo:PlasticStrain .
+
+base:PermanentExtension a owl:NamedIndividual,
+        mseo:PlasticStrain .
+
+base:PlasticExtensionAtMaximumForce a owl:NamedIndividual,
+        mseo:PlasticStrain .
+
+base:ProofStrengthPlasticExtension a owl:NamedIndividual,
+        mseo:PlasticStrain .
+
+base:ProofStrengthTotalExtension a owl:NamedIndividual,
+        mseo:EngineeringStrain .
+
+base:Specimen a owl:NamedIndividual,
+        mseo:Specimen ;
+    obo:BFO_0000051 base:MeasurementRegion ;
+    cco:designated_by base:SpecimenName ;
+    cco:has_function base:TensileTestSpecimen ;
+    cco:is_input_of base:HotTensilTestMetall .
+
+base:TensileStrenght a owl:NamedIndividual,
+        mseo:UltimateTensileStrength .
+
+base:TotalExtensionAtFracture a owl:NamedIndividual,
+        mseo:EngineeringStrain .
+
+base:TotalExtensionAtMaximumForce a owl:NamedIndividual,
+        mseo:EngineeringStrain .
+
+base:UpperYieldStrenght a owl:NamedIndividual,
+        mseo:UpperYieldStrenght .
+
+base:YieldPointExtension a owl:NamedIndividual,
+        mseo:EngineeringStrain .
+
+mseo: a owl:Ontology ;
+    dc:creator "author_full_name" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "my_method_long_name" ;
+    owl:versionInfo "0.0.1" .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" .
+
+cco:ActOfArtifactAssemply a owl:Class ;
+    rdfs:label "Act Of Artifact Assemply" .
+
+cco:ActOfArtifactModification a owl:Class ;
+    rdfs:label "Act Of Artifact Modification" .
+
+cco:ActOfPositionChange a owl:Class ;
+    rdfs:label "Act Of Position Change" .
+
+cco:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+cco:ArtifactFunction a owl:Class ;
+    rdfs:label "Artifact Function" .
+
+cco:Cylindrical a owl:Class ;
+    rdfs:label "Cylindrical" .
+
+cco:Diameter a owl:Class ;
+    rdfs:label "Diameter" .
+
+cco:DistanceMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Distance Measurement Information Content Entity" .
+
+cco:Document a owl:Class ;
+    rdfs:label "Document" .
+
+cco:InformationLine a owl:Class ;
+    rdfs:label "Information Line" .
+
+cco:PlanSpecification a owl:Class ;
+    rdfs:label "Plan Specification" .
+
+cco:RatioMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Ratio Measurement Information Content Entity" .
+
+cco:Round a owl:Class ;
+    rdfs:label "Round" .
+
+cco:Temperature a owl:Class ;
+    rdfs:label "Temperature" .
+
+mid:BWMD_00286 a owl:Class ;
+    rdfs:label "B W M D_00286" .
+
+base:AlignSpecimen a cco:ActOfPositionChange,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:SpecimenTempering .
+
+base:Caliper a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    cco:designated_by base:CaliperIdentifer .
+
+base:CaliperIdentifer a owl:NamedIndividual .
+
+base:CrossHeadAcccelaration a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:CrossHeadSpeed a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:CrossSection a owl:NamedIndividual,
+        mseo:CrossSection ;
+    obo:RO_0000086 base:CrossSectionShape,
+        base:SpecimenDiameter .
+
+base:CrossSectionShape a cco:Round,
+        owl:NamedIndividual .
+
+base:DIN_EN_ISO_6892-2 a cco:Document,
+        owl:NamedIndividual ;
+    obo:BFO_0000051 base:StandardCode ;
+    cco:has_URI_value "https://www.beuth.de/de/norm/din-en-iso-6892-2/291328974|"^^xsd:anyURI .
+
+base:DiameterInformationBearingEntity a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:has_decimal_value 10.0 .
+
+base:DiameterMeasurementInformation a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    obo:RO_0010001 base:DiameterInformationBearingEntity .
+
+base:ExperimentDate a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:designated_by base:ExperimentDateIdentifier .
+
+base:ExperimentDateIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:HotTensilTestMetall a owl:NamedIndividual,
+        mseo:Experiment ;
+    cco:has_agent base:Operator ;
+    cco:has_process_part base:ActOfElongation,
+        base:AlignSpecimen,
+        base:ClampSpecimen,
+        base:GetCharacteristicValues,
+        base:MeasureDiameter,
+        base:MeasureLenght,
+        base:SpecimenTempering ;
+    cco:occures_on base:ExperimentDate ;
+    cco:prescribed_by base:TestPlan ;
+    mseo:in_accordance_with base:Standard .
+
+base:MaximumForce a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:MeasureDiameter a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_accessory base:Caliper ;
+    cco:process_preceeds base:MeasureLenght .
+
+base:MeasurementRegion a owl:NamedIndividual,
+        mseo:MeasurementRegion ;
+    obo:BFO_0000051 base:CrossSection ;
+    obo:RO_0000086 base:MeasurmentRegionShape,
+        base:SpecimenLenght,
+        base:SpecimenTemperature .
+
+base:MeasurmentRegionShape a cco:Cylindrical,
+        owl:NamedIndividual .
+
+base:Operator a cco:Agent,
+        owl:NamedIndividual ;
+    cco:designated_by base:OperatorName .
+
+base:OperatorName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenDiameter a cco:Diameter,
+        owl:NamedIndividual ;
+    cco:is_measured_by base:DiameterMeasurementInformation .
+
+base:SpecimenLenght a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:is_measured_by base:StartLenght ;
+    cco:is_ratio_measurement_of base:StrainMeasurementInformation .
+
+base:SpecimenName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:SpecimenTemperaturSetPoint a cco:NonNameIdentifier,
+        owl:NamedIndividual ;
+    cco:prescribes base:SpecimenTemperature .
+
+base:Standard a owl:NamedIndividual,
+        mseo:Regulation ;
+    obo:RO_0010001 base:DIN_EN_ISO_6892-2 ;
+    cco:designated_by base:StandardIdentifier .
+
+base:StandardCode a cco:InformationLine,
+        owl:NamedIndividual .
+
+base:StandardIdentifier a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:StartLenght a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:StrainMeasurementInformation a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+base:TensileTestSpecimen a cco:ArtifactFunction,
+        owl:NamedIndividual .
+
+base:TestPlan a cco:PlanSpecification,
+        owl:NamedIndividual ;
+    cco:designated_by base:TestPlanName .
+
+base:TestPlanName a cco:NonNameIdentifier,
+        owl:NamedIndividual .
+
+mseo:ActOfAnalysing a owl:Class ;
+    rdfs:label "Act Of Analysing" .
+
+mseo:CrossSection a owl:Class ;
+    rdfs:label "Cross Section" .
+
+mseo:ElasticModulus a owl:Class ;
+    rdfs:label "Elastic Modulus" .
+
+mseo:Experiment a owl:Class ;
+    rdfs:label "Experiment" .
+
+mseo:LowerYieldStrenght a owl:Class ;
+    rdfs:label "Lower Yield Strenght" .
+
+mseo:MeasurementRegion a owl:Class ;
+    rdfs:label "Measurement Region" .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+mseo:UltimateTensileStrength a owl:Class ;
+    rdfs:label "Ultimate Tensile Strength" .
+
+mseo:UpperYieldStrenght a owl:Class ;
+    rdfs:label "Upper Yield Strenght" .
+
+cco:DistanceMeasurementArtifactFunction a owl:Class ;
+    rdfs:label "Distance Measurement Artifact Function" .
+
+base:ActOfElongation a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:has_profil base:CrossHeadAcccelaration,
+        base:CrossHeadSpeed,
+        base:MaximumForce ;
+    cco:process_preceeds base:GetCharacteristicValues .
+
+base:ClampSpecimen a cco:ActOfArtifactAssemply,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:MeasureLenght .
+
+base:GetCharacteristicValues a owl:NamedIndividual,
+        mseo:ActOfAnalysing .
+
+base:SpecimenTemperature a cco:Temperature,
+        owl:NamedIndividual .
+
+base:SpecimenTempering a cco:ActOfArtifactModification,
+        owl:NamedIndividual ;
+    cco:has_input base:SpecimenTemperaturSetPoint ;
+    cco:process_preceeds base:ClampSpecimen .
+
+mseo:MeasurementDevice a owl:Class ;
+    rdfs:label "Measurement Device" .
+
+cco:ActOfMeasuring a owl:Class ;
+    rdfs:label "Act Of Measuring" .
+
+base:MeasureLenght a cco:ActOfMeasuring,
+        owl:NamedIndividual ;
+    cco:process_preceeds base:ActOfElongation .
+
+mseo:PlasticStrain a owl:Class ;
+    rdfs:label "Plastic Strain" .
+
+mseo:EngineeringStrain a owl:Class ;
+    rdfs:label "Engineering Strain" .
+
+cco:NonNameIdentifier a owl:Class,
+        owl:DatatypeProperty ;
+    rdfs:label "Non Name Identifier",
+        "non name identifier" ;
+    rdfs:domain cco:DistanceMeasurementArtifactFunction .
+
