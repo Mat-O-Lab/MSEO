@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-03-16T11:04:25.344Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" etag="VeKI20MmKB8fY51oPkFT" version="17.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-03-16T17:28:22.302Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36" etag="4KpnLnx6xjRg3UYqbNZE" version="17.1.2" type="github">
   <diagram id="RQUcGvRlMdFbgAy4DLWb" name="Page-1">
-    <mxGraphModel dx="1856" dy="944" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1702" dy="865" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -787,13 +787,13 @@
           <mxGeometry x="780" y="940" width="100" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0PtQ9QTV_TQMzkyyk_zX-23" value="mseo:ActOfAnalysing&lt;span style=&quot;white-space: pre&quot;&gt;	&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];align=left;" parent="1" vertex="1">
-          <mxGeometry x="900" y="980" width="140" height="30" as="geometry" />
+          <mxGeometry x="1910" y="980" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0PtQ9QTV_TQMzkyyk_zX-24" value="&lt;u&gt;base:GetCharacteristicValues&lt;br&gt;&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];align=left;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="900" y="1010" width="140" height="30" as="geometry" />
+          <mxGeometry x="1910" y="1010" width="140" height="30" as="geometry" />
         </mxCell>
         <mxCell id="0PtQ9QTV_TQMzkyyk_zX-34" value="cco:process_preceeds" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.1;exitDx=0;exitDy=0;fontSize=12;entryX=1;entryY=0.1;entryDx=0;entryDy=0;" parent="1" source="0PtQ9QTV_TQMzkyyk_zX-19" target="0PtQ9QTV_TQMzkyyk_zX-24" edge="1">
-          <mxGeometry x="0.6" relative="1" as="geometry">
+          <mxGeometry x="-0.5371" relative="1" as="geometry">
             <mxPoint x="780" y="893" as="sourcePoint" />
             <mxPoint x="840" y="920" as="targetPoint" />
             <Array as="points">
@@ -947,7 +947,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="eucvteF7T8Y-6G_bBoor-28" value="Characteristic Values (Qualities and realizable entities)" style="swimlane;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="2170" y="1040" width="400" height="360" as="geometry" />
+          <mxGeometry x="2430" y="1141" width="400" height="360" as="geometry" />
         </mxCell>
         <mxCell id="eucvteF7T8Y-6G_bBoor-29" value="mseo:UltimateTensileStrength" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="eucvteF7T8Y-6G_bBoor-28">
           <mxGeometry x="61.549999999999955" y="54" width="250" height="26" as="geometry" />
@@ -998,6 +998,42 @@
           <mxGeometry x="0.0551" relative="1" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="1060" y="1039" as="sourcePoint" />
+            <mxPoint x="2241.5499999999997" y="1279" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-61" value="cco:MaximumOrdinalMeasurementInformationContentEntity" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="2493" y="940" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-62" value="&lt;u&gt;base:TensileStrenghtMeasurementInformation&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="2493" y="970" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-63" value="cco:is_a_ordinal_measurement_of" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.3;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" source="eucvteF7T8Y-6G_bBoor-62" parent="1" target="eucvteF7T8Y-6G_bBoor-66">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2330" y="851" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2410" y="940.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-64" value="cco:is_measured_by" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.1;exitDx=0;exitDy=0;entryX=1;entryY=0.1;entryDx=0;entryDy=0;" edge="1" parent="1" source="eucvteF7T8Y-6G_bBoor-30" target="eucvteF7T8Y-6G_bBoor-62">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1630" y="946.9999999999998" as="sourcePoint" />
+            <mxPoint x="1780" y="944" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="2880" y="1101" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-65" value="cco:NominalMeasurementInformationContentEntity" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];" vertex="1" parent="1">
+          <mxGeometry x="2160" y="1051" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-66" value="&lt;u&gt;base:StressMeasurementInformation&lt;/u&gt;" style="rounded=0;whiteSpace=wrap;html=1;snapToPoint=1;points=[[0.1,0],[0.2,0],[0.3,0],[0.4,0],[0.5,0],[0.6,0],[0.7,0],[0.8,0],[0.9,0],[0,0.1],[0,0.3],[0,0.5],[0,0.7],[0,0.9],[0.1,1],[0.2,1],[0.3,1],[0.4,1],[0.5,1],[0.6,1],[0.7,1],[0.8,1],[0.9,1],[1,0.1],[1,0.3],[1,0.5],[1,0.7],[1,0.9]];fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="2160" y="1081" width="290" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="eucvteF7T8Y-6G_bBoor-67" value="cco:has_output&lt;br&gt;" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.1;entryDx=0;entryDy=0;exitX=1;exitY=0.1;exitDx=0;exitDy=0;" edge="1" parent="1" source="0PtQ9QTV_TQMzkyyk_zX-24" target="eucvteF7T8Y-6G_bBoor-66">
+          <mxGeometry x="0.0551" relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="1050" y="1023" as="sourcePoint" />
             <mxPoint x="2241.5499999999997" y="1279" as="targetPoint" />
           </mxGeometry>
         </mxCell>
