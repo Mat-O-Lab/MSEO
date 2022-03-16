@@ -207,6 +207,9 @@ cco:DesignativeName a owl:Class ;
 cco:Document a owl:Class ;
     rdfs:label "Document" .
 
+cco:MaximumOrdinalMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Maximum Ordinal Measurement Information Content Entity" .
+
 cco:MinimumOrdinalMeasurementInformationContentEntity a owl:Class ;
     rdfs:label "Minimum Ordinal Measurement Information Content Entity" .
 
@@ -308,7 +311,12 @@ base:TensileForce a owl:NamedIndividual,
     cco:is_measured_by base:ForceMeasurementInformation .
 
 base:TensileStrenght a owl:NamedIndividual,
-        mseo:UltimateTensileStrength .
+        mseo:UltimateTensileStrength ;
+    cco:is_measured_by base:TensileStrenghtMeasurementInformation .
+
+base:TensileStrenghtMeasurementInformation a cco:MaximumOrdinalMeasurementInformationContentEntity,
+        owl:NamedIndividual ;
+    cco:is_a_ordinal_measurement_of base:StressMeasurementInformation .
 
 base:TestPlanName a cco:NonNameIdentifier,
         owl:NamedIndividual .
@@ -367,9 +375,6 @@ cco:InformationLine a owl:Class ;
 cco:LossOfQuality a owl:Class ;
     rdfs:label "Loss Of Quality" .
 
-cco:NominalMeasurementInformationContentEntity a owl:Class ;
-    rdfs:label "Nominal Measurement Information Content Entity" .
-
 cco:PerformanceSpecification a owl:Class ;
     rdfs:label "Performance Specification" .
 
@@ -398,9 +403,13 @@ base:GetCharacteristicValues a owl:NamedIndividual,
     cco:has_output base:ElasticModulus,
         base:ElongationAtBreak,
         base:ElongationAtMaximumForce,
+        base:StressMeasurementInformation,
         base:TensileStrenght .
 
 base:LenghtMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
+base:StressMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
         owl:NamedIndividual .
 
 base:TestMachine a owl:NamedIndividual,
@@ -431,6 +440,9 @@ cco:Lenght a owl:Class ;
 
 cco:LossOfFunction a owl:Class ;
     rdfs:label "Loss Of Function" .
+
+cco:NominalMeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Nominal Measurement Information Content Entity" .
 
 cco:Thickness a owl:Class ;
     rdfs:label "Thickness" .
