@@ -6,7 +6,6 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix tiff: <http://www.owl-ontologies.com/tiff#> .
 
 obo:RO_0000086 a owl:ObjectProperty ;
     rdfs:label "r o_0000086" ;
@@ -46,9 +45,6 @@ cco:has_input a owl:ObjectProperty ;
 
 cco:has_output a owl:ObjectProperty ;
     rdfs:label "has_output" .
-
-cco:has_part a owl:ObjectProperty ;
-    rdfs:label "has_part" .
 
 cco:has_process_part a owl:ObjectProperty ;
     rdfs:label "has_process_part" .
@@ -124,8 +120,8 @@ mseo: a owl:Ontology ;
     dc:title "Geometry measurement of precipitates on TEM images of an aluminium alloy" ;
     owl:versionInfo "0.0.1" .
 
-tiff:ScaleValue a owl:Class ;
-    rdfs:label "Scale Value" .
+cco:RationMeasurementContentEntity a owl:Class ;
+    rdfs:label "Ration Measurement Content Entity" .
 
 base:AreaInNanometer a cco:MeasurementContentEntity,
         owl:NamedIndividual .
@@ -152,8 +148,7 @@ base:ClearTheBorder a owl:NamedIndividual,
     cco:process_preceeds base:LabelMaskedPrecipitates .
 
 base:ColorLabelMaskedImage a cco:Image,
-        owl:NamedIndividual ;
-    cco:has_part base:ScaleValue .
+        owl:NamedIndividual .
 
 base:ColorTheLabels a cco:Agent,
         owl:NamedIndividual ;
@@ -197,6 +192,7 @@ base:KernelValue a cco:InformationBearingEntity,
 
 base:LabelMaskedPrecipitates a cco:Agent,
         owl:NamedIndividual ;
+    cco:has_input base:ScaleValue ;
     cco:has_profil base:BG_Label ;
     cco:process_preceeds base:ColorTheLabels .
 
@@ -257,6 +253,9 @@ base:OtsuThresholding a cco:Agent,
 base:RadiusInNanometer a cco:MeasurementContentEntity,
         owl:NamedIndividual .
 
+base:ScaleValue a cco:RationMeasurementContentEntity,
+        owl:NamedIndividual .
+
 base:StandardDeviation a cco:MeasurementContentEntity,
         owl:NamedIndividual .
 
@@ -267,8 +266,7 @@ base:StatisticEvaluation a owl:NamedIndividual,
         base:StandardDeviation .
 
 base:TEMDarkfieldImage a cco:Image,
-        owl:NamedIndividual ;
-    cco:has_part base:ScaleValue .
+        owl:NamedIndividual .
 
 base:TestPlan a cco:Agent,
         owl:NamedIndividual ;
@@ -300,9 +298,6 @@ cco:MajorAxis a owl:Class ;
 
 cco:MinorAxis a owl:Class ;
     rdfs:label "Minor Axis" .
-
-base:ScaleValue a tiff:ScaleValue,
-        owl:NamedIndividual .
 
 mseo:ActOfAnalysing a owl:Class ;
     rdfs:label "Act Of Analysing" .
