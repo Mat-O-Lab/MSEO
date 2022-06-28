@@ -143,6 +143,12 @@ base:BitSize a cco:Agent,
 base:BitSizeValue a cco:InformationBearingEntity,
         owl:NamedIndividual .
 
+base:Centroid-X a cco:MeasurementContentEntity,
+        owl:NamedIndividual .
+
+base:Centroid-Y a cco:MeasurementContentEntity,
+        owl:NamedIndividual .
+
 base:ClearTheBorder a owl:NamedIndividual,
         mseo:ActOfAnalysing ;
     cco:process_preceeds base:LabelMaskedPrecipitates .
@@ -217,11 +223,11 @@ base:MeanRadiusAllPrecipitates a cco:MeasurementContentEntity,
 base:MeasuringPrecipitateSize a cco:Agent,
         owl:NamedIndividual ;
     cco:has_output base:AreaInNanometer,
+        base:Centroid-X,
+        base:Centroid-Y,
         base:MajorAxisLength,
         base:MinorAxisLength,
-        base:RadiusInNanometer,
-        base:Weighted-X-PositionCentralPoint,
-        base:Weighted-Y-PositionCentralPoint ;
+        base:RadiusInNanometer ;
     cco:process_preceeds base:StatisticEvaluation .
 
 base:MedianFilter a cco:Agent,
@@ -273,12 +279,6 @@ base:TestPlan a cco:Agent,
     cco:designated_by base:TestPlanName .
 
 base:TestPlanName a cco:Agent,
-        owl:NamedIndividual .
-
-base:Weighted-X-PositionCentralPoint a cco:MeasurementContentEntity,
-        owl:NamedIndividual .
-
-base:Weighted-Y-PositionCentralPoint a cco:MeasurementContentEntity,
         owl:NamedIndividual .
 
 mseo:ActOfMeasuring a owl:Class ;
