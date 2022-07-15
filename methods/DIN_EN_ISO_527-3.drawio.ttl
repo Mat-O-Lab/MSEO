@@ -358,7 +358,7 @@ base:StrainMaxForce a cco:MeasurementInformationContentEntity,
 
 base:TensileForce a owl:NamedIndividual,
         mseo:MeasurementDevice ;
-    cco:is_measured_by base:ForceMeasurementInformation .
+    cco:is_measured_by base:LenghtMeasurementInformation .
 
 base:TensileStrenghtMeasurementInformation a cco:MaximumOrdinalMeasurementInformationContentEntity,
         owl:NamedIndividual ;
@@ -452,6 +452,9 @@ base:CrossHeadAcccelaration a owl:NamedIndividual,
 base:CrossHeadSpeed a owl:NamedIndividual,
         mseo:MeasurementDevice .
 
+base:ForceMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
+        owl:NamedIndividual .
+
 base:GetCharacteristicValues a owl:NamedIndividual,
         mseo:ActOfAnalysing ;
     cco:has_output base:CrossSectionArea,
@@ -509,12 +512,6 @@ cco:Thickness a owl:Class ;
 cco:Width a owl:Class ;
     rdfs:label "Width" .
 
-base:ForceMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
-        owl:NamedIndividual .
-
-base:LenghtMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
-        owl:NamedIndividual .
-
 base:StrainMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
         owl:NamedIndividual ;
     cco:is_measured_by base:LenghtMeasurementInformation,
@@ -526,6 +523,9 @@ base:StressMeasurementInformation a cco:NominalMeasurementInformationContentEnti
 
 cco:ActOfMeasuring a owl:Class ;
     rdfs:label "Act Of Measuring" .
+
+base:LenghtMeasurementInformation a cco:NominalMeasurementInformationContentEntity,
+        owl:NamedIndividual .
 
 cco:NominalMeasurementInformationContentEntity a owl:Class ;
     rdfs:label "Nominal Measurement Information Content Entity" .
