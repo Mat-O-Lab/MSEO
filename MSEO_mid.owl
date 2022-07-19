@@ -1,24 +1,23 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://purl.matolab.org/mseo/mid/"
      xml:base="https://purl.matolab.org/mseo/mid/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:pte="http://www.daml.org/2003/01/periodictable/PeriodicTable#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cco="http://www.ontologyrepository.com/CommonCoreOntologies/"
      xmlns:geo="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:pte="http://www.daml.org/2003/01/periodictable/PeriodicTable#"
+     xmlns:graph_designer="https://www.materials.fraunhofer.de/ontologies/graph_designer#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:graph_designer="https://www.materials.fraunhofer.de/ontologies/graph_designer#">
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://purl.matolab.org/mseo/mid">
         <owl:imports rdf:resource="http://www.daml.org/2003/01/periodictable/PeriodicTable.owl"/>
         <owl:imports rdf:resource="https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl"/>
-        <terms:title xml:lang="en">Material Science and Engineering Ontology</terms:title>
         <rdfs:comment xml:lang="de">Contact:
 Christoph Schweizer
 Fraunhofer-Institut für Werkstoffmechanik IWM
@@ -29,23 +28,24 @@ Martin Huschka
 Fraunhofer Institute for High-Speed Dynamics , Ernst-Mach-Institut, EMI
 Ernst-Zermelo-Strasse 4, 79104 Freiburg , Germany
 Martin.Huschka@EMI.Fraunhofer.de</rdfs:comment>
-        <rdfs:comment xml:lang="de">Contact:
-Philipp von Hartrott
-Fraunhofer-Institut für Werkstoffmechanik IWM
-Wöhlerstraße 11, 79108 Freiburg
-philipp.von.hartrott@iwm.fraunhofer.de</rdfs:comment>
+        <author xml:lang="de">Christoph Schweizer (Fraunhofer IWM)</author>
+        <owl:priorVersion xml:lang="de">BWMD_mid</owl:priorVersion>
+        <curator xml:lang="en">Thomas Hanke (Fraunhofer IMWS)</curator>
+        <curator xml:lang="en">Philipp von Hartrott (Fraunhofer IWM)</curator>
+        <rdfs:comment xml:lang="en">This is the mid-level module of the Material Sience and Engineering Ontology MSEO.</rdfs:comment>
         <rdfs:comment xml:lang="de">Contact:
 Thomas Hanke
 Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen IMWS
 Walter-Hülse-Strasse 1, 06120 Halle (Saale)
 thomas.hanke@imws.fraunhofer.de</rdfs:comment>
-        <rdfs:comment xml:lang="en">This is the mid-level module of the Material Sience and Engineering Ontology MSEO.</rdfs:comment>
-        <owl:priorVersion xml:lang="de">BWMD_mid</owl:priorVersion>
-        <author xml:lang="de">Christoph Schweizer (Fraunhofer IWM)</author>
-        <curator xml:lang="en">Martin Huschka (Fraunhofer EMI)</curator>
-        <curator xml:lang="en">Philipp von Hartrott (Fraunhofer IWM)</curator>
+        <terms:title xml:lang="en">Material Science and Engineering Ontology</terms:title>
         <curator xml:lang="en">Simon Stier (Fraunhofer ISC)</curator>
-        <curator xml:lang="en">Thomas Hanke (Fraunhofer IMWS)</curator>
+        <curator xml:lang="en">Martin Huschka (Fraunhofer EMI)</curator>
+        <rdfs:comment xml:lang="de">Contact:
+Philipp von Hartrott
+Fraunhofer-Institut für Werkstoffmechanik IWM
+Wöhlerstraße 11, 79108 Freiburg
+philipp.von.hartrott@iwm.fraunhofer.de</rdfs:comment>
     </owl:Ontology>
     
 
@@ -1132,6 +1132,24 @@ thomas.hanke@imws.fraunhofer.de</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CSVFile"/>
         <cco:definition xml:lang="en">An Column as Defined by the W3C Vocabulary for CSV Files on the web. Typically, inhers in the tableSchema class and carries information about the name, the position and the unit for values in that table.</cco:definition>
         <rdfs:label xml:lang="en">CSVColumn</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid#ActOfAnnealing -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid#ActOfAnnealing">
+        <rdfs:subClassOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/ActOfArtifactModification"/>
+        <rdfs:label xml:lang="en">Act of Annealing</rdfs:label>
+        <rdfs:label xml:lang="de">Thermische Konditionierung</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid#PressureMeasurementArtifactFunction -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid#PressureMeasurementArtifactFunction">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction"/>
     </owl:Class>
     
 
@@ -3927,5 +3945,5 @@ The yield strength or yield stress is a material property and is the stress corr
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
