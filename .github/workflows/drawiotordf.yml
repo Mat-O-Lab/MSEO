@@ -19,9 +19,11 @@ jobs:
       - name: clone Chowlk and install requirements
         #working-directory: ./methods
         if: ${{ steps.diff.outputs.diff }}
+        uses: actions/checkout@master
+        with:
+          repository: oeg-upm/Chowlk
         run: |
           echo "${{ steps.diff.outputs.diff }}"
-          git clone https://github.com/oeg-upm/Chowlk.git
           pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
         if: ${{ steps.diff.outputs.diff }}
