@@ -187,10 +187,6 @@ cco:is_subject_of owl:equivalentProperty :BWMD_00320 .
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty owl:topDataProperty ;
-                         owl:someValuesFrom xsd:NCName
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty owl:topDataProperty ;
                          owl:someValuesFrom xsd:NMTOKEN
                        ] ,
                        [ rdf:type owl:Restriction ;
