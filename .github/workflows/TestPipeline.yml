@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 env:
-  #WORKING_DIR: ./examples/
+  WORKING_DIR: ./tools/examples/
   RAW_URL: 'https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/example.csv'
   MAPREQUEST_URL: 'https://github.com/Mat-O-Lab/MapToMethod/raw/main/examples/request.json'
   METHOD_URL: 'https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl'
@@ -12,6 +12,7 @@ env:
 jobs:
   TestPipeline:
     runs-on: ubuntu-latest
+    working-directory: ${{env.WORKING_DIR}}
     services:
       csvtocsvw:
         image: ghcr.io/mat-o-lab/csvtocsvw:latest
@@ -23,8 +24,12 @@ jobs:
         ports:
            - 5002:5000
     steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0        
       - name: create csvw json-ld meta data
         run: |
+          curl -LJO ${{env.RAW_URL}}
           RESULT=$(curl -X POST "http://localhost:5001/api" -H  "accept: application/json" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"data_url\":\"${{env.RAW_URL}}\"}")
           FILEDATA=$(echo $RESULT | jq -r '.filedata')
           FILENAME=$(echo $RESULT | jq -r '.filename')
@@ -43,4 +48,10 @@ jobs:
           FILENAME=$(echo $RESULT | jq -r '.filename')
           echo $FILENAME
           echo $FILEDATA > $FILENAME
-                  
+      - name: Commit files # commit the output folder
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: 'updated example output'
+          add: '*.* --force'
+          cwd: ${{env.WORKING_DIR}}
+            
