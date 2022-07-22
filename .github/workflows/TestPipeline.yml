@@ -6,7 +6,7 @@ on:
 env:
   #WORKING_DIR: ./examples/
   RAW_URL: 'https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/example.csv'
-  MAPREQUEST_URL: 'https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/request.json'
+  MAPREQUEST_URL: 'https://github.com/Mat-O-Lab/MapToMethod/raw/main/examples/request.json'
   METHOD_URL: 'https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl'
 
 jobs:
