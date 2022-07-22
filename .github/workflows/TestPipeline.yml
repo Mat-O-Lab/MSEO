@@ -37,7 +37,7 @@ jobs:
             'http://localhost:5002/api/mappingfile' \
             -H 'accept: application/json' \
             -H 'Content-Type: application/json' \
-            -d @request.json -v --connect-timeout 5)
+            -d ${{env.MAPREQUEST_URL}} -v --connect-timeout 5)
           FILEDATA=$(echo $RESULT | jq -r '.filedata')
           FILENAME=$(echo $RESULT | jq -r '.filename')
           echo $FILENAME
