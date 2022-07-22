@@ -9,10 +9,12 @@ env:
   MAPREQUEST_URL: 'https://github.com/Mat-O-Lab/MapToMethod/raw/main/examples/request.json'
   METHOD_URL: 'https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl'
 
+defaults:
+  run:
+    working-directory: ${{env.WORKING_DIR}}
 jobs:
   TestPipeline:
     runs-on: ubuntu-latest
-    working-directory: ${{env.WORKING_DIR}}
     services:
       csvtocsvw:
         image: ghcr.io/mat-o-lab/csvtocsvw:latest
