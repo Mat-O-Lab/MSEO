@@ -32,11 +32,12 @@ jobs:
           echo $FILEDATA > $FILENAME               
       - name: create a YARRRML mapping file
         run: |
+          curl ${{env.MAPREQUEST_URL}} -o request.json
           RESULT=$(curl -X 'POST' \
             'http://localhost:5002/api/mappingfile' \
             -H 'accept: application/json' \
             -H 'Content-Type: application/json' \
-            -d ${{env.MAPREQUEST_URL}} -v --connect-timeout 5)
+            -d @request.json -v --connect-timeout 5)
           FILEDATA=$(echo $RESULT | jq -r '.filedata')
           FILENAME=$(echo $RESULT | jq -r '.filename')
           echo $FILENAME
