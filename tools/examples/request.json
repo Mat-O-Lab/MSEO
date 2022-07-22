@@ -1,0 +1,8 @@
+{
+    "data_url": "https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/example-metadata.json",
+    "method_url": "https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl",
+    "maplist": {
+        "SpecimenName": "AktuelleProbe0",
+        "StrainMeasurementInformation": "Dehnung"
+    }
+}
