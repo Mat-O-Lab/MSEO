@@ -33,6 +33,7 @@ jobs:
       - name: create a YARRRML mapping file
         run: |
           curl ${{env.MAPREQUEST_URL}} -o request.json
+          cat request.json
           RESULT=$(curl -X 'POST' \
             'http://localhost:5002/api/mappingfile' \
             -H 'accept: application/json' \
