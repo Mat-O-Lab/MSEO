@@ -1,13 +1,15 @@
 name: DrawioToRdf
 
-on: [push]
+push:
+    paths:
+      - methods/**
 jobs:
   chowlk:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          fetch-depth: 0        
       - name: Check changed files
         id: diff
         run: |
@@ -21,20 +23,18 @@ jobs:
         if: ${{ steps.diff.outputs.diff }}
         run: |
           echo "${{ steps.diff.outputs.diff }}"
-          git clone https://github.com/oeg-upm/Chowlk.git
+          git clone https://github.com/oeg-upm/Chowlk
           pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
         if: ${{ steps.diff.outputs.diff }}
-        #working-directory: ./methods
         run: |
           for file in ${{ steps.diff.outputs.diff }}; do python Chowlk/converter.py "$file" "$file".ttl --type ontology --format ttl; done
       - name: Commit files # commit the output folder
         if: ${{ steps.diff.outputs.diff }}
-        working-directory: ./methods
         run: |
           git config --local user.email "chowlk.action@github.com"
           git config --local user.name "Chowlk Action"
-          git add .
+          git add methods/\*
           git commit -m "converted changed drawio files"  
       - name: Push changes # push the output folder to your repo
         if: ${{ steps.diff.outputs.diff }}
