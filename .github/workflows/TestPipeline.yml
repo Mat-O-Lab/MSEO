@@ -5,6 +5,7 @@ on:
 
 env:
   #WORKING_DIR: ./examples/
+  RAW_URL: 'https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/example.csv'
   DATA_URL: 'https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/example-metadata.json'
   METHOD_URL: 'https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl'
 
@@ -24,7 +25,7 @@ jobs:
     steps:
       - name: run test
         run: |
-          RESULT=$(curl -X POST "http://localhost:5001/api" -H  "accept: application/json" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"data_url\":\"https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/$file\"}")
+          RESULT=$(curl -X POST "http://localhost:5001/api" -H  "accept: application/json" -H  "accept: application/json" -H  "Content-Type: application/json" -d "{\"data_url\":\"${{env.RAW_URL}}\"}")
           FILEDATA=$(echo $RESULT | jq -r '.filedata')
           FILENAME=$(echo $RESULT | jq -r '.filename')
           echo $FILENAME
