@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
 
 env:
-  WORKING_DIR: ./tools/examples/
+  #WORKING_DIR: ./tools/examples/
   RAW_URL: 'https://github.com/Mat-O-Lab/CSVToCSVW/raw/main/examples/example.csv'
   MAPREQUEST_URL: 'https://github.com/Mat-O-Lab/MapToMethod/raw/main/examples/request.json'
   METHOD_URL: 'https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl'
 
 defaults:
   run:
-    working-directory: ${{env.WORKING_DIR}}
+    working-directory: ./tools/examples/
 jobs:
   TestPipeline:
     runs-on: ubuntu-latest
