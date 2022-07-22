@@ -1,8 +1,9 @@
 name: DrawioToRdf
 
-push:
-    paths:
-      - methods/**
+on:
+    push:
+        paths:
+        - methods/**
 jobs:
   chowlk:
     runs-on: ubuntu-latest
