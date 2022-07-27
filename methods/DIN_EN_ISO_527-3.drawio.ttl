@@ -1,4 +1,4 @@
-@prefix base: <https://raw.githubusercontent.com/Mat-O-Lab/MSEO/main/methods/DIN_EN_ISO_527-3.drawio.ttl/> .
+@prefix base: <https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl/> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix mseo: <https://purl.matolab.org/mseo/mid/> .
@@ -112,16 +112,6 @@ cco:process_preceeds a owl:ObjectProperty ;
     rdfs:label "process_preceeds" ;
     rdfs:range cco:ActOfArtifactAssembly .
 
-mseo: a owl:Ontology ;
-    dc:creator "Thomas Hanke" ;
-    dc:description "Ontology code created by Chowlk" ;
-    dc:title "DIN EN ISO 527-3 Graph" ;
-    owl:versionInfo "0.0.1" .
-
-mseo:in_accordance_with a owl:ObjectProperty ;
-    rdfs:label "in_accordance_with" ;
-    rdfs:domain mseo:Experiment .
-
 base:DecreaseOfThickness a cco:DecreaseOfQuality,
         owl:NamedIndividual .
 
@@ -193,6 +183,16 @@ base:TestPlan a cco:PlanSpecification,
 base:TimeOfBreak a owl:NamedIndividual,
         mseo:TimeOfBreak .
 
+mseo: a owl:Ontology ;
+    dc:creator "Thomas Hanke" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "DIN EN ISO 527-3 Graph" ;
+    owl:versionInfo "0.0.1" .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" ;
+    rdfs:domain mseo:Experiment .
+
 obo:BFO_0000148 a owl:Class ;
     rdfs:label "B F O_0000148" .
 
@@ -231,33 +231,6 @@ cco:PortionOfMaterial a owl:Class ;
 
 cco:RatioInformationContentEntity a owl:Class ;
     rdfs:label "Ratio Information Content Entity" .
-
-mseo:ActOfAnalysing a owl:Class ;
-    rdfs:label "Act Of Analysing" .
-
-mseo:CrossSection a owl:Class ;
-    rdfs:label "Cross Section" .
-
-mseo:ElasticModulus a owl:Class ;
-    rdfs:label "Elastic Modulus" .
-
-mseo:ExperimentTime a owl:Class ;
-    rdfs:label "Experiment Time" .
-
-mseo:File a owl:Class ;
-    rdfs:label "File" .
-
-mseo:ForceMeasurementArtifactFunction a owl:Class ;
-    rdfs:label "Force Measurement Artifact Function" .
-
-mseo:Regulation a owl:Class ;
-    rdfs:label "Regulation" .
-
-mseo:UltimateTensileStrength a owl:Class ;
-    rdfs:label "Ultimate Tensile Strength" .
-
-mseo:UniversalTestingMachine a owl:Class ;
-    rdfs:label "Universal Testing Machine" .
 
 base:AlignSpecimen a cco:ActOfPositionChange,
         owl:NamedIndividual ;
@@ -401,6 +374,33 @@ base:TestTimeInterval a owl:NamedIndividual,
 base:WidthMeasurementInformation a cco:DistanceMeasurementInformationContentEntity,
         owl:NamedIndividual .
 
+mseo:ActOfAnalysing a owl:Class ;
+    rdfs:label "Act Of Analysing" .
+
+mseo:CrossSection a owl:Class ;
+    rdfs:label "Cross Section" .
+
+mseo:ElasticModulus a owl:Class ;
+    rdfs:label "Elastic Modulus" .
+
+mseo:ExperimentTime a owl:Class ;
+    rdfs:label "Experiment Time" .
+
+mseo:File a owl:Class ;
+    rdfs:label "File" .
+
+mseo:ForceMeasurementArtifactFunction a owl:Class ;
+    rdfs:label "Force Measurement Artifact Function" .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+mseo:UltimateTensileStrength a owl:Class ;
+    rdfs:label "Ultimate Tensile Strength" .
+
+mseo:UniversalTestingMachine a owl:Class ;
+    rdfs:label "Universal Testing Machine" .
+
 cco:ActOfArtifactAssembly a owl:Class ;
     rdfs:label "Act Of Artifact Assembly" .
 
@@ -433,18 +433,6 @@ cco:MeanPointEstimateMeasurementInformationContentEntity a owl:Class ;
 
 cco:ProcessProfilSpecification a owl:Class ;
     rdfs:label "Process Profil Specification" .
-
-mseo:EngineeringStrain a owl:Class ;
-    rdfs:label "Engineering Strain" .
-
-mseo:MeasurementRegion a owl:Class ;
-    rdfs:label "Measurement Region" .
-
-mseo:Specimen a owl:Class ;
-    rdfs:label "Specimen" .
-
-mseo:TimeOfBreak a owl:Class ;
-    rdfs:label "Time Of Break" .
 
 base:ActOfElongation a cco:ActOfMeasuring,
         owl:NamedIndividual ;
@@ -493,6 +481,18 @@ base:ThicknessMeasurementInformation a cco:DistanceMeasurementInformationContent
 
 base:TimeOfMaxStress a obo:BFO_0000148,
         owl:NamedIndividual .
+
+mseo:EngineeringStrain a owl:Class ;
+    rdfs:label "Engineering Strain" .
+
+mseo:MeasurementRegion a owl:Class ;
+    rdfs:label "Measurement Region" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+mseo:TimeOfBreak a owl:Class ;
+    rdfs:label "Time Of Break" .
 
 cco:DecreaseOfQuality a owl:Class ;
     rdfs:label "Decrease Of Quality" .
