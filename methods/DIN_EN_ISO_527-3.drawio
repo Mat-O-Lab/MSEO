@@ -1,14 +1,14 @@
-<mxfile host="app.diagrams.net" modified="2022-07-27T10:02:25.334Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.114 Safari/537.36 Edg/103.0.1264.62" etag="nmdA2ukoBk5XpmqG8Qxq" version="20.1.3" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-01T13:56:16.050Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 Safari/537.36 Edg/110.0.1587.57" etag="Uq-jJys06Zs27l9LVzGJ" version="20.8.22" type="github">
   <diagram id="RQUcGvRlMdFbgAy4DLWb" name="Page-1">
-    <mxGraphModel dx="1849" dy="468" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1861" dy="470" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="0PtQ9QTV_TQMzkyyk_zX-2" value="&lt;div&gt;&lt;b&gt;dc:creator:&lt;/b&gt;&amp;nbsp;Thomas Hanke&lt;/div&gt;&lt;div&gt;&lt;b&gt;owl:versionInfo:&lt;/b&gt; 0.0.1&lt;/div&gt;&lt;div&gt;&lt;b&gt;dc:title:&lt;/b&gt;&amp;nbsp;DIN EN ISO 527-3 Graph&lt;/div&gt;" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;labelBackgroundColor=#ffffff;strokeColor=#000000;fontSize=12;fontColor=#000000;size=0.23333333333333334;align=left;" parent="1" vertex="1">
           <mxGeometry x="40" y="150" width="253" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="0PtQ9QTV_TQMzkyyk_zX-5" value="&lt;div&gt;&lt;b&gt;mseo&lt;/b&gt;:&amp;nbsp;https://purl.matolab.org/mseo/mid/&lt;/div&gt;&lt;div&gt;cco:&amp;nbsp;http://www.ontologyrepository.com/CommonCoreOntologies/&lt;/div&gt;&lt;div&gt;obo: http://purl.obolibrary.org/obo/&lt;/div&gt;&lt;div&gt;&lt;b&gt;base:&lt;/b&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: rgb(255, 255, 254); font-size: 14px;&quot;&gt;https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;/&lt;/span&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
-          <mxGeometry x="41" y="11" width="579" height="100" as="geometry" />
+        <mxCell id="0PtQ9QTV_TQMzkyyk_zX-5" value="&lt;div&gt;&lt;b&gt;mseo&lt;/b&gt;:&amp;nbsp;https://purl.matolab.org/mseo/mid/&lt;/div&gt;&lt;div&gt;cco:&amp;nbsp;http://www.ontologyrepository.com/CommonCoreOntologies/&lt;/div&gt;&lt;div&gt;obo: http://purl.obolibrary.org/obo/&lt;/div&gt;&lt;div&gt;&lt;b&gt;base:&lt;/b&gt;&lt;span&gt;&amp;nbsp;&lt;/span&gt;&lt;/div&gt;https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl/" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;align=left;" parent="1" vertex="1">
+          <mxGeometry x="41" y="11" width="519" height="100" as="geometry" />
         </mxCell>
         <mxCell id="0PtQ9QTV_TQMzkyyk_zX-37" value="" style="group;labelPosition=right;verticalLabelPosition=top;align=right;verticalAlign=bottom;fontColor=#009474;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1" connectable="0">
           <mxGeometry x="40" y="520" width="1060" height="363" as="geometry" />
