@@ -10,11 +10,13 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:cco="http://www.ontologyrepository.com/CommonCoreOntologies/"
      xmlns:geo="http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#"
+     xmlns:oa="http://www.w3.org/ns/oa#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:av="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:csvw="http://www.w3.org/ns/csvw#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://purl.matolab.org/mseo/mid">
         <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/"/>
@@ -122,144 +124,16 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/in_accordance_with -->
 
     <owl:ObjectProperty rdf:about="https://purl.matolab.org/mseo/mid/in_accordance_with">
-        <rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/describedBy"/>
+        <rdfs:subPropertyOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/describedBy"/>
         <rdfs:range rdf:resource="https://purl.matolab.org/mseo/mid/Regulation"/>
         <rdfs:label xml:lang="en">in accordance with</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/describedBy -->
 
-    
-
-
-    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value">
-        <owl:equivalentProperty rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00316"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value -->
-
-    <owl:DatatypeProperty rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value">
-        <owl:equivalentProperty rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00313"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00312 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00312">
-        <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00313"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000116>is obsolete! use relation has measurement unit use annotation property SI unit label</obo:IAO_0000116>
-        <rdfs:label>obsolete hasUnitSymbol</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00313 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00313">
-        <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00315"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>obsolete hasStringLiteral</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00314 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00314">
-        <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00315"/>
-        <rdfs:label>obsolete hasDoubleLiteral</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00315 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00315">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
-        <rdfs:label>obsolete hasValue</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00316 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00316">
-        <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00315"/>
-        <rdfs:label>obsolete hasIntegerLiteral</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00317 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00317">
-        <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00315"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
-        <rdfs:label>obsolete hasRealLiteral</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00318 -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00318">
-        <rdfs:subPropertyOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00313"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:IAO_0000116>is obsolet! use relation is element</obo:IAO_0000116>
-        <rdfs:label>obsolete refersToElementSymbol</rdfs:label>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/has_column_index -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/has_column_index">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label>has column index</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/has_row_index -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/has_row_index">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">has row index</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/has_separator_string -->
-
-    <owl:DatatypeProperty rdf:about="https://purl.matolab.org/mseo/mid/has_separator_string">
-        <rdfs:subPropertyOf rdf:resource="http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label>has separator string</rdfs:label>
-        <av:naturalLanguageDefinition>A string by that a line of Informations can be separated into inividual fields.</av:naturalLanguageDefinition>
-    </owl:DatatypeProperty>
+    <owl:ObjectProperty rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/describedBy"/>
     
 
 
@@ -331,7 +205,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier -->
 
     <owl:Class rdf:about="http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Identifier"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/Identifier"/>
     </owl:Class>
     
 
@@ -349,18 +223,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- http://www.w3.org/ns/oa#Annotation -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/oa#Annotation">
-        <owl:equivalentClass rdf:resource="https://www.w3.org/ns/csvw#note"/>
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CSVFile"/>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid#Strenght -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid#Strenght">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Capability"/>
-        <rdfs:label xml:lang="en">Strenght</rdfs:label>
-        <av:naturalLanguageDefinition xml:lang="en">The capacity of an object or substance to withstand great force or pressure.</av:naturalLanguageDefinition>
     </owl:Class>
     
 
@@ -368,7 +231,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/ActOfAnalysing -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ActOfAnalysing">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/PlannedProcess"/>
         <obo:IAO_0000116>Not quite sure about this...</obo:IAO_0000116>
         <rdfs:label xml:lang="en">Act of Analysing</rdfs:label>
     </owl:Class>
@@ -378,7 +241,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/ActOfConcluding -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ActOfConcluding">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/PlannedProcess"/>
         <rdfs:label xml:lang="en">Act of Concluding</rdfs:label>
     </owl:Class>
     
@@ -387,7 +250,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/ActOfSummarising -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ActOfSummarising">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/PlannedProcess"/>
         <rdfs:label xml:lang="en">Act of Summarising</rdfs:label>
     </owl:Class>
     
@@ -406,7 +269,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/Annealing -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Annealing">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ManufacturingProcess"/>
         <rdfs:label xml:lang="en">Annealing</rdfs:label>
         <rdfs:label xml:lang="de">Thermische Konditionierung</rdfs:label>
     </owl:Class>
@@ -452,7 +315,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/BWMD_00110 -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00110">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic"/>
         <rdfs:label xml:lang="en">MagneticFlux</rdfs:label>
     </owl:Class>
     
@@ -552,7 +415,7 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <!-- https://purl.matolab.org/mseo/mid/Building -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Building">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Building</rdfs:label>
     </owl:Class>
     
@@ -617,7 +480,7 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     <!-- https://purl.matolab.org/mseo/mid/Consumable -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Consumable">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:comment>Consumables are products that consumers use recurrently, i.e., items which &quot;get used up&quot; or discarded.</rdfs:comment>
         <rdfs:label xml:lang="en">Consumable</rdfs:label>
     </owl:Class>
@@ -676,7 +539,7 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     <!-- https://purl.matolab.org/mseo/mid/DataSet -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DataSet">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/InformationContentEntity"/>
         <obo:IAO_0000116>this should not be collections of information bearer, they are collections of other ICEs</obo:IAO_0000116>
         <rdfs:comment>Any kind of data set</rdfs:comment>
         <rdfs:label xml:lang="en">Data Set</rdfs:label>
@@ -688,7 +551,7 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     <!-- https://purl.matolab.org/mseo/mid/DataTransformation -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DataTransformation">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ComputingProcess"/>
         <rdfs:label xml:lang="en">DataTransformation</rdfs:label>
     </owl:Class>
     
@@ -713,7 +576,7 @@ In the figure it can be seen that the compressive loading (indicated by the arro
     <!-- https://purl.matolab.org/mseo/mid/DeformationSpeed -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DeformationSpeed">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic"/>
         <rdfs:label xml:lang="en">Deformation Speed</rdfs:label>
         <rdfs:label xml:lang="de">Deformationsgeschwindigkeit</rdfs:label>
         <skos:altLabel xml:lang="de">Dehnrate</skos:altLabel>
@@ -788,7 +651,7 @@ Elastic deformation, however, is an approximation and its quality depends on the
     <!-- https://purl.matolab.org/mseo/mid/ElectricCurrent -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ElectricCurrent">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic"/>
         <rdfs:label xml:lang="en">Electric Current</rdfs:label>
     </owl:Class>
     
@@ -840,7 +703,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/Equipment -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Equipment">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Equipment</rdfs:label>
     </owl:Class>
     
@@ -858,7 +721,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/Experiment -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Experiment">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MeasurementProcess"/>
         <rdfs:label xml:lang="en">Experiment</rdfs:label>
         <av:naturalLanguageDefinition xml:lang="en">In engineering and the physical sciences, experiments are a primary component of the scientific method. They are used to test theories and hypotheses about how physical processes work under particular conditions (e.g., whether a particular engineering process can produce a desired chemical compound). Typically, experiments in these fields focus on replication of identical procedures in hopes of producing identical results in each replication. Random assignment is uncommon.</av:naturalLanguageDefinition>
         <av:naturalLanguageDefinition_source xml:lang="en">https://en.wikipedia.org/wiki/Experiment</av:naturalLanguageDefinition_source>
@@ -878,7 +741,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/File -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/File">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/InformationContentEntity"/>
         <rdfs:label xml:lang="en">File</rdfs:label>
     </owl:Class>
     
@@ -897,7 +760,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/ForceRate -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ForceRate">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic"/>
         <obo:IAO_0000116 xml:lang="en">second derivative of momentum with respect to time</obo:IAO_0000116>
         <rdfs:label xml:lang="en">Force Rate</rdfs:label>
         <rdfs:label xml:lang="de">Kraftrate</rdfs:label>
@@ -1122,7 +985,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/MeasurementDevice -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MeasurementDevice">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label>Measurement Device</rdfs:label>
         <av:naturalLanguageDefinition xml:lang="en">A Artifact inhering a Measurement Artifact Function</av:naturalLanguageDefinition>
     </owl:Class>
@@ -1173,7 +1036,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/MechanicalStrength -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MechanicalStrength">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid#Strenght"/>
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Strenght"/>
         <rdfs:label xml:lang="de">Festigkeit</rdfs:label>
         <rdfs:label xml:lang="en">Mechanical Strength</rdfs:label>
         <av:naturalLanguageDefinition xml:lang="en">In the mechanics of materials, the strength of a material is its ability to withstand an applied load without failure or plastic deformation. The field of strength of materials deals with forces and deformations that result from their acting on a material. A load applied to a mechanical member will induce internal forces within the member called stresses when those forces are expressed on a unit basis. The stresses acting on the material cause deformation of the material in various manners including breaking them completely. Deformation of the material is called strain when those deformations too are placed on a unit basis.</av:naturalLanguageDefinition>
@@ -1185,7 +1048,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/MechanicalWorkshop -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MechanicalWorkshop">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Manufacturer"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/Manufacturer"/>
         <rdfs:comment>A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing...</rdfs:comment>
         <rdfs:label xml:lang="en">Mechanical Workshop</rdfs:label>
     </owl:Class>
@@ -1231,7 +1094,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DesignativeInformationContentEntity"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/DesignativeInformationContentEntity"/>
         <obo:IAO_0000116>We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier.</obo:IAO_0000116>
         <rdfs:label xml:lang="en">Periodic Table Element Identifer</rdfs:label>
     </owl:Class>
@@ -1241,7 +1104,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/PhysicsModel -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PhysicsModel">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Algorithm"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/Algorithm"/>
         <rdfs:label xml:lang="en">Physics Model</rdfs:label>
     </owl:Class>
     
@@ -1355,7 +1218,7 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     <!-- https://purl.matolab.org/mseo/mid/ProcessProfilSpecification -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ProcessProfilSpecification">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DirectiveInformationContentEntity"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/DirectiveInformationContentEntity"/>
         <rdfs:label xml:lang="en">Process Profil Specification</rdfs:label>
         <skos:exampe xml:lang="en">The set point of the speed of a motor; The intended heat rate to increase the temperature</skos:exampe>
         <av:naturalLanguageDefinition xml:lang="en">A Specification which describes the Target for a Profil of a Process.</av:naturalLanguageDefinition>
@@ -1375,7 +1238,7 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     <!-- https://purl.matolab.org/mseo/mid/Project -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Project">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/PlanSpecification"/>
         <rdfs:label xml:lang="en">Project</rdfs:label>
     </owl:Class>
     
@@ -1433,7 +1296,7 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     <!-- https://purl.matolab.org/mseo/mid/Regulation -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Regulation">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/PlanSpecification"/>
         <rdfs:label xml:lang="en">Regulation</rdfs:label>
     </owl:Class>
     
@@ -1474,7 +1337,7 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     <!-- https://purl.matolab.org/mseo/mid/Simulation -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Simulation">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ComputingProcess"/>
         <rdfs:label xml:lang="en">Simulation</rdfs:label>
     </owl:Class>
     
@@ -1492,7 +1355,7 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     <!-- https://purl.matolab.org/mseo/mid/Software -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Software">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Software</rdfs:label>
     </owl:Class>
     
@@ -1501,7 +1364,7 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     <!-- https://purl.matolab.org/mseo/mid/SoftwareArchitecture -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/SoftwareArchitecture">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Software Architecture</rdfs:label>
     </owl:Class>
     
@@ -1519,7 +1382,7 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     <!-- https://purl.matolab.org/mseo/mid/Specimen -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Specimen">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Specimen</rdfs:label>
         <av:naturalLanguageDefinition xml:lang="en">An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement.</av:naturalLanguageDefinition>
     </owl:Class>
@@ -1529,7 +1392,7 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     <!-- https://purl.matolab.org/mseo/mid/Stiffness -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Stiffness">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid#Strenght"/>
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Strenght"/>
         <obo:IAO_0000116 xml:lang="en">While Stiffness characterizes a bodies response, taking into account its geometry and materials. Elastic Modulus aims to be agnostic to geometry and specific for the material.</obo:IAO_0000116>
         <rdfs:label xml:lang="de">Steifigkeit</rdfs:label>
         <rdfs:label xml:lang="en">Stiffness</rdfs:label>
@@ -1548,6 +1411,16 @@ The complementary concept is flexibility or pliability: the more flexible an obj
         <rdfs:label xml:lang="en">Strain</rdfs:label>
         <av:naturalLanguageDefinition xml:lang="en">Strain is related to deformation in terms of relative displacement of particles in the body that excludes rigid-body motions. Different equivalent choices may be made for the expression of a strain field depending on whether it is defined with respect to the initial or the final configuration of the body and on whether the metric tensor or its dual is considered.</av:naturalLanguageDefinition>
         <av:naturalLanguageDefinition_source xml:lang="en">https://en.wikipedia.org/wiki/Deformation_(physics)</av:naturalLanguageDefinition_source>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/Strenght -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Strenght">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/Capability"/>
+        <rdfs:label xml:lang="en">Strenght</rdfs:label>
+        <av:naturalLanguageDefinition xml:lang="en">The capacity of an object or substance to withstand great force or pressure.</av:naturalLanguageDefinition>
     </owl:Class>
     
 
@@ -1634,7 +1507,7 @@ Tensile strengths are rarely of any consequence in the design of ductile members
     <!-- https://purl.matolab.org/mseo/mid/UniversalTestingMachine -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/UniversalTestingMachine">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Universal Testing Machine</rdfs:label>
         <av:naturalLanguageDefinition xml:lang="en">A machine capitable of performing komplex mechanical experiments, by applying force or displacement controlled regimes on specimen.</av:naturalLanguageDefinition>
     </owl:Class>
@@ -1647,7 +1520,7 @@ Tensile strengths are rarely of any consequence in the design of ductile members
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/YieldStrenght"/>
         <obo:IAO_0000119 xml:lang="en">https://en.wikipedia.org/wiki/Yield_(engineering)</obo:IAO_0000119>
         <rdfs:label xml:lang="de">Obere Streckgrenze</rdfs:label>
-        <rdfs:label xml:lang="en">Upper Yield Strenght</rdfs:label>
+        <rdfs:label xml:lang="en">Upper Yield Strength</rdfs:label>
         <skos:altLabel xml:lang="de">Obere Fließspannung</skos:altLabel>
         <skos:altLabel xml:lang="en">Upper Yield Stress</skos:altLabel>
         <av:naturalLanguageDefinition xml:lang="en">Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop.</av:naturalLanguageDefinition>
@@ -1668,7 +1541,7 @@ Tensile strengths are rarely of any consequence in the design of ductile members
     <!-- https://purl.matolab.org/mseo/mid/Voltage -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Voltage">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic"/>
         <rdfs:label xml:lang="en">Voltage</rdfs:label>
     </owl:Class>
     
@@ -1741,7 +1614,7 @@ Tensile strengths are rarely of any consequence in the design of ductile members
     <!-- https://purl.matolab.org/mseo/mid/WithdrawalPlan -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/WithdrawalPlan">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/Core/PlanSpecification"/>
         <rdfs:comment>A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)</rdfs:comment>
         <rdfs:label xml:lang="en">Withdrawal Plan</rdfs:label>
     </owl:Class>
@@ -1782,13 +1655,87 @@ The yield strength or yield stress is a material property and is the stress corr
     
 
 
-    <!-- https://www.w3.org/ns/csvw#note -->
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/Algorithm -->
 
-    <owl:Class rdf:about="https://www.w3.org/ns/csvw#note">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CSVFile"/>
-        <rdfs:label xml:lang="en">CSVNote</rdfs:label>
-        <av:naturalLanguageDefinition xml:lang="en">An Annotation as Defined by the W3C Vocabulary for CSV Files on the web. Typically, the bearer of the Information provided by the additional header before the actual tabular data in a CSV file.</av:naturalLanguageDefinition>
-    </owl:Class>
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/Algorithm"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/Capability -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/Capability"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/ComputingProcess -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/ComputingProcess"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/DesignativeInformationContentEntity -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/DesignativeInformationContentEntity"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/DirectiveInformationContentEntity -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/DirectiveInformationContentEntity"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/Identifier -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/Identifier"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/InformationContentEntity -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/InformationContentEntity"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/Manufacturer -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/Manufacturer"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/ManufacturingProcess -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/ManufacturingProcess"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/MaterialArtifact"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/MeasurementProcess -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/MeasurementProcess"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/PlanSpecification -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/PlanSpecification"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/PlannedProcess -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/PlannedProcess"/>
+    
+
+
+    <!-- https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic -->
+
+    <owl:Class rdf:about="https://spec.industrialontologies.org/ontology/202301/core/Core/ProcessCharacteristic"/>
 </rdf:RDF>
 
 
