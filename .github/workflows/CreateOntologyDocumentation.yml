@@ -41,6 +41,9 @@ jobs:
         run: |
           pip install pylode
           pip show pylode
+          ls /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/
+          ls /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/pylode/
+          ls /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/pylode/bin
       - name: Run pyLODE
         run: |
           mkdir -p _site 
