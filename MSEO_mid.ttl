@@ -1,6 +1,9 @@
 @prefix : <https://purl.matolab.org/mseo/mid/> .
+@prefix av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
 @prefix geo: <http://schemas.opengis.net/geosparql/1.0/geosparql_vocab_all.rdf#> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/202301/core/Core/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix pte: <http://www.daml.org/2003/01/periodictable/PeriodicTable#> .
@@ -8,239 +11,85 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 @base <https://purl.matolab.org/mseo/mid> .
 
 <https://purl.matolab.org/mseo/mid> rdf:type owl:Ontology ;
-                                     owl:imports <http://www.daml.org/2003/01/periodictable/PeriodicTable.owl> ,
-                                                 <https://raw.githubusercontent.com/CommonCoreOntology/CommonCoreOntologies/master/AllCoreOntology.ttl> ;
+                                     owl:imports <https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/> ,
+                                                 <http://www.daml.org/2003/01/periodictable/PeriodicTable> ,
+                                                 iof: ;
+                                     dc:contributor "Thomas Hanke (Fraunhofer IMWS)"@en ,
+                                                    "Philipp von Hartrott (Fraunhofer IWM)"@en ;
+                                     owl:priorVersion "BWMD_mid"@de ;
+                                     dc:contributor "Christoph Schweizer (Fraunhofer IWM)"@de ;
+                                     rdfs:comment "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ;
+                                     dc:contributor "Martin Huschka (Fraunhofer EMI)"@en ;
                                      rdfs:comment """Contact:
-Christoph Schweizer
-Fraunhofer-Institut für Werkstoffmechanik IWM
-Wöhlerstraße 11, 79108 Freiburg
-christoph.schweizer@iwm.fraunhofer.de"""@de ,
-                                                  """Contact:
 Martin Huschka 
 Fraunhofer Institute for High-Speed Dynamics , Ernst-Mach-Institut, EMI
 Ernst-Zermelo-Strasse 4, 79104 Freiburg , Germany
-Martin.Huschka@EMI.Fraunhofer.de"""@de ;
-                                     :author "Christoph Schweizer (Fraunhofer IWM)"@de ;
-                                     owl:priorVersion "BWMD_mid"@de ;
-                                     :curator "Thomas Hanke (Fraunhofer IMWS)"@en ,
-                                              "Philipp von Hartrott (Fraunhofer IWM)"@en ;
-                                     rdfs:comment "This is the mid-level module of the Material Sience and Engineering Ontology MSEO."@en ,
+Martin.Huschka@EMI.Fraunhofer.de"""@de ,
                                                   """Contact:
 Thomas Hanke
 Fraunhofer-Institut für Mikrostruktur von Werkstoffen und Systemen IMWS
 Walter-Hülse-Strasse 1, 06120 Halle (Saale)
-thomas.hanke@imws.fraunhofer.de"""@de ;
-                                     <http://purl.org/dc/terms/title> "Material Science and Engineering Ontology"@en ;
-                                     :curator "Simon Stier (Fraunhofer ISC)"@en ,
-                                              "Martin Huschka (Fraunhofer EMI)"@en ;
-                                     rdfs:comment """Contact:
+thomas.hanke@imws.fraunhofer.de"""@de ,
+                                                  """Contact:
 Philipp von Hartrott
 Fraunhofer-Institut für Werkstoffmechanik IWM
 Wöhlerstraße 11, 79108 Freiburg
-philipp.von.hartrott@iwm.fraunhofer.de"""@de .
+philipp.von.hartrott@iwm.fraunhofer.de"""@de ;
+                                     terms:title "Material Science and Engineering Ontology"@en ;
+                                     dc:contributor "Simon Stier (Fraunhofer ISC)"@en ;
+                                     rdfs:comment """Contact:
+Christoph Schweizer
+Fraunhofer-Institut für Werkstoffmechanik IWM
+Wöhlerstraße 11, 79108 Freiburg
+christoph.schweizer@iwm.fraunhofer.de"""@de .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+obo:IAO_0000116 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exampe
+skos:exampe rdf:type owl:AnnotationProperty .
+
+
+###  https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/naturalLanguageDefinition_source
+av:naturalLanguageDefinition_source rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://purl.obolibrary.org/obo/RO_0010001
-obo:RO_0010001 owl:equivalentProperty :BWMD_00326 .
-
-
 ###  http://www.daml.org/2003/01/periodictable/PeriodicTable#element
 pte:element rdf:type owl:ObjectProperty ;
             rdfs:range pte:Element ;
-            rdfs:label "has element" .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/designated_by
-cco:designated_by owl:equivalentProperty :BWMD_00319 .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of
-cco:is_subject_of owl:equivalentProperty :BWMD_00320 .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00319
-:BWMD_00319 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00320 ;
-            rdfs:range :BWMD_00001 ;
-            rdfs:comment "Indicates properties, such as IDs, names etc. which are used to identify objects, processes etc." ;
-            rdfs:label "obsolete hasIdentifier" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00320
-:BWMD_00320 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:label "obsolete has info"^^xsd:string ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00321
-:BWMD_00321 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:label "obsolete refersTo" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00322
-:BWMD_00322 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00323 ;
-            rdfs:range :BWMD_00002 ;
-            rdfs:label "obsolete isComposedOf" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00323
-:BWMD_00323 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:label "obsolete hasPart" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00324
-:BWMD_00324 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:label "obsolete chronologicalConnection" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00325
-:BWMD_00325 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00326 ;
-            rdfs:range :BWMD_00003 ;
-            rdfs:label "obsolete hasTemporalInfo" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00326
-:BWMD_00326 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00320 ;
-            rdfs:range :DataSet ;
-            rdfs:label "obsolete has attached dataset"^^xsd:string ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00327
-:BWMD_00327 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00328 ;
-            rdfs:range :BWMD_00004 ;
-            rdfs:label "obsolete hasOperator" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00328
-:BWMD_00328 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf owl:topObjectProperty ;
-            rdfs:range :PhysicsModel ,
-                       :Software ;
-            rdfs:label "obsolete hasParticipant" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00329
-:BWMD_00329 rdf:type owl:ObjectProperty ;
-            owl:equivalentProperty :BWMD_00330 ;
-            rdfs:subPropertyOf obo:RO_0010001 ;
-            rdfs:domain :BWMD_00005 ;
-            rdfs:label "obsolete has values of type"^^xsd:string ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00330
-:BWMD_00330 rdf:type owl:ObjectProperty ;
-            obo:IAO_0000116 "too unspecific! what is the purpose of that relation?" ;
-            rdfs:label "obsolete isOfType" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00331
-:BWMD_00331 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00324 ;
-            rdfs:label "obsolete hasOutput" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00332
-:BWMD_00332 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00321 ;
-            rdfs:comment "A reference, that indicates that something is defined by something else. E.g. the location/shape of a geometric feature is defined by the CAD file." ;
-            rdfs:label "obsolete isDefinedBy" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00333
-:BWMD_00333 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00320 ;
-            rdfs:label "obsolete obsolete hasStructuralQuantity" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00334
-:BWMD_00334 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00326 ;
-            rdfs:range :BWMD_00006 ;
-            rdfs:comment "Specific textual input (such as comments, descriptions) is attached to any kind of entity" ;
-            rdfs:label "obsolete hasTextualInfo" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00335
-:BWMD_00335 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00324 ;
-            rdfs:label "obsolete precedes" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00336
-:BWMD_00336 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00320 ,
-                               :BWMD_00326 ;
-            rdfs:range :StructuralInfo ;
-            rdfs:label "obsolete has structural info"^^xsd:string ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00337
-:BWMD_00337 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00324 ;
-            rdfs:label "obsolete isInputFor" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00339
-:BWMD_00339 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00326 ;
-            rdfs:domain obo:BFO_0000015 ;
-            rdfs:range :ProcessParameterSet ;
-            rdfs:label "obsolete has parameter set"^^xsd:string ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00340
-:BWMD_00340 rdf:type owl:ObjectProperty ;
-            rdfs:domain :BWMD_00010 ;
-            rdfs:range :BWMD_00011 ;
-            rdfs:label "obsolete hasQuantityKind" ;
-            owl:deprecated "true"^^xsd:boolean .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00341
-:BWMD_00341 rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf :BWMD_00321 ;
-            rdfs:domain :BWMD_00012 ;
-            rdfs:comment "E.g. a process quantity or material data set is representative for a certain temporal state of an object" ;
-            rdfs:label "obsolete isRepresentativeFor" ;
-            owl:deprecated "true"^^xsd:boolean .
+            rdfs:label "has periodic element"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/in_accordance_with
 :in_accordance_with rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf cco:described_by ;
+                    rdfs:subPropertyOf <https://spec.industrialontologies.org/ontology/core/Core/describedBy> ;
                     rdfs:range :Regulation ;
                     rdfs:label "in accordance with"@en .
 
@@ -249,26 +98,19 @@ cco:is_subject_of owl:equivalentProperty :BWMD_00320 .
 #    Data properties
 #################################################################
 
-###  http://www.ontologyrepository.com/CommonCoreOntologies/has_decimal_value
-cco:has_decimal_value owl:equivalentProperty :BWMD_00317 .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/has_double_value
-cco:has_double_value owl:equivalentProperty :BWMD_00314 .
-
-
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_integer_value
-cco:has_integer_value owl:equivalentProperty :BWMD_00316 .
+cco:has_integer_value rdf:type owl:DatatypeProperty ;
+                      owl:equivalentProperty :BWMD_00316 .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/has_text_value
-cco:has_text_value owl:equivalentProperty :BWMD_00313 .
+cco:has_text_value rdf:type owl:DatatypeProperty ;
+                   owl:equivalentProperty :BWMD_00313 .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00312
 :BWMD_00312 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :BWMD_00313 ;
-            rdfs:domain :BWMD_00010 ;
             rdfs:range xsd:string ;
             obo:IAO_0000116 "is obsolete! use relation has measurement unit use annotation property SI unit label" ;
             rdfs:label "obsolete hasUnitSymbol" ;
@@ -324,7 +166,6 @@ cco:has_text_value owl:equivalentProperty :BWMD_00313 .
 ###  https://purl.matolab.org/mseo/mid/has_column_index
 :has_column_index rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf cco:has_integer_value ;
-                  rdfs:domain :InformationField ;
                   rdfs:range xsd:integer ;
                   rdfs:label "has column index" .
 
@@ -332,7 +173,6 @@ cco:has_text_value owl:equivalentProperty :BWMD_00313 .
 ###  https://purl.matolab.org/mseo/mid/has_row_index
 :has_row_index rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf cco:has_integer_value ;
-               rdfs:domain cco:InformationLine ;
                rdfs:range xsd:integer ;
                rdfs:label "has row index"^^rdfs:Literal .
 
@@ -340,10 +180,9 @@ cco:has_text_value owl:equivalentProperty :BWMD_00313 .
 ###  https://purl.matolab.org/mseo/mid/has_separator_string
 :has_separator_string rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf cco:has_text_value ;
-                      rdfs:domain cco:InformationBearingArtifact ;
                       rdfs:range xsd:string ;
-                      cco:definition "A string by that a line of Informations can be separated into inividual fields." ;
-                      rdfs:label "has separator string" .
+                      rdfs:label "has separator string" ;
+                      av:naturalLanguageDefinition "A string by that a line of Informations can be separated into inividual fields." .
 
 
 #################################################################
@@ -386,20 +225,16 @@ pte:StandardState rdf:type owl:Class ;
                   rdfs:subClassOf :PeriodicTableElementIdentifer .
 
 
-###  http://www.ontologyrepository.com/CommonCoreOntologies/Facility
-cco:Facility owl:equivalentClass :Building .
-
-
-###  http://www.ontologyrepository.com/CommonCoreOntologies/Strength
-cco:Strength obo:IAO_0000118 "Resistance" ;
-             rdfs:label "Stärke"@de .
+###  http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier
+cco:CodeIdentifier rdf:type owl:Class ;
+                   rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Identifier> .
 
 
 ###  http://www.w3.org/ns/csvw#Column
 <http://www.w3.org/ns/csvw#Column> rdf:type owl:Class ;
                                    rdfs:subClassOf :CSVFile ;
-                                   cco:definition "An Column as Defined by the W3C Vocabulary for CSV Files on the web. Typically, inhers in the tableSchema class and carries information about the name, the position and the unit for values in that table."@en ;
-                                   rdfs:label "CSVColumn"@en .
+                                   rdfs:label "CSVColumn"@en ;
+                                   av:naturalLanguageDefinition "An Column as Defined by the W3C Vocabulary for CSV Files on the web. Typically, inhers in the tableSchema class and carries information about the name, the position and the unit for values in that table."@en .
 
 
 ###  http://www.w3.org/ns/oa#Annotation
@@ -408,35 +243,29 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
                                      rdfs:subClassOf :CSVFile .
 
 
-###  https://purl.matolab.org/mseo/mid/Abstract
-:Abstract rdf:type owl:Class ;
-          rdfs:subClassOf cco:InformationBearingArtifact ;
-          rdfs:label "Abstract"@en .
+###  https://purl.matolab.org/mseo/mid#Strenght
+:Strenght rdf:type owl:Class ;
+          rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Capability> ;
+          rdfs:label "Strenght"@en ;
+          av:naturalLanguageDefinition "The capacity of an object or substance to withstand great force or pressure."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ActOfAnalysing
 :ActOfAnalysing rdf:type owl:Class ;
-                rdfs:subClassOf cco:IntentionalAct ;
+                rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess> ;
                 obo:IAO_0000116 "Not quite sure about this..." ;
                 rdfs:label "Act of Analysing"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/ActOfAnnealing
-:ActOfAnnealing rdf:type owl:Class ;
-                rdfs:subClassOf cco:ActOfArtifactModification ;
-                rdfs:label "Act of Annealing"@en ,
-                           "Thermische Konditionierung"@de .
-
-
 ###  https://purl.matolab.org/mseo/mid/ActOfConcluding
 :ActOfConcluding rdf:type owl:Class ;
-                 rdfs:subClassOf cco:IntentionalAct ;
+                 rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess> ;
                  rdfs:label "Act of Concluding"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ActOfSummarising
 :ActOfSummarising rdf:type owl:Class ;
-                  rdfs:subClassOf cco:IntentionalAct ;
+                  rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess> ;
                   rdfs:label "Act of Summarising"@en .
 
 
@@ -445,6 +274,13 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
                  rdfs:subClassOf :ProcessDataSet ;
                  rdfs:comment "Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file." ;
                  rdfs:label "Analysed Data Set"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Annealing
+:Annealing rdf:type owl:Class ;
+           rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ManufacturingProcess> ;
+           rdfs:label "Annealing"@en ,
+                      "Thermische Konditionierung"@de .
 
 
 ###  https://purl.matolab.org/mseo/mid/Atom
@@ -457,42 +293,6 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
 :AtomicFraction rdf:type owl:Class ;
                 rdfs:subClassOf :MaterialComposition ;
                 rdfs:label "Atomic Fraction"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00001
-:BWMD_00001 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00002
-:BWMD_00002 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00003
-:BWMD_00003 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00004
-:BWMD_00004 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00005
-:BWMD_00005 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00006
-:BWMD_00006 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00010
-:BWMD_00010 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00011
-:BWMD_00011 rdf:type owl:Class .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00012
-:BWMD_00012 rdf:type owl:Class .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00039
@@ -509,14 +309,8 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00110
 :BWMD_00110 rdf:type owl:Class ;
-            rdfs:subClassOf cco:Magnetic ;
+            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic> ;
             rdfs:label "MagneticFlux"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00135
-:BWMD_00135 rdf:type owl:Class ;
-            rdfs:subClassOf :MaterialStructureInfo ;
-            rdfs:label "ChemicalComposition"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00166
@@ -532,12 +326,6 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
             rdfs:label "Control Software"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00179
-:BWMD_00179 rdf:type owl:Class ;
-            rdfs:subClassOf :MaterialStructureInfo ;
-            rdfs:label "MaterialSurfaceStructureInfo"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/BWMD_00197
 :BWMD_00197 rdf:type owl:Class ;
             rdfs:subClassOf :CADile ;
@@ -549,12 +337,6 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
             rdfs:subClassOf :BWMD_00092 ;
             rdfs:comment "Software used for preprocessing" ;
             rdfs:label "PreprocessingSoftware"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/BWMD_00226
-:BWMD_00226 rdf:type owl:Class ;
-            rdfs:subClassOf :MaterialStructureInfo ;
-            rdfs:label "MaterialVolumeStructureInfo"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BWMD_00248
@@ -586,28 +368,28 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
 :BreakingStrength rdf:type owl:Class ;
                   rdfs:subClassOf :MechanicalStrength ;
                   obo:IAO_0000119 "https://en.wikipedia.org/wiki/Fracture"@en ;
-                  cco:alternative_label "Bruchspannung"@de ,
-                                        "Fracture Stress"@en ,
-                                        "Strength at Break"@en ;
-                  cco:definition "Fracture strength, also known as breaking strength, is the stress at which a specimen fails via fracture. This is usually determined for a given specimen by a tensile test, which charts the stress–strain curve. The final recorded point is the fracture strength."@en ;
                   rdfs:comment "Where the Ultimate Strenght is the maximum recorded stress, the breaking strenght is the last stress recorded when the break event of the experiment occures."@en ;
                   rdfs:label "Breaking Strenght"@en ,
-                             "Bruchfestigkeit"@de .
+                             "Bruchfestigkeit"@de ;
+                  skos:altLabel "Bruchspannung"@de ,
+                                "Fracture Stress"@en ,
+                                "Strength at Break"@en ;
+                  av:naturalLanguageDefinition "Fracture strength, also known as breaking strength, is the stress at which a specimen fails via fracture. This is usually determined for a given specimen by a tensile test, which charts the stress–strain curve. The final recorded point is the fracture strength."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Building
 :Building rdf:type owl:Class ;
-          rdfs:subClassOf cco:Artifact ;
+          rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
           rdfs:label "Building"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BulkModulus
 :BulkModulus rdf:type owl:Class ;
              rdfs:subClassOf :Stiffness ;
-             cco:definition "The bulk modulus ({\\displaystyle K}K or {\\displaystyle B}B) of a substance is a measure of how resistant to compression that substance is. It is defined as the ratio of the infinitesimal pressure increase to the resulting relative decrease of the volume. Other moduli describe the material's response (strain) to other kinds of stress: the shear modulus describes the response to shear stress, and Young's modulus describes the response to normal stress. For a fluid, only the bulk modulus is meaningful. For a complex anisotropic solid such as wood or paper, these three moduli do not contain enough information to describe its behaviour, and one must use the full generalized Hooke's law. The reciprocal of the bulk modulus at fixed temperature is called the isothermal compressibility."@en ;
-             cco:definition_source "https://en.wikipedia.org/wiki/Bulk_modulus"@en ;
              rdfs:label "Bulk Modulus"@en ,
-                        "Kompressionsmodul"@de .
+                        "Kompressionsmodul"@de ;
+             av:naturalLanguageDefinition "The bulk modulus ({\\displaystyle K}K or {\\displaystyle B}B) of a substance is a measure of how resistant to compression that substance is. It is defined as the ratio of the infinitesimal pressure increase to the resulting relative decrease of the volume. Other moduli describe the material's response (strain) to other kinds of stress: the shear modulus describes the response to shear stress, and Young's modulus describes the response to normal stress. For a fluid, only the bulk modulus is meaningful. For a complex anisotropic solid such as wood or paper, these three moduli do not contain enough information to describe its behaviour, and one must use the full generalized Hooke's law. The reciprocal of the bulk modulus at fixed temperature is called the isothermal compressibility."@en ;
+             av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Bulk_modulus"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/CADile
@@ -619,15 +401,15 @@ cco:Strength obo:IAO_0000118 "Resistance" ;
 ###  https://purl.matolab.org/mseo/mid/CSVFile
 :CSVFile rdf:type owl:Class ;
          rdfs:subClassOf :File ;
-         cco:definition """A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.
+         rdfs:label "CSVFile"@en ;
+         av:naturalLanguageDefinition """A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.
 
 The CSV file format is not fully standardized. Separating fields with commas is the foundation, but commas in the data or embedded line breaks have to be handled specially. Some implementations disallow such content while others surround the field with quotation marks, which yet again creates the need for escaping if quotation marks are present in the data.
 
 The term \"CSV\" also denotes several closely-related delimiter-separated formats that use other field delimiters such as semicolons.[2] These include tab-separated values and space-separated values. A delimiter guaranteed not to be part of the data greatly simplifies parsing.
 
 Alternative delimiter-separated files are often given a \".csv\" extension despite the use of a non-comma field separator. This loose terminology can cause problems in data exchange. Many applications that accept CSV files have options to select the delimiter character and the quotation character. Semicolons are often used instead of commas in many European locales in order to use the comma as the decimal separator and, possibly, the period as a decimal grouping character."""@en ;
-         cco:definition_source "https://en.wikipedia.org/wiki/Comma-separated_values"@en ;
-         rdfs:label "CSVFile"@en .
+         av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Comma-separated_values"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Cluster
@@ -636,44 +418,25 @@ Alternative delimiter-separated files are often given a \".csv\" extension despi
          rdfs:label "Cluster"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/Comment
-:Comment rdf:type owl:Class ;
-         rdfs:subClassOf cco:InformationBearingArtifact ;
-         rdfs:label "Comment"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/Concentration
 :Concentration rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000016 ;
                rdfs:label "Concentration"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/Conclusion
-:Conclusion rdf:type owl:Class ;
-            rdfs:subClassOf cco:InformationBearingArtifact ;
-            rdfs:label "Conclusion"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/Consumable
 :Consumable rdf:type owl:Class ;
-            rdfs:subClassOf cco:Artifact ;
+            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
             rdfs:comment "Consumables are products that consumers use recurrently, i.e., items which \"get used up\" or discarded." ;
             rdfs:label "Consumable"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/Count
-:Count rdf:type owl:Class ;
-       rdfs:subClassOf cco:Amount ;
-       cco:alternative_label "Count" ;
-       rdfs:label "Number"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/CrossSection
 :CrossSection rdf:type owl:Class ;
               rdfs:subClassOf obo:BFO_0000009 ;
-              cco:definition "a surface or shape exposed by making a straight cut through something, especially at right angles to an axis"@en ;
-              cco:definition_source "https://languages.oup.com/google-dictionary-en/"@en ;
-              rdfs:label "Cross Section"@en .
+              rdfs:label "Cross Section"@en ;
+              av:naturalLanguageDefinition "a surface or shape exposed by making a straight cut through something, especially at right angles to an axis"@en ;
+              av:naturalLanguageDefinition_source "https://languages.oup.com/google-dictionary-en/"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DOCXFile
@@ -704,16 +467,16 @@ Alternative delimiter-separated files are often given a \".csv\" extension despi
 
 ###  https://purl.matolab.org/mseo/mid/DataSet
 :DataSet rdf:type owl:Class ;
-         rdfs:subClassOf cco:InformationContentEntity ;
+         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity> ;
          obo:IAO_0000116 "this should not be collections of information bearer, they are collections of other ICEs" ;
-         cco:definition "A collection of Information Content Entitys with the purpose to gather them in a particular context." ;
          rdfs:comment "Any kind of data set" ;
-         rdfs:label "Data Set"@en .
+         rdfs:label "Data Set"@en ;
+         av:naturalLanguageDefinition "A collection of Information Content Entitys with the purpose to gather them in a particular context." .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataTransformation
 :DataTransformation rdf:type owl:Class ;
-                    rdfs:subClassOf obo:BFO_0000015 ;
+                    rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess> ;
                     rdfs:label "DataTransformation"@en .
 
 
@@ -721,34 +484,27 @@ Alternative delimiter-separated files are often given a \".csv\" extension despi
 :Deformation rdf:type owl:Class ;
              rdfs:subClassOf obo:BFO_0000016 ;
              obo:IAO_0000116 "excludes any rigid body motion"@en ;
-             cco:definition """In engineering, deformation refers to the change in size or shape of an object. Displacements are the absolute change in position of a point on the object. Deflection is the relative change in external displacements on an object. Strain is the relative internal change in shape of an infinitesimally small cube of material and can be expressed as a non-dimensional change in length or angle of distortion of the cube. Strains are related to the forces acting on the cube, which are known as stress, by a stress-strain curve. The relationship between stress and strain is generally linear and reversible up until the yield point and the deformation is elastic. The linear relationship for a material is known as Young's modulus. Above the yield point, some degree of permanent distortion remains after unloading and is termed plastic deformation. The determination of the stress and strain throughout a solid object is given by the field of strength of materials and for a structure by structural analysis.
+             rdfs:label "Deformation"@en ;
+             av:naturalLanguageDefinition """In engineering, deformation refers to the change in size or shape of an object. Displacements are the absolute change in position of a point on the object. Deflection is the relative change in external displacements on an object. Strain is the relative internal change in shape of an infinitesimally small cube of material and can be expressed as a non-dimensional change in length or angle of distortion of the cube. Strains are related to the forces acting on the cube, which are known as stress, by a stress-strain curve. The relationship between stress and strain is generally linear and reversible up until the yield point and the deformation is elastic. The linear relationship for a material is known as Young's modulus. Above the yield point, some degree of permanent distortion remains after unloading and is termed plastic deformation. The determination of the stress and strain throughout a solid object is given by the field of strength of materials and for a structure by structural analysis.
 
 Engineering stress and engineering strain are approximations to the internal state that may be determined from the external forces and deformations of an object, provided that there is no significant change in size. When there is a significant change in size, the true stress and true strain can be derived from the instantaneous size of the object.
 
 In the figure it can be seen that the compressive loading (indicated by the arrow) has caused deformation in the cylinder so that the original shape (dashed lines) has changed (deformed) into one with bulging sides. The sides bulge because the material, although strong enough to not crack or otherwise fail, is not strong enough to support the load without change. As a result, the material is forced out laterally. Internal forces (in this case at right angles to the deformation) resist the applied load."""@en ;
-             cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(engineering)" ;
-             rdfs:label "Deformation"@en .
+             av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Deformation_(engineering)" .
 
 
 ###  https://purl.matolab.org/mseo/mid/DeformationSpeed
 :DeformationSpeed rdf:type owl:Class ;
-                  rdfs:subClassOf obo:BFO_0000144 ;
-                  cco:alternative_label "Dehnrate"@de ,
-                                        "Strain Rate"@en ;
-                  cco:definition """Strain rate is the change in strain (deformation) of a material with respect to time.
+                  rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic> ;
+                  rdfs:label "Deformation Speed"@en ,
+                             "Deformationsgeschwindigkeit"@de ;
+                  skos:altLabel "Dehnrate"@de ,
+                                "Strain Rate"@en ;
+                  av:naturalLanguageDefinition """Strain rate is the change in strain (deformation) of a material with respect to time.
 
 The strain rate at some point within the material measures the rate at which the distances of adjacent parcels of the material change with time in the neighborhood of that point. It comprises both the rate at which the material is expanding or shrinking (expansion rate), and also the rate at which it is being deformed by progressive shearing without changing its volume (shear rate). It is zero if these distances do not change, as happens when all particles in some region are moving with the same velocity (same speed and direction) and/or rotating with the same angular velocity, as if that part of the medium were a rigid body.
 The strain rate is a concept of materials science and continuum mechanics, that plays an essential role in the physics of fluids and deformable solids. In an isotropic Newtonian fluid, in particular, the viscous stress is a linear function of the rate of strain, defined by two coefficients, one relating to the expansion rate (the bulk viscosity coefficient) and one relating to the shear rate (the \"ordinary\" viscosity coefficient). In solids, higher strain rates can often cause normally ductile materials to fail in a brittle manner."""@en ;
-                  cco:definition_source "https://en.wikipedia.org/wiki/Strain_rate"@en ;
-                  rdfs:label "Deformation Speed"@en ,
-                             "Deformationsgeschwindigkeit"@de .
-
-
-###  https://purl.matolab.org/mseo/mid/Description
-:Description rdf:type owl:Class ;
-             rdfs:subClassOf cco:InformationBearingArtifact ;
-             rdfs:comment "A descriptive text" ;
-             rdfs:label "Description"@en .
+                  av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Strain_rate"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DocumentFile
@@ -760,26 +516,26 @@ The strain rate is a concept of materials science and continuum mechanics, that 
 ###  https://purl.matolab.org/mseo/mid/ElasticModulus
 :ElasticModulus rdf:type owl:Class ;
                 rdfs:subClassOf :Stiffness ;
-                cco:alternative_label "Young's Modulus"@en ;
-                cco:definition """An elastic modulus (also known as modulus of elasticity) is a quantity that measures an object or substance's resistance to being deformed elastically (i.e., non-permanently) when a stress is applied to it. The elastic modulus of an object is defined as the slope of its stress–strain curve in the elastic deformation region: A stiffer material will have a higher elastic modulus. An elastic modulus has the form:
+                rdfs:label "Elastic Modulus"@en ,
+                           "Elastizitätsmodul"@de ;
+                skos:altLabel "Young's Modulus"@en ;
+                av:naturalLanguageDefinition """An elastic modulus (also known as modulus of elasticity) is a quantity that measures an object or substance's resistance to being deformed elastically (i.e., non-permanently) when a stress is applied to it. The elastic modulus of an object is defined as the slope of its stress–strain curve in the elastic deformation region: A stiffer material will have a higher elastic modulus. An elastic modulus has the form:
 {\\displaystyle \\delta \\ {\\stackrel {\\text{def}}{=}}\\ {\\frac {\\text{stress}}{\\text{strain}}}}{\\displaystyle \\delta \\ {\\stackrel {\\text{def}}{=}}\\ {\\frac {\\text{stress}}{\\text{strain}}}}
 where stress is the force causing the deformation divided by the area to which the force is applied and strain is the ratio of the change in some parameter caused by the deformation to the original value of the parameter. Since strain is a dimensionless quantity, the units of {\\displaystyle \\delta }\\delta  will be the same as the units of stress."""@en ;
-                cco:definition_source "https://en.wikipedia.org/wiki/Elastic_modulus"@en ;
-                rdfs:label "Elastic Modulus"@en ,
-                           "Elastizitätsmodul"@de .
+                av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Elastic_modulus"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElasticStrain
 :ElasticStrain rdf:type owl:Class ;
                rdfs:subClassOf :Strain ;
                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Plasticity_(physics)"@en ;
-               cco:alternative_label "Elastic Deformation"@en ,
-                                     "Elastische Verformung"@de ;
-               cco:definition """For many ductile metals, tensile loading applied to a sample will cause it to behave in an elastic manner. Each increment of load is accompanied by a proportional increment in extension. When the load is removed, the piece returns to its original size. However, once the load exceeds a threshold – the yield strength – the extension increases more rapidly than in the elastic region; now when the load is removed, some degree of extension will remain.
-
-Elastic deformation, however, is an approximation and its quality depends on the time frame considered and loading speed. If, as indicated in the graph opposite, the deformation includes elastic deformation, it is also often referred to as \"elasto-plastic deformation\" or \"elastic-plastic deformation\"."""@en ;
                rdfs:label "Elastic Strain"@en ,
-                          "Elastische Deformation"@de .
+                          "Elastische Deformation"@de ;
+               skos:altLabel "Elastic Deformation"@en ,
+                             "Elastische Verformung"@de ;
+               av:naturalLanguageDefinition """For many ductile metals, tensile loading applied to a sample will cause it to behave in an elastic manner. Each increment of load is accompanied by a proportional increment in extension. When the load is removed, the piece returns to its original size. However, once the load exceeds a threshold – the yield strength – the extension increases more rapidly than in the elastic region; now when the load is removed, some degree of extension will remain.
+
+Elastic deformation, however, is an approximation and its quality depends on the time frame considered and loading speed. If, as indicated in the graph opposite, the deformation includes elastic deformation, it is also often referred to as \"elasto-plastic deformation\" or \"elastic-plastic deformation\"."""@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCapacitance
@@ -796,7 +552,7 @@ Elastic deformation, however, is an approximation and its quality depends on the
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCurrent
 :ElectricCurrent rdf:type owl:Class ;
-                 rdfs:subClassOf obo:BFO_0000144 ;
+                 rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic> ;
                  rdfs:label "Electric Current"@en .
 
 
@@ -809,34 +565,34 @@ Elastic deformation, however, is an approximation and its quality depends on the
 ###  https://purl.matolab.org/mseo/mid/EngineeringStrain
 :EngineeringStrain rdf:type owl:Class ;
                    rdfs:subClassOf :Strain ;
-                   cco:alternative_label "Cauchy Strain"@en ,
-                                         "Technical Strain"@en ;
-                   cco:definition """The Engineering strain also known as Cauchy strain is expressed as the ratio of total deformation to the initial dimension of the material body on which forces are applied. The engineering normal strain or engineering extensional strain or nominal strain e of a material line element or fiber axially loaded is expressed as the change in length ΔL per unit of the original length L of the line element or fibers. The normal strain is positive if the material fibers are stretched and negative if they are compressed. Thus, we have
+                   rdfs:label "Engineering Strain"@en ,
+                              "Technische Dehnung"@de ;
+                   skos:altLabel "Cauchy Strain"@en ,
+                                 "Technical Strain"@en ;
+                   av:naturalLanguageDefinition """The Engineering strain also known as Cauchy strain is expressed as the ratio of total deformation to the initial dimension of the material body on which forces are applied. The engineering normal strain or engineering extensional strain or nominal strain e of a material line element or fiber axially loaded is expressed as the change in length ΔL per unit of the original length L of the line element or fibers. The normal strain is positive if the material fibers are stretched and negative if they are compressed. Thus, we have
 
 {\\displaystyle \\ e={\\frac {\\Delta L}{L}}={\\frac {l-L}{L}}}{\\displaystyle \\ e={\\frac {\\Delta L}{L}}={\\frac {l-L}{L}}}
 where e is the engineering normal strain, L is the original length of the fiber and l is the final length of the fiber. Measures of strain are often expressed in parts per million or microstrains."""@de ;
-                   cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#Engineering_strain"@en ;
-                   rdfs:label "Engineering Strain"@en ,
-                              "Technische Dehnung"@de .
+                   av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#Engineering_strain"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/EngineeringStress
 :EngineeringStress rdf:type owl:Class ;
                    rdfs:subClassOf :Stress ;
                    obo:IAO_0000116 "Assumes unchanged size of Area the force is normalized to. Changes in the Area can only be neclected for very small deformations."@en ;
-                   cco:definition """Consider a bar of original cross sectional area {\\displaystyle A_{0}}A_{0} being subjected to equal and opposite forces {\\displaystyle F}F pulling at the ends so the bar is under tension. The material is experiencing a stress defined to be the ratio of the force to the cross sectional area of the bar, as well as an axial elongation:
+                   rdfs:label "Engineering Stress"@en ,
+                              "Technische Spannung"@de ;
+                   av:naturalLanguageDefinition """Consider a bar of original cross sectional area {\\displaystyle A_{0}}A_{0} being subjected to equal and opposite forces {\\displaystyle F}F pulling at the ends so the bar is under tension. The material is experiencing a stress defined to be the ratio of the force to the cross sectional area of the bar, as well as an axial elongation:
 
 {\\displaystyle \\sigma ={\\tfrac {F}{A_{0}}}}{\\displaystyle \\sigma ={\\tfrac {F}{A_{0}}}}
 {\\displaystyle \\varepsilon ={\\tfrac {L-L_{0}}{L_{0}}}={\\tfrac {\\Delta L}{L_{0}}}}{\\displaystyle \\varepsilon ={\\tfrac {L-L_{0}}{L_{0}}}={\\tfrac {\\Delta L}{L_{0}}}}
 Subscript 0 denotes the original dimensions of the sample. The SI unit for stress is newton per square metre, or pascal (1 pascal = 1 Pa = 1 N/m2), and strain is unitless. Stress-strain curve for this material is plotted by elongating the sample and recording the stress variation with strain until the sample fractures. By convention, the strain is set to the horizontal axis and stress is set to vertical axis. Note that for engineering purposes we often assume the cross-section area of the material does not change during the whole deformation process. This is not true since the actual area will decrease while deforming due to elastic and plastic deformation. The curve based on the original cross-section and gauge length is called the engineering stress-strain curve, while the curve based on the instantaneous cross-section area and length is called the true stress-strain curve. Unless stated otherwise, engineering stress-strain is generally used."""@en ;
-                   cco:definition_source "https://en.wikipedia.org/wiki/Stress%E2%80%93strain_curve"@en ;
-                   rdfs:label "Engineering Stress"@en ,
-                              "Technische Spannung"@de .
+                   av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Stress%E2%80%93strain_curve"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Equipment
 :Equipment rdf:type owl:Class ;
-           rdfs:subClassOf cco:Artifact ;
+           rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
            rdfs:label "Equipment"@en .
 
 
@@ -848,17 +604,10 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/Experiment
 :Experiment rdf:type owl:Class ;
-            rdfs:subClassOf cco:IntentionalAct ;
-            cco:definition "In engineering and the physical sciences, experiments are a primary component of the scientific method. They are used to test theories and hypotheses about how physical processes work under particular conditions (e.g., whether a particular engineering process can produce a desired chemical compound). Typically, experiments in these fields focus on replication of identical procedures in hopes of producing identical results in each replication. Random assignment is uncommon."@en ;
-            cco:definition_source "https://en.wikipedia.org/wiki/Experiment"@en ;
-            rdfs:label "Experiment"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ExperimentTime
-:ExperimentTime rdf:type owl:Class ;
-                rdfs:subClassOf obo:BFO_0000038 ;
-                cco:definition "The Time Interval measuring while a Experiment is conducted"@en ;
-                rdfs:label "Experiment Time"@en .
+            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MeasurementProcess> ;
+            rdfs:label "Experiment"@en ;
+            av:naturalLanguageDefinition "In engineering and the physical sciences, experiments are a primary component of the scientific method. They are used to test theories and hypotheses about how physical processes work under particular conditions (e.g., whether a particular engineering process can produce a desired chemical compound). Typically, experiments in these fields focus on replication of identical procedures in hopes of producing identical results in each replication. Random assignment is uncommon."@en ;
+            av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Experiment"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Extrapolation
@@ -869,42 +618,28 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/File
 :File rdf:type owl:Class ;
-      rdfs:subClassOf cco:InformationBearingArtifact ;
+      rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity> ;
       rdfs:label "File"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction
 :ForceMeasurementArtifactFunction rdf:type owl:Class ;
-                                  rdfs:subClassOf cco:MeasurementArtifactFunction ;
-                                  cco:definition "A Measurement Artifact Function that is realized during events in which an Artifact is used to measure the Force applied on a specified object or class of objects."@en ;
-                                  rdfs:label "Force Measurement Artifact Function"@en .
+                                  rdfs:subClassOf obo:BFO_0000034 ;
+                                  rdfs:label "Force Measurement Artifact Function"@en ;
+                                  av:naturalLanguageDefinition "A Measurement Artifact Function that is realized during events in which an Artifact is used to measure the Force applied on a specified object or class of objects."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ForceRate
 :ForceRate rdf:type owl:Class ;
-           rdfs:subClassOf obo:BFO_0000144 ;
+           rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic> ;
            obo:IAO_0000116 "second derivative of momentum with respect to time"@en ;
-           cco:alternative_label "Force Rate"@en ,
-                                 "Ruck"@de ,
-                                 "Yank"@en ;
-           cco:definition "In physics, yank is sometimes used to denote the derivative of force with respect to time or mass multiplied by jerk. In relativistic physics, it is expressed as the second derivative of momentum with respect to time, because the mass is velocity-dependent. Though not universally accepted as an official term for this quantity, the term \"yank\" is commonly used among physics enthusiasts."@en ;
-           cco:definition_source "https://en-academic.com/dic.nsf/enwiki/1620873"@en ;
            rdfs:label "Force Rate"@en ,
-                      "Kraftrate"@de .
-
-
-###  https://purl.matolab.org/mseo/mid/Fraction
-:Fraction rdf:type owl:Class ;
-          rdfs:subClassOf cco:Amount ;
-          cco:definition "A fraction of a number" ;
-          rdfs:label "Fraction"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/GeometryInfo
-:GeometryInfo rdf:type owl:Class ;
-              rdfs:subClassOf :StructuralInfo ;
-              rdfs:comment "Data set containing geometric information content" ;
-              rdfs:label "Geometry Info"@en .
+                      "Kraftrate"@de ;
+           skos:altLabel "Force Rate"@en ,
+                         "Ruck"@de ,
+                         "Yank"@en ;
+           av:naturalLanguageDefinition "In physics, yank is sometimes used to denote the derivative of force with respect to time or mass multiplied by jerk. In relativistic physics, it is expressed as the second derivative of momentum with respect to time, because the mass is velocity-dependent. Though not universally accepted as an official term for this quantity, the term \"yank\" is commonly used among physics enthusiasts."@en ;
+           av:naturalLanguageDefinition_source "https://en-academic.com/dic.nsf/enwiki/1620873"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ISOStandard
@@ -936,7 +671,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/IndentingArtfactFunction
 :IndentingArtfactFunction rdf:type owl:Class ;
-                          rdfs:subClassOf cco:DamagingArtifactFunction ;
+                          rdfs:subClassOf obo:BFO_0000034 ;
                           rdfs:label "Indenting Artfact Function" .
 
 
@@ -944,13 +679,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 :IndustryProject rdf:type owl:Class ;
                  rdfs:subClassOf :Project ;
                  rdfs:label "Industry Project"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/InformationField
-:InformationField rdf:type owl:Class ;
-                  rdfs:subClassOf cco:InformationLine ;
-                  cco:definition "A Field in a Informations Line having a row index and can have a column index property" ;
-                  rdfs:label "Information Field" .
 
 
 ###  https://purl.matolab.org/mseo/mid/InfrastructureEquipmentSet
@@ -966,13 +694,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
            rdfs:label "InputFile"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/InternationalSystemofUnits
-:InternationalSystemofUnits rdf:type owl:Class ;
-                            rdfs:subClassOf :SystemOfUnits ;
-                            cco:alternative_label "SI Unit System"@en ;
-                            rdfs:label "International System of Units" .
-
-
 ###  https://purl.matolab.org/mseo/mid/Interpolation
 :Interpolation rdf:type owl:Class ;
                rdfs:subClassOf :DataTransformation ;
@@ -983,11 +704,11 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 :LowerYieldStrenght rdf:type owl:Class ;
                     rdfs:subClassOf :YieldStrenght ;
                     obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
-                    cco:alternative_label "Lower Yield Stress"@en ,
-                                          "Untere Fließspannung"@de ;
-                    cco:definition "Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop."@en ;
                     rdfs:label "Lower Yield Strength"@en ,
-                               "Untere Streckgrenze"@de .
+                               "Untere Streckgrenze"@de ;
+                    skos:altLabel "Lower Yield Stress"@en ,
+                                  "Untere Fließspannung"@de ;
+                    av:naturalLanguageDefinition "Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/LuminousIntensity
@@ -1046,12 +767,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                    rdfs:label "Material Structure"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/MaterialStructureInfo
-:MaterialStructureInfo rdf:type owl:Class ;
-                       rdfs:subClassOf :StructuralInfo ;
-                       rdfs:label "Material Structure Info"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/MaterialStructureRelatedFiatObjectPart
 :MaterialStructureRelatedFiatObjectPart rdf:type owl:Class ;
                                         rdfs:subClassOf :MaterialStructure ;
@@ -1072,9 +787,9 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementDevice
 :MeasurementDevice rdf:type owl:Class ;
-                   rdfs:subClassOf cco:Artifact ;
-                   cco:definition "A Artifact inhering a Measurement Artifact Function"@en ;
-                   rdfs:label "Measurement Device" .
+                   rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
+                   rdfs:label "Measurement Device" ;
+                   av:naturalLanguageDefinition "A Artifact inhering a Measurement Artifact Function"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementLocation
@@ -1087,8 +802,8 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 ###  https://purl.matolab.org/mseo/mid/MeasurementRegion
 :MeasurementRegion rdf:type owl:Class ;
                    rdfs:subClassOf obo:BFO_0000028 ;
-                   cco:definition "a three-dimensional spatial region which is prepared and or defined as scope for a measurement to be carried out"@en ;
-                   rdfs:label "Measurement Region"@en .
+                   rdfs:label "Measurement Region"@en ;
+                   av:naturalLanguageDefinition "a three-dimensional spatial region which is prepared and or defined as scope for a measurement to be carried out"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementRelatedFiatObjectPart
@@ -1100,24 +815,24 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementSpecimenFunction
 :MeasurementSpecimenFunction rdf:type owl:Class ;
-                             rdfs:subClassOf cco:ArtifactFunction ;
-                             cco:definition "An artifact function gained by a preparation processedure aiming modifing an object to meet the specifications of a test procedure."@en ;
+                             rdfs:subClassOf obo:BFO_0000034 ;
                              rdfs:label "Measurement Specimen Function"@en ,
-                                        "Prüfkörper Funktion"@de .
+                                        "Prüfkörper Funktion"@de ;
+                             av:naturalLanguageDefinition "An artifact function gained by a preparation processedure aiming modifing an object to meet the specifications of a test procedure."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MechanicalStrength
 :MechanicalStrength rdf:type owl:Class ;
-                    rdfs:subClassOf cco:Strength ;
-                    cco:definition "In the mechanics of materials, the strength of a material is its ability to withstand an applied load without failure or plastic deformation. The field of strength of materials deals with forces and deformations that result from their acting on a material. A load applied to a mechanical member will induce internal forces within the member called stresses when those forces are expressed on a unit basis. The stresses acting on the material cause deformation of the material in various manners including breaking them completely. Deformation of the material is called strain when those deformations too are placed on a unit basis."@en ;
-                    cco:definition_source "https://en.wikipedia.org/wiki/Strength_of_materials"@en ;
+                    rdfs:subClassOf :Strenght ;
                     rdfs:label "Festigkeit"@de ,
-                               "Mechanical Strength"@en .
+                               "Mechanical Strength"@en ;
+                    av:naturalLanguageDefinition "In the mechanics of materials, the strength of a material is its ability to withstand an applied load without failure or plastic deformation. The field of strength of materials deals with forces and deformations that result from their acting on a material. A load applied to a mechanical member will induce internal forces within the member called stresses when those forces are expressed on a unit basis. The stresses acting on the material cause deformation of the material in various manners including breaking them completely. Deformation of the material is called strain when those deformations too are placed on a unit basis."@en ;
+                    av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Strength_of_materials"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MechanicalWorkshop
 :MechanicalWorkshop rdf:type owl:Class ;
-                    rdfs:subClassOf cco:Facility ;
+                    rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Manufacturer> ;
                     rdfs:comment "A workshop dealing with mechanical manufacturing processes such as turning, wire eroding, separating, sawing..." ;
                     rdfs:label "Mechanical Workshop"@en .
 
@@ -1148,14 +863,14 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/PeriodicTableElementIdentifer
 :PeriodicTableElementIdentifer rdf:type owl:Class ;
-                               rdfs:subClassOf cco:DesignativeInformationContentEntity ;
+                               rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/DesignativeInformationContentEntity> ;
                                obo:IAO_0000116 "We shouldnt use subclassing here! Every chemical emlent is an Named Individual of this class. Not a Subclass! I think its even  more a kind of Identifier." ;
                                rdfs:label "Periodic Table Element Identifer"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PhysicsModel
 :PhysicsModel rdf:type owl:Class ;
-              rdfs:subClassOf cco:Algorithm ;
+              rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/Algorithm> ;
               rdfs:label "Physics Model"@en .
 
 
@@ -1170,31 +885,31 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 :PlasticStrain rdf:type owl:Class ;
                rdfs:subClassOf :Strain ;
                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Plasticity_(physics)"@en ;
-               cco:alternative_label "Plastic Deformation"@en ,
-                                     "Plastische Verformung"@de ;
-               cco:definition """In physics and materials science, plasticity, also known as plastic deformation, is the ability of a solid material to undergo permanent deformation, a non-reversible change of shape in response to applied forces.[1][2] For example, a solid piece of metal being bent or pounded into a new shape displays plasticity as permanent changes occur within the material itself. In engineering, the transition from elastic behavior to plastic behavior is known as yielding.
-
-Plastic deformation is observed in most materials, particularly metals, soils, rocks, concrete, and foams.[3][4][5][6] However, the physical mechanisms that cause plastic deformation can vary widely. At a crystalline scale, plasticity in metals is usually a consequence of dislocations. Such defects are relatively rare in most crystalline materials, but are numerous in some and part of their crystal structure; in such cases, plastic crystallinity can result. In brittle materials such as rock, concrete and bone, plasticity is caused predominantly by slip at microcracks. In cellular materials such as liquid foams or biological tissues, plasticity is mainly a consequence of bubble or cell rearrangements, notably T1 processes."""@en ;
                rdfs:label "Plastic Strain"@en ,
-                          "Plastische Deformation"@de .
+                          "Plastische Deformation"@de ;
+               skos:altLabel "Plastic Deformation"@en ,
+                             "Plastische Verformung"@de ;
+               av:naturalLanguageDefinition """In physics and materials science, plasticity, also known as plastic deformation, is the ability of a solid material to undergo permanent deformation, a non-reversible change of shape in response to applied forces.[1][2] For example, a solid piece of metal being bent or pounded into a new shape displays plasticity as permanent changes occur within the material itself. In engineering, the transition from elastic behavior to plastic behavior is known as yielding.
+
+Plastic deformation is observed in most materials, particularly metals, soils, rocks, concrete, and foams.[3][4][5][6] However, the physical mechanisms that cause plastic deformation can vary widely. At a crystalline scale, plasticity in metals is usually a consequence of dislocations. Such defects are relatively rare in most crystalline materials, but are numerous in some and part of their crystal structure; in such cases, plastic crystallinity can result. In brittle materials such as rock, concrete and bone, plasticity is caused predominantly by slip at microcracks. In cellular materials such as liquid foams or biological tissues, plasticity is mainly a consequence of bubble or cell rearrangements, notably T1 processes."""@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PoissonEffect
 :PoissonEffect rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000017 ;
-               cco:definition "The dual effect that a compression load has on an object: the compression causes the object to become shorter in the direction of the compressive load and wider laterally. Thus, an intervertebral disc subjected to compression will shorten in the vertical dimension, but will bulge out laterally. For each different type of material, there is a specific ratio of strain in the axial direction to strain in the transverse direction; this is known as the Poisson ratio."@en ;
-               cco:definition_source "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100333756"@en ;
                rdfs:label "Poisson Effect"@en ,
-                          "Querkontraktion"@de .
+                          "Querkontraktion"@de ;
+               av:naturalLanguageDefinition "The dual effect that a compression load has on an object: the compression causes the object to become shorter in the direction of the compressive load and wider laterally. Thus, an intervertebral disc subjected to compression will shorten in the vertical dimension, but will bulge out laterally. For each different type of material, there is a specific ratio of strain in the axial direction to strain in the transverse direction; this is known as the Poisson ratio."@en ;
+               av:naturalLanguageDefinition_source "https://www.oxfordreference.com/view/10.1093/oi/authority.20110803100333756"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PoissonRatio
 :PoissonRatio rdf:type owl:Class ;
               rdfs:subClassOf :PoissonEffect ;
-              cco:definition "Poisson's ratio is a measure of the Poisson effect, the phenomenon in which a material tends to expand in directions perpendicular to the direction of compression. Conversely, if the material is stretched rather than compressed, it usually tends to contract in the directions transverse to the direction of stretching. It is a common observation when a rubber band is stretched, it becomes noticeably thinner. Again, the Poisson ratio will be the ratio of relative contraction to relative expansion and will have the same value as above. In certain rare cases, a material will actually shrink in the transverse direction when compressed (or expand when stretched) which will yield a negative value of the Poisson ratio."@en ;
-              cco:definition_source "https://en.wikipedia.org/wiki/Poisson%27s_ratio"@en ;
               rdfs:label "Poisson's Ratio"@en ,
-                         "Poissonzahl"@de .
+                         "Poissonzahl"@de ;
+              av:naturalLanguageDefinition "Poisson's ratio is a measure of the Poisson effect, the phenomenon in which a material tends to expand in directions perpendicular to the direction of compression. Conversely, if the material is stretched rather than compressed, it usually tends to contract in the directions transverse to the direction of stretching. It is a common observation when a rubber band is stretched, it becomes noticeably thinner. Again, the Poisson ratio will be the ratio of relative contraction to relative expansion and will have the same value as above. In certain rare cases, a material will actually shrink in the transverse direction when compressed (or expand when stretched) which will yield a negative value of the Poisson ratio."@en ;
+              av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Poisson%27s_ratio"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PostProcessing
@@ -1236,10 +951,10 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 
 ###  https://purl.matolab.org/mseo/mid/ProcessProfilSpecification
 :ProcessProfilSpecification rdf:type owl:Class ;
-                            rdfs:subClassOf cco:Objective ;
-                            cco:definition "A Specification which describes the Target for a Profil of a Process."@en ;
-                            cco:example_of_usage "The set point of the speed of a motor; The intended heat rate to increase the temperature"@en ;
-                            rdfs:label "Process Profil Specification"@en .
+                            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/DirectiveInformationContentEntity> ;
+                            rdfs:label "Process Profil Specification"@en ;
+                            skos:exampe "The set point of the speed of a motor; The intended heat rate to increase the temperature"@en ;
+                            av:naturalLanguageDefinition "A Specification which describes the Target for a Profil of a Process."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ProcessSetup
@@ -1250,7 +965,7 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 
 ###  https://purl.matolab.org/mseo/mid/Project
 :Project rdf:type owl:Class ;
-         rdfs:subClassOf cco:PlanSpecification ;
+         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification> ;
          rdfs:label "Project"@en .
 
 
@@ -1258,9 +973,9 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 :ProofStrenght rdf:type owl:Class ;
                rdfs:subClassOf :MechanicalStrength ;
                obo:IAO_0000119 "https://www.corrosionpedia.com/definition/6354/proof-stress"@en ;
-               cco:alternative_label "Proof Stress"@en ;
-               cco:definition "The proof stress of a material is defined as the amount of stress it can endure until it undergoes a relatively small amount of plastic deformation. Specifically, proof stress is the point at which the material exhibits 0.2% of plastic deformation."@en ;
-               rdfs:label "Proof Strenght"@en .
+               rdfs:label "Proof Strenght"@en ;
+               skos:altLabel "Proof Stress"@en ;
+               av:naturalLanguageDefinition "The proof stress of a material is defined as the amount of stress it can endure until it undergoes a relatively small amount of plastic deformation. Specifically, proof stress is the point at which the material exhibits 0.2% of plastic deformation."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PublicProject
@@ -1290,7 +1005,7 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 
 ###  https://purl.matolab.org/mseo/mid/Regulation
 :Regulation rdf:type owl:Class ;
-            rdfs:subClassOf cco:PlanSpecification ;
+            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification> ;
             rdfs:label "Regulation"@en .
 
 
@@ -1303,7 +1018,9 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 ###  https://purl.matolab.org/mseo/mid/ShearModulus
 :ShearModulus rdf:type owl:Class ;
               rdfs:subClassOf :Stiffness ;
-              cco:definition """In materials science, shear modulus or modulus of rigidity, denoted by G, or sometimes S or μ, is a measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain:
+              rdfs:label "Schubmodul"@de ,
+                         "Shear Modulus"@en ;
+              av:naturalLanguageDefinition """In materials science, shear modulus or modulus of rigidity, denoted by G, or sometimes S or μ, is a measure of the elastic shear stiffness of a material and is defined as the ratio of shear stress to the shear strain:
 
 {\\displaystyle G\\ {\\stackrel {\\mathrm {def} }{=}}\\ {\\frac {\\tau _{xy}}{\\gamma _{xy}}}={\\frac {F/A}{\\Delta x/l}}={\\frac {Fl}{A\\Delta x}}}G\\ {\\stackrel  {{\\mathrm  {def}}}{=}}\\ {\\frac  {\\tau _{{xy}}}{\\gamma _{{xy}}}}={\\frac  {F/A}{\\Delta x/l}}={\\frac  {Fl}{A\\Delta x}}
 where
@@ -1315,14 +1032,12 @@ where
 {\\displaystyle \\Delta x}\\Delta x is the transverse displacement
 {\\displaystyle l}l is the initial length of the area.
 The derived SI unit of shear modulus is the pascal (Pa), although it is usually expressed in gigapascals (GPa) or in thousand pounds per square inch (ksi). Its dimensional form is M1L−1T−2, replacing force by mass times acceleration."""@en ;
-              cco:definition_source "https://en.wikipedia.org/wiki/Shear_modulus"@en ;
-              rdfs:label "Schubmodul"@de ,
-                         "Shear Modulus"@en .
+              av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Shear_modulus"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Simulation
 :Simulation rdf:type owl:Class ;
-            rdfs:subClassOf cco:ActOfPrediction ;
+            rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ComputingProcess> ;
             rdfs:label "Simulation"@en .
 
 
@@ -1334,13 +1049,13 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
 
 ###  https://purl.matolab.org/mseo/mid/Software
 :Software rdf:type owl:Class ;
-          rdfs:subClassOf cco:Artifact ;
+          rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
           rdfs:label "Software"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/SoftwareArchitecture
 :SoftwareArchitecture rdf:type owl:Class ;
-                      rdfs:subClassOf cco:Artifact ;
+                      rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
                       rdfs:label "Software Architecture"@en .
 
 
@@ -1352,72 +1067,47 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
 
 ###  https://purl.matolab.org/mseo/mid/Specimen
 :Specimen rdf:type owl:Class ;
-          rdfs:subClassOf cco:Artifact ;
-          cco:definition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en ;
-          rdfs:label "Specimen"@en .
+          rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
+          rdfs:label "Specimen"@en ;
+          av:naturalLanguageDefinition "An Artifact manufactured with the purpose to be the scope Act of Observation or Measurement."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Stiffness
 :Stiffness rdf:type owl:Class ;
-           rdfs:subClassOf cco:Strength ;
+           rdfs:subClassOf :Strenght ;
            obo:IAO_0000116 "While Stiffness characterizes a bodies response, taking into account its geometry and materials. Elastic Modulus aims to be agnostic to geometry and specific for the material."@en ;
-           cco:definition """Stiffness is the extent to which an object resists deformation in response to an applied force.
-The complementary concept is flexibility or pliability: the more flexible an object is, the less stiff it is."""@en ;
-           cco:definition_source "https://en.wikipedia.org/wiki/Stiffness"@en ;
            rdfs:label "Steifigkeit"@de ,
-                      "Stiffness"@en .
+                      "Stiffness"@en ;
+           av:naturalLanguageDefinition """Stiffness is the extent to which an object resists deformation in response to an applied force.
+The complementary concept is flexibility or pliability: the more flexible an object is, the less stiff it is."""@en ;
+           av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Stiffness"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Strain
 :Strain rdf:type owl:Class ;
         rdfs:subClassOf :Deformation ;
-        cco:definition "Strain is related to deformation in terms of relative displacement of particles in the body that excludes rigid-body motions. Different equivalent choices may be made for the expression of a strain field depending on whether it is defined with respect to the initial or the final configuration of the body and on whether the metric tensor or its dual is considered."@en ;
-        cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(physics)"@en ;
         rdfs:label "Dehnung"@de ,
-                   "Strain"@en .
+                   "Strain"@en ;
+        av:naturalLanguageDefinition "Strain is related to deformation in terms of relative displacement of particles in the body that excludes rigid-body motions. Different equivalent choices may be made for the expression of a strain field depending on whether it is defined with respect to the initial or the final configuration of the body and on whether the metric tensor or its dual is considered."@en ;
+        av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Deformation_(physics)"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Stress
 :Stress rdf:type owl:Class ;
         rdfs:subClassOf obo:BFO_0000019 ;
-        cco:alternative_label "Cauchy Stress"@en ,
-                              "True Stress"@en ,
-                              "Wahre Spannung"@de ;
-        cco:definition "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other, while strain is the measure of the deformation of the material. For example, when a solid vertical bar is supporting an overhead weight, each particle in the bar pushes on the particles immediately below it. When a liquid is in a closed container under pressure, each particle gets pushed against by all the surrounding particles. The container walls and the pressure-inducing surface (such as a piston) push against them in (Newtonian) reaction. These macroscopic forces are actually the net result of a very large number of intermolecular forces and collisions between the particles in those molecules. Stress is frequently represented by a lowercase Greek letter sigma (σ)."@en ;
-        cco:definition_source "https://en.wikipedia.org/wiki/Stress_(mechanics)"@en ;
         rdfs:label "Spannung"@de ,
-                   "Stress"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/StructuralInfo
-:StructuralInfo rdf:type owl:Class ;
-                rdfs:subClassOf cco:NominalMeasurementInformationContentEntity ;
-                rdfs:label "Structural Info"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/Summary
-:Summary rdf:type owl:Class ;
-         rdfs:subClassOf cco:InformationBearingArtifact ;
-         rdfs:label "Summary"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/SystemOfUnits
-:SystemOfUnits rdf:type owl:Class ;
-               rdfs:subClassOf cco:ReferenceSystem ;
-               rdfs:label "System Of Units"@en .
+                   "Stress"@en ;
+        skos:altLabel "Cauchy Stress"@en ,
+                      "True Stress"@en ,
+                      "Wahre Spannung"@de ;
+        av:naturalLanguageDefinition "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other, while strain is the measure of the deformation of the material. For example, when a solid vertical bar is supporting an overhead weight, each particle in the bar pushes on the particles immediately below it. When a liquid is in a closed container under pressure, each particle gets pushed against by all the surrounding particles. The container walls and the pressure-inducing surface (such as a piston) push against them in (Newtonian) reaction. These macroscopic forces are actually the net result of a very large number of intermolecular forces and collisions between the particles in those molecules. Stress is frequently represented by a lowercase Greek letter sigma (σ)."@en ;
+        av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Stress_(mechanics)"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/TXTFile
 :TXTFile rdf:type owl:Class ;
          rdfs:subClassOf :File ;
          rdfs:label "TXTFile"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/Table
-:Table rdf:type owl:Class ;
-       rdfs:subClassOf cco:InformationBearingArtifact ;
-       rdfs:comment "Any kind of table" ;
-       rdfs:label "Table"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart
@@ -1429,68 +1119,68 @@ The complementary concept is flexibility or pliability: the more flexible an obj
 ###  https://purl.matolab.org/mseo/mid/TimeOfBreak
 :TimeOfBreak rdf:type owl:Class ;
              rdfs:subClassOf obo:BFO_0000148 ;
-             cco:definition "The instand when a part or specimen breaks in an mechanical test."@en ;
-             rdfs:label "Time of Break"@en .
+             rdfs:label "Time of Break"@en ;
+             av:naturalLanguageDefinition "The instand when a part or specimen breaks in an mechanical test."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/TrueStrain
 :TrueStrain rdf:type owl:Class ;
             rdfs:subClassOf :Strain ;
-            cco:alternative_label "Hencky Strain"@en ;
-            cco:definition """The logarithmic strain ε, also called, true strain or Hencky strain. Considering an incremental strain (Ludwik)
+            rdfs:label "Logarithmic Strain"@en ,
+                       "True Strain"@en ,
+                       "Wahre Dehnung"@de ;
+            skos:altLabel "Hencky Strain"@en ;
+            av:naturalLanguageDefinition """The logarithmic strain ε, also called, true strain or Hencky strain. Considering an incremental strain (Ludwik)
 
 {\\displaystyle \\ \\delta \\varepsilon ={\\frac {\\delta l}{l}}}{\\displaystyle \\ \\delta \\varepsilon ={\\frac {\\delta l}{l}}}
 the logarithmic strain is obtained by integrating this incremental strain:
 
 {\\displaystyle \\ {\\begin{aligned}\\int \\delta \\varepsilon &=\\int _{L}^{l}{\\frac {\\delta l}{l}}\\\\\\varepsilon &=\\ln \\left({\\frac {l}{L}}\\right)=\\ln(\\lambda )\\\\&=\\ln(1+e)\\\\&=e-{\\frac {e^{2}}{2}}+{\\frac {e^{3}}{3}}-\\cdots \\\\\\end{aligned}}}{\\displaystyle \\ {\\begin{aligned}\\int \\delta \\varepsilon &=\\int _{L}^{l}{\\frac {\\delta l}{l}}\\\\\\varepsilon &=\\ln \\left({\\frac {l}{L}}\\right)=\\ln(\\lambda )\\\\&=\\ln(1+e)\\\\&=e-{\\frac {e^{2}}{2}}+{\\frac {e^{3}}{3}}-\\cdots \\\\\\end{aligned}}}
 where e is the engineering strain. The logarithmic strain provides the correct measure of the final strain when deformation takes place in a series of increments, taking into account the influence of the strain path."""@de ;
-            cco:definition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#True_strain"@en ;
-            rdfs:label "Logarithmic Strain"@en ,
-                       "True Strain"@en ,
-                       "Wahre Dehnung"@de .
+            av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#True_strain"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/UltimateTensileStrength
 :UltimateTensileStrength rdf:type owl:Class ;
                          rdfs:subClassOf :MechanicalStrength ;
                          obo:IAO_0000119 "https://en.wikipedia.org/wiki/Ultimate_tensile_strength"@en ;
-                         cco:definition """Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\\displaystyle F_{\\text{tu}}}{\\displaystyle F_{\\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
+                         rdfs:label "Ultimate Tensile Strength"@en ,
+                                    "Zugfestigkeit"@de ;
+                         av:naturalLanguageDefinition """Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\\displaystyle F_{\\text{tu}}}{\\displaystyle F_{\\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
 
 The ultimate tensile strength is usually found by performing a tensile test and recording the engineering stress versus strain. The highest point of the stress–strain curve is the ultimate tensile strength and has units of stress. The equivalent point for the case of compression, instead of tension, is called the compressive strength.
 
-Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood."""@en ;
-                         rdfs:label "Ultimate Tensile Strength"@en ,
-                                    "Zugfestigkeit"@de .
+Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood."""@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/UniversalTestingMachine
 :UniversalTestingMachine rdf:type owl:Class ;
-                         rdfs:subClassOf cco:Artifact ;
-                         cco:definition "A machine capitable of performing komplex mechanical experiments, by applying force or displacement controlled regimes on specimen."@en ;
-                         rdfs:label "Universal Testing Machine"@en .
+                         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact> ;
+                         rdfs:label "Universal Testing Machine"@en ;
+                         av:naturalLanguageDefinition "A machine capitable of performing komplex mechanical experiments, by applying force or displacement controlled regimes on specimen."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/UpperYieldStrength
 :UpperYieldStrength rdf:type owl:Class ;
                     rdfs:subClassOf :YieldStrenght ;
                     obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
-                    cco:alternative_label "Obere Fließspannung"@de ,
-                                          "Upper Yield Stress"@en ;
-                    cco:definition "Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop."@en ;
                     rdfs:label "Obere Streckgrenze"@de ,
-                               "Upper Yield Strenght"@en .
+                               "Upper Yield Strenght"@en ;
+                    skos:altLabel "Obere Fließspannung"@de ,
+                                  "Upper Yield Stress"@en ;
+                    av:naturalLanguageDefinition "Some metals, such as mild steel, reach an upper yield point before dropping rapidly to a lower yield point. The material response is linear up until the upper yield point, but the lower yield point is used in structural engineering as a conservative value. If a metal is only stressed to the upper yield point, and beyond, Lüders bands can develop."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/VersionNumber
 :VersionNumber rdf:type owl:Class ;
                rdfs:subClassOf cco:CodeIdentifier ;
-               cco:definition "A number designating a particular form of something that is slightly different from other forms of the same thing."@en ;
-               rdfs:label "Version Number"@de .
+               rdfs:label "Version Number"@de ;
+               av:naturalLanguageDefinition "A number designating a particular form of something that is slightly different from other forms of the same thing."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Voltage
 :Voltage rdf:type owl:Class ;
-         rdfs:subClassOf obo:BFO_0000144 ;
+         rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic> ;
          rdfs:label "Voltage"@en .
 
 
@@ -1539,7 +1229,7 @@ Tensile strengths are rarely of any consequence in the design of ductile members
 
 ###  https://purl.matolab.org/mseo/mid/WithdrawalPlan
 :WithdrawalPlan rdf:type owl:Class ;
-                rdfs:subClassOf cco:PlanSpecification ;
+                rdfs:subClassOf <https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification> ;
                 rdfs:comment "A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)" ;
                 rdfs:label "Withdrawal Plan"@en .
 
@@ -1554,12 +1244,12 @@ Tensile strengths are rarely of any consequence in the design of ductile members
 :YieldStrenght rdf:type owl:Class ;
                rdfs:subClassOf :MechanicalStrength ;
                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
-               cco:alternative_label "Yield Stress"@en ;
-               cco:definition """In materials science and engineering, the yield point is the point on a stress-strain curve that indicates the limit of elastic behavior and the beginning of plastic behavior. Below the yield point, a material will deform elastically and will return to its original shape when the applied stress is removed. Once the yield point is passed, some fraction of the deformation will be permanent and non-reversible and is known as plastic deformation.
-
-The yield strength or yield stress is a material property and is the stress corresponding to the yield point at which the material begins to deform plastically. The yield strength is often used to determine the maximum allowable load in a mechanical component, since it represents the upper limit to forces that can be applied without producing permanent deformation. In some materials, such as aluminium, there is a gradual onset of non-linear behavior, making the precise yield point difficult to determine. In such a case, the offset yield point (or proof stress) is taken as the stress at which 0.2% plastic deformation occurs. Yielding is a gradual failure mode which is normally not catastrophic, unlike ultimate failure."""@en ;
                rdfs:label "Fließgrenze"@de ,
-                          "Yield Strength"@en .
+                          "Yield Strength"@en ;
+               skos:altLabel "Yield Stress"@en ;
+               av:naturalLanguageDefinition """In materials science and engineering, the yield point is the point on a stress-strain curve that indicates the limit of elastic behavior and the beginning of plastic behavior. Below the yield point, a material will deform elastically and will return to its original shape when the applied stress is removed. Once the yield point is passed, some fraction of the deformation will be permanent and non-reversible and is known as plastic deformation.
+
+The yield strength or yield stress is a material property and is the stress corresponding to the yield point at which the material begins to deform plastically. The yield strength is often used to determine the maximum allowable load in a mechanical component, since it represents the upper limit to forces that can be applied without producing permanent deformation. In some materials, such as aluminium, there is a gradual onset of non-linear behavior, making the precise yield point difficult to determine. In such a case, the offset yield point (or proof stress) is taken as the stress at which 0.2% plastic deformation occurs. Yielding is a gradual failure mode which is normally not catastrophic, unlike ultimate failure."""@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ZipFile
@@ -1572,21 +1262,8 @@ The yield strength or yield stress is a material property and is the stress corr
 ###  https://www.w3.org/ns/csvw#note
 <https://www.w3.org/ns/csvw#note> rdf:type owl:Class ;
                                   rdfs:subClassOf :CSVFile ;
-                                  cco:definition "An Annotation as Defined by the W3C Vocabulary for CSV Files on the web. Typically, the bearer of the Information provided by the additional header before the actual tabular data in a CSV file."@en ;
-                                  rdfs:label "CSVNote"@en .
-
-
-#################################################################
-#    Annotations
-#################################################################
-
-cco:Force obo:IAO_0000116 "first derivativ of momentum over time"@en .
-
-
-cco:PascalMeasurementUnit cco:alternative_label "N/mm²" .
-
-
-cco:SpatialOrientation cco:alternative_label "Angle" .
+                                  rdfs:label "CSVNote"@en ;
+                                  av:naturalLanguageDefinition "An Annotation as Defined by the W3C Vocabulary for CSV Files on the web. Typically, the bearer of the Information provided by the additional header before the actual tabular data in a CSV file."@en .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

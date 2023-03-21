@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/" uri="https://github.com/iofoundry/ontology/raw/master/core/meta/AnnotationVocabulary.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/" uri="file:/C:/Users/hanke/projects/ontology/core/meta/AnnotationVocabulary.rdf"/>
+    <uri id="User Entered Import Resolution" name="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/" uri="file:/C:/Users/hanke/projects/ontology/core/meta/AnnotationVocabulary.rdf"/>
+    <uri id="Imports Wizard Entry" name="https://spec.industrialontologies.org/ontology/202301/core/Core/" uri="https://github.com/iofoundry/ontology/raw/master/core/Core.rdf"/>
+    <uri id="Imports Wizard Entry" name="http://www.daml.org/2003/01/periodictable/PeriodicTable" uri="file:/C:/Users/hanke/Downloads/PeriodicTable.owl"/>
+    <uri id="Imports Wizard Entry" name="http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/MergedAllCoreOntology" uri="file:/C:/Users/hanke/Downloads/MergedAllCoreOntology-v1.3-2021-03-01.ttl"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1658385955079" name="https://purl.matolab.org/mseo/mid/" uri="MSEO_mid.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1679386039081" name="https://purl.matolab.org/mseo/mid" uri="MSEO_mid.owl"/>
     </group>
 </catalog>
