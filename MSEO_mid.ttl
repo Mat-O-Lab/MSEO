@@ -150,66 +150,66 @@ oa:Annotation rdf:type owl:Class ;
                       "Thermische Konditionierung"@de .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00039
-:BWMD_00039 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/SoftwareTool
+:SoftwareTool rdf:type owl:Class ;
             rdfs:subClassOf :Software ;
-            rdfs:label "SoftwareTool"@en .
+            rdfs:label "Software Tool"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00092
-:BWMD_00092 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/SimulationSoftware
+:SimulationSoftware rdf:type owl:Class ;
             rdfs:subClassOf :Software ;
-            rdfs:label "SimulationSoftware"@en .
+            rdfs:label "Simulation Software"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00110
-:BWMD_00110 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/MagneticFlux
+:MagneticFlux rdf:type owl:Class ;
             rdfs:subClassOf iof-core:ProcessCharacteristic ;
-            rdfs:label "MagneticFlux"@en .
+            rdfs:label "Magnetic Flux"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00166
-:BWMD_00166 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/MachineSoftware
+:MachineSoftware rdf:type owl:Class ;
             rdfs:subClassOf :Software ;
             rdfs:comment "Machine specific software, e.g. used to control the process or acquire data" ;
-            rdfs:label "MachineSoftware"@en .
+            rdfs:label "Machine Software"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00171
-:BWMD_00171 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/ControlSoftware
+:ControlSoftware rdf:type owl:Class ;
             rdfs:subClassOf :Software ;
             rdfs:label "Control Software"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00197
-:BWMD_00197 rdf:type owl:Class ;
-            rdfs:subClassOf :CADile ;
+###  https://purl.matolab.org/mseo/mid/STEPFile
+:STEPFile rdf:type owl:Class ;
+            rdfs:subClassOf :CADFile ;
             rdfs:label "STEPFile"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00209
-:BWMD_00209 rdf:type owl:Class ;
-            rdfs:subClassOf :BWMD_00092 ;
+###  https://purl.matolab.org/mseo/mid/PreprocessingSoftware
+:PreprocessingSoftware rdf:type owl:Class ;
+            rdfs:subClassOf :Software ;
             rdfs:comment "Software used for preprocessing" ;
-            rdfs:label "PreprocessingSoftware"@en .
+            rdfs:label "Preprocessing Software"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00248
-:BWMD_00248 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware
+:DataAcquisitionSoftware rdf:type owl:Class ;
             rdfs:subClassOf :Software ;
             rdfs:label "Data Acquisition Software"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00275
-:BWMD_00275 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/SoftwareScript
+:SoftwareScript rdf:type owl:Class ;
             rdfs:subClassOf :Software ;
-            rdfs:label "SoftwareScript"@en .
+            rdfs:label "Software Script"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/BWMD_00284
-:BWMD_00284 rdf:type owl:Class ;
+###  https://purl.matolab.org/mseo/mid/TestSetup
+:TestSetup rdf:type owl:Class ;
             rdfs:subClassOf :ProcessSetup ;
-            rdfs:label "TestSetup"@en .
+            rdfs:label "Test Setup"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BreakingStrength

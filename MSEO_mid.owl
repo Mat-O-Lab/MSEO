@@ -215,98 +215,6 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00039 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00039">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
-        <rdfs:label xml:lang="en">SoftwareTool</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00092 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00092">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
-        <rdfs:label xml:lang="en">SimulationSoftware</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00110 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00110">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
-        <rdfs:label xml:lang="en">MagneticFlux</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00166 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00166">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
-        <rdfs:comment>Machine specific software, e.g. used to control the process or acquire data</rdfs:comment>
-        <rdfs:label xml:lang="en">MachineSoftware</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00171 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00171">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
-        <rdfs:label xml:lang="en">Control Software</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00197 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00197">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CADile"/>
-        <rdfs:label xml:lang="en">STEPFile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00209 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00209">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/BWMD_00092"/>
-        <rdfs:comment>Software used for preprocessing</rdfs:comment>
-        <rdfs:label xml:lang="en">PreprocessingSoftware</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00248 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00248">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
-        <rdfs:label xml:lang="en">Data Acquisition Software</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00275 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00275">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
-        <rdfs:label xml:lang="en">SoftwareScript</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/BWMD_00284 -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BWMD_00284">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ProcessSetup"/>
-        <rdfs:label xml:lang="en">TestSetup</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/BreakingStrength -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/BreakingStrength">
@@ -341,6 +249,12 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
         <iof-av:naturalLanguageDefinition xml:lang="en">The bulk modulus ({\displaystyle K}K or {\displaystyle B}B) of a substance is a measure of how resistant to compression that substance is. It is defined as the ratio of the infinitesimal pressure increase to the resulting relative decrease of the volume. Other moduli describe the material&apos;s response (strain) to other kinds of stress: the shear modulus describes the response to shear stress, and Young&apos;s modulus describes the response to normal stress. For a fluid, only the bulk modulus is meaningful. For a complex anisotropic solid such as wood or paper, these three moduli do not contain enough information to describe its behaviour, and one must use the full generalized Hooke&apos;s law. The reciprocal of the bulk modulus at fixed temperature is called the isothermal compressibility.</iof-av:naturalLanguageDefinition>
         <iof-av:naturalLanguageDefinition_source xml:lang="en">https://en.wikipedia.org/wiki/Bulk_modulus</iof-av:naturalLanguageDefinition_source>
     </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/CADFile -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/CADFile"/>
     
 
 
@@ -407,6 +321,15 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     
 
 
+    <!-- https://purl.matolab.org/mseo/mid/ControlSoftware -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ControlSoftware">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:label xml:lang="en">Control Software</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.matolab.org/mseo/mid/CrossSection -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/CrossSection">
@@ -423,6 +346,15 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DOCXFile">
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DocumentFile"/>
         <rdfs:label xml:lang="en">DOCXFile</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:label xml:lang="en">Data Acquisition Software</rdfs:label>
     </owl:Class>
     
 
@@ -801,6 +733,25 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     
 
 
+    <!-- https://purl.matolab.org/mseo/mid/MachineSoftware -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MachineSoftware">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:comment>Machine specific software, e.g. used to control the process or acquire data</rdfs:comment>
+        <rdfs:label xml:lang="en">Machine Software</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/MagneticFlux -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MagneticFlux">
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/ProcessCharacteristic"/>
+        <rdfs:label xml:lang="en">Magnetic Flux</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.matolab.org/mseo/mid/MaterialComposition -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MaterialComposition">
@@ -1069,6 +1020,16 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     
 
 
+    <!-- https://purl.matolab.org/mseo/mid/PreprocessingSoftware -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PreprocessingSoftware">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:comment>Software used for preprocessing</rdfs:comment>
+        <rdfs:label xml:lang="en">Preprocessing Software</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.matolab.org/mseo/mid/PressureMeasurementArtifactFunction -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PressureMeasurementArtifactFunction">
@@ -1202,6 +1163,15 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     
 
 
+    <!-- https://purl.matolab.org/mseo/mid/STEPFile -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/STEPFile">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CADFile"/>
+        <rdfs:label xml:lang="en">STEPFile</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.matolab.org/mseo/mid/ShearModulus -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ShearModulus">
@@ -1234,6 +1204,15 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     
 
 
+    <!-- https://purl.matolab.org/mseo/mid/SimulationSoftware -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/SimulationSoftware">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:label xml:lang="en">Simulation Software</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://purl.matolab.org/mseo/mid/SimulationStep -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/SimulationStep">
@@ -1257,6 +1236,24 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/SoftwareArchitecture">
         <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
         <rdfs:label xml:lang="en">Software Architecture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/SoftwareScript -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/SoftwareScript">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:label xml:lang="en">Software Script</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/SoftwareTool -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/SoftwareTool">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Software"/>
+        <rdfs:label xml:lang="en">Software Tool</rdfs:label>
     </owl:Class>
     
 
@@ -1345,6 +1342,15 @@ The complementary concept is flexibility or pliability: the more flexible an obj
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart">
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/MaterialStructure"/>
         <rdfs:label xml:lang="en">Technological Product Related Fiat Object Part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.matolab.org/mseo/mid/TestSetup -->
+
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/TestSetup">
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ProcessSetup"/>
+        <rdfs:label xml:lang="en">Test Setup</rdfs:label>
     </owl:Class>
     
 
