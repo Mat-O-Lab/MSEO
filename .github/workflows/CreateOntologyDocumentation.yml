@@ -38,7 +38,9 @@ jobs:
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
       - name: Install pyLODE
-        run: pip install pylode
+        run: |
+          pip install pylode
+          pip show pylode
       - name: Run pyLODE
         run: |
           mkdir -p _site 
