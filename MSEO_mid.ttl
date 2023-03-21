@@ -16,6 +16,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@base <https://purl.matolab.org/mseo/mid> .
 
 
 <https://purl.matolab.org/mseo/mid> rdf:type owl:Ontology ;
