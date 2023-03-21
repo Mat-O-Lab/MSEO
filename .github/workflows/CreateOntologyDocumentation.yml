@@ -41,11 +41,10 @@ jobs:
         run: |
           pip install pylode
           pip show pylode
-          ls /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/
       - name: Run pyLODE
         run: |
           mkdir -p _site 
-          python /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/pylode/cli.py MSEO_mid.owl -o ./_site/index.html
+          python /opt/hostedtoolcache/Python/3.9.16/x64/lib/python3.9/site-packages/pylode/cli.py MSEO_mid.ttl -o ./_site/index.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
