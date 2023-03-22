@@ -19,8 +19,8 @@
 @base <https://purl.matolab.org/mseo/mid> .
 
 <https://purl.matolab.org/mseo/mid> rdf:type owl:Ontology ;
-                                     owl:imports <https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/> ,
-                                                 iof-core: ;
+                                     owl:imports <https://github.com/iofoundry/ontology/raw/master/core/meta/AnnotationVocabulary.rdf> ,
+                                                 <https://github.com/iofoundry/ontology/raw/master/core/Core.rdf> ;
                                      dc:contributor "Thomas Hanke (Fraunhofer IMWS)"@en ,
                                                     "Philipp von Hartrott (Fraunhofer IWM)"@en ;
                                      owl:priorVersion "BWMD_mid"@de ;

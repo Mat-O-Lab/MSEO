@@ -19,8 +19,8 @@
      xmlns:csvw="http://www.w3.org/ns/csvw#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="https://purl.matolab.org/mseo/mid">
-        <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/202301/core/meta/AnnotationVocabulary/"/>
-        <owl:imports rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/"/>
+        <owl:imports rdf:resource="https://github.com/iofoundry/ontology/raw/master/core/meta/AnnotationVocabulary.rdf"/>
+        <owl:imports rdf:resource="https://github.com/iofoundry/ontology/raw/master/core/Core.rdf"/>
         <dc:contributor xml:lang="en">Thomas Hanke (Fraunhofer IMWS)</dc:contributor>
         <dc:contributor xml:lang="en">Philipp von Hartrott (Fraunhofer IWM)</dc:contributor>
         <owl:priorVersion xml:lang="de">BWMD_mid</owl:priorVersion>
