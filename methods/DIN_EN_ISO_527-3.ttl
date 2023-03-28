@@ -1,0 +1,284 @@
+@prefix : <https://github.com/Mat-O-Lab/MSEO/raw/main/methods/DIN_EN_ISO_527-3.drawio.ttl/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix iof: <https://spec.industrialontologies.org/ontology/core/Core/> .
+@prefix iofav: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
+@prefix mseo: <https://purl.matolab.org/mseo/mid/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000056 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000056" .
+
+obo:BFO_0000063 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000063" .
+
+obo:BFO_0000110 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000110" .
+
+obo:BFO_0000117 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000117" ;
+    rdfs:range iof:MeasurementProcess .
+
+obo:BFO_0000166 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000166" ;
+    rdfs:domain iof:MeasurementProcess .
+
+obo:BFO_0000176 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000176" .
+
+obo:BFO_0000199 a owl:ObjectProperty ;
+    rdfs:label "b f o_0000199" ;
+    rdfs:domain iof:MeasurementProcess .
+
+: a owl:Ontology ;
+    dc:creator "Thomas Hanke" ;
+    dc:description "Ontology code created by Chowlk" ;
+    dc:title "DIN EN ISO 527-3 Graph" ;
+    owl:versionInfo "0.0.1" .
+
+:ExperimentTimeInterval a obo:BFO_0000008,
+        owl:NamedIndividual .
+
+:Operator a owl:NamedIndividual,
+        iof:Agent ;
+    iof:designatedBy :OperatorID .
+
+:PreLoadSetPoint a owl:DatatypeProperty ;
+    rdfs:label "pre load set point" ;
+    rdfs:domain iof:ObjectiveSpecification .
+
+:Project a owl:NamedIndividual,
+        iof:PlannedProcess ;
+    iof:designatedBy :ProjectID .
+
+:Specimen a owl:NamedIndividual,
+        mseo:Specimen ;
+    iof:designatedBy :SpecimenID ;
+    iof:hasQuality :SpecimenLength,
+        :SpecimenStress,
+        :SpecimenWidth ;
+    iof:isInputOf :PolymerTensileTest .
+
+:Standard a owl:NamedIndividual,
+        mseo:Regulation ;
+    iofav:directSource "https://www.beuth.de/de/norm/din-en-iso-527-3/298745448"^^xsd:anyURI .
+
+:TestPlan a owl:NamedIndividual,
+        iof:PlanSpecification ;
+    obo:BFO_0000110 :CrossheadAccelerationSetPoint,
+        :CrossheadSpeedSetPoint ;
+    iof:designatedBy :TestPlanName .
+
+mseo:in_accordance_with a owl:ObjectProperty ;
+    rdfs:label "in_accordance_with" ;
+    rdfs:domain iof:MeasurementProcess .
+
+iof:MeasurementCapaility a owl:Class ;
+    rdfs:label "Measurement Capaility" .
+
+iof:designatedBy a owl:ObjectProperty ;
+    rdfs:label "designated by" .
+
+iof:hasCapability a owl:ObjectProperty ;
+    rdfs:label "has capability" .
+
+iof:hasMeasuredValueAtSomeTime a owl:ObjectProperty ;
+    rdfs:label "has measured value at some time" .
+
+iof:hasProcessCharacteristic a owl:ObjectProperty ;
+    rdfs:label "has process characteristic" .
+
+iof:hasQuality a owl:ObjectProperty ;
+    rdfs:label "has quality" .
+
+iof:hasSpecifiedOutput a owl:ObjectProperty ;
+    rdfs:label "has specified output" .
+
+iof:isInputOf a owl:ObjectProperty ;
+    rdfs:label "is input of" .
+
+iof:measuredByAtSomeTime a owl:ObjectProperty ;
+    rdfs:label "measured by at some time" .
+
+iof:prescribedBy a owl:ObjectProperty ;
+    rdfs:label "prescribed by" ;
+    rdfs:domain iof:MeasurementProcess .
+
+iof:prescribes a owl:ObjectProperty ;
+    rdfs:label "prescribes" ;
+    rdfs:domain iof:ObjectiveSpecification .
+
+obo:BFO_0000008 a owl:Class ;
+    rdfs:label "B F O_0000008" .
+
+:ApplyPreLoad a owl:NamedIndividual,
+        iof:ProcessCharacteristic ;
+    obo:BFO_0000063 :CrosheadMovement .
+
+:CaliperID a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:CrossheadAccelerationSetPoint a owl:NamedIndividual,
+        iof:ObjectiveSpecification ;
+    iof:hasValueExpressionAtSomeTime :CrossheadAccelerationSetPointValue ;
+    iof:prescribes :CrosheadMovement .
+
+:CrossheadAccelerationSetPointValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+:CrossheadSpeedSetPoint a owl:NamedIndividual,
+        iof:ObjectiveSpecification ;
+    iof:hasValueExpressionAtSomeTime :CrossheadSpeedSetPointValue ;
+    iof:prescribes :CrosheadMovement .
+
+:CrossheadSpeedSetPointValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+:ForceMeasurement a owl:NamedIndividual,
+        iof:ValueExpression ;
+    obo:BFO_0000176 :Measurements ;
+    iof:measuredByAtSomeTime :LoadCell .
+
+:ForceMeasurementCapability a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:LengthMeasurement a owl:NamedIndividual,
+        iof:ValueExpression ;
+    obo:BFO_0000176 :Measurements ;
+    iof:measuredByAtSomeTime :Traverse .
+
+:LoadCellID a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:OperatorID a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:PolymerTensileTest a owl:NamedIndividual,
+        iof:MeasurementProcess ;
+    obo:BFO_0000056 :Caliper,
+        :UniversalTestingMachine ;
+    iof:hasProcessCharacteristic :ApplyPreLoad,
+        :CrosheadMovement ;
+    iof:hasSpecifiedOutput :Measurements .
+
+:PreLoadSetPointValue a owl:NamedIndividual,
+        iof:ValueExpression .
+
+:ProjectID a owl:NamedIndividual,
+        iof:Identifier .
+
+:SpecimenID a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:SpecimenLength a obo:BFO_0000019,
+        owl:NamedIndividual ;
+    iof:hasMeasuredValueAtSomeTime :ThicknessMeasurement .
+
+:SpecimenStress a obo:BFO_0000019,
+        owl:NamedIndividual .
+
+:SpecimenWidth a obo:BFO_0000019,
+        owl:NamedIndividual ;
+    iof:hasMeasuredValueAtSomeTime :LengthMeasurement,
+        :WidthMeasurement .
+
+:TestPlanName a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:ThicknessMeasurement a owl:NamedIndividual,
+        iof:ValueExpression ;
+    obo:BFO_0000176 :Measurements ;
+    iof:measuredByAtSomeTime :Caliper .
+
+:TraverseID a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:UniversalTestingMachine a owl:NamedIndividual,
+        iof:PieceOfEquipment ;
+    obo:BFO_0000056 :LoadCell,
+        :Traverse .
+
+:WidthMeasurement a owl:NamedIndividual,
+        iof:ValueExpression ;
+    obo:BFO_0000176 :Measurements ;
+    iof:measuredByAtSomeTime :Caliper .
+
+mseo:Regulation a owl:Class ;
+    rdfs:label "Regulation" .
+
+mseo:Specimen a owl:Class ;
+    rdfs:label "Specimen" .
+
+iof:Agent a owl:Class ;
+    rdfs:label "Agent" .
+
+iof:Identifier a owl:Class ;
+    rdfs:label "Identifier" .
+
+iof:MeasurementInformationContentEntity a owl:Class ;
+    rdfs:label "Measurement Information Content Entity" .
+
+iof:PieceOfEquipment a owl:Class ;
+    rdfs:label "Piece Of Equipment" .
+
+iof:PlanSpecification a owl:Class ;
+    rdfs:label "Plan Specification" .
+
+iof:PlannedProcess a owl:Class ;
+    rdfs:label "Planned Process" .
+
+iof:hasValueExpressionAtSomeTime a owl:ObjectProperty ;
+    rdfs:label "has value expression at some time" ;
+    rdfs:domain iof:ObjectiveSpecification .
+
+:DistanceMeasurementCapability a owl:NamedIndividual,
+        iof:DesignativeInformationContentEntity .
+
+:LoadCell a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    iof:designatedBy :LoadCellID ;
+    iof:hasCapability :ForceMeasurementCapability .
+
+:Traverse a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    iof:designatedBy :TraverseID ;
+    iof:hasCapability :DistanceMeasurementCapability .
+
+iof:ProcessCharacteristic a owl:Class ;
+    rdfs:label "Process Characteristic" .
+
+obo:BFO_0000019 a owl:Class ;
+    rdfs:label "B F O_0000019" .
+
+:Caliper a owl:NamedIndividual,
+        mseo:MeasurementDevice ;
+    iof:designatedBy :CaliperID ;
+    iof:hasCapability :DistanceMeasurementCapability .
+
+mseo:MeasurementDevice a owl:Class ;
+    rdfs:label "Measurement Device" .
+
+:CrosheadMovement a owl:NamedIndividual,
+        iof:ProcessCharacteristic ;
+    iof:hasMeasuredValueAtSomeTime :ForceMeasurement .
+
+:Measurements a owl:NamedIndividual,
+        iof:MeasurementInformationContentEntity .
+
+iof:ObjectiveSpecification a owl:Class ;
+    rdfs:label "Objective Specification" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:hasValue :PreLoadSetPointValue ;
+            owl:onProperty iof:hasValueExpressionAtSomeTime ] .
+
+iof:MeasurementProcess a owl:Class ;
+    rdfs:label "Measurement Process" .
+
+iof:ValueExpression a owl:Class ;
+    rdfs:label "Value Expression" .
+
+iof:DesignativeInformationContentEntity a owl:Class ;
+    rdfs:label "Designative Information Content Entity" .
+
