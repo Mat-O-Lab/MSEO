@@ -149,24 +149,6 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     
 
 
-    <!-- http://www.w3.org/ns/csvw#Column -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/csvw#Column">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CSVFile"/>
-        <rdfs:label xml:lang="en">CSVColumn</rdfs:label>
-        <iof-av:naturalLanguageDefinition xml:lang="en">An Column as Defined by the W3C Vocabulary for CSV Files on the web. Typically, inhers in the tableSchema class and carries information about the name, the position and the unit for values in that table.</iof-av:naturalLanguageDefinition>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/oa#Annotation -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/oa#Annotation">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CSVFile"/>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/ActOfAnalysing -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ActOfAnalysing">
@@ -191,16 +173,6 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ActOfSummarising">
         <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlannedProcess"/>
         <rdfs:label xml:lang="en">Act of Summarising</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/AnalysedDataSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/AnalysedDataSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ProcessDataSet"/>
-        <rdfs:comment>Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file.</rdfs:comment>
-        <rdfs:label xml:lang="en">Analysed Data Set</rdfs:label>
     </owl:Class>
     
 
@@ -248,38 +220,6 @@ christoph.schweizer@iwm.fraunhofer.de</rdfs:comment>
         <rdfs:label xml:lang="de">Kompressionsmodul</rdfs:label>
         <iof-av:naturalLanguageDefinition xml:lang="en">The bulk modulus ({\displaystyle K}K or {\displaystyle B}B) of a substance is a measure of how resistant to compression that substance is. It is defined as the ratio of the infinitesimal pressure increase to the resulting relative decrease of the volume. Other moduli describe the material&apos;s response (strain) to other kinds of stress: the shear modulus describes the response to shear stress, and Young&apos;s modulus describes the response to normal stress. For a fluid, only the bulk modulus is meaningful. For a complex anisotropic solid such as wood or paper, these three moduli do not contain enough information to describe its behaviour, and one must use the full generalized Hooke&apos;s law. The reciprocal of the bulk modulus at fixed temperature is called the isothermal compressibility.</iof-av:naturalLanguageDefinition>
         <iof-av:naturalLanguageDefinition_source xml:lang="en">https://en.wikipedia.org/wiki/Bulk_modulus</iof-av:naturalLanguageDefinition_source>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/CADFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/CADFile"/>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/CADile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/CADile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:label xml:lang="en">CADFile</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/CSVFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/CSVFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:label xml:lang="en">CSVFile</rdfs:label>
-        <iof-av:naturalLanguageDefinition xml:lang="en">A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.
-
-The CSV file format is not fully standardized. Separating fields with commas is the foundation, but commas in the data or embedded line breaks have to be handled specially. Some implementations disallow such content while others surround the field with quotation marks, which yet again creates the need for escaping if quotation marks are present in the data.
-
-The term &quot;CSV&quot; also denotes several closely-related delimiter-separated formats that use other field delimiters such as semicolons.[2] These include tab-separated values and space-separated values. A delimiter guaranteed not to be part of the data greatly simplifies parsing.
-
-Alternative delimiter-separated files are often given a &quot;.csv&quot; extension despite the use of a non-comma field separator. This loose terminology can cause problems in data exchange. Many applications that accept CSV files have options to select the delimiter character and the quotation character. Semicolons are often used instead of commas in many European locales in order to use the comma as the decimal separator and, possibly, the period as a decimal grouping character.</iof-av:naturalLanguageDefinition>
-        <iof-av:naturalLanguageDefinition_source xml:lang="en">https://en.wikipedia.org/wiki/Comma-separated_values</iof-av:naturalLanguageDefinition_source>
     </owl:Class>
     
 
@@ -341,15 +281,6 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/DOCXFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DOCXFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DocumentFile"/>
-        <rdfs:label xml:lang="en">DOCXFile</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware">
@@ -384,18 +315,6 @@ Alternative delimiter-separated files are often given a &quot;.csv&quot; extensi
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DataReduction">
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DataTransformation"/>
         <rdfs:label xml:lang="en">DataReduction</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/DataSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DataSet">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
-        <obo:IAO_0000116>this should not be collections of information bearer, they are collections of other ICEs</obo:IAO_0000116>
-        <rdfs:comment>Any kind of data set</rdfs:comment>
-        <rdfs:label xml:lang="en">Data Set</rdfs:label>
-        <iof-av:naturalLanguageDefinition>A collection of Information Content Entitys with the purpose to gather them in a particular context.</iof-av:naturalLanguageDefinition>
     </owl:Class>
     
 
@@ -438,15 +357,6 @@ In the figure it can be seen that the compressive loading (indicated by the arro
 The strain rate at some point within the material measures the rate at which the distances of adjacent parcels of the material change with time in the neighborhood of that point. It comprises both the rate at which the material is expanding or shrinking (expansion rate), and also the rate at which it is being deformed by progressive shearing without changing its volume (shear rate). It is zero if these distances do not change, as happens when all particles in some region are moving with the same velocity (same speed and direction) and/or rotating with the same angular velocity, as if that part of the medium were a rigid body.
 The strain rate is a concept of materials science and continuum mechanics, that plays an essential role in the physics of fluids and deformable solids. In an isotropic Newtonian fluid, in particular, the viscous stress is a linear function of the rate of strain, defined by two coefficients, one relating to the expansion rate (the bulk viscosity coefficient) and one relating to the shear rate (the &quot;ordinary&quot; viscosity coefficient). In solids, higher strain rates can often cause normally ductile materials to fail in a brittle manner.</iof-av:naturalLanguageDefinition>
         <iof-av:naturalLanguageDefinition_source xml:lang="en">https://en.wikipedia.org/wiki/Strain_rate</iof-av:naturalLanguageDefinition_source>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/DocumentFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/DocumentFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:label xml:lang="en">DocumentFile</rdfs:label>
     </owl:Class>
     
 
@@ -552,24 +462,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/Equipment -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Equipment">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
-        <rdfs:label xml:lang="en">Equipment</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/EquipmentSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/EquipmentSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ObjectSet"/>
-        <rdfs:label xml:lang="en">Equipment Set</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/Experiment -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Experiment">
@@ -590,18 +482,9 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/File -->
+    <!-- https://purl.matolab.org/mseo/mid/ForceMeasurementCapability -->
 
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/File">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/InformationContentEntity"/>
-        <rdfs:label xml:lang="en">File</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction">
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ForceMeasurementCapability">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
         <rdfs:label xml:lang="en">Force Measurement Artifact Function</rdfs:label>
         <iof-av:naturalLanguageDefinition xml:lang="en">A Measurement Artifact Function that is realized during events in which an Artifact is used to measure the Force applied on a specified object or class of objects.</iof-av:naturalLanguageDefinition>
@@ -634,41 +517,11 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/ImageMetadataSet -->
+    <!-- https://purl.matolab.org/mseo/mid/IndentingArtifactFunction -->
 
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ImageMetadataSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DataSet"/>
-        <rdfs:comment>Metadata set included in images. E.g. microscopes write the process specific metadata into the image file.</rdfs:comment>
-        <rdfs:label xml:lang="en">Image Metadata Set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ImageSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ImageSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DataSet"/>
-        <rdfs:comment>A set of images</rdfs:comment>
-        <rdfs:label xml:lang="en">ImageSet</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ImageStack -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ImageStack">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ImageSet"/>
-        <rdfs:comment>A series of images, that form a vertical stack (e.g. a series of images generated by tomography).</rdfs:comment>
-        <rdfs:label xml:lang="en">Image Stack</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/IndentingArtfactFunction -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/IndentingArtfactFunction">
+    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/IndentingArtifactFunction">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000034"/>
-        <rdfs:label>Indenting Artfact Function</rdfs:label>
+        <rdfs:label xml:lang="en">Indenting Artifact Function</rdfs:label>
     </owl:Class>
     
 
@@ -678,25 +531,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/IndustryProject">
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Project"/>
         <rdfs:label xml:lang="en">Industry Project</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/InfrastructureEquipmentSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/InfrastructureEquipmentSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/EquipmentSet"/>
-        <rdfs:label xml:lang="en">Infrastructure Equipment Set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/InputFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/InputFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:comment>An input file is a file with no specific file ending, that is used as input for a simulation</rdfs:comment>
-        <rdfs:label xml:lang="en">InputFile</rdfs:label>
     </owl:Class>
     
 
@@ -758,16 +592,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
         <rdfs:label xml:lang="en">Material Composition</rdfs:label>
         <iof-av:naturalLanguageDefinition xml:lang="en">Any kind of quantity, that describes the composition of materials.</iof-av:naturalLanguageDefinition>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/MaterialDataSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MaterialDataSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DataSet"/>
-        <rdfs:comment>A data set containing material specific data</rdfs:comment>
-        <rdfs:label xml:lang="en">Material Data Set</rdfs:label>
     </owl:Class>
     
 
@@ -835,15 +659,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/MaterialStructureRelatedObject -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MaterialStructureRelatedObject">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
-        <rdfs:label xml:lang="en">MaterialStructureRelatedObject</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/MatterObject -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MatterObject">
@@ -856,7 +671,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     <!-- https://purl.matolab.org/mseo/mid/MeasurementDevice -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/MeasurementDevice">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/MaterialArtifact"/>
+        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PieceOfEquipment"/>
         <rdfs:label>Measurement Device</rdfs:label>
         <iof-av:naturalLanguageDefinition xml:lang="en">A Artifact inhering a Measurement Artifact Function</iof-av:naturalLanguageDefinition>
     </owl:Class>
@@ -925,39 +740,11 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/ObjectSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ObjectSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DataSet"/>
-        <rdfs:label xml:lang="en">ObjectSet</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/PDFFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PDFFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DocumentFile"/>
-        <rdfs:label xml:lang="en">PDFFile</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/PhysicsModel -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PhysicsModel">
         <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/Algorithm"/>
         <rdfs:label xml:lang="en">Physics Model</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/PlanarImageSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PlanarImageSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ImageSet"/>
-        <rdfs:comment>A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)</rdfs:comment>
-        <rdfs:label xml:lang="en">Planar Image Set</rdfs:label>
     </owl:Class>
     
 
@@ -1033,7 +820,7 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     <!-- https://purl.matolab.org/mseo/mid/PressureMeasurementArtifactFunction -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/PressureMeasurementArtifactFunction">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction"/>
+        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ForceMeasurementCapability"/>
     </owl:Class>
     
 
@@ -1043,46 +830,6 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Procedure">
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/Regulation"/>
         <rdfs:label xml:lang="en">Procedure</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ProcessDataSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ProcessDataSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DataSet"/>
-        <rdfs:comment>Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)</rdfs:comment>
-        <rdfs:label xml:lang="en">Process Data Set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ProcessParameterSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ProcessParameterSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ProcessDataSet"/>
-        <rdfs:comment>A set of parameters, that is used to control a process. Those are usually quantities of type &quot;as supposed&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="en">Process Parameter Set</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ProcessProfilSpecification -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ProcessProfilSpecification">
-        <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/DirectiveInformationContentEntity"/>
-        <rdfs:label xml:lang="en">Process Profil Specification</rdfs:label>
-        <skos:exampe xml:lang="en">The set point of the speed of a motor; The intended heat rate to increase the temperature</skos:exampe>
-        <iof-av:naturalLanguageDefinition xml:lang="en">A Specification which describes the Target for a Profil of a Process.</iof-av:naturalLanguageDefinition>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ProcessSetup -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ProcessSetup">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ObjectSet"/>
-        <rdfs:label xml:lang="en">Process Setup</rdfs:label>
     </owl:Class>
     
 
@@ -1117,25 +864,6 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/Publication -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Publication">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DocumentFile"/>
-        <rdfs:label xml:lang="en">Publication</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/RawDataSet -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/RawDataSet">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ProcessDataSet"/>
-        <rdfs:comment>Any kind of raw data set. Raw data refers to the original data set.</rdfs:comment>
-        <rdfs:label xml:lang="en">Raw Data Set</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/RegionOfInterest -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/RegionOfInterest">
@@ -1150,24 +878,6 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Regulation">
         <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification"/>
         <rdfs:label xml:lang="en">Regulation</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/Report -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/Report">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/DocumentFile"/>
-        <rdfs:label xml:lang="en">Report</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/STEPFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/STEPFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/CADFile"/>
-        <rdfs:label xml:lang="en">STEPFile</rdfs:label>
     </owl:Class>
     
 
@@ -1328,29 +1038,11 @@ The complementary concept is flexibility or pliability: the more flexible an obj
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/TXTFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/TXTFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:label xml:lang="en">TXTFile</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart">
         <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/MaterialStructure"/>
         <rdfs:label xml:lang="en">Technological Product Related Fiat Object Part</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/TestSetup -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/TestSetup">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/ProcessSetup"/>
-        <rdfs:label xml:lang="en">Test Setup</rdfs:label>
     </owl:Class>
     
 
@@ -1444,31 +1136,12 @@ Tensile strengths are rarely of any consequence in the design of ductile members
     
 
 
-    <!-- https://purl.matolab.org/mseo/mid/WMVFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/WMVFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:comment>Windows Media-Audio/-Video file</rdfs:comment>
-        <rdfs:label xml:lang="en">WMVFile</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- https://purl.matolab.org/mseo/mid/WithdrawalPlan -->
 
     <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/WithdrawalPlan">
         <rdfs:subClassOf rdf:resource="https://spec.industrialontologies.org/ontology/core/Core/PlanSpecification"/>
         <rdfs:comment>A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)</rdfs:comment>
         <rdfs:label xml:lang="en">Withdrawal Plan</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/XLSFFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/XLSFFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:label xml:lang="en">XLSFile</rdfs:label>
     </owl:Class>
     
 
@@ -1484,16 +1157,6 @@ Tensile strengths are rarely of any consequence in the design of ductile members
         <iof-av:naturalLanguageDefinition xml:lang="en">In materials science and engineering, the yield point is the point on a stress-strain curve that indicates the limit of elastic behavior and the beginning of plastic behavior. Below the yield point, a material will deform elastically and will return to its original shape when the applied stress is removed. Once the yield point is passed, some fraction of the deformation will be permanent and non-reversible and is known as plastic deformation.
 
 The yield strength or yield stress is a material property and is the stress corresponding to the yield point at which the material begins to deform plastically. The yield strength is often used to determine the maximum allowable load in a mechanical component, since it represents the upper limit to forces that can be applied without producing permanent deformation. In some materials, such as aluminium, there is a gradual onset of non-linear behavior, making the precise yield point difficult to determine. In such a case, the offset yield point (or proof stress) is taken as the stress at which 0.2% plastic deformation occurs. Yielding is a gradual failure mode which is normally not catastrophic, unlike ultimate failure.</iof-av:naturalLanguageDefinition>
-    </owl:Class>
-    
-
-
-    <!-- https://purl.matolab.org/mseo/mid/ZipFile -->
-
-    <owl:Class rdf:about="https://purl.matolab.org/mseo/mid/ZipFile">
-        <rdfs:subClassOf rdf:resource="https://purl.matolab.org/mseo/mid/File"/>
-        <rdfs:comment>Any kind of ZIP-File</rdfs:comment>
-        <rdfs:label xml:lang="en">ZIPFile</rdfs:label>
     </owl:Class>
     
 

@@ -105,18 +105,6 @@ obo:CHEBI_24431 rdf:type owl:Class ;
                 iof-av:naturalLanguageDefinition "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances."@en .
 
 
-###  http://www.w3.org/ns/csvw#Column
-csvw:Column rdf:type owl:Class ;
-            rdfs:subClassOf :CSVFile ;
-            rdfs:label "CSVColumn"@en ;
-            iof-av:naturalLanguageDefinition "An Column as Defined by the W3C Vocabulary for CSV Files on the web. Typically, inhers in the tableSchema class and carries information about the name, the position and the unit for values in that table."@en .
-
-
-###  http://www.w3.org/ns/oa#Annotation
-oa:Annotation rdf:type owl:Class ;
-              rdfs:subClassOf :CSVFile .
-
-
 ###  https://purl.matolab.org/mseo/mid/ActOfAnalysing
 :ActOfAnalysing rdf:type owl:Class ;
                 rdfs:subClassOf iof-core:PlannedProcess ;
@@ -136,80 +124,11 @@ oa:Annotation rdf:type owl:Class ;
                   rdfs:label "Act of Summarising"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/AnalysedDataSet
-:AnalysedDataSet rdf:type owl:Class ;
-                 rdfs:subClassOf :ProcessDataSet ;
-                 rdfs:comment "Any kind of analysed data set. This usually means, that it is the result of some kind of postprocessing/analysis process of a raw data file." ;
-                 rdfs:label "Analysed Data Set"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/Annealing
 :Annealing rdf:type owl:Class ;
            rdfs:subClassOf iof-core:ManufacturingProcess ;
            rdfs:label "Annealing"@en ,
                       "Thermische Konditionierung"@de .
-
-
-###  https://purl.matolab.org/mseo/mid/SoftwareTool
-:SoftwareTool rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:label "Software Tool"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/SimulationSoftware
-:SimulationSoftware rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:label "Simulation Software"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/MagneticFlux
-:MagneticFlux rdf:type owl:Class ;
-            rdfs:subClassOf iof-core:ProcessCharacteristic ;
-            rdfs:label "Magnetic Flux"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/MachineSoftware
-:MachineSoftware rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:comment "Machine specific software, e.g. used to control the process or acquire data" ;
-            rdfs:label "Machine Software"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ControlSoftware
-:ControlSoftware rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:label "Control Software"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/STEPFile
-:STEPFile rdf:type owl:Class ;
-            rdfs:subClassOf :CADFile ;
-            rdfs:label "STEPFile"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/PreprocessingSoftware
-:PreprocessingSoftware rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:comment "Software used for preprocessing" ;
-            rdfs:label "Preprocessing Software"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware
-:DataAcquisitionSoftware rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:label "Data Acquisition Software"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/SoftwareScript
-:SoftwareScript rdf:type owl:Class ;
-            rdfs:subClassOf :Software ;
-            rdfs:label "Software Script"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/TestSetup
-:TestSetup rdf:type owl:Class ;
-            rdfs:subClassOf :ProcessSetup ;
-            rdfs:label "Test Setup"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/BreakingStrength
@@ -240,26 +159,6 @@ oa:Annotation rdf:type owl:Class ;
              iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Bulk_modulus"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/CADile
-:CADile rdf:type owl:Class ;
-        rdfs:subClassOf :File ;
-        rdfs:label "CADFile"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/CSVFile
-:CSVFile rdf:type owl:Class ;
-         rdfs:subClassOf :File ;
-         rdfs:label "CSVFile"@en ;
-         iof-av:naturalLanguageDefinition """A comma-separated values (CSV) file is a delimited text file that uses a comma to separate values. Each line of the file is a data record. Each record consists of one or more fields, separated by commas. The use of the comma as a field separator is the source of the name for this file format. A CSV file typically stores tabular data (numbers and text) in plain text, in which case each line will have the same number of fields.
-
-The CSV file format is not fully standardized. Separating fields with commas is the foundation, but commas in the data or embedded line breaks have to be handled specially. Some implementations disallow such content while others surround the field with quotation marks, which yet again creates the need for escaping if quotation marks are present in the data.
-
-The term \"CSV\" also denotes several closely-related delimiter-separated formats that use other field delimiters such as semicolons.[2] These include tab-separated values and space-separated values. A delimiter guaranteed not to be part of the data greatly simplifies parsing.
-
-Alternative delimiter-separated files are often given a \".csv\" extension despite the use of a non-comma field separator. This loose terminology can cause problems in data exchange. Many applications that accept CSV files have options to select the delimiter character and the quotation character. Semicolons are often used instead of commas in many European locales in order to use the comma as the decimal separator and, possibly, the period as a decimal grouping character."""@en ;
-         iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Comma-separated_values"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/ChemicalElementFraction
 :ChemicalElementFraction rdf:type owl:Class ;
                          rdfs:subClassOf iof-core:ValueExpression ;
@@ -285,6 +184,12 @@ Alternative delimiter-separated files are often given a \".csv\" extension despi
             rdfs:label "Consumable"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/ControlSoftware
+:ControlSoftware rdf:type owl:Class ;
+                 rdfs:subClassOf :Software ;
+                 rdfs:label "Control Software"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/CrossSection
 :CrossSection rdf:type owl:Class ;
               rdfs:subClassOf obo:BFO_0000009 ;
@@ -293,10 +198,10 @@ Alternative delimiter-separated files are often given a \".csv\" extension despi
               iof-av:naturalLanguageDefinition_source "https://languages.oup.com/google-dictionary-en/"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/DOCXFile
-:DOCXFile rdf:type owl:Class ;
-          rdfs:subClassOf :DocumentFile ;
-          rdfs:label "DOCXFile"@en .
+###  https://purl.matolab.org/mseo/mid/DataAcquisitionSoftware
+:DataAcquisitionSoftware rdf:type owl:Class ;
+                         rdfs:subClassOf :Software ;
+                         rdfs:label "Data Acquisition Software"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataEvaluation
@@ -317,15 +222,6 @@ Alternative delimiter-separated files are often given a \".csv\" extension despi
 :DataReduction rdf:type owl:Class ;
                rdfs:subClassOf :DataTransformation ;
                rdfs:label "DataReduction"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/DataSet
-:DataSet rdf:type owl:Class ;
-         rdfs:subClassOf iof-core:InformationContentEntity ;
-         obo:IAO_0000116 "this should not be collections of information bearer, they are collections of other ICEs" ;
-         rdfs:comment "Any kind of data set" ;
-         rdfs:label "Data Set"@en ;
-         iof-av:naturalLanguageDefinition "A collection of Information Content Entitys with the purpose to gather them in a particular context." .
 
 
 ###  https://purl.matolab.org/mseo/mid/DataTransformation
@@ -359,12 +255,6 @@ In the figure it can be seen that the compressive loading (indicated by the arro
 The strain rate at some point within the material measures the rate at which the distances of adjacent parcels of the material change with time in the neighborhood of that point. It comprises both the rate at which the material is expanding or shrinking (expansion rate), and also the rate at which it is being deformed by progressive shearing without changing its volume (shear rate). It is zero if these distances do not change, as happens when all particles in some region are moving with the same velocity (same speed and direction) and/or rotating with the same angular velocity, as if that part of the medium were a rigid body.
 The strain rate is a concept of materials science and continuum mechanics, that plays an essential role in the physics of fluids and deformable solids. In an isotropic Newtonian fluid, in particular, the viscous stress is a linear function of the rate of strain, defined by two coefficients, one relating to the expansion rate (the bulk viscosity coefficient) and one relating to the shear rate (the \"ordinary\" viscosity coefficient). In solids, higher strain rates can often cause normally ductile materials to fail in a brittle manner."""@en ;
                   iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Strain_rate"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/DocumentFile
-:DocumentFile rdf:type owl:Class ;
-              rdfs:subClassOf :File ;
-              rdfs:label "DocumentFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElasticModulus
@@ -444,18 +334,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                    iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Stress%E2%80%93strain_curve"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/Equipment
-:Equipment rdf:type owl:Class ;
-           rdfs:subClassOf iof-core:MaterialArtifact ;
-           rdfs:label "Equipment"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/EquipmentSet
-:EquipmentSet rdf:type owl:Class ;
-              rdfs:subClassOf :ObjectSet ;
-              rdfs:label "Equipment Set"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/Experiment
 :Experiment rdf:type owl:Class ;
             rdfs:subClassOf iof-core:MeasurementProcess ;
@@ -470,17 +348,11 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                rdfs:label "Extrapolation"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/File
-:File rdf:type owl:Class ;
-      rdfs:subClassOf iof-core:InformationContentEntity ;
-      rdfs:label "File"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ForceMeasurementArtifactFunction
-:ForceMeasurementArtifactFunction rdf:type owl:Class ;
-                                  rdfs:subClassOf obo:BFO_0000034 ;
-                                  rdfs:label "Force Measurement Artifact Function"@en ;
-                                  iof-av:naturalLanguageDefinition "A Measurement Artifact Function that is realized during events in which an Artifact is used to measure the Force applied on a specified object or class of objects."@en .
+###  https://purl.matolab.org/mseo/mid/ForceMeasurementCapability
+:ForceMeasurementCapability rdf:type owl:Class ;
+                            rdfs:subClassOf obo:BFO_0000034 ;
+                            rdfs:label "Force Measurement Artifact Function"@en ;
+                            iof-av:naturalLanguageDefinition "A Measurement Artifact Function that is realized during events in which an Artifact is used to measure the Force applied on a specified object or class of objects."@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ForceRate
@@ -502,50 +374,16 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
              rdfs:label "Standard"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/ImageMetadataSet
-:ImageMetadataSet rdf:type owl:Class ;
-                  rdfs:subClassOf :DataSet ;
-                  rdfs:comment "Metadata set included in images. E.g. microscopes write the process specific metadata into the image file." ;
-                  rdfs:label "Image Metadata Set"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ImageSet
-:ImageSet rdf:type owl:Class ;
-          rdfs:subClassOf :DataSet ;
-          rdfs:comment "A set of images" ;
-          rdfs:label "ImageSet"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ImageStack
-:ImageStack rdf:type owl:Class ;
-            rdfs:subClassOf :ImageSet ;
-            rdfs:comment "A series of images, that form a vertical stack (e.g. a series of images generated by tomography)." ;
-            rdfs:label "Image Stack"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/IndentingArtfactFunction
-:IndentingArtfactFunction rdf:type owl:Class ;
-                          rdfs:subClassOf obo:BFO_0000034 ;
-                          rdfs:label "Indenting Artfact Function" .
+###  https://purl.matolab.org/mseo/mid/IndentingArtifactFunction
+:IndentingArtifactFunction rdf:type owl:Class ;
+                           rdfs:subClassOf obo:BFO_0000034 ;
+                           rdfs:label "Indenting Artifact Function"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/IndustryProject
 :IndustryProject rdf:type owl:Class ;
                  rdfs:subClassOf :Project ;
                  rdfs:label "Industry Project"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/InfrastructureEquipmentSet
-:InfrastructureEquipmentSet rdf:type owl:Class ;
-                            rdfs:subClassOf :EquipmentSet ;
-                            rdfs:label "Infrastructure Equipment Set"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/InputFile
-:InputFile rdf:type owl:Class ;
-           rdfs:subClassOf :File ;
-           rdfs:comment "An input file is a file with no specific file ending, that is used as input for a simulation" ;
-           rdfs:label "InputFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Interpolation
@@ -571,18 +409,24 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                    rdfs:label "Luminous Intensity"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/MachineSoftware
+:MachineSoftware rdf:type owl:Class ;
+                 rdfs:subClassOf :Software ;
+                 rdfs:comment "Machine specific software, e.g. used to control the process or acquire data" ;
+                 rdfs:label "Machine Software"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/MagneticFlux
+:MagneticFlux rdf:type owl:Class ;
+              rdfs:subClassOf iof-core:ProcessCharacteristic ;
+              rdfs:label "Magnetic Flux"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/MaterialComposition
 :MaterialComposition rdf:type owl:Class ;
                      rdfs:subClassOf obo:BFO_0000019 ;
                      rdfs:label "Material Composition"@en ;
                      iof-av:naturalLanguageDefinition "Any kind of quantity, that describes the composition of materials."@en .
-
-
-###  https://purl.matolab.org/mseo/mid/MaterialDataSet
-:MaterialDataSet rdf:type owl:Class ;
-                 rdfs:subClassOf :DataSet ;
-                 rdfs:comment "A data set containing material specific data" ;
-                 rdfs:label "Material Data Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialDefect
@@ -627,12 +471,6 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                                         rdfs:label "Material Structure Related Fiat Object Part"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/MaterialStructureRelatedObject
-:MaterialStructureRelatedObject rdf:type owl:Class ;
-                                rdfs:subClassOf obo:BFO_0000030 ;
-                                rdfs:label "MaterialStructureRelatedObject"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/MatterObject
 :MatterObject rdf:type owl:Class ;
               rdfs:subClassOf obo:BFO_0000030 ;
@@ -641,7 +479,7 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 
 ###  https://purl.matolab.org/mseo/mid/MeasurementDevice
 :MeasurementDevice rdf:type owl:Class ;
-                   rdfs:subClassOf iof-core:MaterialArtifact ;
+                   rdfs:subClassOf iof-core:PieceOfEquipment ;
                    rdfs:label "Measurement Device" ;
                    iof-av:naturalLanguageDefinition "A Artifact inhering a Measurement Artifact Function"@en .
 
@@ -690,29 +528,10 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                rdfs:label "Number Density"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/ObjectSet
-:ObjectSet rdf:type owl:Class ;
-           rdfs:subClassOf :DataSet ;
-           rdfs:label "ObjectSet"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/PDFFile
-:PDFFile rdf:type owl:Class ;
-         rdfs:subClassOf :DocumentFile ;
-         rdfs:label "PDFFile"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/PhysicsModel
 :PhysicsModel rdf:type owl:Class ;
               rdfs:subClassOf iof-core:Algorithm ;
               rdfs:label "Physics Model"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/PlanarImageSet
-:PlanarImageSet rdf:type owl:Class ;
-                rdfs:subClassOf :ImageSet ;
-                rdfs:comment "A series of images taken in a plane, which form a set of images (e.g. images of a microsection or a fracture surface)" ;
-                rdfs:label "Planar Image Set"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/PlasticStrain
@@ -758,43 +577,22 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
                rdfs:label "PreProcessing"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/PreprocessingSoftware
+:PreprocessingSoftware rdf:type owl:Class ;
+                       rdfs:subClassOf :Software ;
+                       rdfs:comment "Software used for preprocessing" ;
+                       rdfs:label "Preprocessing Software"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/PressureMeasurementArtifactFunction
 :PressureMeasurementArtifactFunction rdf:type owl:Class ;
-                                     rdfs:subClassOf :ForceMeasurementArtifactFunction .
+                                     rdfs:subClassOf :ForceMeasurementCapability .
 
 
 ###  https://purl.matolab.org/mseo/mid/Procedure
 :Procedure rdf:type owl:Class ;
            rdfs:subClassOf :Regulation ;
            rdfs:label "Procedure"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ProcessDataSet
-:ProcessDataSet rdf:type owl:Class ;
-                rdfs:subClassOf :DataSet ;
-                rdfs:comment "Any kind of data set, that is the output of a process (e.g. raw data, analysed data, files, quantities...)" ;
-                rdfs:label "Process Data Set"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ProcessParameterSet
-:ProcessParameterSet rdf:type owl:Class ;
-                     rdfs:subClassOf :ProcessDataSet ;
-                     rdfs:comment "A set of parameters, that is used to control a process. Those are usually quantities of type \"as supposed\"." ;
-                     rdfs:label "Process Parameter Set"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ProcessProfilSpecification
-:ProcessProfilSpecification rdf:type owl:Class ;
-                            rdfs:subClassOf iof-core:DirectiveInformationContentEntity ;
-                            rdfs:label "Process Profil Specification"@en ;
-                            skos:exampe "The set point of the speed of a motor; The intended heat rate to increase the temperature"@en ;
-                            iof-av:naturalLanguageDefinition "A Specification which describes the Target for a Profil of a Process."@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ProcessSetup
-:ProcessSetup rdf:type owl:Class ;
-              rdfs:subClassOf :ObjectSet ;
-              rdfs:label "Process Setup"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/Project
@@ -818,19 +616,6 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
                rdfs:label "Public Project"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/Publication
-:Publication rdf:type owl:Class ;
-             rdfs:subClassOf :DocumentFile ;
-             rdfs:label "Publication"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/RawDataSet
-:RawDataSet rdf:type owl:Class ;
-            rdfs:subClassOf :ProcessDataSet ;
-            rdfs:comment "Any kind of raw data set. Raw data refers to the original data set." ;
-            rdfs:label "Raw Data Set"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/RegionOfInterest
 :RegionOfInterest rdf:type owl:Class ;
                   rdfs:subClassOf obo:BFO_0000029 ;
@@ -841,12 +626,6 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 :Regulation rdf:type owl:Class ;
             rdfs:subClassOf iof-core:PlanSpecification ;
             rdfs:label "Regulation"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/Report
-:Report rdf:type owl:Class ;
-        rdfs:subClassOf :DocumentFile ;
-        rdfs:label "Report"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/ShearModulus
@@ -875,6 +654,12 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
             rdfs:label "Simulation"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/SimulationSoftware
+:SimulationSoftware rdf:type owl:Class ;
+                    rdfs:subClassOf :Software ;
+                    rdfs:label "Simulation Software"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/SimulationStep
 :SimulationStep rdf:type owl:Class ;
                 rdfs:subClassOf :Simulation ;
@@ -891,6 +676,18 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
 :SoftwareArchitecture rdf:type owl:Class ;
                       rdfs:subClassOf iof-core:MaterialArtifact ;
                       rdfs:label "Software Architecture"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/SoftwareScript
+:SoftwareScript rdf:type owl:Class ;
+                rdfs:subClassOf :Software ;
+                rdfs:label "Software Script"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/SoftwareTool
+:SoftwareTool rdf:type owl:Class ;
+              rdfs:subClassOf :Software ;
+              rdfs:label "Software Tool"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/SpecificHeatCapacity
@@ -943,12 +740,6 @@ The complementary concept is flexibility or pliability: the more flexible an obj
                       "Wahre Spannung"@de ;
         iof-av:naturalLanguageDefinition "In continuum mechanics, stress is a physical quantity that expresses the internal forces that neighbouring particles of a continuous material exert on each other, while strain is the measure of the deformation of the material. For example, when a solid vertical bar is supporting an overhead weight, each particle in the bar pushes on the particles immediately below it. When a liquid is in a closed container under pressure, each particle gets pushed against by all the surrounding particles. The container walls and the pressure-inducing surface (such as a piston) push against them in (Newtonian) reaction. These macroscopic forces are actually the net result of a very large number of intermolecular forces and collisions between the particles in those molecules. Stress is frequently represented by a lowercase Greek letter sigma (σ)."@en ;
         iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Stress_(mechanics)"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/TXTFile
-:TXTFile rdf:type owl:Class ;
-         rdfs:subClassOf :File ;
-         rdfs:label "TXTFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/TechnologicalProductRelatedFiatObjectPart
@@ -1025,24 +816,11 @@ Tensile strengths are rarely of any consequence in the design of ductile members
          rdfs:label "Voltage"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/WMVFile
-:WMVFile rdf:type owl:Class ;
-         rdfs:subClassOf :File ;
-         rdfs:comment "Windows Media-Audio/-Video file" ;
-         rdfs:label "WMVFile"@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/WithdrawalPlan
 :WithdrawalPlan rdf:type owl:Class ;
                 rdfs:subClassOf iof-core:PlanSpecification ;
                 rdfs:comment "A data set containg the information content of a withdrawal plan (e.g. PDFFile, CADFile...)" ;
                 rdfs:label "Withdrawal Plan"@en .
-
-
-###  https://purl.matolab.org/mseo/mid/XLSFFile
-:XLSFFile rdf:type owl:Class ;
-          rdfs:subClassOf :File ;
-          rdfs:label "XLSFile"@en .
 
 
 ###  https://purl.matolab.org/mseo/mid/YieldStrenght
@@ -1055,13 +833,6 @@ Tensile strengths are rarely of any consequence in the design of ductile members
                iof-av:naturalLanguageDefinition """In materials science and engineering, the yield point is the point on a stress-strain curve that indicates the limit of elastic behavior and the beginning of plastic behavior. Below the yield point, a material will deform elastically and will return to its original shape when the applied stress is removed. Once the yield point is passed, some fraction of the deformation will be permanent and non-reversible and is known as plastic deformation.
 
 The yield strength or yield stress is a material property and is the stress corresponding to the yield point at which the material begins to deform plastically. The yield strength is often used to determine the maximum allowable load in a mechanical component, since it represents the upper limit to forces that can be applied without producing permanent deformation. In some materials, such as aluminium, there is a gradual onset of non-linear behavior, making the precise yield point difficult to determine. In such a case, the offset yield point (or proof stress) is taken as the stress at which 0.2% plastic deformation occurs. Yielding is a gradual failure mode which is normally not catastrophic, unlike ultimate failure."""@en .
-
-
-###  https://purl.matolab.org/mseo/mid/ZipFile
-:ZipFile rdf:type owl:Class ;
-         rdfs:subClassOf :File ;
-         rdfs:comment "Any kind of ZIP-File" ;
-         rdfs:label "ZIPFile"@en .
 
 
 ###  https://spec.industrialontologies.org/ontology/core/Core/Algorithm
