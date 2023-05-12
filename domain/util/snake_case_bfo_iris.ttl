@@ -1,0 +1,131 @@
+@prefix bfo: <https://github.com/BFO-ontology/BFO-2020/raw/master/21838-2/owl/bfo-2020.owl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+bfo:bearer_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000196> .
+
+bfo:concretizes_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000164> .
+
+bfo:concretizes_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000059> .
+
+bfo:continuant_part_of_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000177> .
+
+bfo:continuant_part_of_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000176> .
+
+bfo:environs owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000183> .
+
+bfo:exists_at owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000108> .
+
+bfo:first_instant_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000221> .
+
+bfo:generically_depends_on_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000219> .
+
+bfo:generically_depends_on_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000084> .
+
+bfo:has_continuant_part_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000110> .
+
+bfo:has_continuant_part_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000178> .
+
+bfo:has_first_instant owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000222> .
+
+bfo:has_history owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000185> .
+
+bfo:has_last_instant owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000224> .
+
+bfo:has_material_basis_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000113> .
+
+bfo:has_material_basis_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000218> .
+
+bfo:has_member_part_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000172> .
+
+bfo:has_member_part_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000115> .
+
+bfo:has_occurrent_part owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000117> .
+
+bfo:has_participant_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000167> .
+
+bfo:has_participant_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000057> .
+
+bfo:has_proper_continuant_part_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000111> .
+
+bfo:has_proper_continuant_part_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000174> .
+
+bfo:has_proper_occurrent_part owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000118> .
+
+bfo:has_proper_temporal_part owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000181> .
+
+bfo:has_realization owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000054> .
+
+bfo:has_temporal_part owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000121> .
+
+bfo:history_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000184> .
+
+bfo:inheres_in owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000197> .
+
+bfo:is_carrier_of_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000220> .
+
+bfo:is_carrier_of_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000101> .
+
+bfo:is_concretized_by_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000165> .
+
+bfo:is_concretized_by_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000058> .
+
+bfo:last_instant_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000223> .
+
+bfo:located_in_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000082> .
+
+bfo:located_in_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000171> .
+
+bfo:location_of_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000170> .
+
+bfo:location_of_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000124> .
+
+bfo:material_basis_of_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000163> .
+
+bfo:material_basis_of_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000127> .
+
+bfo:member_part_of_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000173> .
+
+bfo:member_part_of_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000129> .
+
+bfo:occupies_spatial_region_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000211> .
+
+bfo:occupies_spatial_region_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000210> .
+
+bfo:occupies_spatiotemporal_region owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000200> .
+
+bfo:occupies_temporal_region owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000199> .
+
+bfo:occurrent_part_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000132> .
+
+bfo:occurs_in owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000066> .
+
+bfo:participates_in_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000166> .
+
+bfo:participates_in_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000056> .
+
+bfo:preceded_by owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000062> .
+
+bfo:precedes owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000063> .
+
+bfo:proper_continuant_part_of_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000137> .
+
+bfo:proper_continuant_part_of_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000175> .
+
+bfo:proper_occurrent_part_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000138> .
+
+bfo:proper_temporal_part_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000136> .
+
+bfo:realizes owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000055> .
+
+bfo:spatially_projects_onto_at_all_times owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000217> .
+
+bfo:spatially_projects_onto_at_some_time owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000216> .
+
+bfo:specifically_depended_on_by owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000194> .
+
+bfo:specifically_depends_on owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000195> .
+
+bfo:temporal_part_of owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000139> .
+
+bfo:temporally_projects_onto owl:equivalentProperty <http://purl.obolibrary.org/obo/BFO_0000153> .
+
