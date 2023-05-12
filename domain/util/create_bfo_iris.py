@@ -56,6 +56,6 @@ for property in bfo[: RDF.type : OWL.ObjectProperty]:
     label=next(bfo[property: RDFS.label : ],None)
     iri=URIRef(MSEO+snake_case(label))
     out.add((iri,RDF.type,OWL.ObjectProperty))
-    out.add((iri,OWL.equivalentProperty,property))
+    out.add((iri,OWL.sameAs,property))
     out.add((iri,RDFS.label,label))
 out.serialize(dir+'/snake_case_bfo_iris.ttl',format='turtle')

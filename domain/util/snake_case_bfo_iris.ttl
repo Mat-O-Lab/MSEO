@@ -4,257 +4,257 @@
 
 <https://purl.matolab.org/mseo/mid/bearer_of> a owl:ObjectProperty ;
     rdfs:label "bearer of"@en ;
-    owl:equivalentProperty obo:BFO_0000196 .
+    owl:sameAs obo:BFO_0000196 .
 
 <https://purl.matolab.org/mseo/mid/concretizes_at_all_times> a owl:ObjectProperty ;
     rdfs:label "concretizes at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000164 .
+    owl:sameAs obo:BFO_0000164 .
 
 <https://purl.matolab.org/mseo/mid/concretizes_at_some_time> a owl:ObjectProperty ;
     rdfs:label "concretizes at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000059 .
+    owl:sameAs obo:BFO_0000059 .
 
 <https://purl.matolab.org/mseo/mid/continuant_part_of_at_all_times> a owl:ObjectProperty ;
     rdfs:label "continuant part of at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000177 .
+    owl:sameAs obo:BFO_0000177 .
 
 <https://purl.matolab.org/mseo/mid/continuant_part_of_at_some_time> a owl:ObjectProperty ;
     rdfs:label "continuant part of at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000176 .
+    owl:sameAs obo:BFO_0000176 .
 
 <https://purl.matolab.org/mseo/mid/environs> a owl:ObjectProperty ;
     rdfs:label "environs"@en ;
-    owl:equivalentProperty obo:BFO_0000183 .
+    owl:sameAs obo:BFO_0000183 .
 
 <https://purl.matolab.org/mseo/mid/exists_at> a owl:ObjectProperty ;
     rdfs:label "exists at"@en ;
-    owl:equivalentProperty obo:BFO_0000108 .
+    owl:sameAs obo:BFO_0000108 .
 
 <https://purl.matolab.org/mseo/mid/first_instant_of> a owl:ObjectProperty ;
     rdfs:label "first instant of"@en ;
-    owl:equivalentProperty obo:BFO_0000221 .
+    owl:sameAs obo:BFO_0000221 .
 
 <https://purl.matolab.org/mseo/mid/generically_depends_on_at_all_times> a owl:ObjectProperty ;
     rdfs:label "generically depends on at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000219 .
+    owl:sameAs obo:BFO_0000219 .
 
 <https://purl.matolab.org/mseo/mid/generically_depends_on_at_some_time> a owl:ObjectProperty ;
     rdfs:label "generically depends on at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000084 .
+    owl:sameAs obo:BFO_0000084 .
 
 <https://purl.matolab.org/mseo/mid/has_continuant_part_at_all_times> a owl:ObjectProperty ;
     rdfs:label "has continuant part at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000110 .
+    owl:sameAs obo:BFO_0000110 .
 
 <https://purl.matolab.org/mseo/mid/has_continuant_part_at_some_time> a owl:ObjectProperty ;
     rdfs:label "has continuant part at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000178 .
+    owl:sameAs obo:BFO_0000178 .
 
 <https://purl.matolab.org/mseo/mid/has_first_instant> a owl:ObjectProperty ;
     rdfs:label "has first instant"@en ;
-    owl:equivalentProperty obo:BFO_0000222 .
+    owl:sameAs obo:BFO_0000222 .
 
 <https://purl.matolab.org/mseo/mid/has_history> a owl:ObjectProperty ;
     rdfs:label "has history"@en ;
-    owl:equivalentProperty obo:BFO_0000185 .
+    owl:sameAs obo:BFO_0000185 .
 
 <https://purl.matolab.org/mseo/mid/has_last_instant> a owl:ObjectProperty ;
     rdfs:label "has last instant"@en ;
-    owl:equivalentProperty obo:BFO_0000224 .
+    owl:sameAs obo:BFO_0000224 .
 
 <https://purl.matolab.org/mseo/mid/has_material_basis_at_all_times> a owl:ObjectProperty ;
     rdfs:label "has material basis at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000113 .
+    owl:sameAs obo:BFO_0000113 .
 
 <https://purl.matolab.org/mseo/mid/has_material_basis_at_some_time> a owl:ObjectProperty ;
     rdfs:label "has material basis at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000218 .
+    owl:sameAs obo:BFO_0000218 .
 
 <https://purl.matolab.org/mseo/mid/has_member_part_at_all_times> a owl:ObjectProperty ;
     rdfs:label "has member part at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000172 .
+    owl:sameAs obo:BFO_0000172 .
 
 <https://purl.matolab.org/mseo/mid/has_member_part_at_some_time> a owl:ObjectProperty ;
     rdfs:label "has member part at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000115 .
+    owl:sameAs obo:BFO_0000115 .
 
 <https://purl.matolab.org/mseo/mid/has_occurrent_part> a owl:ObjectProperty ;
     rdfs:label "has occurrent part"@en ;
-    owl:equivalentProperty obo:BFO_0000117 .
+    owl:sameAs obo:BFO_0000117 .
 
 <https://purl.matolab.org/mseo/mid/has_participant_at_all_times> a owl:ObjectProperty ;
     rdfs:label "has participant at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000167 .
+    owl:sameAs obo:BFO_0000167 .
 
 <https://purl.matolab.org/mseo/mid/has_participant_at_some_time> a owl:ObjectProperty ;
     rdfs:label "has participant at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000057 .
+    owl:sameAs obo:BFO_0000057 .
 
 <https://purl.matolab.org/mseo/mid/has_proper_continuant_part_at_all_times> a owl:ObjectProperty ;
     rdfs:label "has proper continuant part at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000111 .
+    owl:sameAs obo:BFO_0000111 .
 
 <https://purl.matolab.org/mseo/mid/has_proper_continuant_part_at_some_time> a owl:ObjectProperty ;
     rdfs:label "has proper continuant part at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000174 .
+    owl:sameAs obo:BFO_0000174 .
 
 <https://purl.matolab.org/mseo/mid/has_proper_occurrent_part> a owl:ObjectProperty ;
     rdfs:label "has proper occurrent part"@en ;
-    owl:equivalentProperty obo:BFO_0000118 .
+    owl:sameAs obo:BFO_0000118 .
 
 <https://purl.matolab.org/mseo/mid/has_proper_temporal_part> a owl:ObjectProperty ;
     rdfs:label "has proper temporal part"@en ;
-    owl:equivalentProperty obo:BFO_0000181 .
+    owl:sameAs obo:BFO_0000181 .
 
 <https://purl.matolab.org/mseo/mid/has_realization> a owl:ObjectProperty ;
     rdfs:label "has realization"@en ;
-    owl:equivalentProperty obo:BFO_0000054 .
+    owl:sameAs obo:BFO_0000054 .
 
 <https://purl.matolab.org/mseo/mid/has_temporal_part> a owl:ObjectProperty ;
     rdfs:label "has temporal part"@en ;
-    owl:equivalentProperty obo:BFO_0000121 .
+    owl:sameAs obo:BFO_0000121 .
 
 <https://purl.matolab.org/mseo/mid/history_of> a owl:ObjectProperty ;
     rdfs:label "history of"@en ;
-    owl:equivalentProperty obo:BFO_0000184 .
+    owl:sameAs obo:BFO_0000184 .
 
 <https://purl.matolab.org/mseo/mid/inheres_in> a owl:ObjectProperty ;
     rdfs:label "inheres in"@en ;
-    owl:equivalentProperty obo:BFO_0000197 .
+    owl:sameAs obo:BFO_0000197 .
 
 <https://purl.matolab.org/mseo/mid/is_carrier_of_at_all_times> a owl:ObjectProperty ;
     rdfs:label "is carrier of at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000220 .
+    owl:sameAs obo:BFO_0000220 .
 
 <https://purl.matolab.org/mseo/mid/is_carrier_of_at_some_time> a owl:ObjectProperty ;
     rdfs:label "is carrier of at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000101 .
+    owl:sameAs obo:BFO_0000101 .
 
 <https://purl.matolab.org/mseo/mid/is_concretized_by_at_all_times> a owl:ObjectProperty ;
     rdfs:label "is concretized by at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000165 .
+    owl:sameAs obo:BFO_0000165 .
 
 <https://purl.matolab.org/mseo/mid/is_concretized_by_at_some_time> a owl:ObjectProperty ;
     rdfs:label "is concretized by at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000058 .
+    owl:sameAs obo:BFO_0000058 .
 
 <https://purl.matolab.org/mseo/mid/last_instant_of> a owl:ObjectProperty ;
     rdfs:label "last instant of"@en ;
-    owl:equivalentProperty obo:BFO_0000223 .
+    owl:sameAs obo:BFO_0000223 .
 
 <https://purl.matolab.org/mseo/mid/located_in_at_all_times> a owl:ObjectProperty ;
     rdfs:label "located in at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000082 .
+    owl:sameAs obo:BFO_0000082 .
 
 <https://purl.matolab.org/mseo/mid/located_in_at_some_time> a owl:ObjectProperty ;
     rdfs:label "located in at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000171 .
+    owl:sameAs obo:BFO_0000171 .
 
 <https://purl.matolab.org/mseo/mid/location_of_at_all_times> a owl:ObjectProperty ;
     rdfs:label "location of at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000170 .
+    owl:sameAs obo:BFO_0000170 .
 
 <https://purl.matolab.org/mseo/mid/location_of_at_some_time> a owl:ObjectProperty ;
     rdfs:label "location of at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000124 .
+    owl:sameAs obo:BFO_0000124 .
 
 <https://purl.matolab.org/mseo/mid/material_basis_of_at_all_times> a owl:ObjectProperty ;
     rdfs:label "material basis of at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000163 .
+    owl:sameAs obo:BFO_0000163 .
 
 <https://purl.matolab.org/mseo/mid/material_basis_of_at_some_time> a owl:ObjectProperty ;
     rdfs:label "material basis of at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000127 .
+    owl:sameAs obo:BFO_0000127 .
 
 <https://purl.matolab.org/mseo/mid/member_part_of_at_all_times> a owl:ObjectProperty ;
     rdfs:label "member part of at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000173 .
+    owl:sameAs obo:BFO_0000173 .
 
 <https://purl.matolab.org/mseo/mid/member_part_of_at_some_time> a owl:ObjectProperty ;
     rdfs:label "member part of at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000129 .
+    owl:sameAs obo:BFO_0000129 .
 
 <https://purl.matolab.org/mseo/mid/occupies_spatial_region_at_all_times> a owl:ObjectProperty ;
     rdfs:label "occupies spatial region at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000211 .
+    owl:sameAs obo:BFO_0000211 .
 
 <https://purl.matolab.org/mseo/mid/occupies_spatial_region_at_some_time> a owl:ObjectProperty ;
     rdfs:label "occupies spatial region at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000210 .
+    owl:sameAs obo:BFO_0000210 .
 
 <https://purl.matolab.org/mseo/mid/occupies_spatiotemporal_region> a owl:ObjectProperty ;
     rdfs:label "occupies spatiotemporal region"@en ;
-    owl:equivalentProperty obo:BFO_0000200 .
+    owl:sameAs obo:BFO_0000200 .
 
 <https://purl.matolab.org/mseo/mid/occupies_temporal_region> a owl:ObjectProperty ;
     rdfs:label "occupies temporal region"@en ;
-    owl:equivalentProperty obo:BFO_0000199 .
+    owl:sameAs obo:BFO_0000199 .
 
 <https://purl.matolab.org/mseo/mid/occurrent_part_of> a owl:ObjectProperty ;
     rdfs:label "occurrent part of"@en ;
-    owl:equivalentProperty obo:BFO_0000132 .
+    owl:sameAs obo:BFO_0000132 .
 
 <https://purl.matolab.org/mseo/mid/occurs_in> a owl:ObjectProperty ;
     rdfs:label "occurs in"@en ;
-    owl:equivalentProperty obo:BFO_0000066 .
+    owl:sameAs obo:BFO_0000066 .
 
 <https://purl.matolab.org/mseo/mid/participates_in_at_all_times> a owl:ObjectProperty ;
     rdfs:label "participates in at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000166 .
+    owl:sameAs obo:BFO_0000166 .
 
 <https://purl.matolab.org/mseo/mid/participates_in_at_some_time> a owl:ObjectProperty ;
     rdfs:label "participates in at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000056 .
+    owl:sameAs obo:BFO_0000056 .
 
 <https://purl.matolab.org/mseo/mid/preceded_by> a owl:ObjectProperty ;
     rdfs:label "preceded by"@en ;
-    owl:equivalentProperty obo:BFO_0000062 .
+    owl:sameAs obo:BFO_0000062 .
 
 <https://purl.matolab.org/mseo/mid/precedes> a owl:ObjectProperty ;
     rdfs:label "precedes"@en ;
-    owl:equivalentProperty obo:BFO_0000063 .
+    owl:sameAs obo:BFO_0000063 .
 
 <https://purl.matolab.org/mseo/mid/proper_continuant_part_of_at_all_times> a owl:ObjectProperty ;
     rdfs:label "proper continuant part of at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000137 .
+    owl:sameAs obo:BFO_0000137 .
 
 <https://purl.matolab.org/mseo/mid/proper_continuant_part_of_at_some_time> a owl:ObjectProperty ;
     rdfs:label "proper continuant part of at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000175 .
+    owl:sameAs obo:BFO_0000175 .
 
 <https://purl.matolab.org/mseo/mid/proper_occurrent_part_of> a owl:ObjectProperty ;
     rdfs:label "proper occurrent part of"@en ;
-    owl:equivalentProperty obo:BFO_0000138 .
+    owl:sameAs obo:BFO_0000138 .
 
 <https://purl.matolab.org/mseo/mid/proper_temporal_part_of> a owl:ObjectProperty ;
     rdfs:label "proper temporal part of"@en ;
-    owl:equivalentProperty obo:BFO_0000136 .
+    owl:sameAs obo:BFO_0000136 .
 
 <https://purl.matolab.org/mseo/mid/realizes> a owl:ObjectProperty ;
     rdfs:label "realizes"@en ;
-    owl:equivalentProperty obo:BFO_0000055 .
+    owl:sameAs obo:BFO_0000055 .
 
 <https://purl.matolab.org/mseo/mid/spatially_projects_onto_at_all_times> a owl:ObjectProperty ;
     rdfs:label "spatially projects onto at all times"@en ;
-    owl:equivalentProperty obo:BFO_0000217 .
+    owl:sameAs obo:BFO_0000217 .
 
 <https://purl.matolab.org/mseo/mid/spatially_projects_onto_at_some_time> a owl:ObjectProperty ;
     rdfs:label "spatially projects onto at some time"@en ;
-    owl:equivalentProperty obo:BFO_0000216 .
+    owl:sameAs obo:BFO_0000216 .
 
 <https://purl.matolab.org/mseo/mid/specifically_depended_on_by> a owl:ObjectProperty ;
     rdfs:label "specifically depended on by"@en ;
-    owl:equivalentProperty obo:BFO_0000194 .
+    owl:sameAs obo:BFO_0000194 .
 
 <https://purl.matolab.org/mseo/mid/specifically_depends_on> a owl:ObjectProperty ;
     rdfs:label "specifically depends on"@en ;
-    owl:equivalentProperty obo:BFO_0000195 .
+    owl:sameAs obo:BFO_0000195 .
 
 <https://purl.matolab.org/mseo/mid/temporal_part_of> a owl:ObjectProperty ;
     rdfs:label "temporal part of"@en ;
-    owl:equivalentProperty obo:BFO_0000139 .
+    owl:sameAs obo:BFO_0000139 .
 
 <https://purl.matolab.org/mseo/mid/temporally_projects_onto> a owl:ObjectProperty ;
     rdfs:label "temporally projects onto"@en ;
-    owl:equivalentProperty obo:BFO_0000153 .
+    owl:sameAs obo:BFO_0000153 .
 
