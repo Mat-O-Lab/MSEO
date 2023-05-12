@@ -39,18 +39,20 @@ def parse_graph(url: str, graph: Graph, format: str = '') -> Graph:
         graph.parse(parsed_url.path, format=format)
     return graph
 
-bfo2020_url='https://github.com/BFO-ontology/BFO-2020/raw/master/21838-2/owl/bfo-2020.owl'
+bfo2020_url='http://purl.obolibrary.org/obo/bfo/2020/bfo.owl'
 g=Graph()
 bfo=parse_graph(bfo2020_url,g, format='xml')
 out=Graph()
 BFO = Namespace(bfo2020_url+"/")
+OBO = Namespace('http://purl.obolibrary.org/obo/')
 out.bind('owl',OWL)
 out.bind('bfo',BFO)
+out.bind('obo',OBO)
 
 predicate=OWL.equivalentProperty
 for property in bfo[: RDF.type : OWL.ObjectProperty]:
     label=next(bfo[property: RDFS.label : ],None)
-    iri=URIRef(bfo2020_url+'/'+snake_case(label))
+    iri=URIRef(OBO+snake_case(label))
     out.add((iri,predicate,property))
 
 out.serialize(dir+'/snake_case_bfo_iris.ttl',format='turtle')
