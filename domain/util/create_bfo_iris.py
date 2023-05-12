@@ -45,14 +45,17 @@ bfo=parse_graph(bfo2020_url,g, format='xml')
 out=Graph()
 BFO = Namespace(bfo2020_url+"/")
 OBO = Namespace('http://purl.obolibrary.org/obo/')
+MSEO = Namespace('https://purl.matolab.org/mseo/mid/')
+
 out.bind('owl',OWL)
 out.bind('bfo',BFO)
 out.bind('obo',OBO)
 
-predicate=OWL.equivalentProperty
+
 for property in bfo[: RDF.type : OWL.ObjectProperty]:
     label=next(bfo[property: RDFS.label : ],None)
-    iri=URIRef(OBO+snake_case(label))
-    out.add((iri,predicate,property))
-
+    iri=URIRef(MSEO+snake_case(label))
+    out.add((iri,RDF.type,OWL.ObjectProperty))
+    out.add((iri,OWL.equivalentProperty,property))
+    out.add((iri,RDFS.label,label))
 out.serialize(dir+'/snake_case_bfo_iris.ttl',format='turtle')
