@@ -21,7 +21,19 @@
 :Phase rdfs:subClassOf mseo:MaterialMicrostructure ;
     skos:prefLabel "Phase"@en, "Phase"@de ;
     skos:definition "Different states of matter that can be observed in a material under a microscope."@en, "Verschiedene Aggregatzustände, die in einem Material unter dem Mikroskop beobachtet werden können."@de .
-    
+
+:AmorphousPhase rdfs:subClassOf :Phase ;
+    rdfs:label "Amorphous Phase"@en, "Amorphe Phase"@de ;
+    skos:prefLabel "Amorphous Phase"@en, "Amorphe Phase"@de ;
+    skos:altLabel "amorphous state"@en, "amorpher Zustand"@de ;
+    skos:definition "A phase without long-range order or crystalline structure"@en, "Eine Phase ohne langfristige Ordnung oder kristalline Struktur"@de ;
+    iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Amorphous_solid> .
+
+:CrystallinePhase rdfs:subClassOf :Phase ;
+    rdfs:label "Crystalline Phase"@en, "Kristalline Phase"@de ;
+    skos:altLabel "Crystal Phase"@en, "Kristallphase"@de ;
+    skos:definition "A crystalline phase is a solid phase of matter in which the atoms, molecules, or ions are arranged in an ordered structure."@en, "Eine kristalline Phase ist ein fester Aggregatzustand der Materie, bei dem die Atome, Moleküle oder Ionen in einer geordneten Struktur angeordnet sind."@de ;
+
 :Crystallite rdfs:subClassOf mseo:MaterialMicrostructure ;
     skos:prefLabel "Crystallite"@en, "Kristallit"@de ;
     skos:definition "Individual crystal that make up a material and can be seen under a microscope."@en, "Einzelne Kristalle, die ein Material ausmachen und unter dem Mikroskop sichtbar sind."@de .

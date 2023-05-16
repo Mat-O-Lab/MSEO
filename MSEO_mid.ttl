@@ -878,6 +878,23 @@ The complementary concept is flexibility or pliability: the more flexible an obj
                        "Die Verschleißfestigkeit ist die Fähigkeit eines Materials, mechanischen Aktionen wie Reiben, Kratzen oder Erosion zu widerstehen, die dazu tendieren, Material allmählich von seiner Oberfläche zu entfernen."@de ;
         iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Wear_resistance> .
 
+:AdhesionStrength rdf:type owl:Class ;
+        rdfs:subClassOf :Strength;
+        rdfs:label "Adhesion Strength"@en, "Haftfestigkeit"@de ;
+        skos:prefLabel "Adhesion Strength"@en, "Haftfestigkeit"@de ;
+        skos:altLabel "Adhesive Strength"@en, "Klebkraft"@de ;
+        skos:definition "Adhesion strength is the measure of the force required to separate two surfaces that are bonded together."@en, "Die Haftfestigkeit ist das Maß für die Kraft, die erforderlich ist, um zwei miteinander verbundene Oberflächen zu trennen."@de ;
+        iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Adhesion_strength> .
+
+:SurfaceTension rdf:type owl:Class ;
+        rdfs:subClassOf :Stress;
+        rdfs:label "Surface Tension"@en, "Oberflächenspannung"@de ;
+        skos:prefLabel "Surface Tension"@en, "Oberflächenspannung"@de ;
+        skos:altLabel "Surface Stress"@en ;
+        skos:definition """The surface tension of a liquid is an effect within the surface layer of the liquid caused by intermolecular forces between the molecules of the liquid."""@en, 
+                        """Die Oberflächenspannung einer Flüssigkeit ist ein Effekt innerhalb der Oberflächenschicht der Flüssigkeit, der durch Wechselwirkungskräfte zwischen den Molekülen der Flüssigkeit verursacht wird."""@de ;
+        iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Surface_tension>, <https://de.wikipedia.org/wiki/Oberfl%C3%A4chenspannung> .
+
 :MaterialFatigue rdf:type owl:Class ;
         rdfs:subClassOf obo:BFO_0000016;
         rdfs:label "Material Fatigue"@en, "Materialermüdung"@de ;
