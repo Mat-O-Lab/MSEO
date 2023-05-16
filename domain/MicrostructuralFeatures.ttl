@@ -1,61 +1,52 @@
-@prefix : <https://www.materials.fraunhofer.de/ontologies/MSEO/domain/MicrostructuralFeatures#> .
+@prefix : <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/MaterialMicrostructure.ttl/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix mseo: <https://purl.matolab.org/mseo/mid/> .
-@base <https://www.materials.fraunhofer.de/ontologies/MSEO/domain/MicrostructuralFeatures> .
+@base <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/MaterialMicrostructure.ttl> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-:MicrostructuralFeatures rdfs:subClassOf mseo:MaterialStructure .
+:MaterialMicrostructure rdfs:subClassOf mseo:MaterialMicrostructure .
 
-:Grain rdfs:subClassOf :MicrostructuralFeatures ;
+:Grain rdfs:subClassOf :MaterialMicrostructure ;
     skos:prefLabel "Grain"@en, "Korn"@de ;
     skos:definition "A crystalline grain of a material that are visible under a microscope."@en, "Kleine Partikel eines Materials, die unter dem Mikroskop sichtbar sind."@de .
     
-:Particle rdfs:subClassOf :MicrostructuralFeatures ;
+:Particle rdfs:subClassOf :MaterialMicrostructure ;
     skos:prefLabel "Particle"@en, "Partikel"@de ;
     skos:definition "Very small pieces of matter that can be seen under a microscope."@en, "Sehr kleine Stücke von Materie, die unter dem Mikroskop sichtbar sind."@de .
     
-:Phase rdfs:subClassOf :MicrostructuralFeatures ;
+:Phase rdfs:subClassOf :MaterialMicrostructure ;
     skos:prefLabel "Phase"@en, "Phase"@de ;
     skos:definition "Different states of matter that can be observed in a material under a microscope."@en, "Verschiedene Aggregatzustände, die in einem Material unter dem Mikroskop beobachtet werden können."@de .
     
-:Crystallite rdfs:subClassOf :MicrostructuralFeatures ;
+:Crystallite rdfs:subClassOf :MaterialMicrostructure ;
     skos:prefLabel "Crystallite"@en, "Kristallit"@de ;
     skos:definition "Individual crystal that make up a material and can be seen under a microscope."@en, "Einzelne Kristalle, die ein Material ausmachen und unter dem Mikroskop sichtbar sind."@de .
     
-:Interface rdfs:subClassOf :MicrostructuralFeatures ;
+:Interface rdfs:subClassOf :MaterialMicrostructure ;
     skos:prefLabel "Interface"@en, "Grenzfläche"@de ;
     skos:definition "Boundary between different phases or grains of a material that can be seen under a microscope."@en, "Grenzen zwischen verschiedenen Phasen oder Körnern eines Materials, die unter dem Mikroskop sichtbar sind."@de .
     
-:Inclusion rdfs:subClassOf :MicrostructuralFeatures ;
+:Inclusion rdfs:subClassOf :MaterialDefect ;
     skos:prefLabel "Inclusion"@en, "Einschluss"@de ;
     skos:definition "Foreign materials that are embedded in a material and can be seen under a microscope."@en, "Fremdmaterialien, die in einem Material eingebettet sind und unter dem Mikroskop sichtbar sind."@de .
     
-:Porosity rdfs:subClassOf :MicrostructuralFeatures ;
+:Porosity rdfs:subClassOf obo:BFO_0000016 ;
     skos:prefLabel "Porosity"@en, "Porosität"@de ;
     skos:definition "The presence of pores or voids in a material that can be seen under a microscope."@en, "Das Vorhandensein von Poren oder Hohlräumen in einem Material, das unter dem Mikroskop sichtbar ist."@de .
     
-:Texture rdfs:subClassOf :MicrostructuralFeatures ;
+:Texture rdfs:subClassOf obo:BFO_0000016 ;
     skos:prefLabel "Texture"@en, "Textur"@de ;
     skos:definition "The arrangement of grains or particles in a material that can be seen under a microscope."@en, "Die Anordnung von Körnern oder Partikeln in einem Material, die unter dem Mikroskop sichtbar ist."@de .
     
-:Streak rdfs:subClassOf :MicrostructuralFeatures ;
-    skos:prefLabel "Streak"@en, "Streifen"@de ;
-    skos:definition "A Long line of particles or grains in a material that can be seen under a microscope."@en, "Lange Linien von Partikeln oder Körnern in einem Material, die unter dem Mikroskop sichtbar sind."@de .
-    
-:Layers rdfs:subClassOf :MicrostructuralFeatures ;
-    skos:prefLabel "Layers"@en, "Schichten"@de ;
-    skos:definition "Alternating layers of different materials that can be seen under a microscope."@en, "Abwechselnde Schichten verschiedener Materialien, die unter dem Mikroskop sichtbar sind."@de .
-    
-:Impuritie rdfs:subClassOf :MicrostructuralFeatures ;
+   
+:Impuritie rdfs:subClassOf :MaterialDefect ;
     skos:prefLabel "Impuritie"@en, "Verunreinigung"@de ;
     skos:definition "Substance that are not part of the original material and can be seen under a microscope."@en, "Stoffe, die nicht Teil des ursprünglichen Materials sind und unter dem Mikroskop sichtbar sind."@de .
     
-:Defect rdfs:subClassOf :MicrostructuralFeatures ;
-    skos:prefLabel "Defect"@en, "Fehler"@de ;
-    skos:definition "Irregularities in the structure of a material that can be seen under a microscope."@en, "Unregelmäßigkeiten in der Struktur eines Materials, die unter dem Mikroskop sichtbar sind."@de .
     
