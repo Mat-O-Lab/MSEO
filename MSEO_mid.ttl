@@ -156,7 +156,7 @@ obo:CHEBI_24431 rdf:type owl:Class ;
 
 ###  https://purl.matolab.org/mseo/mid/BreakingStrength
 :BreakingStrength rdf:type owl:Class ;
-                  rdfs:subClassOf :MechanicalStrength ;
+                  rdfs:subClassOf :Toughness ;
                   obo:IAO_0000119 "https://en.wikipedia.org/wiki/Fracture"@en ;
                   rdfs:comment "Where the Ultimate Strength is the maximum recorded stress, the breaking strength is the last stress recorded when the break event of the experiment occures."@en ;
                   rdfs:label "Breaking Strength"@en ,
@@ -165,6 +165,20 @@ obo:CHEBI_24431 rdf:type owl:Class ;
                                 "Fracture Stress"@en ,
                                 "Strength at Break"@en ;
                   iof-av:naturalLanguageDefinition "Fracture strength, also known as breaking strength, is the stress at which a specimen fails via fracture. This is usually determined for a given specimen by a tensile test, which charts the stress–strain curve. The final recorded point is the fracture strength."@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Brittleness
+:Brittleness rdf:type owl:Class ;
+             rdfs:subClassOf iof-core:Capability ;
+             rdfs:label "Brittleness"@en ,
+                        "Sprödigkeit"@de ;
+             skos:altLabel "Fragility"@en ,
+                           "Zerbrechlichkeit"@de ;
+             skos:definition "Die Eigenschaft, leicht zu brechen oder zu beschädigen."@de ,
+                             "Opposite to Toughness, brittleness is the property of being easily broken or damaged."@en ;
+             skos:prefLabel "Brittleness"@en ,
+                            "Sprödigkeit"@de ;
+             iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Brittleness> .
 
 
 ###  https://purl.matolab.org/mseo/mid/Building
@@ -225,6 +239,18 @@ obo:CHEBI_24431 rdf:type owl:Class ;
                  rdfs:label "Control Software"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/CreepModulus
+:CreepModulus rdf:type owl:Class ;
+              rdfs:subClassOf :Viscoelasticity ;
+              rdfs:label "Creep Modulus"@en ,
+                         "Kriechmodul"@de ;
+              skos:definition "Der Kriechmodul ist ein Maß für die Viskoelastizität eines Materials, das seine Fähigkeit zur Verformung unter Belastung im Laufe der Zeit beschreibt."@de ,
+                              "The creep modulus is a measure of the viscoelasticity of a material, which is its ability to deform under stress over time."@en ;
+              skos:prefLabel "Creep Modulus"@en ,
+                             "Kriechmodul"@de ;
+              iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscoelasticity> .
+
+
 ###  https://purl.matolab.org/mseo/mid/CreepResistace
 :CreepResistace rdf:type owl:Class ;
                 rdfs:subClassOf :Durability ;
@@ -237,6 +263,20 @@ obo:CHEBI_24431 rdf:type owl:Class ;
                 skos:prefLabel "Creep Resistance"@en ,
                                "Kriechfestigkeit"@de ;
                 iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Creep_(deformation)> .
+
+
+###  https://purl.matolab.org/mseo/mid/CreepStrain
+:CreepStrain rdf:type owl:Class ;
+             rdfs:subClassOf :Strain ;
+             rdfs:label "Creep Strain"@en ,
+                        "Kriechverformung"@de ;
+             skos:altLabel "Creeping strain"@en ,
+                           "Kriechbeanspruchung"@de ;
+             skos:definition "A creep strain is a type of strain that occurs when a material is subjected to a constant stress over a long period of time."@en ,
+                             "Eine Kriechverformung ist eine Art von Verformung, die auftritt, wenn ein Material einer konstanten Belastung über einen langen Zeitraum ausgesetzt ist."@de ;
+             skos:prefLabel "Creep Strain"@en ,
+                            "Kriechverformung"@de ;
+             iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Creep_(deformation)> .
 
 
 ###  https://purl.matolab.org/mseo/mid/CrossSection
@@ -308,6 +348,20 @@ The strain rate is a concept of materials science and continuum mechanics, that 
                   iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Strain_rate"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/Ductility
+:Ductility rdf:type owl:Class ;
+           rdfs:subClassOf iof-core:Capability ;
+           rdfs:label "Ductility"@en ,
+                      "Duktilität"@de ;
+           skos:altLabel "Biegsamkeit"@de ,
+                         "Flexibility"@en ;
+           skos:definition "Die Fähigkeit eines Materials, plastisch zu verformen, ohne zu brechen"@de ,
+                           "The ability of a material to deform plastically without breaking"@en ;
+           skos:prefLabel "Ductility"@en ,
+                          "Duktilität"@de ;
+           iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Ductility> .
+
+
 ###  https://purl.matolab.org/mseo/mid/Durability
 :Durability rdf:type owl:Class ;
             rdfs:subClassOf iof-core:Capability ;
@@ -320,6 +374,18 @@ The strain rate is a concept of materials science and continuum mechanics, that 
             skos:prefLabel "Dauerhaftigkeit"@de ,
                            "Durability"@en ;
             iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Durability> .
+
+
+###  https://purl.matolab.org/mseo/mid/DynamicViscosity
+:DynamicViscosity rdf:type owl:Class ;
+                  rdfs:subClassOf :Viscosity ;
+                  rdfs:label "Dynamic Viscosity"@en ,
+                             "Dynamische Viskosität"@de ;
+                  skos:definition "Die dynamische Viskosität ist ein Maß für den Widerstand eines Fluids gegen eine allmähliche Verformung durch Scher- oder Zugspannung. Es ist ein Maß für den inneren Widerstand des Fluids gegen den Fluss und kann als Maß für die Flüssigkeitsreibung betrachtet werden."@de ,
+                                  "Dynamic viscosity is the measure of a fluid's resistance to gradual deformation by shear stress or tensile stress. It is a measure of the fluid's internal resistance to flow and may be thought of as a measure of fluid friction."@en ;
+                  skos:prefLabel "Dynamic Viscosity"@en ,
+                                 "Dynamische Viskosität"@de ;
+                  iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscosity> .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElasticModulus
@@ -345,6 +411,22 @@ where stress is the force causing the deformation divided by the area to which t
                iof-av:naturalLanguageDefinition """For many ductile metals, tensile loading applied to a sample will cause it to behave in an elastic manner. Each increment of load is accompanied by a proportional increment in extension. When the load is removed, the piece returns to its original size. However, once the load exceeds a threshold – the yield strength – the extension increases more rapidly than in the elastic region; now when the load is removed, some degree of extension will remain.
 
 Elastic deformation, however, is an approximation and its quality depends on the time frame considered and loading speed. If, as indicated in the graph opposite, the deformation includes elastic deformation, it is also often referred to as \"elasto-plastic deformation\" or \"elastic-plastic deformation\"."""@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Elasticity
+:Elasticity rdf:type owl:Class ;
+            rdfs:subClassOf :Strength ;
+            rdfs:label "Elasticity"@en ,
+                       "Elastizität"@de ;
+            skos:altLabel "Elastic"@en ,
+                          "Elastisch"@de ,
+                          "Resilience"@en ,
+                          "Widerstandsfähigkeit"@de ;
+            skos:definition "Elasticity is the ability of an object or material to resume its normal shape after deformation."@en ,
+                            "Elastizität ist die Fähigkeit eines Objekts oder Materials, nach Deformation seine normale Form wiederherzustellen."@de ;
+            skos:prefLabel "Elasticity"@en ,
+                           "Elastizität"@de ;
+            iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Elasticity_(physics)> .
 
 
 ###  https://purl.matolab.org/mseo/mid/ElectricCapacitance
@@ -428,6 +510,16 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
             iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Experiment"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/ExtentionalViscosity
+:ExtentionalViscosity rdf:type owl:Class ;
+                      rdfs:subClassOf :Viscosity ;
+                      rdfs:label "Dehnviskosität"@de ,
+                                 "Extentional Viscosity"@en ;
+                      skos:definition "Die Messung des Widerstands einer Flüssigkeit gegen den Fluss bei Dehnspannung"@de ,
+                                      "The measure of a fluid's resistance to tension flow"@en ;
+                      iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscosity> .
+
+
 ###  https://purl.matolab.org/mseo/mid/Extrapolation
 :Extrapolation rdf:type owl:Class ;
                rdfs:subClassOf :DataTransformation ;
@@ -463,6 +555,19 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                  iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Fatigue_strength> .
 
 
+###  https://purl.matolab.org/mseo/mid/FlexuralStrength
+:FlexuralStrength rdf:type owl:Class ;
+                  rdfs:subClassOf :BreakingStrength ;
+                  rdfs:label "Biegefestigkeit"@de ,
+                             "Flexural Strength"@en ;
+                  skos:altLabel "Bending Strength"@en ;
+                  skos:definition "Die Fähigkeit eines Materials, unter Biegelast Deformationen zu widerstehen."@de ,
+                                  "The ability of a material to resist deformation under flexual load."@en ;
+                  skos:prefLabel "Biegefestigkeit"@de ,
+                                 "Flexural Strength"@en ;
+                  iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Flexural_strength> .
+
+
 ###  https://purl.matolab.org/mseo/mid/ForceMeasurementCapability
 :ForceMeasurementCapability rdf:type owl:Class ;
                             rdfs:subClassOf obo:BFO_0000034 ;
@@ -484,6 +589,30 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                          "Yank"@en ;
            iof-av:naturalLanguageDefinition "In physics, yank is sometimes used to denote the derivative of force with respect to time or mass multiplied by jerk. In relativistic physics, it is expressed as the second derivative of momentum with respect to time, because the mass is velocity-dependent. Though not universally accepted as an official term for this quantity, the term \"yank\" is commonly used among physics enthusiasts."@en ;
            iof-av:naturalLanguageDefinition_source "https://en-academic.com/dic.nsf/enwiki/1620873"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/Hardness
+:Hardness rdf:type owl:Class ;
+          rdfs:subClassOf :Strength ;
+          rdfs:label "Hardness"@en ,
+                     "Härte"@de ;
+          skos:definition "Die Widerstandsfähigkeit eines Materials gegen lokalisierte Verformung oder Plastizität, die durch mechanische Einwirkung wie Biegen, Quetschen oder Kratzen verursacht wird."@de ,
+                          "The resistance of a material to localized deformation or plasticity caused by mechanical action, such as bending, crushing, or scratching."@en ;
+          skos:prefLabel "Hardness"@en ,
+                         "Härte"@de ;
+          iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Hardness> .
+
+
+###  https://purl.matolab.org/mseo/mid/IdentationHardness
+:IdentationHardness rdf:type owl:Class ;
+                    rdfs:subClassOf :Hardness ;
+                    rdfs:label "Identation Hardness"@en ,
+                               "Indentationshärte"@de ;
+                    skos:definition "Die Indentationshärte ist ein Maß für die Widerstandsfähigkeit eines Materials gegen Eindringen."@de ,
+                                    "Identation hardness is a measure of the resistance of a material to indentation."@en ;
+                    skos:prefLabel "Identation Hardness"@en ,
+                                   "Indentationshärte"@de ;
+                    iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Indentation_hardness> .
 
 
 ###  https://purl.matolab.org/mseo/mid/ImpactStrenght
@@ -530,6 +659,18 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
                iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Interpolation> .
 
 
+###  https://purl.matolab.org/mseo/mid/KinematicViscosity
+:KinematicViscosity rdf:type owl:Class ;
+                    rdfs:subClassOf :Viscosity ;
+                    skos:altLabel "Kinetic Viscosity"@en ,
+                                  "Kinetische Viskosität"@de ;
+                    skos:definition "Die kinematische Viskosität ist das Verhältnis der dynamischen Viskosität zur Dichte."@de ,
+                                    "Kinematic viscosity is the ratio of dynamic viscosity to density."@en ;
+                    skos:prefLabel "Kinematic Viscosity"@en ,
+                                   "Kinematische Viskosität"@de ;
+                    iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Kinematic_viscosity> .
+
+
 ###  https://purl.matolab.org/mseo/mid/LowerYieldStrength
 :LowerYieldStrength rdf:type owl:Class ;
                     rdfs:subClassOf :YieldStrength ;
@@ -570,6 +711,20 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
               skos:prefLabel "Magnetic Flux"@en ,
                              "Magnetischer Fluss"@de ;
               iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Magnetic_flux> .
+
+
+###  https://purl.matolab.org/mseo/mid/Malleability
+:Malleability rdf:type owl:Class ;
+              rdfs:subClassOf :Ductility ;
+              rdfs:label "Formbarkeit"@de ,
+                         "Malleability"@en ;
+              skos:altLabel "Malleable"@en ,
+                            "formbar"@de ;
+              skos:definition "Im Vergleich zu Duktilität, werden Materialen als formbar angesehen, wenn sie durch Hammern oder Walzen bearbeitet werden können"@de ,
+                              "In contrast to Ductility, materials were considered malleable if they were amenable to forming by hammering or rolling"@en ;
+              skos:prefLabel "Formbarkeit"@de ,
+                             "Malleability"@en ;
+              iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Ductility> .
 
 
 ###  https://purl.matolab.org/mseo/mid/MaterialComposition
@@ -777,6 +932,18 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
 Plastic deformation is observed in most materials, particularly metals, soils, rocks, concrete, and foams.[3][4][5][6] However, the physical mechanisms that cause plastic deformation can vary widely. At a crystalline scale, plasticity in metals is usually a consequence of dislocations. Such defects are relatively rare in most crystalline materials, but are numerous in some and part of their crystal structure; in such cases, plastic crystallinity can result. In brittle materials such as rock, concrete and bone, plasticity is caused predominantly by slip at microcracks. In cellular materials such as liquid foams or biological tissues, plasticity is mainly a consequence of bubble or cell rearrangements, notably T1 processes."""@en .
 
 
+###  https://purl.matolab.org/mseo/mid/Plasticity
+:Plasticity rdf:type owl:Class ;
+            rdfs:subClassOf :Strength ;
+            rdfs:label "Plasticity"@en ,
+                       "Plastizität"@de ;
+            skos:definition "Plasticity is the ability of a material to undergo permanent deformation without breaking or cracking."@en ,
+                            "Plastizität ist die Fähigkeit eines Materials, dauerhafte Verformungen ohne Bruch oder Riss zu erleiden."@de ;
+            skos:prefLabel "Plasticity"@en ,
+                           "Plastizität"@de ;
+            iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Plasticity_(physics)> .
+
+
 ###  https://purl.matolab.org/mseo/mid/PoissonEffect
 :PoissonEffect rdf:type owl:Class ;
                rdfs:subClassOf obo:BFO_0000017 ;
@@ -846,6 +1013,18 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
                rdfs:label "Public Project"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/ReboundHardness
+:ReboundHardness rdf:type owl:Class ;
+                 rdfs:subClassOf :Hardness ;
+                 rdfs:label "Rebound hardness"@en ,
+                            "Rückprallhärte"@de ;
+                 skos:definition "Die Rückprallhärte ist ein Maß für die Elastizität eines Materials, das als Verhältnis der Rückprallgeschwindigkeit zur Aufprallgeschwindigkeit eines Standardballs definiert wird, der auf eine Oberfläche geworfen wird."@de ,
+                                 "Rebound hardness is a measure of the elasticity of a material, which is defined as the ratio of the rebound velocity to the impact velocity of a standard ball dropped onto a surface."@en ;
+                 skos:prefLabel "Rebound hardness"@en ,
+                                "Rückprallhärte"@de ;
+                 iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Rebound_hardness> .
+
+
 ###  https://purl.matolab.org/mseo/mid/RegionOfInterest
 :RegionOfInterest rdf:type owl:Class ;
                   rdfs:subClassOf obo:BFO_0000029 ;
@@ -856,6 +1035,19 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
 :Regulation rdf:type owl:Class ;
             rdfs:subClassOf iof-core:PlanSpecification ;
             rdfs:label "Regulation"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/ScratchHardness
+:ScratchHardness rdf:type owl:Class ;
+                 rdfs:subClassOf :Hardness ;
+                 rdfs:label "Scratch Hardness"@en ;
+                 skos:altLabel "Kratzbeständigkeit"@de ,
+                               "Scratch Resistance"@en ;
+                 skos:definition "Die Fähigkeit eines Materials, Kratzern zu widerstehen"@de ,
+                                 "The ability of a material to resist being scratched"@en ;
+                 skos:prefLabel "Kratzfestigkeit"@de ,
+                                "Scratch Hardness"@en ;
+                 iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Scratch_hardness> .
 
 
 ###  https://purl.matolab.org/mseo/mid/ShearModulus
@@ -876,6 +1068,18 @@ where
 {\\displaystyle l}l is the initial length of the area.
 The derived SI unit of shear modulus is the pascal (Pa), although it is usually expressed in gigapascals (GPa) or in thousand pounds per square inch (ksi). Its dimensional form is M1L−1T−2, replacing force by mass times acceleration."""@en ;
               iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Shear_modulus"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/ShearViscosity
+:ShearViscosity rdf:type owl:Class ;
+                rdfs:subClassOf :Viscosity ;
+                rdfs:label "Scherviskosität"@de ,
+                           "Shear Viscosity"@en ;
+                skos:definition "Die Messung des Widerstands einer Flüssigkeit gegen den Fluss bei Scherspannung"@de ,
+                                "The measure of a fluid's resistance to shear flow"@en ;
+                skos:prefLabel "Scherviskosität"@de ,
+                               "Shear Viscosity"@en ;
+                iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscosity> .
 
 
 ###  https://purl.matolab.org/mseo/mid/Simulation
@@ -935,7 +1139,7 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
 
 ###  https://purl.matolab.org/mseo/mid/Stiffness
 :Stiffness rdf:type owl:Class ;
-           rdfs:subClassOf :Strength ;
+           rdfs:subClassOf :Elasticity ;
            obo:IAO_0000116 "While Stiffness characterizes a bodies response, taking into account its geometry and materials. Elastic Modulus aims to be agnostic to geometry and specific for the material."@en ;
            rdfs:label "Steifigkeit"@de ,
                       "Stiffness"@en ;
@@ -998,6 +1202,22 @@ The complementary concept is flexibility or pliability: the more flexible an obj
                                            rdfs:label "Technological Product Related Fiat Object Part"@en .
 
 
+###  https://purl.matolab.org/mseo/mid/TensileStrength
+:TensileStrength rdf:type owl:Class ;
+                 rdfs:subClassOf :BreakingStrength ;
+                 rdfs:label "Tensile Strength"@en ,
+                            "Zugfestigkeit"@de ;
+                 skos:altLabel "Ultimate Tensile Strength"@en ;
+                 skos:prefLabel "Ultimate Tensile Strength"@en ,
+                                "Zugfestigkeit"@de ;
+                 iof-av:naturalLanguageDefinition """Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\\displaystyle F_{\\text{tu}}}{\\displaystyle F_{\\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
+
+The ultimate tensile strength is usually found by performing a tensile test and recording the engineering stress versus strain. The highest point of the stress–strain curve is the ultimate tensile strength and has units of stress. The equivalent point for the case of compression, instead of tension, is called the compressive strength.
+
+Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood."""@en ;
+                 iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Ultimate_tensile_strength"@en .
+
+
 ###  https://purl.matolab.org/mseo/mid/TimeOfBreak
 :TimeOfBreak rdf:type owl:Class ;
              rdfs:subClassOf obo:BFO_0000148 ;
@@ -1034,19 +1254,6 @@ where e is the engineering strain. The logarithmic strain provides the correct m
             iof-av:naturalLanguageDefinition_source "https://en.wikipedia.org/wiki/Deformation_(physics)#True_strain"@en .
 
 
-###  https://purl.matolab.org/mseo/mid/UltimateTensileStrength
-:UltimateTensileStrength rdf:type owl:Class ;
-                         rdfs:subClassOf :MechanicalStrength ;
-                         obo:IAO_0000119 "https://en.wikipedia.org/wiki/Ultimate_tensile_strength"@en ;
-                         rdfs:label "Ultimate Tensile Strength"@en ,
-                                    "Zugfestigkeit"@de ;
-                         iof-av:naturalLanguageDefinition """Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\\displaystyle F_{\\text{tu}}}{\\displaystyle F_{\\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
-
-The ultimate tensile strength is usually found by performing a tensile test and recording the engineering stress versus strain. The highest point of the stress–strain curve is the ultimate tensile strength and has units of stress. The equivalent point for the case of compression, instead of tension, is called the compressive strength.
-
-Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood."""@en .
-
-
 ###  https://purl.matolab.org/mseo/mid/UniversalTestingMachine
 :UniversalTestingMachine rdf:type owl:Class ;
                          rdfs:subClassOf iof-core:MaterialArtifact ;
@@ -1072,10 +1279,46 @@ Tensile strengths are rarely of any consequence in the design of ductile members
                iof-av:naturalLanguageDefinition "A number designating a particular form of something that is slightly different from other forms of the same thing."@en .
 
 
+###  https://purl.matolab.org/mseo/mid/Viscoelasticity
+:Viscoelasticity rdf:type owl:Class ;
+                 rdfs:subClassOf :Strength ;
+                 rdfs:label "Viscoelasticity"@en ,
+                            "Viscoelastizität"@de ;
+                 skos:altLabel "Elasticity of viscosity"@en ,
+                               "Viskoelastizität"@de ;
+                 skos:definition "Viscoelasticity is the property of materials that exhibit both viscous and elastic characteristics when undergoing deformation."@en ,
+                                 "Viscoelastizität ist die Eigenschaft von Materialien, die sowohl viskose als auch elastische Eigenschaften aufweisen, wenn sie sich verformen."@de ;
+                 skos:prefLabel "Viscoelasticity"@en ,
+                                "Viscoelastizität"@de ;
+                 iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscoelasticity> .
+
+
+###  https://purl.matolab.org/mseo/mid/Viscosity
+:Viscosity rdf:type owl:Class ;
+           rdfs:subClassOf :Plasticity ;
+           rdfs:label "Viscosity"@en ,
+                      "Viskosität"@de ;
+           skos:definition "Die Messung des Widerstands einer Flüssigkeit gegen den Fluss"@de ,
+                           "The measure of a fluid's resistance to flow"@en ;
+           skos:prefLabel "Viscosity"@en ,
+                          "Viskosität"@de ;
+           iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscosity> .
+
+
 ###  https://purl.matolab.org/mseo/mid/Voltage
 :Voltage rdf:type owl:Class ;
          rdfs:subClassOf iof-core:ProcessCharacteristic ;
          rdfs:label "Voltage"@en .
+
+
+###  https://purl.matolab.org/mseo/mid/VolumeViscosity
+:VolumeViscosity rdf:type owl:Class ;
+                 rdfs:subClassOf :Viscosity ;
+                 rdfs:label "Volume Viscosity"@en ,
+                            "Volumenviskosität"@de ;
+                 skos:definition "Die Messung des Widerstands einer Flüssigkeit gegen den Fluss bei Volumenspannung"@de ,
+                                 "The measure of a fluid's resistance to volumetric stress"@en ;
+                 iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Viscosity> .
 
 
 ###  https://purl.matolab.org/mseo/mid/WearResistance
@@ -1092,6 +1335,19 @@ Tensile strengths are rarely of any consequence in the design of ductile members
                 iof-av:naturalLanguageDefinition_source <https://en.wikipedia.org/wiki/Wear_resistance> .
 
 
+###  https://purl.matolab.org/mseo/mid/WeatheringResistance
+:WeatheringResistance rdf:type owl:Class ;
+                      rdfs:subClassOf :OperationalStrength ;
+                      rdfs:label "Weathering Resistance"@en ,
+                                 "Witterungsbeständigkeit"@de ;
+                      skos:altLabel "Weather Resistant"@en ,
+                                    "Wetterbeständig"@de ;
+                      skos:definition "Die Fähigkeit eines Materials, den Auswirkungen von Witterungseinflüssen wie Wind, Regen und Sonnenlicht standzuhalten."@de ,
+                                      "The ability of a material to resist the effects of weathering, such as wind, rain, and sunlight."@en ;
+                      skos:prefLabel "Weathering Resistance"@en ,
+                                     "Witterungsbeständigkeit"@de .
+
+
 ###  https://purl.matolab.org/mseo/mid/WithdrawalPlan
 :WithdrawalPlan rdf:type owl:Class ;
                 rdfs:subClassOf iof-core:PlanSpecification ;
@@ -1101,7 +1357,7 @@ Tensile strengths are rarely of any consequence in the design of ductile members
 
 ###  https://purl.matolab.org/mseo/mid/YieldStrength
 :YieldStrength rdf:type owl:Class ;
-               rdfs:subClassOf :MechanicalStrength ;
+               rdfs:subClassOf :Plasticity ;
                obo:IAO_0000119 "https://en.wikipedia.org/wiki/Yield_(engineering)"@en ;
                rdfs:label "Fließgrenze"@de ,
                           "Yield Strength"@en ;
@@ -1178,3 +1434,4 @@ iof-core:PlannedProcess rdf:type owl:Class .
 iof-core:ProcessCharacteristic rdf:type owl:Class .
 
 
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

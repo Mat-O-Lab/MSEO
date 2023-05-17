@@ -109,6 +109,9 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/BreakingStrength"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/Brittleness"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/Building"/>
     </Declaration>
     <Declaration>
@@ -130,7 +133,13 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/ControlSoftware"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/CreepModulus"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/CreepResistace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/CreepStrain"/>
     </Declaration>
     <Declaration>
         <Class IRI="/CrossSection"/>
@@ -157,13 +166,22 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/DeformationSpeed"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/Ductility"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/Durability"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/DynamicViscosity"/>
     </Declaration>
     <Declaration>
         <Class IRI="/ElasticModulus"/>
     </Declaration>
     <Declaration>
         <Class IRI="/ElasticStrain"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Elasticity"/>
     </Declaration>
     <Declaration>
         <Class IRI="/ElectricCapacitance"/>
@@ -187,16 +205,28 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/Experiment"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/ExtentionalViscosity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/Extrapolation"/>
     </Declaration>
     <Declaration>
         <Class IRI="/FatigueStrength"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/FlexuralStrength"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/ForceMeasurementCapability"/>
     </Declaration>
     <Declaration>
         <Class IRI="/ForceRate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Hardness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/IdentationHardness"/>
     </Declaration>
     <Declaration>
         <Class IRI="/ImpactStrenght"/>
@@ -211,6 +241,9 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/Interpolation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/KinematicViscosity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/LowerYieldStrength"/>
     </Declaration>
     <Declaration>
@@ -221,6 +254,9 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/MagneticFlux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Malleability"/>
     </Declaration>
     <Declaration>
         <Class IRI="/MaterialComposition"/>
@@ -283,6 +319,9 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/PlasticStrain"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/Plasticity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/PoissonEffect"/>
     </Declaration>
     <Declaration>
@@ -313,13 +352,22 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/PublicProject"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/ReboundHardness"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/RegionOfInterest"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Regulation"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/ScratchHardness"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/ShearModulus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/ShearViscosity"/>
     </Declaration>
     <Declaration>
         <Class IRI="/Simulation"/>
@@ -367,6 +415,9 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/TechnologicalProductRelatedFiatObjectPart"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/TensileStrength"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/TimeOfBreak"/>
     </Declaration>
     <Declaration>
@@ -374,9 +425,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </Declaration>
     <Declaration>
         <Class IRI="/TrueStrain"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="/UltimateTensileStrength"/>
     </Declaration>
     <Declaration>
         <Class IRI="/UniversalTestingMachine"/>
@@ -388,10 +436,22 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/VersionNumber"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/Viscoelasticity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/Viscosity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/Voltage"/>
     </Declaration>
     <Declaration>
+        <Class IRI="/VolumeViscosity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="/WearResistance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="/WeatheringResistance"/>
     </Declaration>
     <Declaration>
         <Class IRI="/WithdrawalPlan"/>
@@ -472,13 +532,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <AnnotationProperty abbreviatedIRI="dc:contributor"/>
     </Declaration>
     <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:identifier"/>
-    </Declaration>
-    <Declaration>
         <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="dc:license"/>
     </Declaration>
     <SubClassOf>
         <Class abbreviatedIRI="obo:CHEBI_24431"/>
@@ -502,7 +556,11 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/BreakingStrength"/>
-        <Class IRI="/MechanicalStrength"/>
+        <Class IRI="/Toughness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Brittleness"/>
+        <Class abbreviatedIRI="iof-core:Capability"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Building"/>
@@ -533,8 +591,16 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/Software"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/CreepModulus"/>
+        <Class IRI="/Viscoelasticity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/CreepResistace"/>
         <Class IRI="/Durability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/CreepStrain"/>
+        <Class IRI="/Strain"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/CrossSection"/>
@@ -569,8 +635,16 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI="iof-core:ProcessCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/Ductility"/>
+        <Class abbreviatedIRI="iof-core:Capability"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/Durability"/>
         <Class abbreviatedIRI="iof-core:Capability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/DynamicViscosity"/>
+        <Class IRI="/Viscosity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/ElasticModulus"/>
@@ -579,6 +653,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class IRI="/ElasticStrain"/>
         <Class IRI="/Strain"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Elasticity"/>
+        <Class IRI="/Strength"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/ElectricCapacitance"/>
@@ -609,6 +687,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI="iof-core:MeasurementProcess"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/ExtentionalViscosity"/>
+        <Class IRI="/Viscosity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/Extrapolation"/>
         <Class IRI="/DataTransformation"/>
     </SubClassOf>
@@ -617,12 +699,24 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/Strength"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/FlexuralStrength"/>
+        <Class IRI="/BreakingStrength"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/ForceMeasurementCapability"/>
         <Class abbreviatedIRI="obo:BFO_0000034"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/ForceRate"/>
         <Class abbreviatedIRI="iof-core:ProcessCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Hardness"/>
+        <Class IRI="/Strength"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/IdentationHardness"/>
+        <Class IRI="/Hardness"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/ImpactStrenght"/>
@@ -641,6 +735,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/DataTransformation"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/KinematicViscosity"/>
+        <Class IRI="/Viscosity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/LowerYieldStrength"/>
         <Class IRI="/YieldStrength"/>
     </SubClassOf>
@@ -655,6 +753,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class IRI="/MagneticFlux"/>
         <Class abbreviatedIRI="iof-core:ProcessCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Malleability"/>
+        <Class IRI="/Ductility"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/MaterialComposition"/>
@@ -737,6 +839,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/Strain"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/Plasticity"/>
+        <Class IRI="/Strength"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/PoissonEffect"/>
         <Class abbreviatedIRI="obo:BFO_0000017"/>
     </SubClassOf>
@@ -777,6 +883,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/Project"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/ReboundHardness"/>
+        <Class IRI="/Hardness"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/RegionOfInterest"/>
         <Class abbreviatedIRI="obo:BFO_0000029"/>
     </SubClassOf>
@@ -785,8 +895,16 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class abbreviatedIRI="iof-core:PlanSpecification"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/ScratchHardness"/>
+        <Class IRI="/Hardness"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/ShearModulus"/>
         <Class IRI="/Stiffness"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/ShearViscosity"/>
+        <Class IRI="/Viscosity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Simulation"/>
@@ -826,7 +944,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Stiffness"/>
-        <Class IRI="/Strength"/>
+        <Class IRI="/Elasticity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/Strain"/>
@@ -849,6 +967,10 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/MaterialStructure"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/TensileStrength"/>
+        <Class IRI="/BreakingStrength"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/TimeOfBreak"/>
         <Class abbreviatedIRI="obo:BFO_0000148"/>
     </SubClassOf>
@@ -859,10 +981,6 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <SubClassOf>
         <Class IRI="/TrueStrain"/>
         <Class IRI="/Strain"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="/UltimateTensileStrength"/>
-        <Class IRI="/MechanicalStrength"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/UniversalTestingMachine"/>
@@ -877,12 +995,28 @@ thomas.hanke@imws.fraunhofer.de</Literal>
         <Class IRI="/CodeIdentifier"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/Viscoelasticity"/>
+        <Class IRI="/Strength"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/Viscosity"/>
+        <Class IRI="/Plasticity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/Voltage"/>
         <Class abbreviatedIRI="iof-core:ProcessCharacteristic"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="/VolumeViscosity"/>
+        <Class IRI="/Viscosity"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="/WearResistance"/>
         <Class IRI="/Durability"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="/WeatheringResistance"/>
+        <Class IRI="/OperationalStrength"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/WithdrawalPlan"/>
@@ -890,7 +1024,7 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/YieldStrength"/>
-        <Class IRI="/MechanicalStrength"/>
+        <Class IRI="/Plasticity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="/tandard"/>
@@ -1091,6 +1225,51 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="en">Brittleness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="de">Sprödigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="en">Fragility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="de">Zerbrechlichkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="de">Die Eigenschaft, leicht zu brechen oder zu beschädigen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="en">Opposite to Toughness, brittleness is the property of being easily broken or damaged.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="en">Brittleness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Brittleness</IRI>
+        <Literal xml:lang="de">Sprödigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Brittleness</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Brittleness</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Building</IRI>
         <Literal xml:lang="en">Building</Literal>
     </AnnotationAssertion>
@@ -1206,6 +1385,41 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CreepModulus</IRI>
+        <Literal xml:lang="en">Creep Modulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CreepModulus</IRI>
+        <Literal xml:lang="de">Kriechmodul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CreepModulus</IRI>
+        <Literal xml:lang="de">Der Kriechmodul ist ein Maß für die Viskoelastizität eines Materials, das seine Fähigkeit zur Verformung unter Belastung im Laufe der Zeit beschreibt.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CreepModulus</IRI>
+        <Literal xml:lang="en">The creep modulus is a measure of the viscoelasticity of a material, which is its ability to deform under stress over time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CreepModulus</IRI>
+        <Literal xml:lang="en">Creep Modulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CreepModulus</IRI>
+        <Literal xml:lang="de">Kriechmodul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/CreepModulus</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscoelasticity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/CreepResistace</IRI>
         <Literal xml:lang="en">Creep Resistance</Literal>
     </AnnotationAssertion>
@@ -1247,6 +1461,51 @@ thomas.hanke@imws.fraunhofer.de</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
         <IRI>/CreepResistace</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Creep_(deformation)</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="en">Creep Strain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="de">Kriechverformung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="en">Creeping strain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="de">Kriechbeanspruchung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="en">A creep strain is a type of strain that occurs when a material is subjected to a constant stress over a long period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="de">Eine Kriechverformung ist eine Art von Verformung, die auftritt, wenn ein Material einer konstanten Belastung über einen langen Zeitraum ausgesetzt ist.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="en">Creep Strain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/CreepStrain</IRI>
+        <Literal xml:lang="de">Kriechverformung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/CreepStrain</IRI>
         <IRI>https://en.wikipedia.org/wiki/Creep_(deformation)</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -1368,6 +1627,51 @@ The strain rate is a concept of materials science and continuum mechanics, that 
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="en">Ductility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="de">Duktilität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="de">Biegsamkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="en">Flexibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="de">Die Fähigkeit eines Materials, plastisch zu verformen, ohne zu brechen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="en">The ability of a material to deform plastically without breaking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="en">Ductility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Ductility</IRI>
+        <Literal xml:lang="de">Duktilität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Ductility</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Ductility</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Durability</IRI>
         <Literal xml:lang="de">Dauerhaftigkeit</Literal>
     </AnnotationAssertion>
@@ -1410,6 +1714,41 @@ The strain rate is a concept of materials science and continuum mechanics, that 
         <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
         <IRI>/Durability</IRI>
         <IRI>https://en.wikipedia.org/wiki/Durability</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DynamicViscosity</IRI>
+        <Literal xml:lang="en">Dynamic Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/DynamicViscosity</IRI>
+        <Literal xml:lang="de">Dynamische Viskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/DynamicViscosity</IRI>
+        <Literal xml:lang="de">Die dynamische Viskosität ist ein Maß für den Widerstand eines Fluids gegen eine allmähliche Verformung durch Scher- oder Zugspannung. Es ist ein Maß für den inneren Widerstand des Fluids gegen den Fluss und kann als Maß für die Flüssigkeitsreibung betrachtet werden.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/DynamicViscosity</IRI>
+        <Literal xml:lang="en">Dynamic viscosity is the measure of a fluid&apos;s resistance to gradual deformation by shear stress or tensile stress. It is a measure of the fluid&apos;s internal resistance to flow and may be thought of as a measure of fluid friction.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/DynamicViscosity</IRI>
+        <Literal xml:lang="en">Dynamic Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/DynamicViscosity</IRI>
+        <Literal xml:lang="de">Dynamische Viskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/DynamicViscosity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscosity</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1469,6 +1808,61 @@ where stress is the force causing the deformation divided by the area to which t
         <Literal xml:lang="en">For many ductile metals, tensile loading applied to a sample will cause it to behave in an elastic manner. Each increment of load is accompanied by a proportional increment in extension. When the load is removed, the piece returns to its original size. However, once the load exceeds a threshold – the yield strength – the extension increases more rapidly than in the elastic region; now when the load is removed, some degree of extension will remain.
 
 Elastic deformation, however, is an approximation and its quality depends on the time frame considered and loading speed. If, as indicated in the graph opposite, the deformation includes elastic deformation, it is also often referred to as &quot;elasto-plastic deformation&quot; or &quot;elastic-plastic deformation&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="en">Elasticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="de">Elastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="en">Elastic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="de">Elastisch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="en">Resilience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="de">Widerstandsfähigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="en">Elasticity is the ability of an object or material to resume its normal shape after deformation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="de">Elastizität ist die Fähigkeit eines Objekts oder Materials, nach Deformation seine normale Form wiederherzustellen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="en">Elasticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Elasticity</IRI>
+        <Literal xml:lang="de">Elastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Elasticity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Elasticity_(physics)</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1674,6 +2068,31 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ExtentionalViscosity</IRI>
+        <Literal xml:lang="de">Dehnviskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ExtentionalViscosity</IRI>
+        <Literal xml:lang="en">Extentional Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ExtentionalViscosity</IRI>
+        <Literal xml:lang="de">Die Messung des Widerstands einer Flüssigkeit gegen den Fluss bei Dehnspannung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ExtentionalViscosity</IRI>
+        <Literal xml:lang="en">The measure of a fluid&apos;s resistance to tension flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/ExtentionalViscosity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscosity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Extrapolation</IRI>
         <Literal xml:lang="de">Extrapolation</Literal>
     </AnnotationAssertion>
@@ -1799,6 +2218,46 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="de">Biegefestigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="en">Flexural Strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="en">Bending Strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="de">Die Fähigkeit eines Materials, unter Biegelast Deformationen zu widerstehen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="en">The ability of a material to resist deformation under flexual load.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="de">Biegefestigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/FlexuralStrength</IRI>
+        <Literal xml:lang="en">Flexural Strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/FlexuralStrength</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Flexural_strength</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/ForceMeasurementCapability</IRI>
         <Literal xml:lang="en">Force Measurement Artifact Function</Literal>
     </AnnotationAssertion>
@@ -1861,6 +2320,76 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
         <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
         <IRI>/ForceRate</IRI>
         <Literal xml:lang="en">https://en-academic.com/dic.nsf/enwiki/1620873</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Hardness</IRI>
+        <Literal xml:lang="en">Hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Hardness</IRI>
+        <Literal xml:lang="de">Härte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Hardness</IRI>
+        <Literal xml:lang="de">Die Widerstandsfähigkeit eines Materials gegen lokalisierte Verformung oder Plastizität, die durch mechanische Einwirkung wie Biegen, Quetschen oder Kratzen verursacht wird.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Hardness</IRI>
+        <Literal xml:lang="en">The resistance of a material to localized deformation or plasticity caused by mechanical action, such as bending, crushing, or scratching.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Hardness</IRI>
+        <Literal xml:lang="en">Hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Hardness</IRI>
+        <Literal xml:lang="de">Härte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Hardness</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Hardness</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/IdentationHardness</IRI>
+        <Literal xml:lang="en">Identation Hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/IdentationHardness</IRI>
+        <Literal xml:lang="de">Indentationshärte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/IdentationHardness</IRI>
+        <Literal xml:lang="de">Die Indentationshärte ist ein Maß für die Widerstandsfähigkeit eines Materials gegen Eindringen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/IdentationHardness</IRI>
+        <Literal xml:lang="en">Identation hardness is a measure of the resistance of a material to indentation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/IdentationHardness</IRI>
+        <Literal xml:lang="en">Identation Hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/IdentationHardness</IRI>
+        <Literal xml:lang="de">Indentationshärte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/IdentationHardness</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Indentation_hardness</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1983,6 +2512,41 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
         <IRI>https://en.wikipedia.org/wiki/Interpolation</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/KinematicViscosity</IRI>
+        <Literal xml:lang="en">Kinetic Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/KinematicViscosity</IRI>
+        <Literal xml:lang="de">Kinetische Viskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/KinematicViscosity</IRI>
+        <Literal xml:lang="de">Die kinematische Viskosität ist das Verhältnis der dynamischen Viskosität zur Dichte.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/KinematicViscosity</IRI>
+        <Literal xml:lang="en">Kinematic viscosity is the ratio of dynamic viscosity to density.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/KinematicViscosity</IRI>
+        <Literal xml:lang="en">Kinematic Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/KinematicViscosity</IRI>
+        <Literal xml:lang="de">Kinematische Viskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/KinematicViscosity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Kinematic_viscosity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>/LowerYieldStrength</IRI>
         <Literal xml:lang="en">https://en.wikipedia.org/wiki/Yield_(engineering)</Literal>
@@ -2091,6 +2655,51 @@ Subscript 0 denotes the original dimensions of the sample. The SI unit for stres
         <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
         <IRI>/MagneticFlux</IRI>
         <IRI>https://en.wikipedia.org/wiki/Magnetic_flux</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="de">Formbarkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="en">Malleability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="en">Malleable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="de">formbar</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="de">Im Vergleich zu Duktilität, werden Materialen als formbar angesehen, wenn sie durch Hammern oder Walzen bearbeitet werden können</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="en">In contrast to Ductility, materials were considered malleable if they were amenable to forming by hammering or rolling</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="de">Formbarkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Malleability</IRI>
+        <Literal xml:lang="en">Malleability</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Malleability</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Ductility</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2611,6 +3220,41 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Plasticity</IRI>
+        <Literal xml:lang="en">Plasticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Plasticity</IRI>
+        <Literal xml:lang="de">Plastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Plasticity</IRI>
+        <Literal xml:lang="en">Plasticity is the ability of a material to undergo permanent deformation without breaking or cracking.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Plasticity</IRI>
+        <Literal xml:lang="de">Plastizität ist die Fähigkeit eines Materials, dauerhafte Verformungen ohne Bruch oder Riss zu erleiden.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Plasticity</IRI>
+        <Literal xml:lang="en">Plasticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Plasticity</IRI>
+        <Literal xml:lang="de">Plastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Plasticity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Plasticity_(physics)</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/PoissonEffect</IRI>
         <Literal xml:lang="en">Poisson Effect</Literal>
     </AnnotationAssertion>
@@ -2706,6 +3350,41 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ReboundHardness</IRI>
+        <Literal xml:lang="en">Rebound hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ReboundHardness</IRI>
+        <Literal xml:lang="de">Rückprallhärte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ReboundHardness</IRI>
+        <Literal xml:lang="de">Die Rückprallhärte ist ein Maß für die Elastizität eines Materials, das als Verhältnis der Rückprallgeschwindigkeit zur Aufprallgeschwindigkeit eines Standardballs definiert wird, der auf eine Oberfläche geworfen wird.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ReboundHardness</IRI>
+        <Literal xml:lang="en">Rebound hardness is a measure of the elasticity of a material, which is defined as the ratio of the rebound velocity to the impact velocity of a standard ball dropped onto a surface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ReboundHardness</IRI>
+        <Literal xml:lang="en">Rebound hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ReboundHardness</IRI>
+        <Literal xml:lang="de">Rückprallhärte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/ReboundHardness</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Rebound_hardness</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/RegionOfInterest</IRI>
         <Literal xml:lang="en">Region Of Interest</Literal>
     </AnnotationAssertion>
@@ -2713,6 +3392,46 @@ Plastic deformation is observed in most materials, particularly metals, soils, r
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Regulation</IRI>
         <Literal xml:lang="en">Regulation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="en">Scratch Hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="de">Kratzbeständigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="en">Scratch Resistance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="de">Die Fähigkeit eines Materials, Kratzern zu widerstehen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="en">The ability of a material to resist being scratched</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="de">Kratzfestigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ScratchHardness</IRI>
+        <Literal xml:lang="en">Scratch Hardness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/ScratchHardness</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Scratch_hardness</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2744,6 +3463,41 @@ The derived SI unit of shear modulus is the pascal (Pa), although it is usually 
         <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
         <IRI>/ShearModulus</IRI>
         <Literal xml:lang="en">https://en.wikipedia.org/wiki/Shear_modulus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ShearViscosity</IRI>
+        <Literal xml:lang="de">Scherviskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/ShearViscosity</IRI>
+        <Literal xml:lang="en">Shear Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ShearViscosity</IRI>
+        <Literal xml:lang="de">Die Messung des Widerstands einer Flüssigkeit gegen den Fluss bei Scherspannung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/ShearViscosity</IRI>
+        <Literal xml:lang="en">The measure of a fluid&apos;s resistance to shear flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ShearViscosity</IRI>
+        <Literal xml:lang="de">Scherviskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/ShearViscosity</IRI>
+        <Literal xml:lang="en">Shear Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/ShearViscosity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscosity</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2968,6 +3722,45 @@ The complementary concept is flexibility or pliability: the more flexible an obj
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="en">Tensile Strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="de">Zugfestigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="en">Ultimate Tensile Strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="en">Ultimate Tensile Strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="de">Zugfestigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="en">Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\displaystyle F_{\text{tu}}}{\displaystyle F_{\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
+
+The ultimate tensile strength is usually found by performing a tensile test and recording the engineering stress versus strain. The highest point of the stress–strain curve is the ultimate tensile strength and has units of stress. The equivalent point for the case of compression, instead of tension, is called the compressive strength.
+
+Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/TensileStrength</IRI>
+        <Literal xml:lang="en">https://en.wikipedia.org/wiki/Ultimate_tensile_strength</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/TimeOfBreak</IRI>
         <Literal xml:lang="en">Time of Break</Literal>
     </AnnotationAssertion>
@@ -3048,30 +3841,6 @@ where e is the engineering strain. The logarithmic strain provides the correct m
         <Literal xml:lang="en">https://en.wikipedia.org/wiki/Deformation_(physics)#True_strain</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
-        <IRI>/UltimateTensileStrength</IRI>
-        <Literal xml:lang="en">https://en.wikipedia.org/wiki/Ultimate_tensile_strength</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/UltimateTensileStrength</IRI>
-        <Literal xml:lang="en">Ultimate Tensile Strength</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>/UltimateTensileStrength</IRI>
-        <Literal xml:lang="de">Zugfestigkeit</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition"/>
-        <IRI>/UltimateTensileStrength</IRI>
-        <Literal xml:lang="en">Ultimate tensile strength (UTS), often shortened to tensile strength (TS), ultimate strength, or {\displaystyle F_{\text{tu}}}{\displaystyle F_{\text{tu}}} within equations,[1][2][3] is the maximum stress that a material can withstand while being stretched or pulled before breaking. In brittle materials the ultimate tensile strength is close to the yield point, whereas in ductile materials the ultimate tensile strength can be higher.
-
-The ultimate tensile strength is usually found by performing a tensile test and recording the engineering stress versus strain. The highest point of the stress–strain curve is the ultimate tensile strength and has units of stress. The equivalent point for the case of compression, instead of tension, is called the compressive strength.
-
-Tensile strengths are rarely of any consequence in the design of ductile members, but they are important with brittle members. They are tabulated for common materials such as alloys, composite materials, ceramics, plastics, and wood.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/UniversalTestingMachine</IRI>
         <Literal xml:lang="en">Universal Testing Machine</Literal>
@@ -3123,8 +3892,113 @@ Tensile strengths are rarely of any consequence in the design of ductile members
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="en">Viscoelasticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="de">Viscoelastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="en">Elasticity of viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="de">Viskoelastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="en">Viscoelasticity is the property of materials that exhibit both viscous and elastic characteristics when undergoing deformation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="de">Viscoelastizität ist die Eigenschaft von Materialien, die sowohl viskose als auch elastische Eigenschaften aufweisen, wenn sie sich verformen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="en">Viscoelasticity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Viscoelasticity</IRI>
+        <Literal xml:lang="de">Viscoelastizität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Viscoelasticity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscoelasticity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Viscosity</IRI>
+        <Literal xml:lang="en">Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/Viscosity</IRI>
+        <Literal xml:lang="de">Viskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Viscosity</IRI>
+        <Literal xml:lang="de">Die Messung des Widerstands einer Flüssigkeit gegen den Fluss</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/Viscosity</IRI>
+        <Literal xml:lang="en">The measure of a fluid&apos;s resistance to flow</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Viscosity</IRI>
+        <Literal xml:lang="en">Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/Viscosity</IRI>
+        <Literal xml:lang="de">Viskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/Viscosity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscosity</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/Voltage</IRI>
         <Literal xml:lang="en">Voltage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VolumeViscosity</IRI>
+        <Literal xml:lang="en">Volume Viscosity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/VolumeViscosity</IRI>
+        <Literal xml:lang="de">Volumenviskosität</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/VolumeViscosity</IRI>
+        <Literal xml:lang="de">Die Messung des Widerstands einer Flüssigkeit gegen den Fluss bei Volumenspannung</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/VolumeViscosity</IRI>
+        <Literal xml:lang="en">The measure of a fluid&apos;s resistance to volumetric stress</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
+        <IRI>/VolumeViscosity</IRI>
+        <IRI>https://en.wikipedia.org/wiki/Viscosity</IRI>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -3170,6 +4044,46 @@ Tensile strengths are rarely of any consequence in the design of ductile members
         <AnnotationProperty abbreviatedIRI="iof-av:naturalLanguageDefinition_source"/>
         <IRI>/WearResistance</IRI>
         <IRI>https://en.wikipedia.org/wiki/Wear_resistance</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="en">Weathering Resistance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="de">Witterungsbeständigkeit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="en">Weather Resistant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:altLabel"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="de">Wetterbeständig</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="de">Die Fähigkeit eines Materials, den Auswirkungen von Witterungseinflüssen wie Wind, Regen und Sonnenlicht standzuhalten.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="en">The ability of a material to resist the effects of weathering, such as wind, rain, and sunlight.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="en">Weathering Resistance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:prefLabel"/>
+        <IRI>/WeatheringResistance</IRI>
+        <Literal xml:lang="de">Witterungsbeständigkeit</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
