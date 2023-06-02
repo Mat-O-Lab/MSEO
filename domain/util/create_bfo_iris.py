@@ -57,6 +57,7 @@ def add_ontology_header(g):
     g.bind('iof-av',IOFAV)
     g.bind('',UTIL)
     g.add((URIRef(util_url),RDF.type,OWL.Ontology))
+    g.add((URIRef(util_url),OWL.imports, URIRef(bfo2020_url)))            
     g.add((URIRef(util_url),DCTERMS.abstract,Literal("This Ontology is a helper creating readable iri for all bfo object properties in by creating equivalent properties with snake case iri from there labels.",lang="en")))
     g.add((URIRef(util_url),DCTERMS.contributor,Literal("Thomas Hanke, Fraunhofer IWM",lang="en")))
     g.add((URIRef(util_url),DCTERMS.creator,Literal("Thomas Hanke, Fraunhofer IWM",lang="en")))

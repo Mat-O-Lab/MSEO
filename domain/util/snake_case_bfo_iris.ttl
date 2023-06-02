@@ -138,7 +138,8 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
     dcterms:abstract "This Ontology is a helper creating readable iri for all bfo object properties in by creating equivalent properties with snake case iri from there labels."@en ;
     dcterms:contributor "Thomas Hanke, Fraunhofer IWM"@en ;
     dcterms:creator "Thomas Hanke, Fraunhofer IWM"@en ;
-    dcterms:license "http://opensource.org/licenses/MIT"^^xsd:anyURI .
+    dcterms:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+    owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> .
 
 :bearer_of a owl:ObjectProperty ;
     rdfs:label "bearer of"@en .
