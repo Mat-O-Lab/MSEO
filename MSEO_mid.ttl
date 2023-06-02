@@ -19,6 +19,7 @@
 
 <https://purl.matolab.org/mseo/mid> rdf:type owl:Ontology ;
                                      owl:imports <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/MicrostructuralFeatures.ttl> ,
+                                                 <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/util/snake_case_bfo_iris.ttl> ,
                                                  <https://github.com/iofoundry/ontology/raw/master/core/Core.rdf> ,
                                                  <https://github.com/iofoundry/ontology/raw/master/core/meta/AnnotationVocabulary.rdf> ;
                                      dc:contributor "Christoph Schweizer (Fraunhofer IWM)"@de ,

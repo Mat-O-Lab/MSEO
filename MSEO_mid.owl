@@ -24,6 +24,7 @@
     <Prefix name="iof-av" IRI="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/"/>
     <Prefix name="iof-core" IRI="https://spec.industrialontologies.org/ontology/core/Core/"/>
     <Import>https://github.com/Mat-O-Lab/MSEO/raw/main/domain/MicrostructuralFeatures.ttl</Import>
+    <Import>https://github.com/Mat-O-Lab/MSEO/raw/main/domain/util/snake_case_bfo_iris.ttl</Import>
     <Import>https://github.com/iofoundry/ontology/raw/master/core/Core.rdf</Import>
     <Import>https://github.com/iofoundry/ontology/raw/master/core/meta/AnnotationVocabulary.rdf</Import>
     <Annotation>
