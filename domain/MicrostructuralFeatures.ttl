@@ -4,10 +4,11 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix mseo: <https://purl.matolab.org/mseo/mid/> .
-@base <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/MaterialMicrostructure.ttl> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix iof-av: <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/> .
 
 : a owl:Ontology ;
     rdfs:label "Microstructural Features Ontology (MFO)"@en ;
@@ -22,7 +23,7 @@
     skos:prefLabel "Grain"@en, "Korn"@de ;
     skos:definition "A crystalline grain of a material that are visible under a microscope."@en, "Kleine Partikel eines Materials, die unter dem Mikroskop sichtbar sind."@de .
     
-:Particle rdfs:subClassOf mseo::MaterialMicrostructure ;
+:Particle rdfs:subClassOf mseo:MaterialMicrostructure ;
     skos:prefLabel "Particle"@en, "Partikel"@de ;
     skos:definition "Very small pieces of matter that can be seen under a microscope."@en, "Sehr kleine Stücke von Materie, die unter dem Mikroskop sichtbar sind."@de .
     
@@ -39,32 +40,37 @@
 
 :CrystallinePhase rdfs:subClassOf :Phase ;
     rdfs:label "Crystalline Phase"@en, "Kristalline Phase"@de ;
+    skos:prefLabel "Crystalline Phase"@en, "Kristalline Phase"@de ;
     skos:altLabel "Crystal Phase"@en, "Kristallphase"@de ;
-    skos:definition "A crystalline phase is a solid phase of matter in which the atoms, molecules, or ions are arranged in an ordered structure."@en, "Eine kristalline Phase ist ein fester Aggregatzustand der Materie, bei dem die Atome, Moleküle oder Ionen in einer geordneten Struktur angeordnet sind."@de ;
+    skos:definition "A crystalline phase is a solid phase of matter in which the atoms, molecules, or ions are arranged in an ordered structure."@en, "Eine kristalline Phase ist ein fester Aggregatzustand der Materie, bei dem die Atome, Moleküle oder Ionen in einer geordneten Struktur angeordnet sind."@de .
 
 :Crystallite rdfs:subClassOf mseo:MaterialMicrostructure ;
+    rdfs:label "Crystallite"@en, "Kristallit"@de ;
     skos:prefLabel "Crystallite"@en, "Kristallit"@de ;
     skos:definition "Individual crystal that make up a material and can be seen under a microscope."@en, "Einzelne Kristalle, die ein Material ausmachen und unter dem Mikroskop sichtbar sind."@de .
     
 :Interface rdfs:subClassOf mseo:MaterialMicrostructure ;
+    rdfs:label "Interface"@en, "Grenzfläche"@de ;
     skos:prefLabel "Interface"@en, "Grenzfläche"@de ;
     skos:definition "Boundary between different phases or grains of a material that can be seen under a microscope."@en, "Grenzen zwischen verschiedenen Phasen oder Körnern eines Materials, die unter dem Mikroskop sichtbar sind."@de .
     
 :Inclusion rdfs:subClassOf mseo:MaterialDefect ;
+    rdfs:label "Inclusion"@en, "Einschluss"@de ;
     skos:prefLabel "Inclusion"@en, "Einschluss"@de ;
     skos:definition "Foreign materials that are embedded in a material and can be seen under a microscope."@en, "Fremdmaterialien, die in einem Material eingebettet sind und unter dem Mikroskop sichtbar sind."@de .
     
+
 :Porosity rdfs:subClassOf obo:BFO_0000016 ;
+    rdfs:label "Porosity"@en, "Porosität"@de ;
     skos:prefLabel "Porosity"@en, "Porosität"@de ;
     skos:definition "The presence of pores or voids in a material that can be seen under a microscope."@en, "Das Vorhandensein von Poren oder Hohlräumen in einem Material, das unter dem Mikroskop sichtbar ist."@de .
     
 :Texture rdfs:subClassOf obo:BFO_0000016 ;
+    rdfs:label "Texture"@en, "Textur"@de ;
     skos:prefLabel "Texture"@en, "Textur"@de ;
     skos:definition "The arrangement of grains or particles in a material that can be seen under a microscope."@en, "Die Anordnung von Körnern oder Partikeln in einem Material, die unter dem Mikroskop sichtbar ist."@de .
     
-   
 :Impuritie rdfs:subClassOf mseo:MaterialDefect ;
+    rdfs:label "Impuritie"@en, "Verunreinigung"@de ;
     skos:prefLabel "Impuritie"@en, "Verunreinigung"@de ;
     skos:definition "Substance that are not part of the original material and can be seen under a microscope."@en, "Stoffe, die nicht Teil des ursprünglichen Materials sind und unter dem Mikroskop sichtbar sind."@de .
-    
-    
