@@ -6,9 +6,17 @@
 @prefix mseo: <https://purl.matolab.org/mseo/mid/> .
 @base <https://github.com/Mat-O-Lab/MSEO/raw/main/domain/MaterialMicrostructure.ttl> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+: a owl:Ontology ;
+    rdfs:label "Microstructural Features Ontology (MFO)"@en ;
+    dcterms:title "Microstructural Features Ontology"@en ;
+    dcterms:abstract "This Ontology describes concepts that can be used to document features investigated or of interest when using imaging procedures on material microstructure."@en ;
+    dcterms:contributor "Thomas Hanke, Fraunhofer IWM"@en ;
+    dcterms:creator "Thomas Hanke, Fraunhofer IWM"@en ;
+    dcterms:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
+    owl:imports <https://purl.matolab.org/mseo/mid/> .
 
 :Grain rdfs:subClassOf mseo:MaterialMicrostructure ;
     skos:prefLabel "Grain"@en, "Korn"@de ;

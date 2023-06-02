@@ -135,6 +135,7 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 
 : a owl:Ontology ;
     rdfs:label "Snake Case BFO Object Properties"@en ;
+    dcterms:title "Snake Case BFO Object Properties"@en ;
     dcterms:abstract "This Ontology is a helper creating readable iri for all bfo object properties in by creating equivalent properties with snake case iri from there labels."@en ;
     dcterms:contributor "Thomas Hanke, Fraunhofer IWM"@en ;
     dcterms:creator "Thomas Hanke, Fraunhofer IWM"@en ;
