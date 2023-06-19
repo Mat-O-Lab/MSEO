@@ -4,6 +4,7 @@ on:
     push:
         paths:
         - methods/**
+    workflow_dispatch:
 jobs:
   chowlk:
     runs-on: ubuntu-latest
