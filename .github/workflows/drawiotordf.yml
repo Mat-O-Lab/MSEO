@@ -32,7 +32,7 @@ jobs:
          python-version: "3.9"
       - name: Install requirements
         run: |
-          pip install -r chowlk/requirements.txt
+          pip install -r Chowlk/requirements.txt
       - name: convert drawio to rdf
         if: ${{ steps.diff.outputs.diff }}
         run: |
