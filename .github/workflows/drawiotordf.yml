@@ -10,7 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0        
+          fetch-depth: 0
+      - uses: actions/setup-python@v4
+        with:
+            python-version: '3.10' 
+            cache: 'pip' # caching pip dependencies
       - name: Check changed files
         id: diff
         run: |
