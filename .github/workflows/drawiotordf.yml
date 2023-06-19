@@ -22,7 +22,7 @@ jobs:
           echo "::set-output name=diff::$( echo "$DIFF" | sed ':a;N;$!ba;s/\n/%0A/g' )"
       - name: clone Chowlk and install requirements
         #working-directory: ./methods
-        if: ${{ steps.diff.outputs.diff }}
+        # if: ${{ steps.diff.outputs.diff }}
         run: |
           echo "${{ steps.diff.outputs.diff }}"
           git clone https://github.com/oeg-upm/Chowlk
