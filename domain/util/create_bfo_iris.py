@@ -25,6 +25,11 @@ def snake_case(s):
     sub('([A-Z]+)', r' \1',
     s.replace('-', ' '))).split()).lower()
 
+def camel_case(s):
+  print(s)
+  s = sub(r"(_|-)+", " ", s).title().replace(" ", "")
+  return ''.join([s[0].lower(), s[1:]])
+
 def parse_graph(url: str, graph: Graph, format: str = '') -> Graph:
     """Parse a Graph from web url to rdflib graph object
     Args:
@@ -58,11 +63,11 @@ def add_ontology_header(g):
     g.bind('',UTIL)
     g.add((URIRef(util_url),RDF.type,OWL.Ontology))
     g.add((URIRef(util_url),OWL.imports, URIRef(bfo2020_url)))            
-    g.add((URIRef(util_url),DCTERMS.abstract,Literal("This Ontology is a helper creating readable iri for all bfo object properties in by creating equivalent properties with snake case iri from there labels.",lang="en")))
+    g.add((URIRef(util_url),DCTERMS.abstract,Literal("This Ontology is a helper creating readable iri for all bfo object properties and classes by creating equivalent relations with snake case iri for properties and camel case iri for class from there labels.",lang="en")))
     g.add((URIRef(util_url),DCTERMS.contributor,Literal("Thomas Hanke, Fraunhofer IWM",lang="en")))
     g.add((URIRef(util_url),DCTERMS.creator,Literal("Thomas Hanke, Fraunhofer IWM",lang="en")))
     g.add((URIRef(util_url),DCTERMS.license,Literal("http://opensource.org/licenses/MIT",datatype=XSD.anyURI)))
-    g.add((URIRef(util_url),RDFS.label,Literal("Snake Case BFO Object Properties",lang="en")))
+    g.add((URIRef(util_url),RDFS.label,Literal("Readable BFO IRIs",lang="en")))
     return g
 
 g=Graph()
@@ -76,5 +81,15 @@ for property in bfo[: RDF.type : OWL.ObjectProperty]:
     out.add((iri,RDF.type,OWL.ObjectProperty))
     out.add((property,OWL.equivalentProperty,iri))
     out.add((iri,RDFS.label,label))
-out.serialize(dir+'/snake_case_bfo_iris.ttl',format='turtle')
+
+for class_ in bfo[: RDF.type : OWL.Class]:
+    label=next(bfo[class_: RDFS.label : ],None)
+    if label:
+        iri=URIRef(UTIL+camel_case(label))
+        out=add_ontology_header(out)
+        out.add((iri,RDF.type,OWL.Class))
+        out.add((class_,OWL.equivalentClass,iri))
+        out.add((iri,RDFS.label,label))
+
+out.serialize(dir+'/readable_bfo_iris.ttl',format='turtle')
 
