@@ -5,57 +5,57 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-obo:BFO_0000001 owl:equivalentClass :entity .
+obo:BFO_0000001 owl:equivalentClass :Entity .
 
-obo:BFO_0000002 owl:equivalentClass :continuant .
+obo:BFO_0000002 owl:equivalentClass :Continuant .
 
-obo:BFO_0000003 owl:equivalentClass :occurrent .
+obo:BFO_0000003 owl:equivalentClass :Occurrent .
 
-obo:BFO_0000004 owl:equivalentClass :independentContinuant .
+obo:BFO_0000004 owl:equivalentClass :IndependentContinuant .
 
-obo:BFO_0000006 owl:equivalentClass :spatialRegion .
+obo:BFO_0000006 owl:equivalentClass :SpatialRegion .
 
-obo:BFO_0000008 owl:equivalentClass :temporalRegion .
+obo:BFO_0000008 owl:equivalentClass :TemporalRegion .
 
-obo:BFO_0000009 owl:equivalentClass :twoDimensionalSpatialRegion .
+obo:BFO_0000009 owl:equivalentClass :TwoDimensionalSpatialRegion .
 
-obo:BFO_0000011 owl:equivalentClass :spatiotemporalRegion .
+obo:BFO_0000011 owl:equivalentClass :SpatiotemporalRegion .
 
-obo:BFO_0000015 owl:equivalentClass :process .
+obo:BFO_0000015 owl:equivalentClass :Process .
 
-obo:BFO_0000016 owl:equivalentClass :disposition .
+obo:BFO_0000016 owl:equivalentClass :Disposition .
 
-obo:BFO_0000017 owl:equivalentClass :realizableEntity .
+obo:BFO_0000017 owl:equivalentClass :RealizableEntity .
 
-obo:BFO_0000018 owl:equivalentClass :zeroDimensionalSpatialRegion .
+obo:BFO_0000018 owl:equivalentClass :ZeroDimensionalSpatialRegion .
 
-obo:BFO_0000019 owl:equivalentClass :quality .
+obo:BFO_0000019 owl:equivalentClass :Quality .
 
-obo:BFO_0000020 owl:equivalentClass :specificallyDependentContinuant .
+obo:BFO_0000020 owl:equivalentClass :SpecificallyDependentContinuant .
 
-obo:BFO_0000023 owl:equivalentClass :role .
+obo:BFO_0000023 owl:equivalentClass :Role .
 
-obo:BFO_0000024 owl:equivalentClass :fiatObjectPart .
+obo:BFO_0000024 owl:equivalentClass :FiatObjectPart .
 
-obo:BFO_0000026 owl:equivalentClass :oneDimensionalSpatialRegion .
+obo:BFO_0000026 owl:equivalentClass :OneDimensionalSpatialRegion .
 
-obo:BFO_0000027 owl:equivalentClass :objectAggregate .
+obo:BFO_0000027 owl:equivalentClass :ObjectAggregate .
 
-obo:BFO_0000028 owl:equivalentClass :threeDimensionalSpatialRegion .
+obo:BFO_0000028 owl:equivalentClass :ThreeDimensionalSpatialRegion .
 
-obo:BFO_0000029 owl:equivalentClass :site .
+obo:BFO_0000029 owl:equivalentClass :Site .
 
-obo:BFO_0000030 owl:equivalentClass :object .
+obo:BFO_0000030 owl:equivalentClass :Object .
 
-obo:BFO_0000031 owl:equivalentClass :genericallyDependentContinuant .
+obo:BFO_0000031 owl:equivalentClass :GenericallyDependentContinuant .
 
-obo:BFO_0000034 owl:equivalentClass :function .
+obo:BFO_0000034 owl:equivalentClass :Function .
 
-obo:BFO_0000035 owl:equivalentClass :processBoundary .
+obo:BFO_0000035 owl:equivalentClass :ProcessBoundary .
 
-obo:BFO_0000038 owl:equivalentClass :oneDimensionalTemporalRegion .
+obo:BFO_0000038 owl:equivalentClass :OneDimensionalTemporalRegion .
 
-obo:BFO_0000040 owl:equivalentClass :materialEntity .
+obo:BFO_0000040 owl:equivalentClass :MaterialEntity .
 
 obo:BFO_0000054 owl:equivalentProperty :has_realization .
 
@@ -113,19 +113,19 @@ obo:BFO_0000138 owl:equivalentProperty :proper_occurrent_part_of .
 
 obo:BFO_0000139 owl:equivalentProperty :temporal_part_of .
 
-obo:BFO_0000140 owl:equivalentClass :continuantFiatBoundary .
+obo:BFO_0000140 owl:equivalentClass :ContinuantFiatBoundary .
 
-obo:BFO_0000141 owl:equivalentClass :immaterialEntity .
+obo:BFO_0000141 owl:equivalentClass :ImmaterialEntity .
 
-obo:BFO_0000142 owl:equivalentClass :fiatLine .
+obo:BFO_0000142 owl:equivalentClass :FiatLine .
 
-obo:BFO_0000145 owl:equivalentClass :relationalQuality .
+obo:BFO_0000145 owl:equivalentClass :RelationalQuality .
 
-obo:BFO_0000146 owl:equivalentClass :fiatSurface .
+obo:BFO_0000146 owl:equivalentClass :FiatSurface .
 
-obo:BFO_0000147 owl:equivalentClass :fiatPoint .
+obo:BFO_0000147 owl:equivalentClass :FiatPoint .
 
-obo:BFO_0000148 owl:equivalentClass :zeroDimensionalTemporalRegion .
+obo:BFO_0000148 owl:equivalentClass :ZeroDimensionalTemporalRegion .
 
 obo:BFO_0000153 owl:equivalentProperty :temporally_projects_onto .
 
@@ -159,7 +159,7 @@ obo:BFO_0000178 owl:equivalentProperty :has_continuant_part_at_some_time .
 
 obo:BFO_0000181 owl:equivalentProperty :has_proper_temporal_part .
 
-obo:BFO_0000182 owl:equivalentClass :history .
+obo:BFO_0000182 owl:equivalentClass :History .
 
 obo:BFO_0000183 owl:equivalentProperty :environs .
 
@@ -179,9 +179,9 @@ obo:BFO_0000199 owl:equivalentProperty :occupies_temporal_region .
 
 obo:BFO_0000200 owl:equivalentProperty :occupies_spatiotemporal_region .
 
-obo:BFO_0000202 owl:equivalentClass :temporalInterval .
+obo:BFO_0000202 owl:equivalentClass :TemporalInterval .
 
-obo:BFO_0000203 owl:equivalentClass :temporalInstant .
+obo:BFO_0000203 owl:equivalentClass :TemporalInstant .
 
 obo:BFO_0000210 owl:equivalentProperty :occupies_spatial_region_at_some_time .
 
@@ -207,11 +207,119 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 
 : a owl:Ontology ;
     rdfs:label "Readable BFO IRIs"@en ;
-    dcterms:abstract "This Ontology is a helper creating readable iri for all bfo object properties and classes by creating equivalent relations with snake case iri for properties and camel case iri for class from there labels."@en ;
+    dcterms:abstract "This Ontology is a helper creating readable iri for all bfo object properties and classes by creating equivalent relations with snake case iri for properties and pascal case iri for class from there labels."@en ;
     dcterms:contributor "Thomas Hanke, Fraunhofer IWM"@en ;
     dcterms:creator "Thomas Hanke, Fraunhofer IWM"@en ;
     dcterms:license "http://opensource.org/licenses/MIT"^^xsd:anyURI ;
     owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> .
+
+:Continuant a owl:Class ;
+    rdfs:label "continuant"@en .
+
+:ContinuantFiatBoundary a owl:Class ;
+    rdfs:label "continuant fiat boundary"@en .
+
+:Disposition a owl:Class ;
+    rdfs:label "disposition"@en .
+
+:Entity a owl:Class ;
+    rdfs:label "entity"@en .
+
+:FiatLine a owl:Class ;
+    rdfs:label "fiat line"@en .
+
+:FiatObjectPart a owl:Class ;
+    rdfs:label "fiat object part"@en .
+
+:FiatPoint a owl:Class ;
+    rdfs:label "fiat point"@en .
+
+:FiatSurface a owl:Class ;
+    rdfs:label "fiat surface"@en .
+
+:Function a owl:Class ;
+    rdfs:label "function"@en .
+
+:GenericallyDependentContinuant a owl:Class ;
+    rdfs:label "generically dependent continuant"@en .
+
+:History a owl:Class ;
+    rdfs:label "history"@en .
+
+:ImmaterialEntity a owl:Class ;
+    rdfs:label "immaterial entity"@en .
+
+:IndependentContinuant a owl:Class ;
+    rdfs:label "independent continuant"@en .
+
+:MaterialEntity a owl:Class ;
+    rdfs:label "material entity"@en .
+
+:Object a owl:Class ;
+    rdfs:label "object"@en .
+
+:ObjectAggregate a owl:Class ;
+    rdfs:label "object aggregate"@en .
+
+:Occurrent a owl:Class ;
+    rdfs:label "occurrent"@en .
+
+:OneDimensionalSpatialRegion a owl:Class ;
+    rdfs:label "one-dimensional spatial region"@en .
+
+:OneDimensionalTemporalRegion a owl:Class ;
+    rdfs:label "one-dimensional temporal region"@en .
+
+:Process a owl:Class ;
+    rdfs:label "process"@en .
+
+:ProcessBoundary a owl:Class ;
+    rdfs:label "process boundary"@en .
+
+:Quality a owl:Class ;
+    rdfs:label "quality"@en .
+
+:RealizableEntity a owl:Class ;
+    rdfs:label "realizable entity"@en .
+
+:RelationalQuality a owl:Class ;
+    rdfs:label "relational quality"@en .
+
+:Role a owl:Class ;
+    rdfs:label "role"@en .
+
+:Site a owl:Class ;
+    rdfs:label "site"@en .
+
+:SpatialRegion a owl:Class ;
+    rdfs:label "spatial region"@en .
+
+:SpatiotemporalRegion a owl:Class ;
+    rdfs:label "spatiotemporal region"@en .
+
+:SpecificallyDependentContinuant a owl:Class ;
+    rdfs:label "specifically dependent continuant"@en .
+
+:TemporalInstant a owl:Class ;
+    rdfs:label "temporal instant"@en .
+
+:TemporalInterval a owl:Class ;
+    rdfs:label "temporal interval"@en .
+
+:TemporalRegion a owl:Class ;
+    rdfs:label "temporal region"@en .
+
+:ThreeDimensionalSpatialRegion a owl:Class ;
+    rdfs:label "three-dimensional spatial region"@en .
+
+:TwoDimensionalSpatialRegion a owl:Class ;
+    rdfs:label "two-dimensional spatial region"@en .
+
+:ZeroDimensionalSpatialRegion a owl:Class ;
+    rdfs:label "zero-dimensional spatial region"@en .
+
+:ZeroDimensionalTemporalRegion a owl:Class ;
+    rdfs:label "zero-dimensional temporal region"@en .
 
 :bearer_of a owl:ObjectProperty ;
     rdfs:label "bearer of"@en .
@@ -222,23 +330,11 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :concretizes_at_some_time a owl:ObjectProperty ;
     rdfs:label "concretizes at some time"@en .
 
-:continuant a owl:Class ;
-    rdfs:label "continuant"@en .
-
-:continuantFiatBoundary a owl:Class ;
-    rdfs:label "continuant fiat boundary"@en .
-
 :continuant_part_of_at_all_times a owl:ObjectProperty ;
     rdfs:label "continuant part of at all times"@en .
 
 :continuant_part_of_at_some_time a owl:ObjectProperty ;
     rdfs:label "continuant part of at some time"@en .
-
-:disposition a owl:Class ;
-    rdfs:label "disposition"@en .
-
-:entity a owl:Class ;
-    rdfs:label "entity"@en .
 
 :environs a owl:ObjectProperty ;
     rdfs:label "environs"@en .
@@ -246,26 +342,8 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :exists_at a owl:ObjectProperty ;
     rdfs:label "exists at"@en .
 
-:fiatLine a owl:Class ;
-    rdfs:label "fiat line"@en .
-
-:fiatObjectPart a owl:Class ;
-    rdfs:label "fiat object part"@en .
-
-:fiatPoint a owl:Class ;
-    rdfs:label "fiat point"@en .
-
-:fiatSurface a owl:Class ;
-    rdfs:label "fiat surface"@en .
-
 :first_instant_of a owl:ObjectProperty ;
     rdfs:label "first instant of"@en .
-
-:function a owl:Class ;
-    rdfs:label "function"@en .
-
-:genericallyDependentContinuant a owl:Class ;
-    rdfs:label "generically dependent continuant"@en .
 
 :generically_depends_on_at_all_times a owl:ObjectProperty ;
     rdfs:label "generically depends on at all times"@en .
@@ -327,17 +405,8 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :has_temporal_part a owl:ObjectProperty ;
     rdfs:label "has temporal part"@en .
 
-:history a owl:Class ;
-    rdfs:label "history"@en .
-
 :history_of a owl:ObjectProperty ;
     rdfs:label "history of"@en .
-
-:immaterialEntity a owl:Class ;
-    rdfs:label "immaterial entity"@en .
-
-:independentContinuant a owl:Class ;
-    rdfs:label "independent continuant"@en .
 
 :inheres_in a owl:ObjectProperty ;
     rdfs:label "inheres in"@en .
@@ -369,9 +438,6 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :location_of_at_some_time a owl:ObjectProperty ;
     rdfs:label "location of at some time"@en .
 
-:materialEntity a owl:Class ;
-    rdfs:label "material entity"@en .
-
 :material_basis_of_at_all_times a owl:ObjectProperty ;
     rdfs:label "material basis of at all times"@en .
 
@@ -383,12 +449,6 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 
 :member_part_of_at_some_time a owl:ObjectProperty ;
     rdfs:label "member part of at some time"@en .
-
-:object a owl:Class ;
-    rdfs:label "object"@en .
-
-:objectAggregate a owl:Class ;
-    rdfs:label "object aggregate"@en .
 
 :occupies_spatial_region_at_all_times a owl:ObjectProperty ;
     rdfs:label "occupies spatial region at all times"@en .
@@ -402,20 +462,11 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :occupies_temporal_region a owl:ObjectProperty ;
     rdfs:label "occupies temporal region"@en .
 
-:occurrent a owl:Class ;
-    rdfs:label "occurrent"@en .
-
 :occurrent_part_of a owl:ObjectProperty ;
     rdfs:label "occurrent part of"@en .
 
 :occurs_in a owl:ObjectProperty ;
     rdfs:label "occurs in"@en .
-
-:oneDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "one-dimensional spatial region"@en .
-
-:oneDimensionalTemporalRegion a owl:Class ;
-    rdfs:label "one-dimensional temporal region"@en .
 
 :participates_in_at_all_times a owl:ObjectProperty ;
     rdfs:label "participates in at all times"@en .
@@ -429,12 +480,6 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :precedes a owl:ObjectProperty ;
     rdfs:label "precedes"@en .
 
-:process a owl:Class ;
-    rdfs:label "process"@en .
-
-:processBoundary a owl:Class ;
-    rdfs:label "process boundary"@en .
-
 :proper_continuant_part_of_at_all_times a owl:ObjectProperty ;
     rdfs:label "proper continuant part of at all times"@en .
 
@@ -447,26 +492,8 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :proper_temporal_part_of a owl:ObjectProperty ;
     rdfs:label "proper temporal part of"@en .
 
-:quality a owl:Class ;
-    rdfs:label "quality"@en .
-
-:realizableEntity a owl:Class ;
-    rdfs:label "realizable entity"@en .
-
 :realizes a owl:ObjectProperty ;
     rdfs:label "realizes"@en .
-
-:relationalQuality a owl:Class ;
-    rdfs:label "relational quality"@en .
-
-:role a owl:Class ;
-    rdfs:label "role"@en .
-
-:site a owl:Class ;
-    rdfs:label "site"@en .
-
-:spatialRegion a owl:Class ;
-    rdfs:label "spatial region"@en .
 
 :spatially_projects_onto_at_all_times a owl:ObjectProperty ;
     rdfs:label "spatially projects onto at all times"@en .
@@ -474,42 +501,15 @@ obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
 :spatially_projects_onto_at_some_time a owl:ObjectProperty ;
     rdfs:label "spatially projects onto at some time"@en .
 
-:spatiotemporalRegion a owl:Class ;
-    rdfs:label "spatiotemporal region"@en .
-
-:specificallyDependentContinuant a owl:Class ;
-    rdfs:label "specifically dependent continuant"@en .
-
 :specifically_depended_on_by a owl:ObjectProperty ;
     rdfs:label "specifically depended on by"@en .
 
 :specifically_depends_on a owl:ObjectProperty ;
     rdfs:label "specifically depends on"@en .
 
-:temporalInstant a owl:Class ;
-    rdfs:label "temporal instant"@en .
-
-:temporalInterval a owl:Class ;
-    rdfs:label "temporal interval"@en .
-
-:temporalRegion a owl:Class ;
-    rdfs:label "temporal region"@en .
-
 :temporal_part_of a owl:ObjectProperty ;
     rdfs:label "temporal part of"@en .
 
 :temporally_projects_onto a owl:ObjectProperty ;
     rdfs:label "temporally projects onto"@en .
-
-:threeDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "three-dimensional spatial region"@en .
-
-:twoDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "two-dimensional spatial region"@en .
-
-:zeroDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "zero-dimensional spatial region"@en .
-
-:zeroDimensionalTemporalRegion a owl:Class ;
-    rdfs:label "zero-dimensional temporal region"@en .
 
