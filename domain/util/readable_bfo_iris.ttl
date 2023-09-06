@@ -5,206 +5,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-obo:BFO_0000001 owl:sameAs :Entity .
-
-obo:BFO_0000002 owl:sameAs :Continuant .
-
-obo:BFO_0000003 owl:sameAs :Occurrent .
-
-obo:BFO_0000004 owl:sameAs :IndependentContinuant .
-
-obo:BFO_0000006 owl:sameAs :SpatialRegion .
-
-obo:BFO_0000008 owl:sameAs :TemporalRegion .
-
-obo:BFO_0000009 owl:sameAs :TwoDimensionalSpatialRegion .
-
-obo:BFO_0000011 owl:sameAs :SpatiotemporalRegion .
-
-obo:BFO_0000015 owl:sameAs :Process .
-
-obo:BFO_0000016 owl:sameAs :Disposition .
-
-obo:BFO_0000017 owl:sameAs :RealizableEntity .
-
-obo:BFO_0000018 owl:sameAs :ZeroDimensionalSpatialRegion .
-
-obo:BFO_0000019 owl:sameAs :Quality .
-
-obo:BFO_0000020 owl:sameAs :SpecificallyDependentContinuant .
-
-obo:BFO_0000023 owl:sameAs :Role .
-
-obo:BFO_0000024 owl:sameAs :FiatObjectPart .
-
-obo:BFO_0000026 owl:sameAs :OneDimensionalSpatialRegion .
-
-obo:BFO_0000027 owl:sameAs :ObjectAggregate .
-
-obo:BFO_0000028 owl:sameAs :ThreeDimensionalSpatialRegion .
-
-obo:BFO_0000029 owl:sameAs :Site .
-
-obo:BFO_0000030 owl:sameAs :Object .
-
-obo:BFO_0000031 owl:sameAs :GenericallyDependentContinuant .
-
-obo:BFO_0000034 owl:sameAs :Function .
-
-obo:BFO_0000035 owl:sameAs :ProcessBoundary .
-
-obo:BFO_0000038 owl:sameAs :OneDimensionalTemporalRegion .
-
-obo:BFO_0000040 owl:sameAs :MaterialEntity .
-
-obo:BFO_0000054 owl:sameAs :has_realization .
-
-obo:BFO_0000055 owl:sameAs :realizes .
-
-obo:BFO_0000056 owl:sameAs :participates_in_at_some_time .
-
-obo:BFO_0000057 owl:sameAs :has_participant_at_some_time .
-
-obo:BFO_0000058 owl:sameAs :is_concretized_by_at_some_time .
-
-obo:BFO_0000059 owl:sameAs :concretizes_at_some_time .
-
-obo:BFO_0000062 owl:sameAs :preceded_by .
-
-obo:BFO_0000063 owl:sameAs :precedes .
-
-obo:BFO_0000066 owl:sameAs :occurs_in .
-
-obo:BFO_0000082 owl:sameAs :located_in_at_all_times .
-
-obo:BFO_0000084 owl:sameAs :generically_depends_on_at_some_time .
-
-obo:BFO_0000101 owl:sameAs :is_carrier_of_at_some_time .
-
-obo:BFO_0000108 owl:sameAs :exists_at .
-
-obo:BFO_0000110 owl:sameAs :has_continuant_part_at_all_times .
-
-obo:BFO_0000111 owl:sameAs :has_proper_continuant_part_at_all_times .
-
-obo:BFO_0000113 owl:sameAs :has_material_basis_at_all_times .
-
-obo:BFO_0000115 owl:sameAs :has_member_part_at_some_time .
-
-obo:BFO_0000117 owl:sameAs :has_occurrent_part .
-
-obo:BFO_0000118 owl:sameAs :has_proper_occurrent_part .
-
-obo:BFO_0000121 owl:sameAs :has_temporal_part .
-
-obo:BFO_0000124 owl:sameAs :location_of_at_some_time .
-
-obo:BFO_0000127 owl:sameAs :material_basis_of_at_some_time .
-
-obo:BFO_0000129 owl:sameAs :member_part_of_at_some_time .
-
-obo:BFO_0000132 owl:sameAs :occurrent_part_of .
-
-obo:BFO_0000136 owl:sameAs :proper_temporal_part_of .
-
-obo:BFO_0000137 owl:sameAs :proper_continuant_part_of_at_all_times .
-
-obo:BFO_0000138 owl:sameAs :proper_occurrent_part_of .
-
-obo:BFO_0000139 owl:sameAs :temporal_part_of .
-
-obo:BFO_0000140 owl:sameAs :ContinuantFiatBoundary .
-
-obo:BFO_0000141 owl:sameAs :ImmaterialEntity .
-
-obo:BFO_0000142 owl:sameAs :FiatLine .
-
-obo:BFO_0000145 owl:sameAs :RelationalQuality .
-
-obo:BFO_0000146 owl:sameAs :FiatSurface .
-
-obo:BFO_0000147 owl:sameAs :FiatPoint .
-
-obo:BFO_0000148 owl:sameAs :ZeroDimensionalTemporalRegion .
-
-obo:BFO_0000153 owl:sameAs :temporally_projects_onto .
-
-obo:BFO_0000163 owl:sameAs :material_basis_of_at_all_times .
-
-obo:BFO_0000164 owl:sameAs :concretizes_at_all_times .
-
-obo:BFO_0000165 owl:sameAs :is_concretized_by_at_all_times .
-
-obo:BFO_0000166 owl:sameAs :participates_in_at_all_times .
-
-obo:BFO_0000167 owl:sameAs :has_participant_at_all_times .
-
-obo:BFO_0000170 owl:sameAs :location_of_at_all_times .
-
-obo:BFO_0000171 owl:sameAs :located_in_at_some_time .
-
-obo:BFO_0000172 owl:sameAs :has_member_part_at_all_times .
-
-obo:BFO_0000173 owl:sameAs :member_part_of_at_all_times .
-
-obo:BFO_0000174 owl:sameAs :has_proper_continuant_part_at_some_time .
-
-obo:BFO_0000175 owl:sameAs :proper_continuant_part_of_at_some_time .
-
-obo:BFO_0000176 owl:sameAs :continuant_part_of_at_some_time .
-
-obo:BFO_0000177 owl:sameAs :continuant_part_of_at_all_times .
-
-obo:BFO_0000178 owl:sameAs :has_continuant_part_at_some_time .
-
-obo:BFO_0000181 owl:sameAs :has_proper_temporal_part .
-
-obo:BFO_0000182 owl:sameAs :History .
-
-obo:BFO_0000183 owl:sameAs :environs .
-
-obo:BFO_0000184 owl:sameAs :history_of .
-
-obo:BFO_0000185 owl:sameAs :has_history .
-
-obo:BFO_0000194 owl:sameAs :specifically_depended_on_by .
-
-obo:BFO_0000195 owl:sameAs :specifically_depends_on .
-
-obo:BFO_0000196 owl:sameAs :bearer_of .
-
-obo:BFO_0000197 owl:sameAs :inheres_in .
-
-obo:BFO_0000199 owl:sameAs :occupies_temporal_region .
-
-obo:BFO_0000200 owl:sameAs :occupies_spatiotemporal_region .
-
-obo:BFO_0000202 owl:sameAs :TemporalInterval .
-
-obo:BFO_0000203 owl:sameAs :TemporalInstant .
-
-obo:BFO_0000210 owl:sameAs :occupies_spatial_region_at_some_time .
-
-obo:BFO_0000211 owl:sameAs :occupies_spatial_region_at_all_times .
-
-obo:BFO_0000216 owl:sameAs :spatially_projects_onto_at_some_time .
-
-obo:BFO_0000217 owl:sameAs :spatially_projects_onto_at_all_times .
-
-obo:BFO_0000218 owl:sameAs :has_material_basis_at_some_time .
-
-obo:BFO_0000219 owl:sameAs :generically_depends_on_at_all_times .
-
-obo:BFO_0000220 owl:sameAs :is_carrier_of_at_all_times .
-
-obo:BFO_0000221 owl:sameAs :first_instant_of .
-
-obo:BFO_0000222 owl:sameAs :has_first_instant .
-
-obo:BFO_0000223 owl:sameAs :last_instant_of .
-
-obo:BFO_0000224 owl:sameAs :has_last_instant .
-
 : a owl:Ontology ;
     rdfs:label "Readable BFO IRIs"@en ;
     dcterms:abstract "This Ontology is a helper creating readable iri for all bfo object properties and classes by creating equivalent relations with snake case iri for properties and pascal case iri for class from there labels."@en ;
@@ -214,302 +14,402 @@ obo:BFO_0000224 owl:sameAs :has_last_instant .
     owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo.owl> .
 
 :Continuant a owl:Class ;
-    rdfs:label "continuant"@en .
+    rdfs:label "continuant"@en ;
+    owl:sameAs obo:BFO_0000002 .
 
 :ContinuantFiatBoundary a owl:Class ;
-    rdfs:label "continuant fiat boundary"@en .
+    rdfs:label "continuant fiat boundary"@en ;
+    owl:sameAs obo:BFO_0000140 .
 
 :Disposition a owl:Class ;
-    rdfs:label "disposition"@en .
+    rdfs:label "disposition"@en ;
+    owl:sameAs obo:BFO_0000016 .
 
 :Entity a owl:Class ;
-    rdfs:label "entity"@en .
+    rdfs:label "entity"@en ;
+    owl:sameAs obo:BFO_0000001 .
 
 :FiatLine a owl:Class ;
-    rdfs:label "fiat line"@en .
+    rdfs:label "fiat line"@en ;
+    owl:sameAs obo:BFO_0000142 .
 
 :FiatObjectPart a owl:Class ;
-    rdfs:label "fiat object part"@en .
+    rdfs:label "fiat object part"@en ;
+    owl:sameAs obo:BFO_0000024 .
 
 :FiatPoint a owl:Class ;
-    rdfs:label "fiat point"@en .
+    rdfs:label "fiat point"@en ;
+    owl:sameAs obo:BFO_0000147 .
 
 :FiatSurface a owl:Class ;
-    rdfs:label "fiat surface"@en .
+    rdfs:label "fiat surface"@en ;
+    owl:sameAs obo:BFO_0000146 .
 
 :Function a owl:Class ;
-    rdfs:label "function"@en .
+    rdfs:label "function"@en ;
+    owl:sameAs obo:BFO_0000034 .
 
 :GenericallyDependentContinuant a owl:Class ;
-    rdfs:label "generically dependent continuant"@en .
+    rdfs:label "generically dependent continuant"@en ;
+    owl:sameAs obo:BFO_0000031 .
 
 :History a owl:Class ;
-    rdfs:label "history"@en .
+    rdfs:label "history"@en ;
+    owl:sameAs obo:BFO_0000182 .
 
 :ImmaterialEntity a owl:Class ;
-    rdfs:label "immaterial entity"@en .
+    rdfs:label "immaterial entity"@en ;
+    owl:sameAs obo:BFO_0000141 .
 
 :IndependentContinuant a owl:Class ;
-    rdfs:label "independent continuant"@en .
+    rdfs:label "independent continuant"@en ;
+    owl:sameAs obo:BFO_0000004 .
 
 :MaterialEntity a owl:Class ;
-    rdfs:label "material entity"@en .
+    rdfs:label "material entity"@en ;
+    owl:sameAs obo:BFO_0000040 .
 
 :Object a owl:Class ;
-    rdfs:label "object"@en .
+    rdfs:label "object"@en ;
+    owl:sameAs obo:BFO_0000030 .
 
 :ObjectAggregate a owl:Class ;
-    rdfs:label "object aggregate"@en .
+    rdfs:label "object aggregate"@en ;
+    owl:sameAs obo:BFO_0000027 .
 
 :Occurrent a owl:Class ;
-    rdfs:label "occurrent"@en .
+    rdfs:label "occurrent"@en ;
+    owl:sameAs obo:BFO_0000003 .
 
 :OneDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "one-dimensional spatial region"@en .
+    rdfs:label "one-dimensional spatial region"@en ;
+    owl:sameAs obo:BFO_0000026 .
 
 :OneDimensionalTemporalRegion a owl:Class ;
-    rdfs:label "one-dimensional temporal region"@en .
+    rdfs:label "one-dimensional temporal region"@en ;
+    owl:sameAs obo:BFO_0000038 .
 
 :Process a owl:Class ;
-    rdfs:label "process"@en .
+    rdfs:label "process"@en ;
+    owl:sameAs obo:BFO_0000015 .
 
 :ProcessBoundary a owl:Class ;
-    rdfs:label "process boundary"@en .
+    rdfs:label "process boundary"@en ;
+    owl:sameAs obo:BFO_0000035 .
 
 :Quality a owl:Class ;
-    rdfs:label "quality"@en .
+    rdfs:label "quality"@en ;
+    owl:sameAs obo:BFO_0000019 .
 
 :RealizableEntity a owl:Class ;
-    rdfs:label "realizable entity"@en .
+    rdfs:label "realizable entity"@en ;
+    owl:sameAs obo:BFO_0000017 .
 
 :RelationalQuality a owl:Class ;
-    rdfs:label "relational quality"@en .
+    rdfs:label "relational quality"@en ;
+    owl:sameAs obo:BFO_0000145 .
 
 :Role a owl:Class ;
-    rdfs:label "role"@en .
+    rdfs:label "role"@en ;
+    owl:sameAs obo:BFO_0000023 .
 
 :Site a owl:Class ;
-    rdfs:label "site"@en .
+    rdfs:label "site"@en ;
+    owl:sameAs obo:BFO_0000029 .
 
 :SpatialRegion a owl:Class ;
-    rdfs:label "spatial region"@en .
+    rdfs:label "spatial region"@en ;
+    owl:sameAs obo:BFO_0000006 .
 
 :SpatiotemporalRegion a owl:Class ;
-    rdfs:label "spatiotemporal region"@en .
+    rdfs:label "spatiotemporal region"@en ;
+    owl:sameAs obo:BFO_0000011 .
 
 :SpecificallyDependentContinuant a owl:Class ;
-    rdfs:label "specifically dependent continuant"@en .
+    rdfs:label "specifically dependent continuant"@en ;
+    owl:sameAs obo:BFO_0000020 .
 
 :TemporalInstant a owl:Class ;
-    rdfs:label "temporal instant"@en .
+    rdfs:label "temporal instant"@en ;
+    owl:sameAs obo:BFO_0000203 .
 
 :TemporalInterval a owl:Class ;
-    rdfs:label "temporal interval"@en .
+    rdfs:label "temporal interval"@en ;
+    owl:sameAs obo:BFO_0000202 .
 
 :TemporalRegion a owl:Class ;
-    rdfs:label "temporal region"@en .
+    rdfs:label "temporal region"@en ;
+    owl:sameAs obo:BFO_0000008 .
 
 :ThreeDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "three-dimensional spatial region"@en .
+    rdfs:label "three-dimensional spatial region"@en ;
+    owl:sameAs obo:BFO_0000028 .
 
 :TwoDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "two-dimensional spatial region"@en .
+    rdfs:label "two-dimensional spatial region"@en ;
+    owl:sameAs obo:BFO_0000009 .
 
 :ZeroDimensionalSpatialRegion a owl:Class ;
-    rdfs:label "zero-dimensional spatial region"@en .
+    rdfs:label "zero-dimensional spatial region"@en ;
+    owl:sameAs obo:BFO_0000018 .
 
 :ZeroDimensionalTemporalRegion a owl:Class ;
-    rdfs:label "zero-dimensional temporal region"@en .
+    rdfs:label "zero-dimensional temporal region"@en ;
+    owl:sameAs obo:BFO_0000148 .
 
 :bearer_of a owl:ObjectProperty ;
-    rdfs:label "bearer of"@en .
+    rdfs:label "bearer of"@en ;
+    owl:sameAs obo:BFO_0000196 .
 
 :concretizes_at_all_times a owl:ObjectProperty ;
-    rdfs:label "concretizes at all times"@en .
+    rdfs:label "concretizes at all times"@en ;
+    owl:sameAs obo:BFO_0000164 .
 
 :concretizes_at_some_time a owl:ObjectProperty ;
-    rdfs:label "concretizes at some time"@en .
+    rdfs:label "concretizes at some time"@en ;
+    owl:sameAs obo:BFO_0000059 .
 
 :continuant_part_of_at_all_times a owl:ObjectProperty ;
-    rdfs:label "continuant part of at all times"@en .
+    rdfs:label "continuant part of at all times"@en ;
+    owl:sameAs obo:BFO_0000177 .
 
 :continuant_part_of_at_some_time a owl:ObjectProperty ;
-    rdfs:label "continuant part of at some time"@en .
+    rdfs:label "continuant part of at some time"@en ;
+    owl:sameAs obo:BFO_0000176 .
 
 :environs a owl:ObjectProperty ;
-    rdfs:label "environs"@en .
+    rdfs:label "environs"@en ;
+    owl:sameAs obo:BFO_0000183 .
 
 :exists_at a owl:ObjectProperty ;
-    rdfs:label "exists at"@en .
+    rdfs:label "exists at"@en ;
+    owl:sameAs obo:BFO_0000108 .
 
 :first_instant_of a owl:ObjectProperty ;
-    rdfs:label "first instant of"@en .
+    rdfs:label "first instant of"@en ;
+    owl:sameAs obo:BFO_0000221 .
 
 :generically_depends_on_at_all_times a owl:ObjectProperty ;
-    rdfs:label "generically depends on at all times"@en .
+    rdfs:label "generically depends on at all times"@en ;
+    owl:sameAs obo:BFO_0000219 .
 
 :generically_depends_on_at_some_time a owl:ObjectProperty ;
-    rdfs:label "generically depends on at some time"@en .
+    rdfs:label "generically depends on at some time"@en ;
+    owl:sameAs obo:BFO_0000084 .
 
 :has_continuant_part_at_all_times a owl:ObjectProperty ;
-    rdfs:label "has continuant part at all times"@en .
+    rdfs:label "has continuant part at all times"@en ;
+    owl:sameAs obo:BFO_0000110 .
 
 :has_continuant_part_at_some_time a owl:ObjectProperty ;
-    rdfs:label "has continuant part at some time"@en .
+    rdfs:label "has continuant part at some time"@en ;
+    owl:sameAs obo:BFO_0000178 .
 
 :has_first_instant a owl:ObjectProperty ;
-    rdfs:label "has first instant"@en .
+    rdfs:label "has first instant"@en ;
+    owl:sameAs obo:BFO_0000222 .
 
 :has_history a owl:ObjectProperty ;
-    rdfs:label "has history"@en .
+    rdfs:label "has history"@en ;
+    owl:sameAs obo:BFO_0000185 .
 
 :has_last_instant a owl:ObjectProperty ;
-    rdfs:label "has last instant"@en .
+    rdfs:label "has last instant"@en ;
+    owl:sameAs obo:BFO_0000224 .
 
 :has_material_basis_at_all_times a owl:ObjectProperty ;
-    rdfs:label "has material basis at all times"@en .
+    rdfs:label "has material basis at all times"@en ;
+    owl:sameAs obo:BFO_0000113 .
 
 :has_material_basis_at_some_time a owl:ObjectProperty ;
-    rdfs:label "has material basis at some time"@en .
+    rdfs:label "has material basis at some time"@en ;
+    owl:sameAs obo:BFO_0000218 .
 
 :has_member_part_at_all_times a owl:ObjectProperty ;
-    rdfs:label "has member part at all times"@en .
+    rdfs:label "has member part at all times"@en ;
+    owl:sameAs obo:BFO_0000172 .
 
 :has_member_part_at_some_time a owl:ObjectProperty ;
-    rdfs:label "has member part at some time"@en .
+    rdfs:label "has member part at some time"@en ;
+    owl:sameAs obo:BFO_0000115 .
 
 :has_occurrent_part a owl:ObjectProperty ;
-    rdfs:label "has occurrent part"@en .
+    rdfs:label "has occurrent part"@en ;
+    owl:sameAs obo:BFO_0000117 .
 
 :has_participant_at_all_times a owl:ObjectProperty ;
-    rdfs:label "has participant at all times"@en .
+    rdfs:label "has participant at all times"@en ;
+    owl:sameAs obo:BFO_0000167 .
 
 :has_participant_at_some_time a owl:ObjectProperty ;
-    rdfs:label "has participant at some time"@en .
+    rdfs:label "has participant at some time"@en ;
+    owl:sameAs obo:BFO_0000057 .
 
 :has_proper_continuant_part_at_all_times a owl:ObjectProperty ;
-    rdfs:label "has proper continuant part at all times"@en .
+    rdfs:label "has proper continuant part at all times"@en ;
+    owl:sameAs obo:BFO_0000111 .
 
 :has_proper_continuant_part_at_some_time a owl:ObjectProperty ;
-    rdfs:label "has proper continuant part at some time"@en .
+    rdfs:label "has proper continuant part at some time"@en ;
+    owl:sameAs obo:BFO_0000174 .
 
 :has_proper_occurrent_part a owl:ObjectProperty ;
-    rdfs:label "has proper occurrent part"@en .
+    rdfs:label "has proper occurrent part"@en ;
+    owl:sameAs obo:BFO_0000118 .
 
 :has_proper_temporal_part a owl:ObjectProperty ;
-    rdfs:label "has proper temporal part"@en .
+    rdfs:label "has proper temporal part"@en ;
+    owl:sameAs obo:BFO_0000181 .
 
 :has_realization a owl:ObjectProperty ;
-    rdfs:label "has realization"@en .
+    rdfs:label "has realization"@en ;
+    owl:sameAs obo:BFO_0000054 .
 
 :has_temporal_part a owl:ObjectProperty ;
-    rdfs:label "has temporal part"@en .
+    rdfs:label "has temporal part"@en ;
+    owl:sameAs obo:BFO_0000121 .
 
 :history_of a owl:ObjectProperty ;
-    rdfs:label "history of"@en .
+    rdfs:label "history of"@en ;
+    owl:sameAs obo:BFO_0000184 .
 
 :inheres_in a owl:ObjectProperty ;
-    rdfs:label "inheres in"@en .
+    rdfs:label "inheres in"@en ;
+    owl:sameAs obo:BFO_0000197 .
 
 :is_carrier_of_at_all_times a owl:ObjectProperty ;
-    rdfs:label "is carrier of at all times"@en .
+    rdfs:label "is carrier of at all times"@en ;
+    owl:sameAs obo:BFO_0000220 .
 
 :is_carrier_of_at_some_time a owl:ObjectProperty ;
-    rdfs:label "is carrier of at some time"@en .
+    rdfs:label "is carrier of at some time"@en ;
+    owl:sameAs obo:BFO_0000101 .
 
 :is_concretized_by_at_all_times a owl:ObjectProperty ;
-    rdfs:label "is concretized by at all times"@en .
+    rdfs:label "is concretized by at all times"@en ;
+    owl:sameAs obo:BFO_0000165 .
 
 :is_concretized_by_at_some_time a owl:ObjectProperty ;
-    rdfs:label "is concretized by at some time"@en .
+    rdfs:label "is concretized by at some time"@en ;
+    owl:sameAs obo:BFO_0000058 .
 
 :last_instant_of a owl:ObjectProperty ;
-    rdfs:label "last instant of"@en .
+    rdfs:label "last instant of"@en ;
+    owl:sameAs obo:BFO_0000223 .
 
 :located_in_at_all_times a owl:ObjectProperty ;
-    rdfs:label "located in at all times"@en .
+    rdfs:label "located in at all times"@en ;
+    owl:sameAs obo:BFO_0000082 .
 
 :located_in_at_some_time a owl:ObjectProperty ;
-    rdfs:label "located in at some time"@en .
+    rdfs:label "located in at some time"@en ;
+    owl:sameAs obo:BFO_0000171 .
 
 :location_of_at_all_times a owl:ObjectProperty ;
-    rdfs:label "location of at all times"@en .
+    rdfs:label "location of at all times"@en ;
+    owl:sameAs obo:BFO_0000170 .
 
 :location_of_at_some_time a owl:ObjectProperty ;
-    rdfs:label "location of at some time"@en .
+    rdfs:label "location of at some time"@en ;
+    owl:sameAs obo:BFO_0000124 .
 
 :material_basis_of_at_all_times a owl:ObjectProperty ;
-    rdfs:label "material basis of at all times"@en .
+    rdfs:label "material basis of at all times"@en ;
+    owl:sameAs obo:BFO_0000163 .
 
 :material_basis_of_at_some_time a owl:ObjectProperty ;
-    rdfs:label "material basis of at some time"@en .
+    rdfs:label "material basis of at some time"@en ;
+    owl:sameAs obo:BFO_0000127 .
 
 :member_part_of_at_all_times a owl:ObjectProperty ;
-    rdfs:label "member part of at all times"@en .
+    rdfs:label "member part of at all times"@en ;
+    owl:sameAs obo:BFO_0000173 .
 
 :member_part_of_at_some_time a owl:ObjectProperty ;
-    rdfs:label "member part of at some time"@en .
+    rdfs:label "member part of at some time"@en ;
+    owl:sameAs obo:BFO_0000129 .
 
 :occupies_spatial_region_at_all_times a owl:ObjectProperty ;
-    rdfs:label "occupies spatial region at all times"@en .
+    rdfs:label "occupies spatial region at all times"@en ;
+    owl:sameAs obo:BFO_0000211 .
 
 :occupies_spatial_region_at_some_time a owl:ObjectProperty ;
-    rdfs:label "occupies spatial region at some time"@en .
+    rdfs:label "occupies spatial region at some time"@en ;
+    owl:sameAs obo:BFO_0000210 .
 
 :occupies_spatiotemporal_region a owl:ObjectProperty ;
-    rdfs:label "occupies spatiotemporal region"@en .
+    rdfs:label "occupies spatiotemporal region"@en ;
+    owl:sameAs obo:BFO_0000200 .
 
 :occupies_temporal_region a owl:ObjectProperty ;
-    rdfs:label "occupies temporal region"@en .
+    rdfs:label "occupies temporal region"@en ;
+    owl:sameAs obo:BFO_0000199 .
 
 :occurrent_part_of a owl:ObjectProperty ;
-    rdfs:label "occurrent part of"@en .
+    rdfs:label "occurrent part of"@en ;
+    owl:sameAs obo:BFO_0000132 .
 
 :occurs_in a owl:ObjectProperty ;
-    rdfs:label "occurs in"@en .
+    rdfs:label "occurs in"@en ;
+    owl:sameAs obo:BFO_0000066 .
 
 :participates_in_at_all_times a owl:ObjectProperty ;
-    rdfs:label "participates in at all times"@en .
+    rdfs:label "participates in at all times"@en ;
+    owl:sameAs obo:BFO_0000166 .
 
 :participates_in_at_some_time a owl:ObjectProperty ;
-    rdfs:label "participates in at some time"@en .
+    rdfs:label "participates in at some time"@en ;
+    owl:sameAs obo:BFO_0000056 .
 
 :preceded_by a owl:ObjectProperty ;
-    rdfs:label "preceded by"@en .
+    rdfs:label "preceded by"@en ;
+    owl:sameAs obo:BFO_0000062 .
 
 :precedes a owl:ObjectProperty ;
-    rdfs:label "precedes"@en .
+    rdfs:label "precedes"@en ;
+    owl:sameAs obo:BFO_0000063 .
 
 :proper_continuant_part_of_at_all_times a owl:ObjectProperty ;
-    rdfs:label "proper continuant part of at all times"@en .
+    rdfs:label "proper continuant part of at all times"@en ;
+    owl:sameAs obo:BFO_0000137 .
 
 :proper_continuant_part_of_at_some_time a owl:ObjectProperty ;
-    rdfs:label "proper continuant part of at some time"@en .
+    rdfs:label "proper continuant part of at some time"@en ;
+    owl:sameAs obo:BFO_0000175 .
 
 :proper_occurrent_part_of a owl:ObjectProperty ;
-    rdfs:label "proper occurrent part of"@en .
+    rdfs:label "proper occurrent part of"@en ;
+    owl:sameAs obo:BFO_0000138 .
 
 :proper_temporal_part_of a owl:ObjectProperty ;
-    rdfs:label "proper temporal part of"@en .
+    rdfs:label "proper temporal part of"@en ;
+    owl:sameAs obo:BFO_0000136 .
 
 :realizes a owl:ObjectProperty ;
-    rdfs:label "realizes"@en .
+    rdfs:label "realizes"@en ;
+    owl:sameAs obo:BFO_0000055 .
 
 :spatially_projects_onto_at_all_times a owl:ObjectProperty ;
-    rdfs:label "spatially projects onto at all times"@en .
+    rdfs:label "spatially projects onto at all times"@en ;
+    owl:sameAs obo:BFO_0000217 .
 
 :spatially_projects_onto_at_some_time a owl:ObjectProperty ;
-    rdfs:label "spatially projects onto at some time"@en .
+    rdfs:label "spatially projects onto at some time"@en ;
+    owl:sameAs obo:BFO_0000216 .
 
 :specifically_depended_on_by a owl:ObjectProperty ;
-    rdfs:label "specifically depended on by"@en .
+    rdfs:label "specifically depended on by"@en ;
+    owl:sameAs obo:BFO_0000194 .
 
 :specifically_depends_on a owl:ObjectProperty ;
-    rdfs:label "specifically depends on"@en .
+    rdfs:label "specifically depends on"@en ;
+    owl:sameAs obo:BFO_0000195 .
 
 :temporal_part_of a owl:ObjectProperty ;
-    rdfs:label "temporal part of"@en .
+    rdfs:label "temporal part of"@en ;
+    owl:sameAs obo:BFO_0000139 .
 
 :temporally_projects_onto a owl:ObjectProperty ;
-    rdfs:label "temporally projects onto"@en .
+    rdfs:label "temporally projects onto"@en ;
+    owl:sameAs obo:BFO_0000153 .
 

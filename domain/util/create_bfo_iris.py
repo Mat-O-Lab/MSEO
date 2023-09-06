@@ -85,7 +85,7 @@ for property in bfo[: RDF.type : OWL.ObjectProperty]:
     out=add_ontology_header(out)
     out.add((iri,RDF.type,OWL.ObjectProperty))
     #out.add((property,OWL.equivalentProperty,iri))
-    out.add((property,OWL.sameAs,iri))
+    out.add((iri,OWL.sameAs,property))
     out.add((iri,RDFS.label,label))
 
 for class_ in bfo[: RDF.type : OWL.Class]:
@@ -95,7 +95,7 @@ for class_ in bfo[: RDF.type : OWL.Class]:
         out=add_ontology_header(out)
         out.add((iri,RDF.type,OWL.Class))
         #out.add((class_,OWL.equivalentClass,iri))
-        out.add((class_,OWL.sameAs,iri))
+        out.add((iri,OWL.sameAs,class_))
         out.add((iri,RDFS.label,label))
 
 out.serialize(dir+'/readable_bfo_iris.ttl',format='turtle')
