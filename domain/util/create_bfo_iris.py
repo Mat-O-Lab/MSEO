@@ -11,7 +11,7 @@ from re import sub
 import os
 dir=os.path.dirname(os.path.realpath(__file__))
 bfo2020_url='http://purl.obolibrary.org/obo/bfo/2020/bfo.owl'
-util_url="https://purl.matolab.org/mseo/mid/util/"
+util_url="https://github.com/Mat-O-Lab/MSEO/raw/main/domain/util/readable_bfo_iris.ttl/"
 BFO = Namespace(bfo2020_url+"/")
 OBO = Namespace('http://purl.obolibrary.org/obo/')
 MSEO = Namespace('https://purl.matolab.org/mseo/mid/')
