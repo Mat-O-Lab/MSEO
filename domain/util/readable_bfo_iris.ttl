@@ -5,205 +5,205 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-obo:BFO_0000001 owl:equivalentClass :Entity .
+obo:BFO_0000001 owl:sameAs :Entity .
 
-obo:BFO_0000002 owl:equivalentClass :Continuant .
+obo:BFO_0000002 owl:sameAs :Continuant .
 
-obo:BFO_0000003 owl:equivalentClass :Occurrent .
+obo:BFO_0000003 owl:sameAs :Occurrent .
 
-obo:BFO_0000004 owl:equivalentClass :IndependentContinuant .
+obo:BFO_0000004 owl:sameAs :IndependentContinuant .
 
-obo:BFO_0000006 owl:equivalentClass :SpatialRegion .
+obo:BFO_0000006 owl:sameAs :SpatialRegion .
 
-obo:BFO_0000008 owl:equivalentClass :TemporalRegion .
+obo:BFO_0000008 owl:sameAs :TemporalRegion .
 
-obo:BFO_0000009 owl:equivalentClass :TwoDimensionalSpatialRegion .
+obo:BFO_0000009 owl:sameAs :TwoDimensionalSpatialRegion .
 
-obo:BFO_0000011 owl:equivalentClass :SpatiotemporalRegion .
+obo:BFO_0000011 owl:sameAs :SpatiotemporalRegion .
 
-obo:BFO_0000015 owl:equivalentClass :Process .
+obo:BFO_0000015 owl:sameAs :Process .
 
-obo:BFO_0000016 owl:equivalentClass :Disposition .
+obo:BFO_0000016 owl:sameAs :Disposition .
 
-obo:BFO_0000017 owl:equivalentClass :RealizableEntity .
+obo:BFO_0000017 owl:sameAs :RealizableEntity .
 
-obo:BFO_0000018 owl:equivalentClass :ZeroDimensionalSpatialRegion .
+obo:BFO_0000018 owl:sameAs :ZeroDimensionalSpatialRegion .
 
-obo:BFO_0000019 owl:equivalentClass :Quality .
+obo:BFO_0000019 owl:sameAs :Quality .
 
-obo:BFO_0000020 owl:equivalentClass :SpecificallyDependentContinuant .
+obo:BFO_0000020 owl:sameAs :SpecificallyDependentContinuant .
 
-obo:BFO_0000023 owl:equivalentClass :Role .
+obo:BFO_0000023 owl:sameAs :Role .
 
-obo:BFO_0000024 owl:equivalentClass :FiatObjectPart .
+obo:BFO_0000024 owl:sameAs :FiatObjectPart .
 
-obo:BFO_0000026 owl:equivalentClass :OneDimensionalSpatialRegion .
+obo:BFO_0000026 owl:sameAs :OneDimensionalSpatialRegion .
 
-obo:BFO_0000027 owl:equivalentClass :ObjectAggregate .
+obo:BFO_0000027 owl:sameAs :ObjectAggregate .
 
-obo:BFO_0000028 owl:equivalentClass :ThreeDimensionalSpatialRegion .
+obo:BFO_0000028 owl:sameAs :ThreeDimensionalSpatialRegion .
 
-obo:BFO_0000029 owl:equivalentClass :Site .
+obo:BFO_0000029 owl:sameAs :Site .
 
-obo:BFO_0000030 owl:equivalentClass :Object .
+obo:BFO_0000030 owl:sameAs :Object .
 
-obo:BFO_0000031 owl:equivalentClass :GenericallyDependentContinuant .
+obo:BFO_0000031 owl:sameAs :GenericallyDependentContinuant .
 
-obo:BFO_0000034 owl:equivalentClass :Function .
+obo:BFO_0000034 owl:sameAs :Function .
 
-obo:BFO_0000035 owl:equivalentClass :ProcessBoundary .
+obo:BFO_0000035 owl:sameAs :ProcessBoundary .
 
-obo:BFO_0000038 owl:equivalentClass :OneDimensionalTemporalRegion .
+obo:BFO_0000038 owl:sameAs :OneDimensionalTemporalRegion .
 
-obo:BFO_0000040 owl:equivalentClass :MaterialEntity .
+obo:BFO_0000040 owl:sameAs :MaterialEntity .
 
-obo:BFO_0000054 owl:equivalentProperty :has_realization .
+obo:BFO_0000054 owl:sameAs :has_realization .
 
-obo:BFO_0000055 owl:equivalentProperty :realizes .
+obo:BFO_0000055 owl:sameAs :realizes .
 
-obo:BFO_0000056 owl:equivalentProperty :participates_in_at_some_time .
+obo:BFO_0000056 owl:sameAs :participates_in_at_some_time .
 
-obo:BFO_0000057 owl:equivalentProperty :has_participant_at_some_time .
+obo:BFO_0000057 owl:sameAs :has_participant_at_some_time .
 
-obo:BFO_0000058 owl:equivalentProperty :is_concretized_by_at_some_time .
+obo:BFO_0000058 owl:sameAs :is_concretized_by_at_some_time .
 
-obo:BFO_0000059 owl:equivalentProperty :concretizes_at_some_time .
+obo:BFO_0000059 owl:sameAs :concretizes_at_some_time .
 
-obo:BFO_0000062 owl:equivalentProperty :preceded_by .
+obo:BFO_0000062 owl:sameAs :preceded_by .
 
-obo:BFO_0000063 owl:equivalentProperty :precedes .
+obo:BFO_0000063 owl:sameAs :precedes .
 
-obo:BFO_0000066 owl:equivalentProperty :occurs_in .
+obo:BFO_0000066 owl:sameAs :occurs_in .
 
-obo:BFO_0000082 owl:equivalentProperty :located_in_at_all_times .
+obo:BFO_0000082 owl:sameAs :located_in_at_all_times .
 
-obo:BFO_0000084 owl:equivalentProperty :generically_depends_on_at_some_time .
+obo:BFO_0000084 owl:sameAs :generically_depends_on_at_some_time .
 
-obo:BFO_0000101 owl:equivalentProperty :is_carrier_of_at_some_time .
+obo:BFO_0000101 owl:sameAs :is_carrier_of_at_some_time .
 
-obo:BFO_0000108 owl:equivalentProperty :exists_at .
+obo:BFO_0000108 owl:sameAs :exists_at .
 
-obo:BFO_0000110 owl:equivalentProperty :has_continuant_part_at_all_times .
+obo:BFO_0000110 owl:sameAs :has_continuant_part_at_all_times .
 
-obo:BFO_0000111 owl:equivalentProperty :has_proper_continuant_part_at_all_times .
+obo:BFO_0000111 owl:sameAs :has_proper_continuant_part_at_all_times .
 
-obo:BFO_0000113 owl:equivalentProperty :has_material_basis_at_all_times .
+obo:BFO_0000113 owl:sameAs :has_material_basis_at_all_times .
 
-obo:BFO_0000115 owl:equivalentProperty :has_member_part_at_some_time .
+obo:BFO_0000115 owl:sameAs :has_member_part_at_some_time .
 
-obo:BFO_0000117 owl:equivalentProperty :has_occurrent_part .
+obo:BFO_0000117 owl:sameAs :has_occurrent_part .
 
-obo:BFO_0000118 owl:equivalentProperty :has_proper_occurrent_part .
+obo:BFO_0000118 owl:sameAs :has_proper_occurrent_part .
 
-obo:BFO_0000121 owl:equivalentProperty :has_temporal_part .
+obo:BFO_0000121 owl:sameAs :has_temporal_part .
 
-obo:BFO_0000124 owl:equivalentProperty :location_of_at_some_time .
+obo:BFO_0000124 owl:sameAs :location_of_at_some_time .
 
-obo:BFO_0000127 owl:equivalentProperty :material_basis_of_at_some_time .
+obo:BFO_0000127 owl:sameAs :material_basis_of_at_some_time .
 
-obo:BFO_0000129 owl:equivalentProperty :member_part_of_at_some_time .
+obo:BFO_0000129 owl:sameAs :member_part_of_at_some_time .
 
-obo:BFO_0000132 owl:equivalentProperty :occurrent_part_of .
+obo:BFO_0000132 owl:sameAs :occurrent_part_of .
 
-obo:BFO_0000136 owl:equivalentProperty :proper_temporal_part_of .
+obo:BFO_0000136 owl:sameAs :proper_temporal_part_of .
 
-obo:BFO_0000137 owl:equivalentProperty :proper_continuant_part_of_at_all_times .
+obo:BFO_0000137 owl:sameAs :proper_continuant_part_of_at_all_times .
 
-obo:BFO_0000138 owl:equivalentProperty :proper_occurrent_part_of .
+obo:BFO_0000138 owl:sameAs :proper_occurrent_part_of .
 
-obo:BFO_0000139 owl:equivalentProperty :temporal_part_of .
+obo:BFO_0000139 owl:sameAs :temporal_part_of .
 
-obo:BFO_0000140 owl:equivalentClass :ContinuantFiatBoundary .
+obo:BFO_0000140 owl:sameAs :ContinuantFiatBoundary .
 
-obo:BFO_0000141 owl:equivalentClass :ImmaterialEntity .
+obo:BFO_0000141 owl:sameAs :ImmaterialEntity .
 
-obo:BFO_0000142 owl:equivalentClass :FiatLine .
+obo:BFO_0000142 owl:sameAs :FiatLine .
 
-obo:BFO_0000145 owl:equivalentClass :RelationalQuality .
+obo:BFO_0000145 owl:sameAs :RelationalQuality .
 
-obo:BFO_0000146 owl:equivalentClass :FiatSurface .
+obo:BFO_0000146 owl:sameAs :FiatSurface .
 
-obo:BFO_0000147 owl:equivalentClass :FiatPoint .
+obo:BFO_0000147 owl:sameAs :FiatPoint .
 
-obo:BFO_0000148 owl:equivalentClass :ZeroDimensionalTemporalRegion .
+obo:BFO_0000148 owl:sameAs :ZeroDimensionalTemporalRegion .
 
-obo:BFO_0000153 owl:equivalentProperty :temporally_projects_onto .
+obo:BFO_0000153 owl:sameAs :temporally_projects_onto .
 
-obo:BFO_0000163 owl:equivalentProperty :material_basis_of_at_all_times .
+obo:BFO_0000163 owl:sameAs :material_basis_of_at_all_times .
 
-obo:BFO_0000164 owl:equivalentProperty :concretizes_at_all_times .
+obo:BFO_0000164 owl:sameAs :concretizes_at_all_times .
 
-obo:BFO_0000165 owl:equivalentProperty :is_concretized_by_at_all_times .
+obo:BFO_0000165 owl:sameAs :is_concretized_by_at_all_times .
 
-obo:BFO_0000166 owl:equivalentProperty :participates_in_at_all_times .
+obo:BFO_0000166 owl:sameAs :participates_in_at_all_times .
 
-obo:BFO_0000167 owl:equivalentProperty :has_participant_at_all_times .
+obo:BFO_0000167 owl:sameAs :has_participant_at_all_times .
 
-obo:BFO_0000170 owl:equivalentProperty :location_of_at_all_times .
+obo:BFO_0000170 owl:sameAs :location_of_at_all_times .
 
-obo:BFO_0000171 owl:equivalentProperty :located_in_at_some_time .
+obo:BFO_0000171 owl:sameAs :located_in_at_some_time .
 
-obo:BFO_0000172 owl:equivalentProperty :has_member_part_at_all_times .
+obo:BFO_0000172 owl:sameAs :has_member_part_at_all_times .
 
-obo:BFO_0000173 owl:equivalentProperty :member_part_of_at_all_times .
+obo:BFO_0000173 owl:sameAs :member_part_of_at_all_times .
 
-obo:BFO_0000174 owl:equivalentProperty :has_proper_continuant_part_at_some_time .
+obo:BFO_0000174 owl:sameAs :has_proper_continuant_part_at_some_time .
 
-obo:BFO_0000175 owl:equivalentProperty :proper_continuant_part_of_at_some_time .
+obo:BFO_0000175 owl:sameAs :proper_continuant_part_of_at_some_time .
 
-obo:BFO_0000176 owl:equivalentProperty :continuant_part_of_at_some_time .
+obo:BFO_0000176 owl:sameAs :continuant_part_of_at_some_time .
 
-obo:BFO_0000177 owl:equivalentProperty :continuant_part_of_at_all_times .
+obo:BFO_0000177 owl:sameAs :continuant_part_of_at_all_times .
 
-obo:BFO_0000178 owl:equivalentProperty :has_continuant_part_at_some_time .
+obo:BFO_0000178 owl:sameAs :has_continuant_part_at_some_time .
 
-obo:BFO_0000181 owl:equivalentProperty :has_proper_temporal_part .
+obo:BFO_0000181 owl:sameAs :has_proper_temporal_part .
 
-obo:BFO_0000182 owl:equivalentClass :History .
+obo:BFO_0000182 owl:sameAs :History .
 
-obo:BFO_0000183 owl:equivalentProperty :environs .
+obo:BFO_0000183 owl:sameAs :environs .
 
-obo:BFO_0000184 owl:equivalentProperty :history_of .
+obo:BFO_0000184 owl:sameAs :history_of .
 
-obo:BFO_0000185 owl:equivalentProperty :has_history .
+obo:BFO_0000185 owl:sameAs :has_history .
 
-obo:BFO_0000194 owl:equivalentProperty :specifically_depended_on_by .
+obo:BFO_0000194 owl:sameAs :specifically_depended_on_by .
 
-obo:BFO_0000195 owl:equivalentProperty :specifically_depends_on .
+obo:BFO_0000195 owl:sameAs :specifically_depends_on .
 
-obo:BFO_0000196 owl:equivalentProperty :bearer_of .
+obo:BFO_0000196 owl:sameAs :bearer_of .
 
-obo:BFO_0000197 owl:equivalentProperty :inheres_in .
+obo:BFO_0000197 owl:sameAs :inheres_in .
 
-obo:BFO_0000199 owl:equivalentProperty :occupies_temporal_region .
+obo:BFO_0000199 owl:sameAs :occupies_temporal_region .
 
-obo:BFO_0000200 owl:equivalentProperty :occupies_spatiotemporal_region .
+obo:BFO_0000200 owl:sameAs :occupies_spatiotemporal_region .
 
-obo:BFO_0000202 owl:equivalentClass :TemporalInterval .
+obo:BFO_0000202 owl:sameAs :TemporalInterval .
 
-obo:BFO_0000203 owl:equivalentClass :TemporalInstant .
+obo:BFO_0000203 owl:sameAs :TemporalInstant .
 
-obo:BFO_0000210 owl:equivalentProperty :occupies_spatial_region_at_some_time .
+obo:BFO_0000210 owl:sameAs :occupies_spatial_region_at_some_time .
 
-obo:BFO_0000211 owl:equivalentProperty :occupies_spatial_region_at_all_times .
+obo:BFO_0000211 owl:sameAs :occupies_spatial_region_at_all_times .
 
-obo:BFO_0000216 owl:equivalentProperty :spatially_projects_onto_at_some_time .
+obo:BFO_0000216 owl:sameAs :spatially_projects_onto_at_some_time .
 
-obo:BFO_0000217 owl:equivalentProperty :spatially_projects_onto_at_all_times .
+obo:BFO_0000217 owl:sameAs :spatially_projects_onto_at_all_times .
 
-obo:BFO_0000218 owl:equivalentProperty :has_material_basis_at_some_time .
+obo:BFO_0000218 owl:sameAs :has_material_basis_at_some_time .
 
-obo:BFO_0000219 owl:equivalentProperty :generically_depends_on_at_all_times .
+obo:BFO_0000219 owl:sameAs :generically_depends_on_at_all_times .
 
-obo:BFO_0000220 owl:equivalentProperty :is_carrier_of_at_all_times .
+obo:BFO_0000220 owl:sameAs :is_carrier_of_at_all_times .
 
-obo:BFO_0000221 owl:equivalentProperty :first_instant_of .
+obo:BFO_0000221 owl:sameAs :first_instant_of .
 
-obo:BFO_0000222 owl:equivalentProperty :has_first_instant .
+obo:BFO_0000222 owl:sameAs :has_first_instant .
 
-obo:BFO_0000223 owl:equivalentProperty :last_instant_of .
+obo:BFO_0000223 owl:sameAs :last_instant_of .
 
-obo:BFO_0000224 owl:equivalentProperty :has_last_instant .
+obo:BFO_0000224 owl:sameAs :has_last_instant .
 
 : a owl:Ontology ;
     rdfs:label "Readable BFO IRIs"@en ;
