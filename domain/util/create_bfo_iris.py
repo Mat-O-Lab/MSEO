@@ -84,7 +84,7 @@ for property in bfo[: RDF.type : OWL.ObjectProperty]:
     iri=URIRef(UTIL+snake_case(label))
     out=add_ontology_header(out)
     out.add((iri,RDF.type,OWL.ObjectProperty))
-    out.add((property,OWL.equivalentProperty,iri))
+    out.add((iri,OWL.equivalentProperty,property))
     #out.add((iri,OWL.sameAs,property))
     out.add((iri,RDFS.label,label))
 
@@ -94,7 +94,7 @@ for class_ in bfo[: RDF.type : OWL.Class]:
         iri=URIRef(UTIL+pascal_case(label))
         out=add_ontology_header(out)
         out.add((iri,RDF.type,OWL.Class))
-        out.add((class_,OWL.equivalentClass,iri))
+        out.add((iri,OWL.equivalentClass,class_))
         #out.add((iri,OWL.sameAs,class_))
         out.add((iri,RDFS.label,label))
 
